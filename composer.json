@@ -1,0 +1,43 @@
+{
+    "name": "weimob-cloud/php-ability-sdk",
+    "type": "library",
+    "license": "MIT",
+    "description": "WeimobCloud PHP Ability Sdk",
+    "authors": [
+        {
+            "name": "weimob-tech",
+            "email": "Weimob-tech@weimob.com"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "ext-pcntl": "7.2",
+            "ext-posix": "7.2"
+        }
+    },
+    "require": {
+        "php": ">=7.2.3",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "WeimobAbility\\": "src"
+        }
+    },
+    "scripts": {
+
+    },
+    "repositories": {
+        "0": {
+            "type": "vcs",
+            "url": "git@github.com:axibx/php-ability-sdk.git"
+        },
+        "packagist": {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        }
+    }
+}
