@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,555
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface McMemberMemberDynamicCodeListener
 {
@@ -23,132 +23,132 @@ interface McMemberMemberDynamicCodeListener
 class MemberDynamicCodeMessage implements \JsonSerializable
 {
     /**
-    * 商户pid
-    * @var int
-    */
+     * 商户pid
+     * @var int
+     */
     private $pid;
 
     /**
-    * 用户wid
-    * @var int
-    */
+     * 用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * 卡模板id
-    * @var int
-    */
+     * 卡模板id
+     * @var int
+     */
     private $memberCardTemplateId;
 
     /**
-    * 用户手机号
-    * @var string
-    */
+     * 用户手机号
+     * @var string
+     */
     private $phone;
 
     /**
-    * 动态码
-    * @var string
-    */
+     * 动态码
+     * @var string
+     */
     private $dynamicCode;
 
     /**
-    * 过期时间
-    * @var int
-    */
+     * 过期时间
+     * @var int
+     */
     private $expireTime;
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $memberCardTemplateId
-    */
-    public function setMemberCardTemplateId(?int $memberCardTemplateId)
+     * @param int $memberCardTemplateId
+     */
+    public function setMemberCardTemplateId(?int $memberCardTemplateId): void
     {
         $this->memberCardTemplateId = $memberCardTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMemberCardTemplateId(): ?int
     {
         return $this->memberCardTemplateId;
     }
 
     /**
-    * @param string $phone
-    */
-    public function setPhone(?string $phone)
+     * @param string $phone
+     */
+    public function setPhone(?string $phone): void
     {
         $this->phone = $phone;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getPhone(): ?string
     {
         return $this->phone;
     }
 
     /**
-    * @param string $dynamicCode
-    */
-    public function setDynamicCode(?string $dynamicCode)
+     * @param string $dynamicCode
+     */
+    public function setDynamicCode(?string $dynamicCode): void
     {
         $this->dynamicCode = $dynamicCode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getDynamicCode(): ?string
     {
         return $this->dynamicCode;
     }
 
     /**
-    * @param int $expireTime
-    */
-    public function setExpireTime(?int $expireTime)
+     * @param int $expireTime
+     */
+    public function setExpireTime(?int $expireTime): void
     {
         $this->expireTime = $expireTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getExpireTime(): ?int
     {
         return $this->expireTime;

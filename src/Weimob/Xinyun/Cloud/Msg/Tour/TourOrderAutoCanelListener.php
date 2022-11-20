@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,034
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface TourOrderAutoCanelListener
 {
@@ -23,22 +23,22 @@ interface TourOrderAutoCanelListener
 class AutoCanelMessage implements \JsonSerializable
 {
     /**
-    * 订单编号
-    * @var string
-    */
+     * 订单编号
+     * @var string
+     */
     private $orderNo;
 
     /**
-    * @param string $orderNo
-    */
-    public function setOrderNo(?string $orderNo)
+     * @param string $orderNo
+     */
+    public function setOrderNo(?string $orderNo): void
     {
         $this->orderNo = $orderNo;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOrderNo(): ?string
     {
         return $this->orderNo;

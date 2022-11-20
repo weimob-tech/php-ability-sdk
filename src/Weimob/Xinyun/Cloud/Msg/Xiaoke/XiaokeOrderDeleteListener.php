@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 2,685
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface XiaokeOrderDeleteListener
 {
@@ -23,88 +23,88 @@ interface XiaokeOrderDeleteListener
 class DeleteMessage implements \JsonSerializable
 {
     /**
-    * 订单号
-    * @var array
-    */
+     * 订单号
+     * @var array
+     */
     private $orderNumberList;
 
     /**
-    * 删除
-    * @var int
-    */
+     * 删除
+     * @var int
+     */
     private $isDel;
 
     /**
-    * 最后操作人
-    * @var int
-    */
+     * 最后操作人
+     * @var int
+     */
     private $lastUpdateUserWid;
 
     /**
-    * 最后操作时间
-    * @var int
-    */
+     * 最后操作时间
+     * @var int
+     */
     private $lastUpdateTime;
 
     /**
-    * @param array $orderNumberList
-    */
-    public function setOrderNumberList(?array $orderNumberList)
+     * @param array $orderNumberList
+     */
+    public function setOrderNumberList(?array $orderNumberList): void
     {
         $this->orderNumberList = $orderNumberList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getOrderNumberList(): ?array
     {
         return $this->orderNumberList;
     }
 
     /**
-    * @param int $isDel
-    */
-    public function setIsDel(?int $isDel)
+     * @param int $isDel
+     */
+    public function setIsDel(?int $isDel): void
     {
         $this->isDel = $isDel;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getIsDel(): ?int
     {
         return $this->isDel;
     }
 
     /**
-    * @param int $lastUpdateUserWid
-    */
-    public function setLastUpdateUserWid(?int $lastUpdateUserWid)
+     * @param int $lastUpdateUserWid
+     */
+    public function setLastUpdateUserWid(?int $lastUpdateUserWid): void
     {
         $this->lastUpdateUserWid = $lastUpdateUserWid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getLastUpdateUserWid(): ?int
     {
         return $this->lastUpdateUserWid;
     }
 
     /**
-    * @param int $lastUpdateTime
-    */
-    public function setLastUpdateTime(?int $lastUpdateTime)
+     * @param int $lastUpdateTime
+     */
+    public function setLastUpdateTime(?int $lastUpdateTime): void
     {
         $this->lastUpdateTime = $lastUpdateTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getLastUpdateTime(): ?int
     {
         return $this->lastUpdateTime;

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 750
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface PaasWeimobGuideCustomerGetListService
 {
@@ -19,131 +19,131 @@ interface PaasWeimobGuideCustomerGetListService
 class WeimobGuideCustomerGetListRequest implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 全局唯一的扩展点
-    * @var string
-    */
+     * 全局唯一的扩展点
+     * @var string
+     */
     private $actionKey;
 
     /**
-    * 功能集ID
-    * @var int
-    */
+     * 功能集ID
+     * @var int
+     */
     private $functionId;
 
     /**
-    * 组织结构节点ID
-    * @var int
-    */
+     * 组织结构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 	组织结构节点类型
-    * @var int
-    */
+     * 	组织结构节点类型
+     * @var int
+     */
     private $vType;
 
     /**
-    * @var WeimobGuideCustomerGetListParam
-    */
+     * @var WeimobGuideCustomerGetListParam
+     */
     private $params;
 
     /**
-    * @param int $bosId
-    */
+     * @param int $bosId
+     */
     public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $actionKey
-    */
+     * @param string $actionKey
+     */
     public function setActionKey(?string $actionKey): void
     {
         $this->actionKey = $actionKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActionKey(): ?string
     {
         return $this->actionKey;
     }
 
     /**
-    * @param int $functionId
-    */
+     * @param int $functionId
+     */
     public function setFunctionId(?int $functionId): void
     {
         $this->functionId = $functionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFunctionId(): ?int
     {
         return $this->functionId;
     }
 
     /**
-    * @param int $vid
-    */
+     * @param int $vid
+     */
     public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vType
-    */
+     * @param int $vType
+     */
     public function setVType(?int $vType): void
     {
         $this->vType = $vType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVType(): ?int
     {
         return $this->vType;
     }
 
     /**
-    * @param WeimobGuideCustomerGetListParam $param
-    */
+     * @param WeimobGuideCustomerGetListParam $param
+     */
     public function setParam(?WeimobGuideCustomerGetListParam $param): void
     {
         $this->param = $param;
     }
 
     /**
-    * @return WeimobGuideCustomerGetListParam
-    */
+     * @return WeimobGuideCustomerGetListParam
+     */
     public function getParam(): ?WeimobGuideCustomerGetListParam
     {
         return $this->param;
@@ -158,110 +158,110 @@ class WeimobGuideCustomerGetListRequest implements \JsonSerializable
 class WeimobGuideCustomerGetListParam implements \JsonSerializable
 {
     /**
-    * 组织结构节点
-    * @var int
-    */
+     * 组织结构节点
+     * @var int
+     */
     private $vid;
 
     /**
-    * 产品实例id
-    * @var int
-    */
+     * 产品实例id
+     * @var int
+     */
     private $productInstanceId;
 
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 组织结构节点类型
-    * @var int
-    */
+     * 组织结构节点类型
+     * @var int
+     */
     private $vidType;
 
     /**
-    * 客户wid list
-    * @var array
-    */
+     * 客户wid list
+     * @var array
+     */
     private $widList;
 
     /**
-    * @param int $vid
-    */
-    public function setVid(?int $vid)
+     * @param int $vid
+     */
+    public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $productInstanceId
-    */
-    public function setProductInstanceId(?int $productInstanceId)
+     * @param int $productInstanceId
+     */
+    public function setProductInstanceId(?int $productInstanceId): void
     {
         $this->productInstanceId = $productInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProductInstanceId(): ?int
     {
         return $this->productInstanceId;
     }
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param int $vidType
-    */
-    public function setVidType(?int $vidType)
+     * @param int $vidType
+     */
+    public function setVidType(?int $vidType): void
     {
         $this->vidType = $vidType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVidType(): ?int
     {
         return $this->vidType;
     }
 
     /**
-    * @param array $widList
-    */
-    public function setWidList(?array $widList)
+     * @param array $widList
+     */
+    public function setWidList(?array $widList): void
     {
         $this->widList = $widList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getWidList(): ?array
     {
         return $this->widList;
@@ -278,44 +278,44 @@ class WeimobGuideCustomerGetListParam implements \JsonSerializable
 class WeimobGuideCustomerGetListResponse implements \JsonSerializable
 {
     /**
-    * 请求返回的对象
-    * @var PaasResponseCode
-    */
+     * 请求返回的对象
+     * @var PaasResponseCode
+     */
     private $code;
 
     /**
-    * 请求返回的数据
-    * @var WeimobGuideCustomerGetListData
-    */
+     * 请求返回的数据
+     * @var WeimobGuideCustomerGetListData
+     */
     private $data;
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?PaasResponseCode
     {
         return $this->code;
     }
 
     /**
-    * @param PaasResponseCode $code
-    */
+     * @param PaasResponseCode $code
+     */
     public function setCode(?PaasResponseCode $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return WeimobGuideCustomerGetListData
-    */
+     * @return WeimobGuideCustomerGetListData
+     */
     public function getData(): ?WeimobGuideCustomerGetListData
     {
         return $this->data;
     }
 
     /**
-    * @param WeimobGuideCustomerGetListData $data
-    */
+     * @param WeimobGuideCustomerGetListData $data
+     */
     public function setData(?WeimobGuideCustomerGetListData $data): void
     {
         $this->data = $data;
@@ -330,22 +330,22 @@ class WeimobGuideCustomerGetListResponse implements \JsonSerializable
 class WeimobGuideCustomerGetListData implements \JsonSerializable
 {
     /**
-    * 业务参数
-    * @var array
-    */
+     * 业务参数
+     * @var array
+     */
     private $userBaseInfoList;
 
     /**
-    * @param array $userBaseInfoList
-    */
-    public function setUserBaseInfoList(?array $userBaseInfoList)
+     * @param array $userBaseInfoList
+     */
+    public function setUserBaseInfoList(?array $userBaseInfoList): void
     {
         $this->userBaseInfoList = $userBaseInfoList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getUserBaseInfoList(): ?array
     {
         return $this->userBaseInfoList;
@@ -361,308 +361,308 @@ class WeimobGuideCustomerGetListData implements \JsonSerializable
 class WeimobGuideCustomerGetListDataUserBaseInfoList implements \JsonSerializable
 {
     /**
-    * wid
-    * @var int
-    */
+     * wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * 昵称
-    * @var string
-    */
+     * 昵称
+     * @var string
+     */
     private $nickName;
 
     /**
-    * 头像url
-    * @var int
-    */
+     * 头像url
+     * @var int
+     */
     private $avatarUrl;
 
     /**
-    * bosId
-    * @var int
-    */
+     * bosId
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 产品实例id
-    * @var int
-    */
+     * 产品实例id
+     * @var int
+     */
     private $productInstanceId;
 
     /**
-    * 手机号
-    * @var string
-    */
+     * 手机号
+     * @var string
+     */
     private $phone;
 
     /**
-    * 姓名
-    * @var int
-    */
+     * 姓名
+     * @var int
+     */
     private $name;
 
     /**
-    * 性别
-    * @var int
-    */
+     * 性别
+     * @var int
+     */
     private $sex;
 
     /**
-    * 性别
-    * @var string
-    */
+     * 性别
+     * @var string
+     */
     private $gender;
 
     /**
-    * 是否订阅公众号
-    * @var string
-    */
+     * 是否订阅公众号
+     * @var string
+     */
     private $isSubscribe;
 
     /**
-    * 邮箱
-    * @var int
-    */
+     * 邮箱
+     * @var int
+     */
     private $email;
 
     /**
-    * 用户归属节点
-    * @var int
-    */
+     * 用户归属节点
+     * @var int
+     */
     private $belongVid;
 
     /**
-    * 用户绑定归属节点时间
-    * @var string
-    */
+     * 用户绑定归属节点时间
+     * @var string
+     */
     private $belongVidBindTime;
 
     /**
-    * 身份证号
-    * @var string
-    */
+     * 身份证号
+     * @var string
+     */
     private $identityCardNum;
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param string $nickName
-    */
-    public function setNickName(?string $nickName)
+     * @param string $nickName
+     */
+    public function setNickName(?string $nickName): void
     {
         $this->nickName = $nickName;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getNickName(): ?string
     {
         return $this->nickName;
     }
 
     /**
-    * @param int $avatarUrl
-    */
-    public function setAvatarUrl(?int $avatarUrl)
+     * @param int $avatarUrl
+     */
+    public function setAvatarUrl(?int $avatarUrl): void
     {
         $this->avatarUrl = $avatarUrl;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getAvatarUrl(): ?int
     {
         return $this->avatarUrl;
     }
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param int $productInstanceId
-    */
-    public function setProductInstanceId(?int $productInstanceId)
+     * @param int $productInstanceId
+     */
+    public function setProductInstanceId(?int $productInstanceId): void
     {
         $this->productInstanceId = $productInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProductInstanceId(): ?int
     {
         return $this->productInstanceId;
     }
 
     /**
-    * @param string $phone
-    */
-    public function setPhone(?string $phone)
+     * @param string $phone
+     */
+    public function setPhone(?string $phone): void
     {
         $this->phone = $phone;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getPhone(): ?string
     {
         return $this->phone;
     }
 
     /**
-    * @param int $name
-    */
-    public function setName(?int $name)
+     * @param int $name
+     */
+    public function setName(?int $name): void
     {
         $this->name = $name;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getName(): ?int
     {
         return $this->name;
     }
 
     /**
-    * @param int $sex
-    */
-    public function setSex(?int $sex)
+     * @param int $sex
+     */
+    public function setSex(?int $sex): void
     {
         $this->sex = $sex;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSex(): ?int
     {
         return $this->sex;
     }
 
     /**
-    * @param string $gender
-    */
-    public function setGender(?string $gender)
+     * @param string $gender
+     */
+    public function setGender(?string $gender): void
     {
         $this->gender = $gender;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getGender(): ?string
     {
         return $this->gender;
     }
 
     /**
-    * @param string $isSubscribe
-    */
-    public function setIsSubscribe(?string $isSubscribe)
+     * @param string $isSubscribe
+     */
+    public function setIsSubscribe(?string $isSubscribe): void
     {
         $this->isSubscribe = $isSubscribe;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getIsSubscribe(): ?string
     {
         return $this->isSubscribe;
     }
 
     /**
-    * @param int $email
-    */
-    public function setEmail(?int $email)
+     * @param int $email
+     */
+    public function setEmail(?int $email): void
     {
         $this->email = $email;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getEmail(): ?int
     {
         return $this->email;
     }
 
     /**
-    * @param int $belongVid
-    */
-    public function setBelongVid(?int $belongVid)
+     * @param int $belongVid
+     */
+    public function setBelongVid(?int $belongVid): void
     {
         $this->belongVid = $belongVid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBelongVid(): ?int
     {
         return $this->belongVid;
     }
 
     /**
-    * @param string $belongVidBindTime
-    */
-    public function setBelongVidBindTime(?string $belongVidBindTime)
+     * @param string $belongVidBindTime
+     */
+    public function setBelongVidBindTime(?string $belongVidBindTime): void
     {
         $this->belongVidBindTime = $belongVidBindTime;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getBelongVidBindTime(): ?string
     {
         return $this->belongVidBindTime;
     }
 
     /**
-    * @param string $identityCardNum
-    */
-    public function setIdentityCardNum(?string $identityCardNum)
+     * @param string $identityCardNum
+     */
+    public function setIdentityCardNum(?string $identityCardNum): void
     {
         $this->identityCardNum = $identityCardNum;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getIdentityCardNum(): ?string
     {
         return $this->identityCardNum;

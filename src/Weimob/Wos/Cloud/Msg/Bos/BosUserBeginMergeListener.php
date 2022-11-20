@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,389
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface BosUserBeginMergeListener
 {
@@ -23,44 +23,44 @@ interface BosUserBeginMergeListener
 class BeginMergeMessage implements \JsonSerializable
 {
     /**
-    * 开始合并的用户ID列表
-    * @var array
-    */
+     * 开始合并的用户ID列表
+     * @var array
+     */
     private $widList;
 
     /**
-    * 开始合并时间 毫秒
-    * @var string
-    */
+     * 开始合并时间 毫秒
+     * @var string
+     */
     private $time;
 
     /**
-    * @param array $widList
-    */
-    public function setWidList(?array $widList)
+     * @param array $widList
+     */
+    public function setWidList(?array $widList): void
     {
         $this->widList = $widList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getWidList(): ?array
     {
         return $this->widList;
     }
 
     /**
-    * @param string $time
-    */
-    public function setTime(?string $time)
+     * @param string $time
+     */
+    public function setTime(?string $time): void
     {
         $this->time = $time;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTime(): ?string
     {
         return $this->time;

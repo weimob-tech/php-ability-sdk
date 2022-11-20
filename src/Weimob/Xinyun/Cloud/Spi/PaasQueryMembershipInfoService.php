@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,780
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface PaasQueryMembershipInfoService
 {
@@ -19,131 +19,131 @@ interface PaasQueryMembershipInfoService
 class SQueryMembershipInfoRequest implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 全局唯一的扩展点
-    * @var string
-    */
+     * 全局唯一的扩展点
+     * @var string
+     */
     private $actionKey;
 
     /**
-    * 功能集ID
-    * @var int
-    */
+     * 功能集ID
+     * @var int
+     */
     private $functionId;
 
     /**
-    * 组织结构节点ID
-    * @var int
-    */
+     * 组织结构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 	组织结构节点类型
-    * @var int
-    */
+     * 	组织结构节点类型
+     * @var int
+     */
     private $vType;
 
     /**
-    * @var SQueryMembershipInfoParam
-    */
+     * @var SQueryMembershipInfoParam
+     */
     private $params;
 
     /**
-    * @param int $bosId
-    */
+     * @param int $bosId
+     */
     public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $actionKey
-    */
+     * @param string $actionKey
+     */
     public function setActionKey(?string $actionKey): void
     {
         $this->actionKey = $actionKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActionKey(): ?string
     {
         return $this->actionKey;
     }
 
     /**
-    * @param int $functionId
-    */
+     * @param int $functionId
+     */
     public function setFunctionId(?int $functionId): void
     {
         $this->functionId = $functionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFunctionId(): ?int
     {
         return $this->functionId;
     }
 
     /**
-    * @param int $vid
-    */
+     * @param int $vid
+     */
     public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vType
-    */
+     * @param int $vType
+     */
     public function setVType(?int $vType): void
     {
         $this->vType = $vType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVType(): ?int
     {
         return $this->vType;
     }
 
     /**
-    * @param SQueryMembershipInfoParam $param
-    */
+     * @param SQueryMembershipInfoParam $param
+     */
     public function setParam(?SQueryMembershipInfoParam $param): void
     {
         $this->param = $param;
     }
 
     /**
-    * @return SQueryMembershipInfoParam
-    */
+     * @return SQueryMembershipInfoParam
+     */
     public function getParam(): ?SQueryMembershipInfoParam
     {
         return $this->param;
@@ -160,82 +160,82 @@ class SQueryMembershipInfoParam implements \JsonSerializable
     private $sourceObject;
 
     /**
-    * 商户id
-    * @var int
-    */
+     * 商户id
+     * @var int
+     */
     private $pid;
 
     /**
-    * 门店id
-    * @var int
-    */
+     * 门店id
+     * @var int
+     */
     private $storeId;
 
     /**
-    * 用户wid
-    * @var int
-    */
+     * 用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * @param SQueryMembershipInfoParamSourceObject $sourceObject
-    */
-    public function setSourceObject(?SQueryMembershipInfoParamSourceObject $sourceObject)
+     * @param SQueryMembershipInfoParamSourceObject $sourceObject
+     */
+    public function setSourceObject(?SQueryMembershipInfoParamSourceObject $sourceObject): void
     {
         $this->sourceObject = $sourceObject;
     }
 
     /**
-    * @return SQueryMembershipInfoParamSourceObject
-    */
+     * @return SQueryMembershipInfoParamSourceObject
+     */
     public function getSourceObject(): ?SQueryMembershipInfoParamSourceObject
     {
         return $this->sourceObject;
     }
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;
     }
 
     /**
-    * @param int $storeId
-    */
-    public function setStoreId(?int $storeId)
+     * @param int $storeId
+     */
+    public function setStoreId(?int $storeId): void
     {
         $this->storeId = $storeId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getStoreId(): ?int
     {
         return $this->storeId;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
@@ -251,66 +251,66 @@ class SQueryMembershipInfoParam implements \JsonSerializable
 class SQueryMembershipInfoParamSourceObject implements \JsonSerializable
 {
     /**
-    * 对应不同的source不同值，比如渠道的openid、手机号、unionid
-    * @var string
-    */
+     * 对应不同的source不同值，比如渠道的openid、手机号、unionid
+     * @var string
+     */
     private $sourceOpenId;
 
     /**
-    * 渠道的appid 如果渠道没有appid概念的话，可以不传
-    * @var string
-    */
+     * 渠道的appid 如果渠道没有appid概念的话，可以不传
+     * @var string
+     */
     private $sourceAppId;
 
     /**
-    * 渠道类型 0 微信公众号 1 微信小程序 2 unionid 4 手机号 phone
-    * @var string
-    */
+     * 渠道类型 0 微信公众号 1 微信小程序 2 unionid 4 手机号 phone
+     * @var string
+     */
     private $source;
 
     /**
-    * @param string $sourceOpenId
-    */
-    public function setSourceOpenId(?string $sourceOpenId)
+     * @param string $sourceOpenId
+     */
+    public function setSourceOpenId(?string $sourceOpenId): void
     {
         $this->sourceOpenId = $sourceOpenId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSourceOpenId(): ?string
     {
         return $this->sourceOpenId;
     }
 
     /**
-    * @param string $sourceAppId
-    */
-    public function setSourceAppId(?string $sourceAppId)
+     * @param string $sourceAppId
+     */
+    public function setSourceAppId(?string $sourceAppId): void
     {
         $this->sourceAppId = $sourceAppId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSourceAppId(): ?string
     {
         return $this->sourceAppId;
     }
 
     /**
-    * @param string $source
-    */
-    public function setSource(?string $source)
+     * @param string $source
+     */
+    public function setSource(?string $source): void
     {
         $this->source = $source;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSource(): ?string
     {
         return $this->source;
@@ -327,44 +327,44 @@ class SQueryMembershipInfoParamSourceObject implements \JsonSerializable
 class SQueryMembershipInfoResponse implements \JsonSerializable
 {
     /**
-    * 请求返回的对象
-    * @var PaasResponseCode
-    */
+     * 请求返回的对象
+     * @var PaasResponseCode
+     */
     private $code;
 
     /**
-    * 请求返回的数据
-    * @var SQueryMembershipInfoData
-    */
+     * 请求返回的数据
+     * @var SQueryMembershipInfoData
+     */
     private $data;
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?PaasResponseCode
     {
         return $this->code;
     }
 
     /**
-    * @param PaasResponseCode $code
-    */
+     * @param PaasResponseCode $code
+     */
     public function setCode(?PaasResponseCode $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return SQueryMembershipInfoData
-    */
+     * @return SQueryMembershipInfoData
+     */
     public function getData(): ?SQueryMembershipInfoData
     {
         return $this->data;
     }
 
     /**
-    * @param SQueryMembershipInfoData $data
-    */
+     * @param SQueryMembershipInfoData $data
+     */
     public function setData(?SQueryMembershipInfoData $data): void
     {
         $this->data = $data;
@@ -379,88 +379,88 @@ class SQueryMembershipInfoResponse implements \JsonSerializable
 class SQueryMembershipInfoData implements \JsonSerializable
 {
     /**
-    * 数据列表
-    * @var array
-    */
+     * 数据列表
+     * @var array
+     */
     private $passMembershipInfos;
 
     /**
-    * 用户手机号，如果返回手机号，会更新手机号到本地数据中，并触发合并
-    * @var string
-    */
+     * 用户手机号，如果返回手机号，会更新手机号到本地数据中，并触发合并
+     * @var string
+     */
     private $phone;
 
     /**
-    * 是否会员
-    * @var bool
-    */
+     * 是否会员
+     * @var bool
+     */
     private $isMember;
 
     /**
-    * 会员状态。1-正常；2-冻结（默认正常）
-    * @var int
-    */
+     * 会员状态。1-正常；2-冻结（默认正常）
+     * @var int
+     */
     private $status;
 
     /**
-    * @param array $passMembershipInfos
-    */
-    public function setPassMembershipInfos(?array $passMembershipInfos)
+     * @param array $passMembershipInfos
+     */
+    public function setPassMembershipInfos(?array $passMembershipInfos): void
     {
         $this->passMembershipInfos = $passMembershipInfos;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getPassMembershipInfos(): ?array
     {
         return $this->passMembershipInfos;
     }
 
     /**
-    * @param string $phone
-    */
-    public function setPhone(?string $phone)
+     * @param string $phone
+     */
+    public function setPhone(?string $phone): void
     {
         $this->phone = $phone;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getPhone(): ?string
     {
         return $this->phone;
     }
 
     /**
-    * @param bool $isMember
-    */
-    public function setIsMember(?bool $isMember)
+     * @param bool $isMember
+     */
+    public function setIsMember(?bool $isMember): void
     {
         $this->isMember = $isMember;
     }
 
     /**
-    * @return bool
-    */
+     * @return bool
+     */
     public function getIsMember(): ?bool
     {
         return $this->isMember;
     }
 
     /**
-    * @param int $status
-    */
-    public function setStatus(?int $status)
+     * @param int $status
+     */
+    public function setStatus(?int $status): void
     {
         $this->status = $status;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getStatus(): ?int
     {
         return $this->status;

@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 490
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface HOTELGoodsOrderGoodsConsumedListener
 {
@@ -23,66 +23,66 @@ interface HOTELGoodsOrderGoodsConsumedListener
 class GoodsConsumedMessage implements \JsonSerializable
 {
     /**
-    * 凭证
-    * @var string
-    */
+     * 凭证
+     * @var string
+     */
     private $snNo;
 
     /**
-    * 核销门店
-    * @var string
-    */
+     * 核销门店
+     * @var string
+     */
     private $storeId;
 
     /**
-    * 操作员
-    * @var string
-    */
+     * 操作员
+     * @var string
+     */
     private $operator;
 
     /**
-    * @param string $snNo
-    */
-    public function setSnNo(?string $snNo)
+     * @param string $snNo
+     */
+    public function setSnNo(?string $snNo): void
     {
         $this->snNo = $snNo;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSnNo(): ?string
     {
         return $this->snNo;
     }
 
     /**
-    * @param string $storeId
-    */
-    public function setStoreId(?string $storeId)
+     * @param string $storeId
+     */
+    public function setStoreId(?string $storeId): void
     {
         $this->storeId = $storeId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getStoreId(): ?string
     {
         return $this->storeId;
     }
 
     /**
-    * @param string $operator
-    */
-    public function setOperator(?string $operator)
+     * @param string $operator
+     */
+    public function setOperator(?string $operator): void
     {
         $this->operator = $operator;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOperator(): ?string
     {
         return $this->operator;

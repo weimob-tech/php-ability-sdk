@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,215
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface BosUserPhoneRebindEventListener
 {
@@ -23,88 +23,88 @@ interface BosUserPhoneRebindEventListener
 class PhoneRebindEventMessage implements \JsonSerializable
 {
     /**
-    * 用户id
-    * @var int
-    */
+     * 用户id
+     * @var int
+     */
     private $wid;
 
     /**
-    * 商家操作系统id
-    * @var int
-    */
+     * 商家操作系统id
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 换绑前的旧手机号
-    * @var string
-    */
+     * 换绑前的旧手机号
+     * @var string
+     */
     private $oldPhone;
 
     /**
-    * 换绑后的新手机号
-    * @var string
-    */
+     * 换绑后的新手机号
+     * @var string
+     */
     private $phone;
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $oldPhone
-    */
-    public function setOldPhone(?string $oldPhone)
+     * @param string $oldPhone
+     */
+    public function setOldPhone(?string $oldPhone): void
     {
         $this->oldPhone = $oldPhone;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOldPhone(): ?string
     {
         return $this->oldPhone;
     }
 
     /**
-    * @param string $phone
-    */
-    public function setPhone(?string $phone)
+     * @param string $phone
+     */
+    public function setPhone(?string $phone): void
     {
         $this->phone = $phone;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getPhone(): ?string
     {
         return $this->phone;

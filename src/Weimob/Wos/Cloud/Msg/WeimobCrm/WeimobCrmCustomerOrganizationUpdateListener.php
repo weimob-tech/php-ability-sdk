@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,357
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobCrmCustomerOrganizationUpdateListener
 {
@@ -23,66 +23,66 @@ interface WeimobCrmCustomerOrganizationUpdateListener
 class OrganizationUpdateMessage implements \JsonSerializable
 {
     /**
-    * 客户编号，是用户身份的唯一标识。可以通过B端页面客户列表/客户详情找到该编号。
-    * @var int
-    */
+     * 客户编号，是用户身份的唯一标识。可以通过B端页面客户列表/客户详情找到该编号。
+     * @var int
+     */
     private $wid;
 
     /**
-    * 变更后的归属门店ID。可以通过B端店铺/店铺设置/组织架构找到门店对应ID。
-    * @var int
-    */
+     * 变更后的归属门店ID。可以通过B端店铺/店铺设置/组织架构找到门店对应ID。
+     * @var int
+     */
     private $newBelongVid;
 
     /**
-    * 变更前的归属门店ID。可以通过B端店铺/店铺设置/组织架构找到门店对应ID。
-    * @var int
-    */
+     * 变更前的归属门店ID。可以通过B端店铺/店铺设置/组织架构找到门店对应ID。
+     * @var int
+     */
     private $oldBelongVid;
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $newBelongVid
-    */
-    public function setNewBelongVid(?int $newBelongVid)
+     * @param int $newBelongVid
+     */
+    public function setNewBelongVid(?int $newBelongVid): void
     {
         $this->newBelongVid = $newBelongVid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getNewBelongVid(): ?int
     {
         return $this->newBelongVid;
     }
 
     /**
-    * @param int $oldBelongVid
-    */
-    public function setOldBelongVid(?int $oldBelongVid)
+     * @param int $oldBelongVid
+     */
+    public function setOldBelongVid(?int $oldBelongVid): void
     {
         $this->oldBelongVid = $oldBelongVid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOldBelongVid(): ?int
     {
         return $this->oldBelongVid;

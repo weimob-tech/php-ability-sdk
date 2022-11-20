@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,324
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface EcGoodsGoodsUpdateListener
 {
@@ -23,22 +23,22 @@ interface EcGoodsGoodsUpdateListener
 class GoodsUpdateMessage implements \JsonSerializable
 {
     /**
-    * 商品id
-    * @var string
-    */
+     * 商品id
+     * @var string
+     */
     private $goodsIdList;
 
     /**
-    * @param string $goodsIdList
-    */
-    public function setGoodsIdList(?string $goodsIdList)
+     * @param string $goodsIdList
+     */
+    public function setGoodsIdList(?string $goodsIdList): void
     {
         $this->goodsIdList = $goodsIdList;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getGoodsIdList(): ?string
     {
         return $this->goodsIdList;

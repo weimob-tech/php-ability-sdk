@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,689
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface CcCouponUpdateCouponOwnerListener
 {
@@ -23,88 +23,88 @@ interface CcCouponUpdateCouponOwnerListener
 class UpdateCouponOwnerMessage implements \JsonSerializable
 {
     /**
-    * 原wid （fromWid和toWid仅作参考，券具体归属，需要通过反查接口获取）
-    * @var int
-    */
+     * 原wid （fromWid和toWid仅作参考，券具体归属，需要通过反查接口获取）
+     * @var int
+     */
     private $fromWid;
 
     /**
-    * 新归属wid
-    * @var int
-    */
+     * 新归属wid
+     * @var int
+     */
     private $toWid;
 
     /**
-    * 商户id
-    * @var int
-    */
+     * 商户id
+     * @var int
+     */
     private $pid;
 
     /**
-    * 码列表
-    * @var string
-    */
+     * 码列表
+     * @var string
+     */
     private $cardIds;
 
     /**
-    * @param int $fromWid
-    */
-    public function setFromWid(?int $fromWid)
+     * @param int $fromWid
+     */
+    public function setFromWid(?int $fromWid): void
     {
         $this->fromWid = $fromWid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFromWid(): ?int
     {
         return $this->fromWid;
     }
 
     /**
-    * @param int $toWid
-    */
-    public function setToWid(?int $toWid)
+     * @param int $toWid
+     */
+    public function setToWid(?int $toWid): void
     {
         $this->toWid = $toWid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getToWid(): ?int
     {
         return $this->toWid;
     }
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;
     }
 
     /**
-    * @param string $cardIds
-    */
-    public function setCardIds(?string $cardIds)
+     * @param string $cardIds
+     */
+    public function setCardIds(?string $cardIds): void
     {
         $this->cardIds = $cardIds;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCardIds(): ?string
     {
         return $this->cardIds;

@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 2,690
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface XiaokeProductDeleteListener
 {
@@ -23,66 +23,66 @@ interface XiaokeProductDeleteListener
 class DeleteMessage implements \JsonSerializable
 {
     /**
-    * 产品信息
-    * @var array
-    */
+     * 产品信息
+     * @var array
+     */
     private $productUniqueRequestList;
 
     /**
-    * 操作时间,时间戳
-    * @var int
-    */
+     * 操作时间,时间戳
+     * @var int
+     */
     private $buildTime;
 
     /**
-    * 操作用户wid
-    * @var int
-    */
+     * 操作用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * @param array $productUniqueRequestList
-    */
-    public function setProductUniqueRequestList(?array $productUniqueRequestList)
+     * @param array $productUniqueRequestList
+     */
+    public function setProductUniqueRequestList(?array $productUniqueRequestList): void
     {
         $this->productUniqueRequestList = $productUniqueRequestList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getProductUniqueRequestList(): ?array
     {
         return $this->productUniqueRequestList;
     }
 
     /**
-    * @param int $buildTime
-    */
-    public function setBuildTime(?int $buildTime)
+     * @param int $buildTime
+     */
+    public function setBuildTime(?int $buildTime): void
     {
         $this->buildTime = $buildTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBuildTime(): ?int
     {
         return $this->buildTime;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;

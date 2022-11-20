@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 624
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface McMemberMemberRankChangeListener
 {
@@ -23,198 +23,198 @@ interface McMemberMemberRankChangeListener
 class MemberRankChangeMessage implements \JsonSerializable
 {
     /**
-    * 店铺pid
-    * @var int
-    */
+     * 店铺pid
+     * @var int
+     */
     private $pid;
 
     /**
-    * 会员唯一标识
-    * @var int
-    */
+     * 会员唯一标识
+     * @var int
+     */
     private $wid;
 
     /**
-    * 系统来源
-    * @var int
-    */
+     * 系统来源
+     * @var int
+     */
     private $source;
 
     /**
-    * 会员卡号
-    * @var string
-    */
+     * 会员卡号
+     * @var string
+     */
     private $memberCode;
 
     /**
-    * 变更前会员等级
-    * @var int
-    */
+     * 变更前会员等级
+     * @var int
+     */
     private $oldRankId;
 
     /**
-    * 变更后会员等级
-    * @var int
-    */
+     * 变更后会员等级
+     * @var int
+     */
     private $newRankId;
 
     /**
-    * 变更原因
-    * @var string
-    */
+     * 变更原因
+     * @var string
+     */
     private $changeReason;
 
     /**
-    * 变更时间
-    * @var int
-    */
+     * 变更时间
+     * @var int
+     */
     private $changeTime;
 
     /**
-    * 会员卡类型
-    * @var int
-    */
+     * 会员卡类型
+     * @var int
+     */
     private $type;
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $source
-    */
-    public function setSource(?int $source)
+     * @param int $source
+     */
+    public function setSource(?int $source): void
     {
         $this->source = $source;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSource(): ?int
     {
         return $this->source;
     }
 
     /**
-    * @param string $memberCode
-    */
-    public function setMemberCode(?string $memberCode)
+     * @param string $memberCode
+     */
+    public function setMemberCode(?string $memberCode): void
     {
         $this->memberCode = $memberCode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getMemberCode(): ?string
     {
         return $this->memberCode;
     }
 
     /**
-    * @param int $oldRankId
-    */
-    public function setOldRankId(?int $oldRankId)
+     * @param int $oldRankId
+     */
+    public function setOldRankId(?int $oldRankId): void
     {
         $this->oldRankId = $oldRankId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOldRankId(): ?int
     {
         return $this->oldRankId;
     }
 
     /**
-    * @param int $newRankId
-    */
-    public function setNewRankId(?int $newRankId)
+     * @param int $newRankId
+     */
+    public function setNewRankId(?int $newRankId): void
     {
         $this->newRankId = $newRankId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getNewRankId(): ?int
     {
         return $this->newRankId;
     }
 
     /**
-    * @param string $changeReason
-    */
-    public function setChangeReason(?string $changeReason)
+     * @param string $changeReason
+     */
+    public function setChangeReason(?string $changeReason): void
     {
         $this->changeReason = $changeReason;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getChangeReason(): ?string
     {
         return $this->changeReason;
     }
 
     /**
-    * @param int $changeTime
-    */
-    public function setChangeTime(?int $changeTime)
+     * @param int $changeTime
+     */
+    public function setChangeTime(?int $changeTime): void
     {
         $this->changeTime = $changeTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getChangeTime(): ?int
     {
         return $this->changeTime;
     }
 
     /**
-    * @param int $type
-    */
-    public function setType(?int $type)
+     * @param int $type
+     */
+    public function setType(?int $type): void
     {
         $this->type = $type;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getType(): ?int
     {
         return $this->type;

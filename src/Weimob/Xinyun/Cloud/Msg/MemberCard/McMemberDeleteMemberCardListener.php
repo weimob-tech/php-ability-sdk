@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,703
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface McMemberDeleteMemberCardListener
 {
@@ -23,110 +23,110 @@ interface McMemberDeleteMemberCardListener
 class DeleteMemberCardMessage implements \JsonSerializable
 {
     /**
-    * 商户pid
-    * @var int
-    */
+     * 商户pid
+     * @var int
+     */
     private $pid;
 
     /**
-    * 用户wid
-    * @var int
-    */
+     * 用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * 卡模板id
-    * @var int
-    */
+     * 卡模板id
+     * @var int
+     */
     private $mcTemplateId;
 
     /**
-    * 会员唯一标示mid
-    * @var int
-    */
+     * 会员唯一标示mid
+     * @var int
+     */
     private $mid;
 
     /**
-    * 会员卡code
-    * @var string
-    */
+     * 会员卡code
+     * @var string
+     */
     private $code;
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $mcTemplateId
-    */
-    public function setMcTemplateId(?int $mcTemplateId)
+     * @param int $mcTemplateId
+     */
+    public function setMcTemplateId(?int $mcTemplateId): void
     {
         $this->mcTemplateId = $mcTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMcTemplateId(): ?int
     {
         return $this->mcTemplateId;
     }
 
     /**
-    * @param int $mid
-    */
-    public function setMid(?int $mid)
+     * @param int $mid
+     */
+    public function setMid(?int $mid): void
     {
         $this->mid = $mid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMid(): ?int
     {
         return $this->mid;
     }
 
     /**
-    * @param string $code
-    */
-    public function setCode(?string $code)
+     * @param string $code
+     */
+    public function setCode(?string $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCode(): ?string
     {
         return $this->code;

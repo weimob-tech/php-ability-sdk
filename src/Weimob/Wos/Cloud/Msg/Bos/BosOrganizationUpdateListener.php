@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,243
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface BosOrganizationUpdateListener
 {
@@ -23,44 +23,44 @@ interface BosOrganizationUpdateListener
 class UpdateMessage implements \JsonSerializable
 {
     /**
-    * 组织编号
-    * @var int
-    */
+     * 组织编号
+     * @var int
+     */
     private $vid;
 
     /**
-    * 变更类型，枚举值：1-创建组织、2-删除组织、3-组织变更父节、4-组织编码变更、5-组织状态变更
-    * @var int
-    */
+     * 变更类型，枚举值：1-创建组织、2-删除组织、3-组织变更父节、4-组织编码变更、5-组织状态变更
+     * @var int
+     */
     private $updateType;
 
     /**
-    * @param int $vid
-    */
-    public function setVid(?int $vid)
+     * @param int $vid
+     */
+    public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $updateType
-    */
-    public function setUpdateType(?int $updateType)
+     * @param int $updateType
+     */
+    public function setUpdateType(?int $updateType): void
     {
         $this->updateType = $updateType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getUpdateType(): ?int
     {
         return $this->updateType;

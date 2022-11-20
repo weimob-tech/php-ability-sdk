@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,786
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface EcPromotionPromotionChangeListener
 {
@@ -23,132 +23,132 @@ interface EcPromotionPromotionChangeListener
 class PromotionChangeMessage implements \JsonSerializable
 {
     /**
-    * 营销活动id
-    * @var int
-    */
+     * 营销活动id
+     * @var int
+     */
     private $activityId;
 
     /**
-    * 活动类型（1-满减满折，3-限时折扣，12-N元N件，13-优惠套装，14-加价购，32-满赠，37-第X件X折）
-    * @var int
-    */
+     * 活动类型（1-满减满折，3-限时折扣，12-N元N件，13-优惠套装，14-加价购，32-满赠，37-第X件X折）
+     * @var int
+     */
     private $activityType;
 
     /**
-    * 商品id列表
-    * @var array
-    */
+     * 商品id列表
+     * @var array
+     */
     private $goodsIdList;
 
     /**
-    * 发送时间
-    * @var int
-    */
+     * 发送时间
+     * @var int
+     */
     private $dateTime;
 
     /**
-    * 消息类型（1-活动信息变更，2-单品级活动主商品变更）
-    * @var int
-    */
+     * 消息类型（1-活动信息变更，2-单品级活动主商品变更）
+     * @var int
+     */
     private $msgType;
 
     /**
-    * 操作类型（1-创建，2-修改，3-开始，4-结束，5-删除）
-    * @var int
-    */
+     * 操作类型（1-创建，2-修改，3-开始，4-结束，5-删除）
+     * @var int
+     */
     private $operateType;
 
     /**
-    * @param int $activityId
-    */
-    public function setActivityId(?int $activityId)
+     * @param int $activityId
+     */
+    public function setActivityId(?int $activityId): void
     {
         $this->activityId = $activityId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getActivityId(): ?int
     {
         return $this->activityId;
     }
 
     /**
-    * @param int $activityType
-    */
-    public function setActivityType(?int $activityType)
+     * @param int $activityType
+     */
+    public function setActivityType(?int $activityType): void
     {
         $this->activityType = $activityType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getActivityType(): ?int
     {
         return $this->activityType;
     }
 
     /**
-    * @param array $goodsIdList
-    */
-    public function setGoodsIdList(?array $goodsIdList)
+     * @param array $goodsIdList
+     */
+    public function setGoodsIdList(?array $goodsIdList): void
     {
         $this->goodsIdList = $goodsIdList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getGoodsIdList(): ?array
     {
         return $this->goodsIdList;
     }
 
     /**
-    * @param int $dateTime
-    */
-    public function setDateTime(?int $dateTime)
+     * @param int $dateTime
+     */
+    public function setDateTime(?int $dateTime): void
     {
         $this->dateTime = $dateTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getDateTime(): ?int
     {
         return $this->dateTime;
     }
 
     /**
-    * @param int $msgType
-    */
-    public function setMsgType(?int $msgType)
+     * @param int $msgType
+     */
+    public function setMsgType(?int $msgType): void
     {
         $this->msgType = $msgType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMsgType(): ?int
     {
         return $this->msgType;
     }
 
     /**
-    * @param int $operateType
-    */
-    public function setOperateType(?int $operateType)
+     * @param int $operateType
+     */
+    public function setOperateType(?int $operateType): void
     {
         $this->operateType = $operateType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOperateType(): ?int
     {
         return $this->operateType;

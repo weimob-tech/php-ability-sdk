@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 899
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface PaasWeimobShopPayPassPaycheckService
 {
@@ -19,131 +19,131 @@ interface PaasWeimobShopPayPassPaycheckService
 class WeimobShopPayPassPaycheckRequest implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 全局唯一的扩展点
-    * @var string
-    */
+     * 全局唯一的扩展点
+     * @var string
+     */
     private $actionKey;
 
     /**
-    * 功能集ID
-    * @var int
-    */
+     * 功能集ID
+     * @var int
+     */
     private $functionId;
 
     /**
-    * 组织结构节点ID
-    * @var int
-    */
+     * 组织结构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 	组织结构节点类型
-    * @var int
-    */
+     * 	组织结构节点类型
+     * @var int
+     */
     private $vType;
 
     /**
-    * @var WeimobShopPayPassPaycheckParam
-    */
+     * @var WeimobShopPayPassPaycheckParam
+     */
     private $params;
 
     /**
-    * @param int $bosId
-    */
+     * @param int $bosId
+     */
     public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $actionKey
-    */
+     * @param string $actionKey
+     */
     public function setActionKey(?string $actionKey): void
     {
         $this->actionKey = $actionKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActionKey(): ?string
     {
         return $this->actionKey;
     }
 
     /**
-    * @param int $functionId
-    */
+     * @param int $functionId
+     */
     public function setFunctionId(?int $functionId): void
     {
         $this->functionId = $functionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFunctionId(): ?int
     {
         return $this->functionId;
     }
 
     /**
-    * @param int $vid
-    */
+     * @param int $vid
+     */
     public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vType
-    */
+     * @param int $vType
+     */
     public function setVType(?int $vType): void
     {
         $this->vType = $vType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVType(): ?int
     {
         return $this->vType;
     }
 
     /**
-    * @param WeimobShopPayPassPaycheckParam $param
-    */
+     * @param WeimobShopPayPassPaycheckParam $param
+     */
     public function setParam(?WeimobShopPayPassPaycheckParam $param): void
     {
         $this->param = $param;
     }
 
     /**
-    * @return WeimobShopPayPassPaycheckParam
-    */
+     * @return WeimobShopPayPassPaycheckParam
+     */
     public function getParam(): ?WeimobShopPayPassPaycheckParam
     {
         return $this->param;
@@ -158,198 +158,198 @@ class WeimobShopPayPassPaycheckRequest implements \JsonSerializable
 class WeimobShopPayPassPaycheckParam implements \JsonSerializable
 {
     /**
-    * 子单信息
-    * @var array
-    */
+     * 子单信息
+     * @var array
+     */
     private $orders;
 
     /**
-    * 父单号
-    * @var int
-    */
+     * 父单号
+     * @var int
+     */
     private $parentOrderNo;
 
     /**
-    * 商户标识.
-    * @var int
-    */
+     * 商户标识.
+     * @var int
+     */
     private $merchantId;
 
     /**
-    * 店铺标识.
-    * @var int
-    */
+     * 店铺标识.
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 调用方产品ID
-    * @var int
-    */
+     * 调用方产品ID
+     * @var int
+     */
     private $productId;
 
     /**
-    * 调用方产品实例ID.
-    * @var int
-    */
+     * 调用方产品实例ID.
+     * @var int
+     */
     private $productInstanceId;
 
     /**
-    * 被调用方产品ID.
-    * @var int
-    */
+     * 被调用方产品ID.
+     * @var int
+     */
     private $targetProductId;
 
     /**
-    * 被调用方产品实例ID
-    * @var int
-    */
+     * 被调用方产品实例ID
+     * @var int
+     */
     private $targetProductInstanceId;
 
     /**
-    * 提供产品的租户
-    * @var string
-    */
+     * 提供产品的租户
+     * @var string
+     */
     private $tcode;
 
     /**
-    * @param array $orders
-    */
-    public function setOrders(?array $orders)
+     * @param array $orders
+     */
+    public function setOrders(?array $orders): void
     {
         $this->orders = $orders;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getOrders(): ?array
     {
         return $this->orders;
     }
 
     /**
-    * @param int $parentOrderNo
-    */
-    public function setParentOrderNo(?int $parentOrderNo)
+     * @param int $parentOrderNo
+     */
+    public function setParentOrderNo(?int $parentOrderNo): void
     {
         $this->parentOrderNo = $parentOrderNo;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getParentOrderNo(): ?int
     {
         return $this->parentOrderNo;
     }
 
     /**
-    * @param int $merchantId
-    */
-    public function setMerchantId(?int $merchantId)
+     * @param int $merchantId
+     */
+    public function setMerchantId(?int $merchantId): void
     {
         $this->merchantId = $merchantId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMerchantId(): ?int
     {
         return $this->merchantId;
     }
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param int $productId
-    */
-    public function setProductId(?int $productId)
+     * @param int $productId
+     */
+    public function setProductId(?int $productId): void
     {
         $this->productId = $productId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProductId(): ?int
     {
         return $this->productId;
     }
 
     /**
-    * @param int $productInstanceId
-    */
-    public function setProductInstanceId(?int $productInstanceId)
+     * @param int $productInstanceId
+     */
+    public function setProductInstanceId(?int $productInstanceId): void
     {
         $this->productInstanceId = $productInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProductInstanceId(): ?int
     {
         return $this->productInstanceId;
     }
 
     /**
-    * @param int $targetProductId
-    */
-    public function setTargetProductId(?int $targetProductId)
+     * @param int $targetProductId
+     */
+    public function setTargetProductId(?int $targetProductId): void
     {
         $this->targetProductId = $targetProductId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getTargetProductId(): ?int
     {
         return $this->targetProductId;
     }
 
     /**
-    * @param int $targetProductInstanceId
-    */
-    public function setTargetProductInstanceId(?int $targetProductInstanceId)
+     * @param int $targetProductInstanceId
+     */
+    public function setTargetProductInstanceId(?int $targetProductInstanceId): void
     {
         $this->targetProductInstanceId = $targetProductInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getTargetProductInstanceId(): ?int
     {
         return $this->targetProductInstanceId;
     }
 
     /**
-    * @param string $tcode
-    */
-    public function setTcode(?string $tcode)
+     * @param string $tcode
+     */
+    public function setTcode(?string $tcode): void
     {
         $this->tcode = $tcode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTcode(): ?string
     {
         return $this->tcode;
@@ -365,110 +365,110 @@ class WeimobShopPayPassPaycheckParam implements \JsonSerializable
 class WeimobShopPayPassPaycheckParamOrders implements \JsonSerializable
 {
     /**
-    * 订单信息
-    * @var WeimobShopPayPassPaycheckParamOrderBase
-    */
+     * 订单信息
+     * @var WeimobShopPayPassPaycheckParamOrderBase
+     */
     private $orderBase;
 
     /**
-    * 订单项列表
-    * @var array
-    */
+     * 订单项列表
+     * @var array
+     */
     private $items;
 
     /**
-    * 支付信息
-    * @var WeimobShopPayPassPaycheckParamPay
-    */
+     * 支付信息
+     * @var WeimobShopPayPassPaycheckParamPay
+     */
     private $pay;
 
     /**
-    * 商户信息
-    * @var WeimobShopPayPassPaycheckParamMerchant
-    */
+     * 商户信息
+     * @var WeimobShopPayPassPaycheckParamMerchant
+     */
     private $merchant;
 
     /**
-    * 用户信息
-    * @var WeimobShopPayPassPaycheckParamBuyer
-    */
+     * 用户信息
+     * @var WeimobShopPayPassPaycheckParamBuyer
+     */
     private $buyer;
 
     /**
-    * @param WeimobShopPayPassPaycheckParamOrderBase $orderBase
-    */
-    public function setOrderBase(?WeimobShopPayPassPaycheckParamOrderBase $orderBase)
+     * @param WeimobShopPayPassPaycheckParamOrderBase $orderBase
+     */
+    public function setOrderBase(?WeimobShopPayPassPaycheckParamOrderBase $orderBase): void
     {
         $this->orderBase = $orderBase;
     }
 
     /**
-    * @return WeimobShopPayPassPaycheckParamOrderBase
-    */
+     * @return WeimobShopPayPassPaycheckParamOrderBase
+     */
     public function getOrderBase(): ?WeimobShopPayPassPaycheckParamOrderBase
     {
         return $this->orderBase;
     }
 
     /**
-    * @param array $items
-    */
-    public function setItems(?array $items)
+     * @param array $items
+     */
+    public function setItems(?array $items): void
     {
         $this->items = $items;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getItems(): ?array
     {
         return $this->items;
     }
 
     /**
-    * @param WeimobShopPayPassPaycheckParamPay $pay
-    */
-    public function setPay(?WeimobShopPayPassPaycheckParamPay $pay)
+     * @param WeimobShopPayPassPaycheckParamPay $pay
+     */
+    public function setPay(?WeimobShopPayPassPaycheckParamPay $pay): void
     {
         $this->pay = $pay;
     }
 
     /**
-    * @return WeimobShopPayPassPaycheckParamPay
-    */
+     * @return WeimobShopPayPassPaycheckParamPay
+     */
     public function getPay(): ?WeimobShopPayPassPaycheckParamPay
     {
         return $this->pay;
     }
 
     /**
-    * @param WeimobShopPayPassPaycheckParamMerchant $merchant
-    */
-    public function setMerchant(?WeimobShopPayPassPaycheckParamMerchant $merchant)
+     * @param WeimobShopPayPassPaycheckParamMerchant $merchant
+     */
+    public function setMerchant(?WeimobShopPayPassPaycheckParamMerchant $merchant): void
     {
         $this->merchant = $merchant;
     }
 
     /**
-    * @return WeimobShopPayPassPaycheckParamMerchant
-    */
+     * @return WeimobShopPayPassPaycheckParamMerchant
+     */
     public function getMerchant(): ?WeimobShopPayPassPaycheckParamMerchant
     {
         return $this->merchant;
     }
 
     /**
-    * @param WeimobShopPayPassPaycheckParamBuyer $buyer
-    */
-    public function setBuyer(?WeimobShopPayPassPaycheckParamBuyer $buyer)
+     * @param WeimobShopPayPassPaycheckParamBuyer $buyer
+     */
+    public function setBuyer(?WeimobShopPayPassPaycheckParamBuyer $buyer): void
     {
         $this->buyer = $buyer;
     }
 
     /**
-    * @return WeimobShopPayPassPaycheckParamBuyer
-    */
+     * @return WeimobShopPayPassPaycheckParamBuyer
+     */
     public function getBuyer(): ?WeimobShopPayPassPaycheckParamBuyer
     {
         return $this->buyer;
@@ -484,88 +484,88 @@ class WeimobShopPayPassPaycheckParamOrders implements \JsonSerializable
 class WeimobShopPayPassPaycheckParamOrderBase implements \JsonSerializable
 {
     /**
-    * 订单号
-    * @var int
-    */
+     * 订单号
+     * @var int
+     */
     private $orderNo;
 
     /**
-    * 支付类型：1-线上支付，2-线下支付，3-无需支付
-    * @var int
-    */
+     * 支付类型：1-线上支付，2-线下支付，3-无需支付
+     * @var int
+     */
     private $paymentType;
 
     /**
-    * 订单类型：1-普通订单，96-虚拟订单，97-消费订单，99-充值订单，11-全渠道B2C订单
-    * @var int
-    */
+     * 订单类型：1-普通订单，96-虚拟订单，97-消费订单，99-充值订单，11-全渠道B2C订单
+     * @var int
+     */
     private $orderType;
 
     /**
-    * 订单创建时间
-    * @var int
-    */
+     * 订单创建时间
+     * @var int
+     */
     private $createTime;
 
     /**
-    * @param int $orderNo
-    */
-    public function setOrderNo(?int $orderNo)
+     * @param int $orderNo
+     */
+    public function setOrderNo(?int $orderNo): void
     {
         $this->orderNo = $orderNo;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOrderNo(): ?int
     {
         return $this->orderNo;
     }
 
     /**
-    * @param int $paymentType
-    */
-    public function setPaymentType(?int $paymentType)
+     * @param int $paymentType
+     */
+    public function setPaymentType(?int $paymentType): void
     {
         $this->paymentType = $paymentType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPaymentType(): ?int
     {
         return $this->paymentType;
     }
 
     /**
-    * @param int $orderType
-    */
-    public function setOrderType(?int $orderType)
+     * @param int $orderType
+     */
+    public function setOrderType(?int $orderType): void
     {
         $this->orderType = $orderType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOrderType(): ?int
     {
         return $this->orderType;
     }
 
     /**
-    * @param int $createTime
-    */
-    public function setCreateTime(?int $createTime)
+     * @param int $createTime
+     */
+    public function setCreateTime(?int $createTime): void
     {
         $this->createTime = $createTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCreateTime(): ?int
     {
         return $this->createTime;
@@ -581,110 +581,110 @@ class WeimobShopPayPassPaycheckParamOrderBase implements \JsonSerializable
 class WeimobShopPayPassPaycheckParamItems implements \JsonSerializable
 {
     /**
-    * 商品信息
-    * @var WeimobShopPayPassPaycheckParamGoods
-    */
+     * 商品信息
+     * @var WeimobShopPayPassPaycheckParamGoods
+     */
     private $goods;
 
     /**
-    * 商品支付信息
-    * @var WeimobShopPayPassPaycheckParamPayInfo
-    */
+     * 商品支付信息
+     * @var WeimobShopPayPassPaycheckParamPayInfo
+     */
     private $payInfo;
 
     /**
-    * 活动信息 
-    * @var WeimobShopPayPassPaycheckParamBizInfos
-    */
+     * 活动信息 
+     * @var WeimobShopPayPassPaycheckParamBizInfos
+     */
     private $bizInfos;
 
     /**
-    * 订单项拓展信息
-    * @var WeimobShopPayPassPaycheckParamItemExt
-    */
+     * 订单项拓展信息
+     * @var WeimobShopPayPassPaycheckParamItemExt
+     */
     private $itemExt;
 
     /**
-    * 订单项id
-    * @var int
-    */
+     * 订单项id
+     * @var int
+     */
     private $itemId;
 
     /**
-    * @param WeimobShopPayPassPaycheckParamGoods $goods
-    */
-    public function setGoods(?WeimobShopPayPassPaycheckParamGoods $goods)
+     * @param WeimobShopPayPassPaycheckParamGoods $goods
+     */
+    public function setGoods(?WeimobShopPayPassPaycheckParamGoods $goods): void
     {
         $this->goods = $goods;
     }
 
     /**
-    * @return WeimobShopPayPassPaycheckParamGoods
-    */
+     * @return WeimobShopPayPassPaycheckParamGoods
+     */
     public function getGoods(): ?WeimobShopPayPassPaycheckParamGoods
     {
         return $this->goods;
     }
 
     /**
-    * @param WeimobShopPayPassPaycheckParamPayInfo $payInfo
-    */
-    public function setPayInfo(?WeimobShopPayPassPaycheckParamPayInfo $payInfo)
+     * @param WeimobShopPayPassPaycheckParamPayInfo $payInfo
+     */
+    public function setPayInfo(?WeimobShopPayPassPaycheckParamPayInfo $payInfo): void
     {
         $this->payInfo = $payInfo;
     }
 
     /**
-    * @return WeimobShopPayPassPaycheckParamPayInfo
-    */
+     * @return WeimobShopPayPassPaycheckParamPayInfo
+     */
     public function getPayInfo(): ?WeimobShopPayPassPaycheckParamPayInfo
     {
         return $this->payInfo;
     }
 
     /**
-    * @param WeimobShopPayPassPaycheckParamBizInfos $bizInfos
-    */
-    public function setBizInfos(?WeimobShopPayPassPaycheckParamBizInfos $bizInfos)
+     * @param WeimobShopPayPassPaycheckParamBizInfos $bizInfos
+     */
+    public function setBizInfos(?WeimobShopPayPassPaycheckParamBizInfos $bizInfos): void
     {
         $this->bizInfos = $bizInfos;
     }
 
     /**
-    * @return WeimobShopPayPassPaycheckParamBizInfos
-    */
+     * @return WeimobShopPayPassPaycheckParamBizInfos
+     */
     public function getBizInfos(): ?WeimobShopPayPassPaycheckParamBizInfos
     {
         return $this->bizInfos;
     }
 
     /**
-    * @param WeimobShopPayPassPaycheckParamItemExt $itemExt
-    */
-    public function setItemExt(?WeimobShopPayPassPaycheckParamItemExt $itemExt)
+     * @param WeimobShopPayPassPaycheckParamItemExt $itemExt
+     */
+    public function setItemExt(?WeimobShopPayPassPaycheckParamItemExt $itemExt): void
     {
         $this->itemExt = $itemExt;
     }
 
     /**
-    * @return WeimobShopPayPassPaycheckParamItemExt
-    */
+     * @return WeimobShopPayPassPaycheckParamItemExt
+     */
     public function getItemExt(): ?WeimobShopPayPassPaycheckParamItemExt
     {
         return $this->itemExt;
     }
 
     /**
-    * @param int $itemId
-    */
-    public function setItemId(?int $itemId)
+     * @param int $itemId
+     */
+    public function setItemId(?int $itemId): void
     {
         $this->itemId = $itemId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getItemId(): ?int
     {
         return $this->itemId;
@@ -700,264 +700,264 @@ class WeimobShopPayPassPaycheckParamItems implements \JsonSerializable
 class WeimobShopPayPassPaycheckParamGoods implements \JsonSerializable
 {
     /**
-    * 价格列表
-    * @var array
-    */
+     * 价格列表
+     * @var array
+     */
     private $priceInfos;
 
     /**
-    * 商品拓展信息(该参数为map)
-    * @var WeimobShopPayPassPaycheckParamGoodsExt
-    */
+     * 商品拓展信息(该参数为map)
+     * @var WeimobShopPayPassPaycheckParamGoodsExt
+     */
     private $goodsExt;
 
     /**
-    * 商品id
-    * @var int
-    */
+     * 商品id
+     * @var int
+     */
     private $goodsId;
 
     /**
-    * 规格数量
-    * @var int
-    */
+     * 规格数量
+     * @var int
+     */
     private $skuNum;
 
     /**
-    * 商品类型：1-普通商品，2-虚拟商品
-    * @var int
-    */
+     * 商品类型：1-普通商品，2-虚拟商品
+     * @var int
+     */
     private $goodsType;
 
     /**
-    * 子商品类型：101-普通商品，102-海淘商品，103-无需物流，201-虚拟商品，202-付费券
-    * @var int
-    */
+     * 子商品类型：101-普通商品，102-海淘商品，103-无需物流，201-虚拟商品，202-付费券
+     * @var int
+     */
     private $subGoodsType;
 
     /**
-    * 售价
-    * @var string
-    */
+     * 售价
+     * @var string
+     */
     private $salePrice;
 
     /**
-    * 商品编码
-    * @var string
-    */
+     * 商品编码
+     * @var string
+     */
     private $goodsCode;
 
     /**
-    * 库存扣减方式: 1-下单扣减库存，2-支付库检库存
-    * @var int
-    */
+     * 库存扣减方式: 1-下单扣减库存，2-支付库检库存
+     * @var int
+     */
     private $deductStockType;
 
     /**
-    * 规格编码
-    * @var string
-    */
+     * 规格编码
+     * @var string
+     */
     private $skuCode;
 
     /**
-    * 规格id
-    * @var int
-    */
+     * 规格id
+     * @var int
+     */
     private $skuId;
 
     /**
-    * sku条码
-    * @var string
-    */
+     * sku条码
+     * @var string
+     */
     private $skuBarCode;
 
     /**
-    * @param array $priceInfos
-    */
-    public function setPriceInfos(?array $priceInfos)
+     * @param array $priceInfos
+     */
+    public function setPriceInfos(?array $priceInfos): void
     {
         $this->priceInfos = $priceInfos;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getPriceInfos(): ?array
     {
         return $this->priceInfos;
     }
 
     /**
-    * @param WeimobShopPayPassPaycheckParamGoodsExt $goodsExt
-    */
-    public function setGoodsExt(?WeimobShopPayPassPaycheckParamGoodsExt $goodsExt)
+     * @param WeimobShopPayPassPaycheckParamGoodsExt $goodsExt
+     */
+    public function setGoodsExt(?WeimobShopPayPassPaycheckParamGoodsExt $goodsExt): void
     {
         $this->goodsExt = $goodsExt;
     }
 
     /**
-    * @return WeimobShopPayPassPaycheckParamGoodsExt
-    */
+     * @return WeimobShopPayPassPaycheckParamGoodsExt
+     */
     public function getGoodsExt(): ?WeimobShopPayPassPaycheckParamGoodsExt
     {
         return $this->goodsExt;
     }
 
     /**
-    * @param int $goodsId
-    */
-    public function setGoodsId(?int $goodsId)
+     * @param int $goodsId
+     */
+    public function setGoodsId(?int $goodsId): void
     {
         $this->goodsId = $goodsId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGoodsId(): ?int
     {
         return $this->goodsId;
     }
 
     /**
-    * @param int $skuNum
-    */
-    public function setSkuNum(?int $skuNum)
+     * @param int $skuNum
+     */
+    public function setSkuNum(?int $skuNum): void
     {
         $this->skuNum = $skuNum;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSkuNum(): ?int
     {
         return $this->skuNum;
     }
 
     /**
-    * @param int $goodsType
-    */
-    public function setGoodsType(?int $goodsType)
+     * @param int $goodsType
+     */
+    public function setGoodsType(?int $goodsType): void
     {
         $this->goodsType = $goodsType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGoodsType(): ?int
     {
         return $this->goodsType;
     }
 
     /**
-    * @param int $subGoodsType
-    */
-    public function setSubGoodsType(?int $subGoodsType)
+     * @param int $subGoodsType
+     */
+    public function setSubGoodsType(?int $subGoodsType): void
     {
         $this->subGoodsType = $subGoodsType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSubGoodsType(): ?int
     {
         return $this->subGoodsType;
     }
 
     /**
-    * @param string $salePrice
-    */
-    public function setSalePrice(?string $salePrice)
+     * @param string $salePrice
+     */
+    public function setSalePrice(?string $salePrice): void
     {
         $this->salePrice = $salePrice;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSalePrice(): ?string
     {
         return $this->salePrice;
     }
 
     /**
-    * @param string $goodsCode
-    */
-    public function setGoodsCode(?string $goodsCode)
+     * @param string $goodsCode
+     */
+    public function setGoodsCode(?string $goodsCode): void
     {
         $this->goodsCode = $goodsCode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getGoodsCode(): ?string
     {
         return $this->goodsCode;
     }
 
     /**
-    * @param int $deductStockType
-    */
-    public function setDeductStockType(?int $deductStockType)
+     * @param int $deductStockType
+     */
+    public function setDeductStockType(?int $deductStockType): void
     {
         $this->deductStockType = $deductStockType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getDeductStockType(): ?int
     {
         return $this->deductStockType;
     }
 
     /**
-    * @param string $skuCode
-    */
-    public function setSkuCode(?string $skuCode)
+     * @param string $skuCode
+     */
+    public function setSkuCode(?string $skuCode): void
     {
         $this->skuCode = $skuCode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSkuCode(): ?string
     {
         return $this->skuCode;
     }
 
     /**
-    * @param int $skuId
-    */
-    public function setSkuId(?int $skuId)
+     * @param int $skuId
+     */
+    public function setSkuId(?int $skuId): void
     {
         $this->skuId = $skuId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSkuId(): ?int
     {
         return $this->skuId;
     }
 
     /**
-    * @param string $skuBarCode
-    */
-    public function setSkuBarCode(?string $skuBarCode)
+     * @param string $skuBarCode
+     */
+    public function setSkuBarCode(?string $skuBarCode): void
     {
         $this->skuBarCode = $skuBarCode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSkuBarCode(): ?string
     {
         return $this->skuBarCode;
@@ -973,44 +973,44 @@ class WeimobShopPayPassPaycheckParamGoods implements \JsonSerializable
 class WeimobShopPayPassPaycheckParamPriceInfos implements \JsonSerializable
 {
     /**
-    * 金额类型：2-市场价，3-商品原价，50-成本价，101-定金，201-积分
-    * @var int
-    */
+     * 金额类型：2-市场价，3-商品原价，50-成本价，101-定金，201-积分
+     * @var int
+     */
     private $type;
 
     /**
-    * 金额
-    * @var string
-    */
+     * 金额
+     * @var string
+     */
     private $amount;
 
     /**
-    * @param int $type
-    */
-    public function setType(?int $type)
+     * @param int $type
+     */
+    public function setType(?int $type): void
     {
         $this->type = $type;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getType(): ?int
     {
         return $this->type;
     }
 
     /**
-    * @param string $amount
-    */
-    public function setAmount(?string $amount)
+     * @param string $amount
+     */
+    public function setAmount(?string $amount): void
     {
         $this->amount = $amount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getAmount(): ?string
     {
         return $this->amount;
@@ -1062,110 +1062,110 @@ class WeimobShopPayPassPaycheckParamItemExt implements \JsonSerializable
 class WeimobShopPayPassPaycheckParamPay implements \JsonSerializable
 {
     /**
-    * 金额明细
-    * @var array
-    */
+     * 金额明细
+     * @var array
+     */
     private $amountInfos;
 
     /**
-    * 实付金额
-    * @var string
-    */
+     * 实付金额
+     * @var string
+     */
     private $payAmount;
 
     /**
-    * 总金额(BigDecimal)
-    * @var string
-    */
+     * 总金额(BigDecimal)
+     * @var string
+     */
     private $totalAmount;
 
     /**
-    * 总折扣金额(BigDecimal)
-    * @var string
-    */
+     * 总折扣金额(BigDecimal)
+     * @var string
+     */
     private $totalDiscountAmount;
 
     /**
-    * 应付金额(BigDecimal)
-    * @var string
-    */
+     * 应付金额(BigDecimal)
+     * @var string
+     */
     private $shouldPayAmount;
 
     /**
-    * @param array $amountInfos
-    */
-    public function setAmountInfos(?array $amountInfos)
+     * @param array $amountInfos
+     */
+    public function setAmountInfos(?array $amountInfos): void
     {
         $this->amountInfos = $amountInfos;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getAmountInfos(): ?array
     {
         return $this->amountInfos;
     }
 
     /**
-    * @param string $payAmount
-    */
-    public function setPayAmount(?string $payAmount)
+     * @param string $payAmount
+     */
+    public function setPayAmount(?string $payAmount): void
     {
         $this->payAmount = $payAmount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getPayAmount(): ?string
     {
         return $this->payAmount;
     }
 
     /**
-    * @param string $totalAmount
-    */
-    public function setTotalAmount(?string $totalAmount)
+     * @param string $totalAmount
+     */
+    public function setTotalAmount(?string $totalAmount): void
     {
         $this->totalAmount = $totalAmount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTotalAmount(): ?string
     {
         return $this->totalAmount;
     }
 
     /**
-    * @param string $totalDiscountAmount
-    */
-    public function setTotalDiscountAmount(?string $totalDiscountAmount)
+     * @param string $totalDiscountAmount
+     */
+    public function setTotalDiscountAmount(?string $totalDiscountAmount): void
     {
         $this->totalDiscountAmount = $totalDiscountAmount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTotalDiscountAmount(): ?string
     {
         return $this->totalDiscountAmount;
     }
 
     /**
-    * @param string $shouldPayAmount
-    */
-    public function setShouldPayAmount(?string $shouldPayAmount)
+     * @param string $shouldPayAmount
+     */
+    public function setShouldPayAmount(?string $shouldPayAmount): void
     {
         $this->shouldPayAmount = $shouldPayAmount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getShouldPayAmount(): ?string
     {
         return $this->shouldPayAmount;
@@ -1181,88 +1181,88 @@ class WeimobShopPayPassPaycheckParamPay implements \JsonSerializable
 class WeimobShopPayPassPaycheckParamAmountInfos implements \JsonSerializable
 {
     /**
-    * 金额类型：1-商品金额，100-预售定金，200-总积分，250-运费，271-包装费
-    * @var int
-    */
+     * 金额类型：1-商品金额，100-预售定金，200-总积分，250-运费，271-包装费
+     * @var int
+     */
     private $type;
 
     /**
-    * 金额(BigDecimal)
-    * @var string
-    */
+     * 金额(BigDecimal)
+     * @var string
+     */
     private $amount;
 
     /**
-    * 实付金额(BigDecimal)
-    * @var string
-    */
+     * 实付金额(BigDecimal)
+     * @var string
+     */
     private $payAmount;
 
     /**
-    * 应付金额(BigDecimal)
-    * @var string
-    */
+     * 应付金额(BigDecimal)
+     * @var string
+     */
     private $shouldPayAmount;
 
     /**
-    * @param int $type
-    */
-    public function setType(?int $type)
+     * @param int $type
+     */
+    public function setType(?int $type): void
     {
         $this->type = $type;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getType(): ?int
     {
         return $this->type;
     }
 
     /**
-    * @param string $amount
-    */
-    public function setAmount(?string $amount)
+     * @param string $amount
+     */
+    public function setAmount(?string $amount): void
     {
         $this->amount = $amount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getAmount(): ?string
     {
         return $this->amount;
     }
 
     /**
-    * @param string $payAmount
-    */
-    public function setPayAmount(?string $payAmount)
+     * @param string $payAmount
+     */
+    public function setPayAmount(?string $payAmount): void
     {
         $this->payAmount = $payAmount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getPayAmount(): ?string
     {
         return $this->payAmount;
     }
 
     /**
-    * @param string $shouldPayAmount
-    */
-    public function setShouldPayAmount(?string $shouldPayAmount)
+     * @param string $shouldPayAmount
+     */
+    public function setShouldPayAmount(?string $shouldPayAmount): void
     {
         $this->shouldPayAmount = $shouldPayAmount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getShouldPayAmount(): ?string
     {
         return $this->shouldPayAmount;
@@ -1278,110 +1278,110 @@ class WeimobShopPayPassPaycheckParamAmountInfos implements \JsonSerializable
 class WeimobShopPayPassPaycheckParamMerchant implements \JsonSerializable
 {
     /**
-    * 商户id
-    * @var int
-    */
+     * 商户id
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 销售节点
-    * @var int
-    */
+     * 销售节点
+     * @var int
+     */
     private $vid;
 
     /**
-    * 销售节点类型：0-无类型,无业务意义，1-集团，2-品牌，3-区域，5-商场，10-门店，100-自提点
-    * @var int
-    */
+     * 销售节点类型：0-无类型,无业务意义，1-集团，2-品牌，3-区域，5-商场，10-门店，100-自提点
+     * @var int
+     */
     private $vidType;
 
     /**
-    * 服务节点
-    * @var int
-    */
+     * 服务节点
+     * @var int
+     */
     private $processVid;
 
     /**
-    * 服务节点类型：0-无类型,无业务意义，1-集团，2-品牌，3-区域，5-商场，10-门店，100-自提点
-    * @var int
-    */
+     * 服务节点类型：0-无类型,无业务意义，1-集团，2-品牌，3-区域，5-商场，10-门店，100-自提点
+     * @var int
+     */
     private $processVidType;
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param int $vid
-    */
-    public function setVid(?int $vid)
+     * @param int $vid
+     */
+    public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vidType
-    */
-    public function setVidType(?int $vidType)
+     * @param int $vidType
+     */
+    public function setVidType(?int $vidType): void
     {
         $this->vidType = $vidType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVidType(): ?int
     {
         return $this->vidType;
     }
 
     /**
-    * @param int $processVid
-    */
-    public function setProcessVid(?int $processVid)
+     * @param int $processVid
+     */
+    public function setProcessVid(?int $processVid): void
     {
         $this->processVid = $processVid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProcessVid(): ?int
     {
         return $this->processVid;
     }
 
     /**
-    * @param int $processVidType
-    */
-    public function setProcessVidType(?int $processVidType)
+     * @param int $processVidType
+     */
+    public function setProcessVidType(?int $processVidType): void
     {
         $this->processVidType = $processVidType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProcessVidType(): ?int
     {
         return $this->processVidType;
@@ -1397,22 +1397,22 @@ class WeimobShopPayPassPaycheckParamMerchant implements \JsonSerializable
 class WeimobShopPayPassPaycheckParamBuyer implements \JsonSerializable
 {
     /**
-    * 用户id
-    * @var int
-    */
+     * 用户id
+     * @var int
+     */
     private $wid;
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
@@ -1429,44 +1429,44 @@ class WeimobShopPayPassPaycheckParamBuyer implements \JsonSerializable
 class WeimobShopPayPassPaycheckResponse implements \JsonSerializable
 {
     /**
-    * 请求返回的对象
-    * @var PaasResponseCode
-    */
+     * 请求返回的对象
+     * @var PaasResponseCode
+     */
     private $code;
 
     /**
-    * 请求返回的数据
-    * @var WeimobShopPayPassPaycheckData
-    */
+     * 请求返回的数据
+     * @var WeimobShopPayPassPaycheckData
+     */
     private $data;
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?PaasResponseCode
     {
         return $this->code;
     }
 
     /**
-    * @param PaasResponseCode $code
-    */
+     * @param PaasResponseCode $code
+     */
     public function setCode(?PaasResponseCode $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return WeimobShopPayPassPaycheckData
-    */
+     * @return WeimobShopPayPassPaycheckData
+     */
     public function getData(): ?WeimobShopPayPassPaycheckData
     {
         return $this->data;
     }
 
     /**
-    * @param WeimobShopPayPassPaycheckData $data
-    */
+     * @param WeimobShopPayPassPaycheckData $data
+     */
     public function setData(?WeimobShopPayPassPaycheckData $data): void
     {
         $this->data = $data;
@@ -1481,66 +1481,66 @@ class WeimobShopPayPassPaycheckResponse implements \JsonSerializable
 class WeimobShopPayPassPaycheckData implements \JsonSerializable
 {
     /**
-    * 订单可支付结果
-    * @var array
-    */
+     * 订单可支付结果
+     * @var array
+     */
     private $checkPayOrders;
 
     /**
-    * 整单是否可支付
-    * @var bool
-    */
+     * 整单是否可支付
+     * @var bool
+     */
     private $enablePay;
 
     /**
-    * 不可支付信息
-    * @var array
-    */
+     * 不可支付信息
+     * @var array
+     */
     private $disableMessages;
 
     /**
-    * @param array $checkPayOrders
-    */
-    public function setCheckPayOrders(?array $checkPayOrders)
+     * @param array $checkPayOrders
+     */
+    public function setCheckPayOrders(?array $checkPayOrders): void
     {
         $this->checkPayOrders = $checkPayOrders;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getCheckPayOrders(): ?array
     {
         return $this->checkPayOrders;
     }
 
     /**
-    * @param bool $enablePay
-    */
-    public function setEnablePay(?bool $enablePay)
+     * @param bool $enablePay
+     */
+    public function setEnablePay(?bool $enablePay): void
     {
         $this->enablePay = $enablePay;
     }
 
     /**
-    * @return bool
-    */
+     * @return bool
+     */
     public function getEnablePay(): ?bool
     {
         return $this->enablePay;
     }
 
     /**
-    * @param array $disableMessages
-    */
-    public function setDisableMessages(?array $disableMessages)
+     * @param array $disableMessages
+     */
+    public function setDisableMessages(?array $disableMessages): void
     {
         $this->disableMessages = $disableMessages;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getDisableMessages(): ?array
     {
         return $this->disableMessages;
@@ -1556,88 +1556,88 @@ class WeimobShopPayPassPaycheckData implements \JsonSerializable
 class WeimobShopPayPassPaycheckDataCheckPayOrders implements \JsonSerializable
 {
     /**
-    * 订单项级支付校验结果
-    * @var array
-    */
+     * 订单项级支付校验结果
+     * @var array
+     */
     private $checkPayItems;
 
     /**
-    * 子单号
-    * @var string
-    */
+     * 子单号
+     * @var string
+     */
     private $orderNo;
 
     /**
-    * 是否可支付
-    * @var bool
-    */
+     * 是否可支付
+     * @var bool
+     */
     private $enablePay;
 
     /**
-    * 不可支付信息
-    * @var array
-    */
+     * 不可支付信息
+     * @var array
+     */
     private $disableMessages;
 
     /**
-    * @param array $checkPayItems
-    */
-    public function setCheckPayItems(?array $checkPayItems)
+     * @param array $checkPayItems
+     */
+    public function setCheckPayItems(?array $checkPayItems): void
     {
         $this->checkPayItems = $checkPayItems;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getCheckPayItems(): ?array
     {
         return $this->checkPayItems;
     }
 
     /**
-    * @param string $orderNo
-    */
-    public function setOrderNo(?string $orderNo)
+     * @param string $orderNo
+     */
+    public function setOrderNo(?string $orderNo): void
     {
         $this->orderNo = $orderNo;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOrderNo(): ?string
     {
         return $this->orderNo;
     }
 
     /**
-    * @param bool $enablePay
-    */
-    public function setEnablePay(?bool $enablePay)
+     * @param bool $enablePay
+     */
+    public function setEnablePay(?bool $enablePay): void
     {
         $this->enablePay = $enablePay;
     }
 
     /**
-    * @return bool
-    */
+     * @return bool
+     */
     public function getEnablePay(): ?bool
     {
         return $this->enablePay;
     }
 
     /**
-    * @param array $disableMessages
-    */
-    public function setDisableMessages(?array $disableMessages)
+     * @param array $disableMessages
+     */
+    public function setDisableMessages(?array $disableMessages): void
     {
         $this->disableMessages = $disableMessages;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getDisableMessages(): ?array
     {
         return $this->disableMessages;
@@ -1653,66 +1653,66 @@ class WeimobShopPayPassPaycheckDataCheckPayOrders implements \JsonSerializable
 class WeimobShopPayPassPaycheckDataCheckPayItems implements \JsonSerializable
 {
     /**
-    * 订单项id
-    * @var int
-    */
+     * 订单项id
+     * @var int
+     */
     private $itemId;
 
     /**
-    * 是否可支付
-    * @var bool
-    */
+     * 是否可支付
+     * @var bool
+     */
     private $enablePay;
 
     /**
-    * 不可支付信息String
-    * @var array
-    */
+     * 不可支付信息String
+     * @var array
+     */
     private $disableMessages;
 
     /**
-    * @param int $itemId
-    */
-    public function setItemId(?int $itemId)
+     * @param int $itemId
+     */
+    public function setItemId(?int $itemId): void
     {
         $this->itemId = $itemId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getItemId(): ?int
     {
         return $this->itemId;
     }
 
     /**
-    * @param bool $enablePay
-    */
-    public function setEnablePay(?bool $enablePay)
+     * @param bool $enablePay
+     */
+    public function setEnablePay(?bool $enablePay): void
     {
         $this->enablePay = $enablePay;
     }
 
     /**
-    * @return bool
-    */
+     * @return bool
+     */
     public function getEnablePay(): ?bool
     {
         return $this->enablePay;
     }
 
     /**
-    * @param array $disableMessages
-    */
-    public function setDisableMessages(?array $disableMessages)
+     * @param array $disableMessages
+     */
+    public function setDisableMessages(?array $disableMessages): void
     {
         $this->disableMessages = $disableMessages;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getDisableMessages(): ?array
     {
         return $this->disableMessages;

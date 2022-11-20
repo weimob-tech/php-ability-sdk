@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,399
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobShopGoodsClassifyBindListener
 {
@@ -23,44 +23,44 @@ interface WeimobShopGoodsClassifyBindListener
 class BindMessage implements \JsonSerializable
 {
     /**
-    * 商品ID
-    * @var int
-    */
+     * 商品ID
+     * @var int
+     */
     private $goodsId;
 
     /**
-    * 组织架构节点ID
-    * @var int
-    */
+     * 组织架构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * @param int $goodsId
-    */
-    public function setGoodsId(?int $goodsId)
+     * @param int $goodsId
+     */
+    public function setGoodsId(?int $goodsId): void
     {
         $this->goodsId = $goodsId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGoodsId(): ?int
     {
         return $this->goodsId;
     }
 
     /**
-    * @param int $vid
-    */
-    public function setVid(?int $vid)
+     * @param int $vid
+     */
+    public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;

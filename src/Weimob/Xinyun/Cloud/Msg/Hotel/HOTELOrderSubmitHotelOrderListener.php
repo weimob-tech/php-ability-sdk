@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 482
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface HOTELOrderSubmitHotelOrderListener
 {
@@ -23,110 +23,110 @@ interface HOTELOrderSubmitHotelOrderListener
 class SubmitHotelOrderMessage implements \JsonSerializable
 {
     /**
-    * 房型名称
-    * @var string
-    */
+     * 房型名称
+     * @var string
+     */
     private $roomTypeName;
 
     /**
-    * 入住时间
-    * @var string
-    */
+     * 入住时间
+     * @var string
+     */
     private $checkInTime;
 
     /**
-    * 离店时间
-    * @var string
-    */
+     * 离店时间
+     * @var string
+     */
     private $checkOutTime;
 
     /**
-    * 实付金额
-    * @var string
-    */
+     * 实付金额
+     * @var string
+     */
     private $roomCharge;
 
     /**
-    * 订单号
-    * @var string
-    */
+     * 订单号
+     * @var string
+     */
     private $orderNo;
 
     /**
-    * @param string $roomTypeName
-    */
-    public function setRoomTypeName(?string $roomTypeName)
+     * @param string $roomTypeName
+     */
+    public function setRoomTypeName(?string $roomTypeName): void
     {
         $this->roomTypeName = $roomTypeName;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getRoomTypeName(): ?string
     {
         return $this->roomTypeName;
     }
 
     /**
-    * @param string $checkInTime
-    */
-    public function setCheckInTime(?string $checkInTime)
+     * @param string $checkInTime
+     */
+    public function setCheckInTime(?string $checkInTime): void
     {
         $this->checkInTime = $checkInTime;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCheckInTime(): ?string
     {
         return $this->checkInTime;
     }
 
     /**
-    * @param string $checkOutTime
-    */
-    public function setCheckOutTime(?string $checkOutTime)
+     * @param string $checkOutTime
+     */
+    public function setCheckOutTime(?string $checkOutTime): void
     {
         $this->checkOutTime = $checkOutTime;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCheckOutTime(): ?string
     {
         return $this->checkOutTime;
     }
 
     /**
-    * @param string $roomCharge
-    */
-    public function setRoomCharge(?string $roomCharge)
+     * @param string $roomCharge
+     */
+    public function setRoomCharge(?string $roomCharge): void
     {
         $this->roomCharge = $roomCharge;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getRoomCharge(): ?string
     {
         return $this->roomCharge;
     }
 
     /**
-    * @param string $orderNo
-    */
-    public function setOrderNo(?string $orderNo)
+     * @param string $orderNo
+     */
+    public function setOrderNo(?string $orderNo): void
     {
         $this->orderNo = $orderNo;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOrderNo(): ?string
     {
         return $this->orderNo;

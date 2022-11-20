@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 885
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface PaasWeimobCdpBalancesAdjustService
 {
@@ -19,131 +19,131 @@ interface PaasWeimobCdpBalancesAdjustService
 class WeimobCdpBalancesAdjustRequest implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 全局唯一的扩展点
-    * @var string
-    */
+     * 全局唯一的扩展点
+     * @var string
+     */
     private $actionKey;
 
     /**
-    * 功能集ID
-    * @var int
-    */
+     * 功能集ID
+     * @var int
+     */
     private $functionId;
 
     /**
-    * 组织结构节点ID
-    * @var int
-    */
+     * 组织结构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 	组织结构节点类型
-    * @var int
-    */
+     * 	组织结构节点类型
+     * @var int
+     */
     private $vType;
 
     /**
-    * @var WeimobCdpBalancesAdjustParam
-    */
+     * @var WeimobCdpBalancesAdjustParam
+     */
     private $params;
 
     /**
-    * @param int $bosId
-    */
+     * @param int $bosId
+     */
     public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $actionKey
-    */
+     * @param string $actionKey
+     */
     public function setActionKey(?string $actionKey): void
     {
         $this->actionKey = $actionKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActionKey(): ?string
     {
         return $this->actionKey;
     }
 
     /**
-    * @param int $functionId
-    */
+     * @param int $functionId
+     */
     public function setFunctionId(?int $functionId): void
     {
         $this->functionId = $functionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFunctionId(): ?int
     {
         return $this->functionId;
     }
 
     /**
-    * @param int $vid
-    */
+     * @param int $vid
+     */
     public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vType
-    */
+     * @param int $vType
+     */
     public function setVType(?int $vType): void
     {
         $this->vType = $vType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVType(): ?int
     {
         return $this->vType;
     }
 
     /**
-    * @param WeimobCdpBalancesAdjustParam $param
-    */
+     * @param WeimobCdpBalancesAdjustParam $param
+     */
     public function setParam(?WeimobCdpBalancesAdjustParam $param): void
     {
         $this->param = $param;
     }
 
     /**
-    * @return WeimobCdpBalancesAdjustParam
-    */
+     * @return WeimobCdpBalancesAdjustParam
+     */
     public function getParam(): ?WeimobCdpBalancesAdjustParam
     {
         return $this->param;
@@ -158,286 +158,286 @@ class WeimobCdpBalancesAdjustRequest implements \JsonSerializable
 class WeimobCdpBalancesAdjustParam implements \JsonSerializable
 {
     /**
-    * 用户信息
-    * @var array
-    */
+     * 用户信息
+     * @var array
+     */
     private $oneCrmAdjustInfoList;
 
     /**
-    * 分摊信息
-    * @var WeimobCdpBalancesAdjustParamSettleRule
-    */
+     * 分摊信息
+     * @var WeimobCdpBalancesAdjustParamSettleRule
+     */
     private $settleRule;
 
     /**
-    * 请求流水号,幂等作用
-    * @var string
-    */
+     * 请求流水号,幂等作用
+     * @var string
+     */
     private $requestId;
 
     /**
-    * 幂等对象类型
-    * @var string
-    */
+     * 幂等对象类型
+     * @var string
+     */
     private $requestType;
 
     /**
-    * 本金（单位：元）
-    * @var int
-    */
+     * 本金（单位：元）
+     * @var int
+     */
     private $changCapitalAmount;
 
     /**
-    * 赠金（单位：元）
-    * @var int
-    */
+     * 赠金（单位：元）
+     * @var int
+     */
     private $changeGrantsAmount;
 
     /**
-    * 调账类型（1：正；2负）
-    * @var string
-    */
+     * 调账类型（1：正；2负）
+     * @var string
+     */
     private $adjustType;
 
     /**
-    * 备注
-    * @var string
-    */
+     * 备注
+     * @var string
+     */
     private $changeReason;
 
     /**
-    * 来源
-    * @var int
-    */
+     * 来源
+     * @var int
+     */
     private $sourceVid;
 
     /**
-    * bosId
-    * @var int
-    */
+     * bosId
+     * @var int
+     */
     private $bosId;
 
     /**
-    * piid
-    * @var int
-    */
+     * piid
+     * @var int
+     */
     private $productInstanceId;
 
     /**
-    * 操作人wid
-    * @var int
-    */
+     * 操作人wid
+     * @var int
+     */
     private $operatorWid;
 
     /**
-    * 操作operateStoreVid
-    * @var int
-    */
+     * 操作operateStoreVid
+     * @var int
+     */
     private $operateStoreVid;
 
     /**
-    * @param array $oneCrmAdjustInfoList
-    */
-    public function setOneCrmAdjustInfoList(?array $oneCrmAdjustInfoList)
+     * @param array $oneCrmAdjustInfoList
+     */
+    public function setOneCrmAdjustInfoList(?array $oneCrmAdjustInfoList): void
     {
         $this->oneCrmAdjustInfoList = $oneCrmAdjustInfoList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getOneCrmAdjustInfoList(): ?array
     {
         return $this->oneCrmAdjustInfoList;
     }
 
     /**
-    * @param WeimobCdpBalancesAdjustParamSettleRule $settleRule
-    */
-    public function setSettleRule(?WeimobCdpBalancesAdjustParamSettleRule $settleRule)
+     * @param WeimobCdpBalancesAdjustParamSettleRule $settleRule
+     */
+    public function setSettleRule(?WeimobCdpBalancesAdjustParamSettleRule $settleRule): void
     {
         $this->settleRule = $settleRule;
     }
 
     /**
-    * @return WeimobCdpBalancesAdjustParamSettleRule
-    */
+     * @return WeimobCdpBalancesAdjustParamSettleRule
+     */
     public function getSettleRule(): ?WeimobCdpBalancesAdjustParamSettleRule
     {
         return $this->settleRule;
     }
 
     /**
-    * @param string $requestId
-    */
-    public function setRequestId(?string $requestId)
+     * @param string $requestId
+     */
+    public function setRequestId(?string $requestId): void
     {
         $this->requestId = $requestId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getRequestId(): ?string
     {
         return $this->requestId;
     }
 
     /**
-    * @param string $requestType
-    */
-    public function setRequestType(?string $requestType)
+     * @param string $requestType
+     */
+    public function setRequestType(?string $requestType): void
     {
         $this->requestType = $requestType;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getRequestType(): ?string
     {
         return $this->requestType;
     }
 
     /**
-    * @param int $changCapitalAmount
-    */
-    public function setChangCapitalAmount(?int $changCapitalAmount)
+     * @param int $changCapitalAmount
+     */
+    public function setChangCapitalAmount(?int $changCapitalAmount): void
     {
         $this->changCapitalAmount = $changCapitalAmount;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getChangCapitalAmount(): ?int
     {
         return $this->changCapitalAmount;
     }
 
     /**
-    * @param int $changeGrantsAmount
-    */
-    public function setChangeGrantsAmount(?int $changeGrantsAmount)
+     * @param int $changeGrantsAmount
+     */
+    public function setChangeGrantsAmount(?int $changeGrantsAmount): void
     {
         $this->changeGrantsAmount = $changeGrantsAmount;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getChangeGrantsAmount(): ?int
     {
         return $this->changeGrantsAmount;
     }
 
     /**
-    * @param string $adjustType
-    */
-    public function setAdjustType(?string $adjustType)
+     * @param string $adjustType
+     */
+    public function setAdjustType(?string $adjustType): void
     {
         $this->adjustType = $adjustType;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getAdjustType(): ?string
     {
         return $this->adjustType;
     }
 
     /**
-    * @param string $changeReason
-    */
-    public function setChangeReason(?string $changeReason)
+     * @param string $changeReason
+     */
+    public function setChangeReason(?string $changeReason): void
     {
         $this->changeReason = $changeReason;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getChangeReason(): ?string
     {
         return $this->changeReason;
     }
 
     /**
-    * @param int $sourceVid
-    */
-    public function setSourceVid(?int $sourceVid)
+     * @param int $sourceVid
+     */
+    public function setSourceVid(?int $sourceVid): void
     {
         $this->sourceVid = $sourceVid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSourceVid(): ?int
     {
         return $this->sourceVid;
     }
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param int $productInstanceId
-    */
-    public function setProductInstanceId(?int $productInstanceId)
+     * @param int $productInstanceId
+     */
+    public function setProductInstanceId(?int $productInstanceId): void
     {
         $this->productInstanceId = $productInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProductInstanceId(): ?int
     {
         return $this->productInstanceId;
     }
 
     /**
-    * @param int $operatorWid
-    */
-    public function setOperatorWid(?int $operatorWid)
+     * @param int $operatorWid
+     */
+    public function setOperatorWid(?int $operatorWid): void
     {
         $this->operatorWid = $operatorWid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOperatorWid(): ?int
     {
         return $this->operatorWid;
     }
 
     /**
-    * @param int $operateStoreVid
-    */
-    public function setOperateStoreVid(?int $operateStoreVid)
+     * @param int $operateStoreVid
+     */
+    public function setOperateStoreVid(?int $operateStoreVid): void
     {
         $this->operateStoreVid = $operateStoreVid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOperateStoreVid(): ?int
     {
         return $this->operateStoreVid;
@@ -453,110 +453,110 @@ class WeimobCdpBalancesAdjustParam implements \JsonSerializable
 class WeimobCdpBalancesAdjustParamOneCrmAdjustInfoList implements \JsonSerializable
 {
     /**
-    * vid
-    * @var int
-    */
+     * vid
+     * @var int
+     */
     private $vid;
 
     /**
-    * wid
-    * @var int
-    */
+     * wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * bosId
-    * @var int
-    */
+     * bosId
+     * @var int
+     */
     private $bosId;
 
     /**
-    * piid
-    * @var int
-    */
+     * piid
+     * @var int
+     */
     private $productInstanceId;
 
     /**
-    * 储值方案id
-    * @var int
-    */
+     * 储值方案id
+     * @var int
+     */
     private $balancePlanId;
 
     /**
-    * @param int $vid
-    */
-    public function setVid(?int $vid)
+     * @param int $vid
+     */
+    public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param int $productInstanceId
-    */
-    public function setProductInstanceId(?int $productInstanceId)
+     * @param int $productInstanceId
+     */
+    public function setProductInstanceId(?int $productInstanceId): void
     {
         $this->productInstanceId = $productInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProductInstanceId(): ?int
     {
         return $this->productInstanceId;
     }
 
     /**
-    * @param int $balancePlanId
-    */
-    public function setBalancePlanId(?int $balancePlanId)
+     * @param int $balancePlanId
+     */
+    public function setBalancePlanId(?int $balancePlanId): void
     {
         $this->balancePlanId = $balancePlanId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBalancePlanId(): ?int
     {
         return $this->balancePlanId;
@@ -572,44 +572,44 @@ class WeimobCdpBalancesAdjustParamOneCrmAdjustInfoList implements \JsonSerializa
 class WeimobCdpBalancesAdjustParamSettleRule implements \JsonSerializable
 {
     /**
-    * 分摊商户
-    * @var int
-    */
+     * 分摊商户
+     * @var int
+     */
     private $vid;
 
     /**
-    * 分摊比例
-    * @var int
-    */
+     * 分摊比例
+     * @var int
+     */
     private $rate;
 
     /**
-    * @param int $vid
-    */
-    public function setVid(?int $vid)
+     * @param int $vid
+     */
+    public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $rate
-    */
-    public function setRate(?int $rate)
+     * @param int $rate
+     */
+    public function setRate(?int $rate): void
     {
         $this->rate = $rate;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getRate(): ?int
     {
         return $this->rate;
@@ -626,44 +626,44 @@ class WeimobCdpBalancesAdjustParamSettleRule implements \JsonSerializable
 class WeimobCdpBalancesAdjustResponse implements \JsonSerializable
 {
     /**
-    * 请求返回的对象
-    * @var PaasResponseCode
-    */
+     * 请求返回的对象
+     * @var PaasResponseCode
+     */
     private $code;
 
     /**
-    * 请求返回的数据
-    * @var WeimobCdpBalancesAdjustData
-    */
+     * 请求返回的数据
+     * @var WeimobCdpBalancesAdjustData
+     */
     private $data;
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?PaasResponseCode
     {
         return $this->code;
     }
 
     /**
-    * @param PaasResponseCode $code
-    */
+     * @param PaasResponseCode $code
+     */
     public function setCode(?PaasResponseCode $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return WeimobCdpBalancesAdjustData
-    */
+     * @return WeimobCdpBalancesAdjustData
+     */
     public function getData(): ?WeimobCdpBalancesAdjustData
     {
         return $this->data;
     }
 
     /**
-    * @param WeimobCdpBalancesAdjustData $data
-    */
+     * @param WeimobCdpBalancesAdjustData $data
+     */
     public function setData(?WeimobCdpBalancesAdjustData $data): void
     {
         $this->data = $data;
@@ -678,44 +678,44 @@ class WeimobCdpBalancesAdjustResponse implements \JsonSerializable
 class WeimobCdpBalancesAdjustData implements \JsonSerializable
 {
     /**
-    * 结果
-    * @var array
-    */
+     * 结果
+     * @var array
+     */
     private $list;
 
     /**
-    * 结果
-    * @var bool
-    */
+     * 结果
+     * @var bool
+     */
     private $result;
 
     /**
-    * @param array $list
-    */
-    public function setList(?array $list)
+     * @param array $list
+     */
+    public function setList(?array $list): void
     {
         $this->list = $list;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getList(): ?array
     {
         return $this->list;
     }
 
     /**
-    * @param bool $result
-    */
-    public function setResult(?bool $result)
+     * @param bool $result
+     */
+    public function setResult(?bool $result): void
     {
         $this->result = $result;
     }
 
     /**
-    * @return bool
-    */
+     * @return bool
+     */
     public function getResult(): ?bool
     {
         return $this->result;
@@ -731,88 +731,88 @@ class WeimobCdpBalancesAdjustData implements \JsonSerializable
 class WeimobCdpBalancesAdjustDatalist implements \JsonSerializable
 {
     /**
-    * 成功
-    * @var int
-    */
+     * 成功
+     * @var int
+     */
     private $status;
 
     /**
-    * wid
-    * @var int
-    */
+     * wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * 原因
-    * @var string
-    */
+     * 原因
+     * @var string
+     */
     private $message;
 
     /**
-    * 人
-    * @var string
-    */
+     * 人
+     * @var string
+     */
     private $widName;
 
     /**
-    * @param int $status
-    */
-    public function setStatus(?int $status)
+     * @param int $status
+     */
+    public function setStatus(?int $status): void
     {
         $this->status = $status;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getStatus(): ?int
     {
         return $this->status;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param string $message
-    */
-    public function setMessage(?string $message)
+     * @param string $message
+     */
+    public function setMessage(?string $message): void
     {
         $this->message = $message;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getMessage(): ?string
     {
         return $this->message;
     }
 
     /**
-    * @param string $widName
-    */
-    public function setWidName(?string $widName)
+     * @param string $widName
+     */
+    public function setWidName(?string $widName): void
     {
         $this->widName = $widName;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getWidName(): ?string
     {
         return $this->widName;

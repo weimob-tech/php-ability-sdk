@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,395
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface PaasGetCardRanksService
 {
@@ -19,131 +19,131 @@ interface PaasGetCardRanksService
 class SGetCardRanksRequest implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 全局唯一的扩展点
-    * @var string
-    */
+     * 全局唯一的扩展点
+     * @var string
+     */
     private $actionKey;
 
     /**
-    * 功能集ID
-    * @var int
-    */
+     * 功能集ID
+     * @var int
+     */
     private $functionId;
 
     /**
-    * 组织结构节点ID
-    * @var int
-    */
+     * 组织结构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 	组织结构节点类型
-    * @var int
-    */
+     * 	组织结构节点类型
+     * @var int
+     */
     private $vType;
 
     /**
-    * @var SGetCardRanksParam
-    */
+     * @var SGetCardRanksParam
+     */
     private $params;
 
     /**
-    * @param int $bosId
-    */
+     * @param int $bosId
+     */
     public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $actionKey
-    */
+     * @param string $actionKey
+     */
     public function setActionKey(?string $actionKey): void
     {
         $this->actionKey = $actionKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActionKey(): ?string
     {
         return $this->actionKey;
     }
 
     /**
-    * @param int $functionId
-    */
+     * @param int $functionId
+     */
     public function setFunctionId(?int $functionId): void
     {
         $this->functionId = $functionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFunctionId(): ?int
     {
         return $this->functionId;
     }
 
     /**
-    * @param int $vid
-    */
+     * @param int $vid
+     */
     public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vType
-    */
+     * @param int $vType
+     */
     public function setVType(?int $vType): void
     {
         $this->vType = $vType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVType(): ?int
     {
         return $this->vType;
     }
 
     /**
-    * @param SGetCardRanksParam $param
-    */
+     * @param SGetCardRanksParam $param
+     */
     public function setParam(?SGetCardRanksParam $param): void
     {
         $this->param = $param;
     }
 
     /**
-    * @return SGetCardRanksParam
-    */
+     * @return SGetCardRanksParam
+     */
     public function getParam(): ?SGetCardRanksParam
     {
         return $this->param;
@@ -159,44 +159,44 @@ class SGetCardRanksRequest implements \JsonSerializable
 class SGetCardRanksResponse implements \JsonSerializable
 {
     /**
-    * 请求返回的对象
-    * @var PaasResponseCode
-    */
+     * 请求返回的对象
+     * @var PaasResponseCode
+     */
     private $code;
 
     /**
-    * 请求返回的数据
-    * @var SGetCardRanksData
-    */
+     * 请求返回的数据
+     * @var SGetCardRanksData
+     */
     private $data;
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?PaasResponseCode
     {
         return $this->code;
     }
 
     /**
-    * @param PaasResponseCode $code
-    */
+     * @param PaasResponseCode $code
+     */
     public function setCode(?PaasResponseCode $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return SGetCardRanksData
-    */
+     * @return SGetCardRanksData
+     */
     public function getData(): ?SGetCardRanksData
     {
         return $this->data;
     }
 
     /**
-    * @param SGetCardRanksData $data
-    */
+     * @param SGetCardRanksData $data
+     */
     public function setData(?SGetCardRanksData $data): void
     {
         $this->data = $data;
@@ -211,22 +211,22 @@ class SGetCardRanksResponse implements \JsonSerializable
 class SGetCardRanksData implements \JsonSerializable
 {
     /**
-    * 多卡等级列表
-    * @var array
-    */
+     * 多卡等级列表
+     * @var array
+     */
     private $itemList;
 
     /**
-    * @param array $itemList
-    */
-    public function setItemList(?array $itemList)
+     * @param array $itemList
+     */
+    public function setItemList(?array $itemList): void
     {
         $this->itemList = $itemList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getItemList(): ?array
     {
         return $this->itemList;
@@ -242,44 +242,44 @@ class SGetCardRanksData implements \JsonSerializable
 class SGetCardRanksDataItemList implements \JsonSerializable
 {
     /**
-    * 等级列表
-    * @var array
-    */
+     * 等级列表
+     * @var array
+     */
     private $ruleList;
 
     /**
-    * 会员卡模板id
-    * @var int
-    */
+     * 会员卡模板id
+     * @var int
+     */
     private $memberCardTemplateId;
 
     /**
-    * @param array $ruleList
-    */
-    public function setRuleList(?array $ruleList)
+     * @param array $ruleList
+     */
+    public function setRuleList(?array $ruleList): void
     {
         $this->ruleList = $ruleList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getRuleList(): ?array
     {
         return $this->ruleList;
     }
 
     /**
-    * @param int $memberCardTemplateId
-    */
-    public function setMemberCardTemplateId(?int $memberCardTemplateId)
+     * @param int $memberCardTemplateId
+     */
+    public function setMemberCardTemplateId(?int $memberCardTemplateId): void
     {
         $this->memberCardTemplateId = $memberCardTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMemberCardTemplateId(): ?int
     {
         return $this->memberCardTemplateId;
@@ -295,110 +295,110 @@ class SGetCardRanksDataItemList implements \JsonSerializable
 class SGetCardRanksDataRuleList implements \JsonSerializable
 {
     /**
-    * 等级id
-    * @var int
-    */
+     * 等级id
+     * @var int
+     */
     private $rankId;
 
     /**
-    * 等级名称
-    * @var string
-    */
+     * 等级名称
+     * @var string
+     */
     private $rankName;
 
     /**
-    * 成长值上限
-    * @var int
-    */
+     * 成长值上限
+     * @var int
+     */
     private $rankUpLimit;
 
     /**
-    * 成长值的下限
-    * @var int
-    */
+     * 成长值的下限
+     * @var int
+     */
     private $rankDownLimit;
 
     /**
-    * 等级折扣
-    * @var int
-    */
+     * 等级折扣
+     * @var int
+     */
     private $rankDiscount;
 
     /**
-    * @param int $rankId
-    */
-    public function setRankId(?int $rankId)
+     * @param int $rankId
+     */
+    public function setRankId(?int $rankId): void
     {
         $this->rankId = $rankId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getRankId(): ?int
     {
         return $this->rankId;
     }
 
     /**
-    * @param string $rankName
-    */
-    public function setRankName(?string $rankName)
+     * @param string $rankName
+     */
+    public function setRankName(?string $rankName): void
     {
         $this->rankName = $rankName;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getRankName(): ?string
     {
         return $this->rankName;
     }
 
     /**
-    * @param int $rankUpLimit
-    */
-    public function setRankUpLimit(?int $rankUpLimit)
+     * @param int $rankUpLimit
+     */
+    public function setRankUpLimit(?int $rankUpLimit): void
     {
         $this->rankUpLimit = $rankUpLimit;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getRankUpLimit(): ?int
     {
         return $this->rankUpLimit;
     }
 
     /**
-    * @param int $rankDownLimit
-    */
-    public function setRankDownLimit(?int $rankDownLimit)
+     * @param int $rankDownLimit
+     */
+    public function setRankDownLimit(?int $rankDownLimit): void
     {
         $this->rankDownLimit = $rankDownLimit;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getRankDownLimit(): ?int
     {
         return $this->rankDownLimit;
     }
 
     /**
-    * @param int $rankDiscount
-    */
-    public function setRankDiscount(?int $rankDiscount)
+     * @param int $rankDiscount
+     */
+    public function setRankDiscount(?int $rankDiscount): void
     {
         $this->rankDiscount = $rankDiscount;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getRankDiscount(): ?int
     {
         return $this->rankDiscount;

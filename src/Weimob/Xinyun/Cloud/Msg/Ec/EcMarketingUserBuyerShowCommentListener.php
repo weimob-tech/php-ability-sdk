@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,902
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface EcMarketingUserBuyerShowCommentListener
 {
@@ -23,44 +23,44 @@ interface EcMarketingUserBuyerShowCommentListener
 class UserBuyerShowCommentMessage implements \JsonSerializable
 {
     /**
-    * 微盟用户wid，客户唯一标识
-    * @var int
-    */
+     * 微盟用户wid，客户唯一标识
+     * @var int
+     */
     private $wid;
 
     /**
-    * 买家秀ID或专题文章ID
-    * @var int
-    */
+     * 买家秀ID或专题文章ID
+     * @var int
+     */
     private $bizId;
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $bizId
-    */
-    public function setBizId(?int $bizId)
+     * @param int $bizId
+     */
+    public function setBizId(?int $bizId): void
     {
         $this->bizId = $bizId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBizId(): ?int
     {
         return $this->bizId;

@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,195
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface MallRightsMallRightsMessageListener
 {
@@ -25,16 +25,16 @@ class MallRightsMessageMessage implements \JsonSerializable
     private $obj;
 
     /**
-    * @param MallRightsMallRightsMessageObj $obj
-    */
-    public function setObj(?MallRightsMallRightsMessageObj $obj)
+     * @param MallRightsMallRightsMessageObj $obj
+     */
+    public function setObj(?MallRightsMallRightsMessageObj $obj): void
     {
         $this->obj = $obj;
     }
 
     /**
-    * @return MallRightsMallRightsMessageObj
-    */
+     * @return MallRightsMallRightsMessageObj
+     */
     public function getObj(): ?MallRightsMallRightsMessageObj
     {
         return $this->obj;

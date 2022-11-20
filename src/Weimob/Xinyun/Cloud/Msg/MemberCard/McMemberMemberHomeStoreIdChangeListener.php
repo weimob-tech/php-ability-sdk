@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,418
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface McMemberMemberHomeStoreIdChangeListener
 {
@@ -23,66 +23,66 @@ interface McMemberMemberHomeStoreIdChangeListener
 class MemberHomeStoreIdChangeMessage implements \JsonSerializable
 {
     /**
-    * 用户wid
-    * @var int
-    */
+     * 用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * 变更前归属门店，首次绑定为null
-    * @var int
-    */
+     * 变更前归属门店，首次绑定为null
+     * @var int
+     */
     private $oldHomeStoreId;
 
     /**
-    * 变更后的归属门店
-    * @var int
-    */
+     * 变更后的归属门店
+     * @var int
+     */
     private $newHomeStoreId;
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $oldHomeStoreId
-    */
-    public function setOldHomeStoreId(?int $oldHomeStoreId)
+     * @param int $oldHomeStoreId
+     */
+    public function setOldHomeStoreId(?int $oldHomeStoreId): void
     {
         $this->oldHomeStoreId = $oldHomeStoreId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOldHomeStoreId(): ?int
     {
         return $this->oldHomeStoreId;
     }
 
     /**
-    * @param int $newHomeStoreId
-    */
-    public function setNewHomeStoreId(?int $newHomeStoreId)
+     * @param int $newHomeStoreId
+     */
+    public function setNewHomeStoreId(?int $newHomeStoreId): void
     {
         $this->newHomeStoreId = $newHomeStoreId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getNewHomeStoreId(): ?int
     {
         return $this->newHomeStoreId;

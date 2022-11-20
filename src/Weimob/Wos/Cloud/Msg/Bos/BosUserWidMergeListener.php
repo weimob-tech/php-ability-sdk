@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,352
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface BosUserWidMergeListener
 {
@@ -23,44 +23,44 @@ interface BosUserWidMergeListener
 class WidMergeMessage implements \JsonSerializable
 {
     /**
-    * 用户wid
-    * @var int
-    */
+     * 用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * 商户ID
-    * @var int
-    */
+     * 商户ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;

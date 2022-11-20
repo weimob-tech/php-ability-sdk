@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,281
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobCrmMembercardPlanChangeListener
 {
@@ -23,22 +23,22 @@ interface WeimobCrmMembercardPlanChangeListener
 class ChangeMessage implements \JsonSerializable
 {
     /**
-    * 会员方案ID
-    * @var int
-    */
+     * 会员方案ID
+     * @var int
+     */
     private $membershipPlanId;
 
     /**
-    * @param int $membershipPlanId
-    */
-    public function setMembershipPlanId(?int $membershipPlanId)
+     * @param int $membershipPlanId
+     */
+    public function setMembershipPlanId(?int $membershipPlanId): void
     {
         $this->membershipPlanId = $membershipPlanId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMembershipPlanId(): ?int
     {
         return $this->membershipPlanId;

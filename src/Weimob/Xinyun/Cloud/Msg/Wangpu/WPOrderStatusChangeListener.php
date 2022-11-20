@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,294
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WPOrderStatusChangeListener
 {
@@ -23,22 +23,22 @@ interface WPOrderStatusChangeListener
 class StatusChangeMessage implements \JsonSerializable
 {
     /**
-    * 订单编号
-    * @var string
-    */
+     * 订单编号
+     * @var string
+     */
     private $order_no;
 
     /**
-    * @param string $order_no
-    */
-    public function setOrderNo(?string $order_no)
+     * @param string $order_no
+     */
+    public function setOrderNo(?string $order_no): void
     {
         $this->order_no = $order_no;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOrderNo(): ?string
     {
         return $this->order_no;

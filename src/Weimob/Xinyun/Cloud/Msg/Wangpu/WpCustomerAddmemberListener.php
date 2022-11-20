@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 174
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WpCustomerAddmemberListener
 {
@@ -23,22 +23,22 @@ interface WpCustomerAddmemberListener
 class AddmemberMessage implements \JsonSerializable
 {
     /**
-    * 变更时间
-    * @var int
-    */
+     * 变更时间
+     * @var int
+     */
     private $change_time;
 
     /**
-    * @param int $change_time
-    */
-    public function setChangeTime(?int $change_time)
+     * @param int $change_time
+     */
+    public function setChangeTime(?int $change_time): void
     {
         $this->change_time = $change_time;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getChangeTime(): ?int
     {
         return $this->change_time;

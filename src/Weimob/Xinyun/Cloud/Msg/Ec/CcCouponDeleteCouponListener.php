@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,692
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface CcCouponDeleteCouponListener
 {
@@ -23,110 +23,110 @@ interface CcCouponDeleteCouponListener
 class DeleteCouponMessage implements \JsonSerializable
 {
     /**
-    * 商户id
-    * @var int
-    */
+     * 商户id
+     * @var int
+     */
     private $pid;
 
     /**
-    * 券模板id
-    * @var int
-    */
+     * 券模板id
+     * @var int
+     */
     private $cardTemplateId;
 
     /**
-    * 用户唯一标识
-    * @var int
-    */
+     * 用户唯一标识
+     * @var int
+     */
     private $wid;
 
     /**
-    * 券code
-    * @var string
-    */
+     * 券code
+     * @var string
+     */
     private $code;
 
     /**
-    * 渠道
-    * @var int
-    */
+     * 渠道
+     * @var int
+     */
     private $channel;
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;
     }
 
     /**
-    * @param int $cardTemplateId
-    */
-    public function setCardTemplateId(?int $cardTemplateId)
+     * @param int $cardTemplateId
+     */
+    public function setCardTemplateId(?int $cardTemplateId): void
     {
         $this->cardTemplateId = $cardTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCardTemplateId(): ?int
     {
         return $this->cardTemplateId;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param string $code
-    */
-    public function setCode(?string $code)
+     * @param string $code
+     */
+    public function setCode(?string $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCode(): ?string
     {
         return $this->code;
     }
 
     /**
-    * @param int $channel
-    */
-    public function setChannel(?int $channel)
+     * @param int $channel
+     */
+    public function setChannel(?int $channel): void
     {
         $this->channel = $channel;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getChannel(): ?int
     {
         return $this->channel;

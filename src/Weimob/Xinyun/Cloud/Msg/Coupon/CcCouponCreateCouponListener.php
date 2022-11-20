@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,165
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface CcCouponCreateCouponListener
 {
@@ -23,88 +23,88 @@ interface CcCouponCreateCouponListener
 class CreateCouponMessage implements \JsonSerializable
 {
     /**
-    * 商户pid
-    * @var int
-    */
+     * 商户pid
+     * @var int
+     */
     private $pid;
 
     /**
-    * 优惠券唯一标识
-    * @var int
-    */
+     * 优惠券唯一标识
+     * @var int
+     */
     private $cardTemplateId;
 
     /**
-    * 优惠券名称
-    * @var string
-    */
+     * 优惠券名称
+     * @var string
+     */
     private $cardTemplateName;
 
     /**
-    * 优惠券类型（0:代金券;1:折扣券;2:兑换券）
-    * @var string
-    */
+     * 优惠券类型（0:代金券;1:折扣券;2:兑换券）
+     * @var string
+     */
     private $type;
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;
     }
 
     /**
-    * @param int $cardTemplateId
-    */
-    public function setCardTemplateId(?int $cardTemplateId)
+     * @param int $cardTemplateId
+     */
+    public function setCardTemplateId(?int $cardTemplateId): void
     {
         $this->cardTemplateId = $cardTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCardTemplateId(): ?int
     {
         return $this->cardTemplateId;
     }
 
     /**
-    * @param string $cardTemplateName
-    */
-    public function setCardTemplateName(?string $cardTemplateName)
+     * @param string $cardTemplateName
+     */
+    public function setCardTemplateName(?string $cardTemplateName): void
     {
         $this->cardTemplateName = $cardTemplateName;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCardTemplateName(): ?string
     {
         return $this->cardTemplateName;
     }
 
     /**
-    * @param string $type
-    */
-    public function setType(?string $type)
+     * @param string $type
+     */
+    public function setType(?string $type): void
     {
         $this->type = $type;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getType(): ?string
     {
         return $this->type;

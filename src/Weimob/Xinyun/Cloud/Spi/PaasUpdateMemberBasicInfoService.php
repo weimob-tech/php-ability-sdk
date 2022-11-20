@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,564
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface PaasUpdateMemberBasicInfoService
 {
@@ -19,131 +19,131 @@ interface PaasUpdateMemberBasicInfoService
 class SUpdateMemberBasicInfoRequest implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 全局唯一的扩展点
-    * @var string
-    */
+     * 全局唯一的扩展点
+     * @var string
+     */
     private $actionKey;
 
     /**
-    * 功能集ID
-    * @var int
-    */
+     * 功能集ID
+     * @var int
+     */
     private $functionId;
 
     /**
-    * 组织结构节点ID
-    * @var int
-    */
+     * 组织结构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 	组织结构节点类型
-    * @var int
-    */
+     * 	组织结构节点类型
+     * @var int
+     */
     private $vType;
 
     /**
-    * @var SUpdateMemberBasicInfoParam
-    */
+     * @var SUpdateMemberBasicInfoParam
+     */
     private $params;
 
     /**
-    * @param int $bosId
-    */
+     * @param int $bosId
+     */
     public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $actionKey
-    */
+     * @param string $actionKey
+     */
     public function setActionKey(?string $actionKey): void
     {
         $this->actionKey = $actionKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActionKey(): ?string
     {
         return $this->actionKey;
     }
 
     /**
-    * @param int $functionId
-    */
+     * @param int $functionId
+     */
     public function setFunctionId(?int $functionId): void
     {
         $this->functionId = $functionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFunctionId(): ?int
     {
         return $this->functionId;
     }
 
     /**
-    * @param int $vid
-    */
+     * @param int $vid
+     */
     public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vType
-    */
+     * @param int $vType
+     */
     public function setVType(?int $vType): void
     {
         $this->vType = $vType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVType(): ?int
     {
         return $this->vType;
     }
 
     /**
-    * @param SUpdateMemberBasicInfoParam $param
-    */
+     * @param SUpdateMemberBasicInfoParam $param
+     */
     public function setParam(?SUpdateMemberBasicInfoParam $param): void
     {
         $this->param = $param;
     }
 
     /**
-    * @return SUpdateMemberBasicInfoParam
-    */
+     * @return SUpdateMemberBasicInfoParam
+     */
     public function getParam(): ?SUpdateMemberBasicInfoParam
     {
         return $this->param;
@@ -158,484 +158,484 @@ class SUpdateMemberBasicInfoRequest implements \JsonSerializable
 class SUpdateMemberBasicInfoParam implements \JsonSerializable
 {
     /**
-    * 自定义字段的扩展字段，支持超过8个扩展字段的，请使用此map写入所有扩展字段
-    * @var SUpdateMemberBasicInfoParamExtInfo
-    */
+     * 自定义字段的扩展字段，支持超过8个扩展字段的，请使用此map写入所有扩展字段
+     * @var SUpdateMemberBasicInfoParamExtInfo
+     */
     private $extInfo;
 
     /**
-    * 渠道List
-    * @var array
-    */
+     * 渠道List
+     * @var array
+     */
     private $sourceObjectList;
 
     /**
-    * 商户id
-    * @var int
-    */
+     * 商户id
+     * @var int
+     */
     private $pid;
 
     /**
-    * 门店ID
-    * @var int
-    */
+     * 门店ID
+     * @var int
+     */
     private $storeId;
 
     /**
-    * 用户wid
-    * @var int
-    */
+     * 用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * 姓名
-    * @var string
-    */
+     * 姓名
+     * @var string
+     */
     private $name;
 
     /**
-    * 生日
-    * @var string
-    */
+     * 生日
+     * @var string
+     */
     private $birthday;
 
     /**
-    * 教育背景
-    * @var string
-    */
+     * 教育背景
+     * @var string
+     */
     private $education;
 
     /**
-    * 收入
-    * @var string
-    */
+     * 收入
+     * @var string
+     */
     private $income;
 
     /**
-    * 地址
-    * @var string
-    */
+     * 地址
+     * @var string
+     */
     private $address;
 
     /**
-    * 邮件
-    * @var string
-    */
+     * 邮件
+     * @var string
+     */
     private $mail;
 
     /**
-    * 性别 MemberSexTypeEnum
-    * @var int
-    */
+     * 性别 MemberSexTypeEnum
+     * @var int
+     */
     private $sex;
 
     /**
-    * 爱好
-    * @var string
-    */
+     * 爱好
+     * @var string
+     */
     private $hobby;
 
     /**
-    * 行业
-    * @var string
-    */
+     * 行业
+     * @var string
+     */
     private $industry;
 
     /**
-    * 会员头像地址
-    * @var string
-    */
+     * 会员头像地址
+     * @var string
+     */
     private $logo;
 
     /**
-    * 备注
-    * @var string
-    */
+     * 备注
+     * @var string
+     */
     private $remark;
 
     /**
-    * 省
-    * @var string
-    */
+     * 省
+     * @var string
+     */
     private $province;
 
     /**
-    * 市
-    * @var string
-    */
+     * 市
+     * @var string
+     */
     private $city;
 
     /**
-    * 区
-    * @var string
-    */
+     * 区
+     * @var string
+     */
     private $area;
 
     /**
-    * 省code
-    * @var string
-    */
+     * 省code
+     * @var string
+     */
     private $provinceCode;
 
     /**
-    * 市code
-    * @var string
-    */
+     * 市code
+     * @var string
+     */
     private $cityCode;
 
     /**
-    * 区code
-    * @var string
-    */
+     * 区code
+     * @var string
+     */
     private $areaCode;
 
     /**
-    * @param SUpdateMemberBasicInfoParamExtInfo $extInfo
-    */
-    public function setExtInfo(?SUpdateMemberBasicInfoParamExtInfo $extInfo)
+     * @param SUpdateMemberBasicInfoParamExtInfo $extInfo
+     */
+    public function setExtInfo(?SUpdateMemberBasicInfoParamExtInfo $extInfo): void
     {
         $this->extInfo = $extInfo;
     }
 
     /**
-    * @return SUpdateMemberBasicInfoParamExtInfo
-    */
+     * @return SUpdateMemberBasicInfoParamExtInfo
+     */
     public function getExtInfo(): ?SUpdateMemberBasicInfoParamExtInfo
     {
         return $this->extInfo;
     }
 
     /**
-    * @param array $sourceObjectList
-    */
-    public function setSourceObjectList(?array $sourceObjectList)
+     * @param array $sourceObjectList
+     */
+    public function setSourceObjectList(?array $sourceObjectList): void
     {
         $this->sourceObjectList = $sourceObjectList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getSourceObjectList(): ?array
     {
         return $this->sourceObjectList;
     }
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;
     }
 
     /**
-    * @param int $storeId
-    */
-    public function setStoreId(?int $storeId)
+     * @param int $storeId
+     */
+    public function setStoreId(?int $storeId): void
     {
         $this->storeId = $storeId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getStoreId(): ?int
     {
         return $this->storeId;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param string $name
-    */
-    public function setName(?string $name)
+     * @param string $name
+     */
+    public function setName(?string $name): void
     {
         $this->name = $name;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
     /**
-    * @param string $birthday
-    */
-    public function setBirthday(?string $birthday)
+     * @param string $birthday
+     */
+    public function setBirthday(?string $birthday): void
     {
         $this->birthday = $birthday;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getBirthday(): ?string
     {
         return $this->birthday;
     }
 
     /**
-    * @param string $education
-    */
-    public function setEducation(?string $education)
+     * @param string $education
+     */
+    public function setEducation(?string $education): void
     {
         $this->education = $education;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getEducation(): ?string
     {
         return $this->education;
     }
 
     /**
-    * @param string $income
-    */
-    public function setIncome(?string $income)
+     * @param string $income
+     */
+    public function setIncome(?string $income): void
     {
         $this->income = $income;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getIncome(): ?string
     {
         return $this->income;
     }
 
     /**
-    * @param string $address
-    */
-    public function setAddress(?string $address)
+     * @param string $address
+     */
+    public function setAddress(?string $address): void
     {
         $this->address = $address;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getAddress(): ?string
     {
         return $this->address;
     }
 
     /**
-    * @param string $mail
-    */
-    public function setMail(?string $mail)
+     * @param string $mail
+     */
+    public function setMail(?string $mail): void
     {
         $this->mail = $mail;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getMail(): ?string
     {
         return $this->mail;
     }
 
     /**
-    * @param int $sex
-    */
-    public function setSex(?int $sex)
+     * @param int $sex
+     */
+    public function setSex(?int $sex): void
     {
         $this->sex = $sex;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSex(): ?int
     {
         return $this->sex;
     }
 
     /**
-    * @param string $hobby
-    */
-    public function setHobby(?string $hobby)
+     * @param string $hobby
+     */
+    public function setHobby(?string $hobby): void
     {
         $this->hobby = $hobby;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getHobby(): ?string
     {
         return $this->hobby;
     }
 
     /**
-    * @param string $industry
-    */
-    public function setIndustry(?string $industry)
+     * @param string $industry
+     */
+    public function setIndustry(?string $industry): void
     {
         $this->industry = $industry;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getIndustry(): ?string
     {
         return $this->industry;
     }
 
     /**
-    * @param string $logo
-    */
-    public function setLogo(?string $logo)
+     * @param string $logo
+     */
+    public function setLogo(?string $logo): void
     {
         $this->logo = $logo;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getLogo(): ?string
     {
         return $this->logo;
     }
 
     /**
-    * @param string $remark
-    */
-    public function setRemark(?string $remark)
+     * @param string $remark
+     */
+    public function setRemark(?string $remark): void
     {
         $this->remark = $remark;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getRemark(): ?string
     {
         return $this->remark;
     }
 
     /**
-    * @param string $province
-    */
-    public function setProvince(?string $province)
+     * @param string $province
+     */
+    public function setProvince(?string $province): void
     {
         $this->province = $province;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getProvince(): ?string
     {
         return $this->province;
     }
 
     /**
-    * @param string $city
-    */
-    public function setCity(?string $city)
+     * @param string $city
+     */
+    public function setCity(?string $city): void
     {
         $this->city = $city;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCity(): ?string
     {
         return $this->city;
     }
 
     /**
-    * @param string $area
-    */
-    public function setArea(?string $area)
+     * @param string $area
+     */
+    public function setArea(?string $area): void
     {
         $this->area = $area;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getArea(): ?string
     {
         return $this->area;
     }
 
     /**
-    * @param string $provinceCode
-    */
-    public function setProvinceCode(?string $provinceCode)
+     * @param string $provinceCode
+     */
+    public function setProvinceCode(?string $provinceCode): void
     {
         $this->provinceCode = $provinceCode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getProvinceCode(): ?string
     {
         return $this->provinceCode;
     }
 
     /**
-    * @param string $cityCode
-    */
-    public function setCityCode(?string $cityCode)
+     * @param string $cityCode
+     */
+    public function setCityCode(?string $cityCode): void
     {
         $this->cityCode = $cityCode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCityCode(): ?string
     {
         return $this->cityCode;
     }
 
     /**
-    * @param string $areaCode
-    */
-    public function setAreaCode(?string $areaCode)
+     * @param string $areaCode
+     */
+    public function setAreaCode(?string $areaCode): void
     {
         $this->areaCode = $areaCode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getAreaCode(): ?string
     {
         return $this->areaCode;
@@ -660,66 +660,66 @@ class SUpdateMemberBasicInfoParamExtInfo implements \JsonSerializable
 class SUpdateMemberBasicInfoParamSourceObjectList implements \JsonSerializable
 {
     /**
-    * 对应不同的source不同值，比如渠道的openid、手机号、unionid
-    * @var string
-    */
+     * 对应不同的source不同值，比如渠道的openid、手机号、unionid
+     * @var string
+     */
     private $sourceOpenId;
 
     /**
-    * 渠道的appid 如果渠道没有appid概念的话，可以不传
-    * @var string
-    */
+     * 渠道的appid 如果渠道没有appid概念的话，可以不传
+     * @var string
+     */
     private $sourceAppId;
 
     /**
-    * 渠道类型 0 微信公众号 1 微信小程序 2 unionid 4 手机号 phone
-    * @var string
-    */
+     * 渠道类型 0 微信公众号 1 微信小程序 2 unionid 4 手机号 phone
+     * @var string
+     */
     private $source;
 
     /**
-    * @param string $sourceOpenId
-    */
-    public function setSourceOpenId(?string $sourceOpenId)
+     * @param string $sourceOpenId
+     */
+    public function setSourceOpenId(?string $sourceOpenId): void
     {
         $this->sourceOpenId = $sourceOpenId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSourceOpenId(): ?string
     {
         return $this->sourceOpenId;
     }
 
     /**
-    * @param string $sourceAppId
-    */
-    public function setSourceAppId(?string $sourceAppId)
+     * @param string $sourceAppId
+     */
+    public function setSourceAppId(?string $sourceAppId): void
     {
         $this->sourceAppId = $sourceAppId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSourceAppId(): ?string
     {
         return $this->sourceAppId;
     }
 
     /**
-    * @param string $source
-    */
-    public function setSource(?string $source)
+     * @param string $source
+     */
+    public function setSource(?string $source): void
     {
         $this->source = $source;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSource(): ?string
     {
         return $this->source;
@@ -736,44 +736,44 @@ class SUpdateMemberBasicInfoParamSourceObjectList implements \JsonSerializable
 class SUpdateMemberBasicInfoResponse implements \JsonSerializable
 {
     /**
-    * 请求返回的对象
-    * @var PaasResponseCode
-    */
+     * 请求返回的对象
+     * @var PaasResponseCode
+     */
     private $code;
 
     /**
-    * 请求返回的数据
-    * @var SUpdateMemberBasicInfoData
-    */
+     * 请求返回的数据
+     * @var SUpdateMemberBasicInfoData
+     */
     private $data;
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?PaasResponseCode
     {
         return $this->code;
     }
 
     /**
-    * @param PaasResponseCode $code
-    */
+     * @param PaasResponseCode $code
+     */
     public function setCode(?PaasResponseCode $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return SUpdateMemberBasicInfoData
-    */
+     * @return SUpdateMemberBasicInfoData
+     */
     public function getData(): ?SUpdateMemberBasicInfoData
     {
         return $this->data;
     }
 
     /**
-    * @param SUpdateMemberBasicInfoData $data
-    */
+     * @param SUpdateMemberBasicInfoData $data
+     */
     public function setData(?SUpdateMemberBasicInfoData $data): void
     {
         $this->data = $data;
@@ -788,22 +788,22 @@ class SUpdateMemberBasicInfoResponse implements \JsonSerializable
 class SUpdateMemberBasicInfoData implements \JsonSerializable
 {
     /**
-    * 返回结果
-    * @var bool
-    */
+     * 返回结果
+     * @var bool
+     */
     private $status;
 
     /**
-    * @param bool $status
-    */
-    public function setStatus(?bool $status)
+     * @param bool $status
+     */
+    public function setStatus(?bool $status): void
     {
         $this->status = $status;
     }
 
     /**
-    * @return bool
-    */
+     * @return bool
+     */
     public function getStatus(): ?bool
     {
         return $this->status;

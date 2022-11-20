@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,760
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface XiaokeClueAssignListener
 {
@@ -23,88 +23,88 @@ interface XiaokeClueAssignListener
 class AssignMessage implements \JsonSerializable
 {
     /**
-    * 线索主键集合
-    * @var array
-    */
+     * 线索主键集合
+     * @var array
+     */
     private $clueKeys;
 
     /**
-    * 线索新所属人wid
-    * @var int
-    */
+     * 线索新所属人wid
+     * @var int
+     */
     private $owner;
 
     /**
-    * 操作时间,时间戳
-    * @var int
-    */
+     * 操作时间,时间戳
+     * @var int
+     */
     private $buildTime;
 
     /**
-    * 操作用户wid
-    * @var int
-    */
+     * 操作用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * @param array $clueKeys
-    */
-    public function setClueKeys(?array $clueKeys)
+     * @param array $clueKeys
+     */
+    public function setClueKeys(?array $clueKeys): void
     {
         $this->clueKeys = $clueKeys;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getClueKeys(): ?array
     {
         return $this->clueKeys;
     }
 
     /**
-    * @param int $owner
-    */
-    public function setOwner(?int $owner)
+     * @param int $owner
+     */
+    public function setOwner(?int $owner): void
     {
         $this->owner = $owner;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOwner(): ?int
     {
         return $this->owner;
     }
 
     /**
-    * @param int $buildTime
-    */
-    public function setBuildTime(?int $buildTime)
+     * @param int $buildTime
+     */
+    public function setBuildTime(?int $buildTime): void
     {
         $this->buildTime = $buildTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBuildTime(): ?int
     {
         return $this->buildTime;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;

@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,260
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobCdpCustomerTagUpdateListener
 {
@@ -23,440 +23,440 @@ interface WeimobCdpCustomerTagUpdateListener
 class UpdateMessage implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 归属节点ID
-    * @var int
-    */
+     * 归属节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 归属节点类型 。1：集团；2：品牌；3：区域；4：部门；5：区域；6：楼层；10：门店；11：网点；100：自提点/站点。
-    * @var int
-    */
+     * 归属节点类型 。1：集团；2：品牌；3：区域；4：部门；5：区域；6：楼层；10：门店；11：网点；100：自提点/站点。
+     * @var int
+     */
     private $vidType;
 
     /**
-    * 产品实例ID
-    * @var int
-    */
+     * 产品实例ID
+     * @var int
+     */
     private $productInstantId;
 
     /**
-    * wid
-    * @var int
-    */
+     * wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * 标签ID
-    * @var int
-    */
+     * 标签ID
+     * @var int
+     */
     private $tagId;
 
     /**
-    * 属性ID
-    * @var int
-    */
+     * 属性ID
+     * @var int
+     */
     private $attId;
 
     /**
-    * 标签值
-    * @var string
-    */
+     * 标签值
+     * @var string
+     */
     private $attValue;
 
     /**
-    * 标签版本号
-    * @var int
-    */
+     * 标签版本号
+     * @var int
+     */
     private $tagVersion;
 
     /**
-    * 更新时间
-    * @var string
-    */
+     * 更新时间
+     * @var string
+     */
     private $updateTime;
 
     /**
-    * 标签event NO_CHANGE(0,"NO_CHANGE","无变化"),INSERT(1,"INSERT","新增"),UPDATE(2,"UPDATE","编辑"),DELETE(3,"DELETE","删除"),ATT_ADD(4, "INSERT_ATT","新增属性"),ATT_EDIT(5, "UPDATE_ATT","编辑属性"),ATT_DELETE(6, "DELETE_ATT","删除属性")
-    * @var string
-    */
+     * 标签event NO_CHANGE(0,"NO_CHANGE","无变化"),INSERT(1,"INSERT","新增"),UPDATE(2,"UPDATE","编辑"),DELETE(3,"DELETE","删除"),ATT_ADD(4, "INSERT_ATT","新增属性"),ATT_EDIT(5, "UPDATE_ATT","编辑属性"),ATT_DELETE(6, "DELETE_ATT","删除属性")
+     * @var string
+     */
     private $event;
 
     /**
-    * weimob：微盟；haidin：海鼎
-    * @var string
-    */
+     * weimob：微盟；haidin：海鼎
+     * @var string
+     */
     private $tcode;
 
     /**
-    * 操作来源 1：商家后台；2：openAPI；3：新云APP
-    * @var int
-    */
+     * 操作来源 1：商家后台；2：openAPI；3：新云APP
+     * @var int
+     */
     private $operationSource;
 
     /**
-    * 标签来源 0-后台创建， 1-企业微信， 2-开放平台
-    * @var int
-    */
+     * 标签来源 0-后台创建， 1-企业微信， 2-开放平台
+     * @var int
+     */
     private $source;
 
     /**
-    * 标签类型 1:多选项 2:单选项 3:文本 4:日期 5:数值
-    * @var int
-    */
+     * 标签类型 1:多选项 2:单选项 3:文本 4:日期 5:数值
+     * @var int
+     */
     private $tagType;
 
     /**
-    * 标签名
-    * @var string
-    */
+     * 标签名
+     * @var string
+     */
     private $tagName;
 
     /**
-    * 是否手工打标，1是，0否
-    * @var int
-    */
+     * 是否手工打标，1是，0否
+     * @var int
+     */
     private $isManual;
 
     /**
-    * 外部标签组id
-    * @var string
-    */
+     * 外部标签组id
+     * @var string
+     */
     private $extTagGId;
 
     /**
-    * 渠道ID
-    * @var string
-    */
+     * 渠道ID
+     * @var string
+     */
     private $channelId;
 
     /**
-    * 外部标签组id
-    * @var string
-    */
+     * 外部标签组id
+     * @var string
+     */
     private $extTagId;
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param int $vid
-    */
-    public function setVid(?int $vid)
+     * @param int $vid
+     */
+    public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vidType
-    */
-    public function setVidType(?int $vidType)
+     * @param int $vidType
+     */
+    public function setVidType(?int $vidType): void
     {
         $this->vidType = $vidType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVidType(): ?int
     {
         return $this->vidType;
     }
 
     /**
-    * @param int $productInstantId
-    */
-    public function setProductInstantId(?int $productInstantId)
+     * @param int $productInstantId
+     */
+    public function setProductInstantId(?int $productInstantId): void
     {
         $this->productInstantId = $productInstantId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProductInstantId(): ?int
     {
         return $this->productInstantId;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $tagId
-    */
-    public function setTagId(?int $tagId)
+     * @param int $tagId
+     */
+    public function setTagId(?int $tagId): void
     {
         $this->tagId = $tagId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getTagId(): ?int
     {
         return $this->tagId;
     }
 
     /**
-    * @param int $attId
-    */
-    public function setAttId(?int $attId)
+     * @param int $attId
+     */
+    public function setAttId(?int $attId): void
     {
         $this->attId = $attId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getAttId(): ?int
     {
         return $this->attId;
     }
 
     /**
-    * @param string $attValue
-    */
-    public function setAttValue(?string $attValue)
+     * @param string $attValue
+     */
+    public function setAttValue(?string $attValue): void
     {
         $this->attValue = $attValue;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getAttValue(): ?string
     {
         return $this->attValue;
     }
 
     /**
-    * @param int $tagVersion
-    */
-    public function setTagVersion(?int $tagVersion)
+     * @param int $tagVersion
+     */
+    public function setTagVersion(?int $tagVersion): void
     {
         $this->tagVersion = $tagVersion;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getTagVersion(): ?int
     {
         return $this->tagVersion;
     }
 
     /**
-    * @param string $updateTime
-    */
-    public function setUpdateTime(?string $updateTime)
+     * @param string $updateTime
+     */
+    public function setUpdateTime(?string $updateTime): void
     {
         $this->updateTime = $updateTime;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getUpdateTime(): ?string
     {
         return $this->updateTime;
     }
 
     /**
-    * @param string $event
-    */
-    public function setEvent(?string $event)
+     * @param string $event
+     */
+    public function setEvent(?string $event): void
     {
         $this->event = $event;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getEvent(): ?string
     {
         return $this->event;
     }
 
     /**
-    * @param string $tcode
-    */
-    public function setTcode(?string $tcode)
+     * @param string $tcode
+     */
+    public function setTcode(?string $tcode): void
     {
         $this->tcode = $tcode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTcode(): ?string
     {
         return $this->tcode;
     }
 
     /**
-    * @param int $operationSource
-    */
-    public function setOperationSource(?int $operationSource)
+     * @param int $operationSource
+     */
+    public function setOperationSource(?int $operationSource): void
     {
         $this->operationSource = $operationSource;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOperationSource(): ?int
     {
         return $this->operationSource;
     }
 
     /**
-    * @param int $source
-    */
-    public function setSource(?int $source)
+     * @param int $source
+     */
+    public function setSource(?int $source): void
     {
         $this->source = $source;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSource(): ?int
     {
         return $this->source;
     }
 
     /**
-    * @param int $tagType
-    */
-    public function setTagType(?int $tagType)
+     * @param int $tagType
+     */
+    public function setTagType(?int $tagType): void
     {
         $this->tagType = $tagType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getTagType(): ?int
     {
         return $this->tagType;
     }
 
     /**
-    * @param string $tagName
-    */
-    public function setTagName(?string $tagName)
+     * @param string $tagName
+     */
+    public function setTagName(?string $tagName): void
     {
         $this->tagName = $tagName;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTagName(): ?string
     {
         return $this->tagName;
     }
 
     /**
-    * @param int $isManual
-    */
-    public function setIsManual(?int $isManual)
+     * @param int $isManual
+     */
+    public function setIsManual(?int $isManual): void
     {
         $this->isManual = $isManual;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getIsManual(): ?int
     {
         return $this->isManual;
     }
 
     /**
-    * @param string $extTagGId
-    */
-    public function setExtTagGId(?string $extTagGId)
+     * @param string $extTagGId
+     */
+    public function setExtTagGId(?string $extTagGId): void
     {
         $this->extTagGId = $extTagGId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getExtTagGId(): ?string
     {
         return $this->extTagGId;
     }
 
     /**
-    * @param string $channelId
-    */
-    public function setChannelId(?string $channelId)
+     * @param string $channelId
+     */
+    public function setChannelId(?string $channelId): void
     {
         $this->channelId = $channelId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getChannelId(): ?string
     {
         return $this->channelId;
     }
 
     /**
-    * @param string $extTagId
-    */
-    public function setExtTagId(?string $extTagId)
+     * @param string $extTagId
+     */
+    public function setExtTagId(?string $extTagId): void
     {
         $this->extTagId = $extTagId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getExtTagId(): ?string
     {
         return $this->extTagId;

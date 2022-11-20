@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 534
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface HOTELRoomAddBookRoomOrderListener
 {
@@ -23,66 +23,66 @@ interface HOTELRoomAddBookRoomOrderListener
 class AddBookRoomOrderMessage implements \JsonSerializable
 {
     /**
-    * 订单号
-    * @var string
-    */
+     * 订单号
+     * @var string
+     */
     private $orderNo;
 
     /**
-    * pid
-    * @var string
-    */
+     * pid
+     * @var string
+     */
     private $pid;
 
     /**
-    * 门店ID
-    * @var string
-    */
+     * 门店ID
+     * @var string
+     */
     private $storeId;
 
     /**
-    * @param string $orderNo
-    */
-    public function setOrderNo(?string $orderNo)
+     * @param string $orderNo
+     */
+    public function setOrderNo(?string $orderNo): void
     {
         $this->orderNo = $orderNo;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOrderNo(): ?string
     {
         return $this->orderNo;
     }
 
     /**
-    * @param string $pid
-    */
-    public function setPid(?string $pid)
+     * @param string $pid
+     */
+    public function setPid(?string $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getPid(): ?string
     {
         return $this->pid;
     }
 
     /**
-    * @param string $storeId
-    */
-    public function setStoreId(?string $storeId)
+     * @param string $storeId
+     */
+    public function setStoreId(?string $storeId): void
     {
         $this->storeId = $storeId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getStoreId(): ?string
     {
         return $this->storeId;

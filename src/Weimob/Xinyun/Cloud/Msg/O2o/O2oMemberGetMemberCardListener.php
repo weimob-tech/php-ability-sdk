@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 470
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface O2oMemberGetMemberCardListener
 {
@@ -23,88 +23,88 @@ interface O2oMemberGetMemberCardListener
 class GetMemberCardMessage implements \JsonSerializable
 {
     /**
-    * 商户id
-    * @var int
-    */
+     * 商户id
+     * @var int
+     */
     private $merchantId;
 
     /**
-    * 用户openId
-    * @var string
-    */
+     * 用户openId
+     * @var string
+     */
     private $openId;
 
     /**
-    * 会员卡code
-    * @var string
-    */
+     * 会员卡code
+     * @var string
+     */
     private $code;
 
     /**
-    * 消息生成时间
-    * @var int
-    */
+     * 消息生成时间
+     * @var int
+     */
     private $createTime;
 
     /**
-    * @param int $merchantId
-    */
-    public function setMerchantId(?int $merchantId)
+     * @param int $merchantId
+     */
+    public function setMerchantId(?int $merchantId): void
     {
         $this->merchantId = $merchantId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMerchantId(): ?int
     {
         return $this->merchantId;
     }
 
     /**
-    * @param string $openId
-    */
-    public function setOpenId(?string $openId)
+     * @param string $openId
+     */
+    public function setOpenId(?string $openId): void
     {
         $this->openId = $openId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOpenId(): ?string
     {
         return $this->openId;
     }
 
     /**
-    * @param string $code
-    */
-    public function setCode(?string $code)
+     * @param string $code
+     */
+    public function setCode(?string $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCode(): ?string
     {
         return $this->code;
     }
 
     /**
-    * @param int $createTime
-    */
-    public function setCreateTime(?int $createTime)
+     * @param int $createTime
+     */
+    public function setCreateTime(?int $createTime): void
     {
         $this->createTime = $createTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCreateTime(): ?int
     {
         return $this->createTime;

@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,346
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobCrmCouponLockCouponListener
 {
@@ -23,44 +23,44 @@ interface WeimobCrmCouponLockCouponListener
 class LockCouponMessage implements \JsonSerializable
 {
     /**
-    * 用户id
-    * @var int
-    */
+     * 用户id
+     * @var int
+     */
     private $wid;
 
     /**
-    * 优惠券码
-    * @var string
-    */
+     * 优惠券码
+     * @var string
+     */
     private $code;
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param string $code
-    */
-    public function setCode(?string $code)
+     * @param string $code
+     */
+    public function setCode(?string $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCode(): ?string
     {
         return $this->code;

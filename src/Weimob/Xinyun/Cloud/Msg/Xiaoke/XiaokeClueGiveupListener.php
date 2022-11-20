@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,752
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface XiaokeClueGiveupListener
 {
@@ -23,110 +23,110 @@ interface XiaokeClueGiveupListener
 class GiveupMessage implements \JsonSerializable
 {
     /**
-    * 线索原所属人wid
-    * @var array
-    */
+     * 线索原所属人wid
+     * @var array
+     */
     private $keys;
 
     /**
-    * 线索原所属人wid
-    * @var int
-    */
+     * 线索原所属人wid
+     * @var int
+     */
     private $owner;
 
     /**
-    * 原因
-    * @var string
-    */
+     * 原因
+     * @var string
+     */
     private $reason;
 
     /**
-    * 操作时间,时间戳
-    * @var int
-    */
+     * 操作时间,时间戳
+     * @var int
+     */
     private $buildTime;
 
     /**
-    * 操作用户wid
-    * @var int
-    */
+     * 操作用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * @param array $keys
-    */
-    public function setKeys(?array $keys)
+     * @param array $keys
+     */
+    public function setKeys(?array $keys): void
     {
         $this->keys = $keys;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getKeys(): ?array
     {
         return $this->keys;
     }
 
     /**
-    * @param int $owner
-    */
-    public function setOwner(?int $owner)
+     * @param int $owner
+     */
+    public function setOwner(?int $owner): void
     {
         $this->owner = $owner;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOwner(): ?int
     {
         return $this->owner;
     }
 
     /**
-    * @param string $reason
-    */
-    public function setReason(?string $reason)
+     * @param string $reason
+     */
+    public function setReason(?string $reason): void
     {
         $this->reason = $reason;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getReason(): ?string
     {
         return $this->reason;
     }
 
     /**
-    * @param int $buildTime
-    */
-    public function setBuildTime(?int $buildTime)
+     * @param int $buildTime
+     */
+    public function setBuildTime(?int $buildTime): void
     {
         $this->buildTime = $buildTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBuildTime(): ?int
     {
         return $this->buildTime;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;

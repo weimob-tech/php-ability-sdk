@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 192
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface O2oStoreGoodsGoodsCleanListener
 {
@@ -23,66 +23,66 @@ interface O2oStoreGoodsGoodsCleanListener
 class GoodsCleanMessage implements \JsonSerializable
 {
     /**
-    * 菜品Id
-    * @var int
-    */
+     * 菜品Id
+     * @var int
+     */
     private $goodsId;
 
     /**
-    * 门店Id
-    * @var int
-    */
+     * 门店Id
+     * @var int
+     */
     private $storeId;
 
     /**
-    * 菜品第三方编码
-    * @var string
-    */
+     * 菜品第三方编码
+     * @var string
+     */
     private $thirdGoodsId;
 
     /**
-    * @param int $goodsId
-    */
-    public function setGoodsId(?int $goodsId)
+     * @param int $goodsId
+     */
+    public function setGoodsId(?int $goodsId): void
     {
         $this->goodsId = $goodsId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGoodsId(): ?int
     {
         return $this->goodsId;
     }
 
     /**
-    * @param int $storeId
-    */
-    public function setStoreId(?int $storeId)
+     * @param int $storeId
+     */
+    public function setStoreId(?int $storeId): void
     {
         $this->storeId = $storeId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getStoreId(): ?int
     {
         return $this->storeId;
     }
 
     /**
-    * @param string $thirdGoodsId
-    */
-    public function setThirdGoodsId(?string $thirdGoodsId)
+     * @param string $thirdGoodsId
+     */
+    public function setThirdGoodsId(?string $thirdGoodsId): void
     {
         $this->thirdGoodsId = $thirdGoodsId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getThirdGoodsId(): ?string
     {
         return $this->thirdGoodsId;

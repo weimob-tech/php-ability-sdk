@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,386
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface BosEmployeeUpdateListener
 {
@@ -23,44 +23,44 @@ interface BosEmployeeUpdateListener
 class UpdateMessage implements \JsonSerializable
 {
     /**
-    * 账户id
-    * @var int
-    */
+     * 账户id
+     * @var int
+     */
     private $wid;
 
     /**
-    * 操作类型，1新建、2删除、3变更
-    * @var int
-    */
+     * 操作类型，1新建、2删除、3变更
+     * @var int
+     */
     private $operateType;
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $operateType
-    */
-    public function setOperateType(?int $operateType)
+     * @param int $operateType
+     */
+    public function setOperateType(?int $operateType): void
     {
         $this->operateType = $operateType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOperateType(): ?int
     {
         return $this->operateType;

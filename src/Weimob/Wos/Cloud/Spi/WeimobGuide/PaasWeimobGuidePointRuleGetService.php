@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 925
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface PaasWeimobGuidePointRuleGetService
 {
@@ -19,131 +19,131 @@ interface PaasWeimobGuidePointRuleGetService
 class WeimobGuidePointRuleGetRequest implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 全局唯一的扩展点
-    * @var string
-    */
+     * 全局唯一的扩展点
+     * @var string
+     */
     private $actionKey;
 
     /**
-    * 功能集ID
-    * @var int
-    */
+     * 功能集ID
+     * @var int
+     */
     private $functionId;
 
     /**
-    * 组织结构节点ID
-    * @var int
-    */
+     * 组织结构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 	组织结构节点类型
-    * @var int
-    */
+     * 	组织结构节点类型
+     * @var int
+     */
     private $vType;
 
     /**
-    * @var WeimobGuidePointRuleGetParam
-    */
+     * @var WeimobGuidePointRuleGetParam
+     */
     private $params;
 
     /**
-    * @param int $bosId
-    */
+     * @param int $bosId
+     */
     public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $actionKey
-    */
+     * @param string $actionKey
+     */
     public function setActionKey(?string $actionKey): void
     {
         $this->actionKey = $actionKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActionKey(): ?string
     {
         return $this->actionKey;
     }
 
     /**
-    * @param int $functionId
-    */
+     * @param int $functionId
+     */
     public function setFunctionId(?int $functionId): void
     {
         $this->functionId = $functionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFunctionId(): ?int
     {
         return $this->functionId;
     }
 
     /**
-    * @param int $vid
-    */
+     * @param int $vid
+     */
     public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vType
-    */
+     * @param int $vType
+     */
     public function setVType(?int $vType): void
     {
         $this->vType = $vType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVType(): ?int
     {
         return $this->vType;
     }
 
     /**
-    * @param WeimobGuidePointRuleGetParam $param
-    */
+     * @param WeimobGuidePointRuleGetParam $param
+     */
     public function setParam(?WeimobGuidePointRuleGetParam $param): void
     {
         $this->param = $param;
     }
 
     /**
-    * @return WeimobGuidePointRuleGetParam
-    */
+     * @return WeimobGuidePointRuleGetParam
+     */
     public function getParam(): ?WeimobGuidePointRuleGetParam
     {
         return $this->param;
@@ -158,47 +158,47 @@ class WeimobGuidePointRuleGetRequest implements \JsonSerializable
 class WeimobGuidePointRuleGetParam implements \JsonSerializable
 {
     /**
-    * 积分方案规则id
-    * @var int
-    */
+     * 积分方案规则id
+     * @var int
+     */
     private $pointPlanId;
 
     /**
-    * basicRule(基础规则)
+     * basicRule(基础规则)
 pointUnit(抵扣价值)
 deductRule(抵扣规则)
 expiryRule(有效期规则)
-    * @var string
-    */
+     * @var string
+     */
     private $fields;
 
     /**
-    * @param int $pointPlanId
-    */
-    public function setPointPlanId(?int $pointPlanId)
+     * @param int $pointPlanId
+     */
+    public function setPointPlanId(?int $pointPlanId): void
     {
         $this->pointPlanId = $pointPlanId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPointPlanId(): ?int
     {
         return $this->pointPlanId;
     }
 
     /**
-    * @param string $fields
-    */
-    public function setFields(?string $fields)
+     * @param string $fields
+     */
+    public function setFields(?string $fields): void
     {
         $this->fields = $fields;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getFields(): ?string
     {
         return $this->fields;
@@ -215,44 +215,44 @@ expiryRule(有效期规则)
 class WeimobGuidePointRuleGetResponse implements \JsonSerializable
 {
     /**
-    * 请求返回的对象
-    * @var PaasResponseCode
-    */
+     * 请求返回的对象
+     * @var PaasResponseCode
+     */
     private $code;
 
     /**
-    * 请求返回的数据
-    * @var WeimobGuidePointRuleGetData
-    */
+     * 请求返回的数据
+     * @var WeimobGuidePointRuleGetData
+     */
     private $data;
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?PaasResponseCode
     {
         return $this->code;
     }
 
     /**
-    * @param PaasResponseCode $code
-    */
+     * @param PaasResponseCode $code
+     */
     public function setCode(?PaasResponseCode $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return WeimobGuidePointRuleGetData
-    */
+     * @return WeimobGuidePointRuleGetData
+     */
     public function getData(): ?WeimobGuidePointRuleGetData
     {
         return $this->data;
     }
 
     /**
-    * @param WeimobGuidePointRuleGetData $data
-    */
+     * @param WeimobGuidePointRuleGetData $data
+     */
     public function setData(?WeimobGuidePointRuleGetData $data): void
     {
         $this->data = $data;
@@ -267,154 +267,154 @@ class WeimobGuidePointRuleGetResponse implements \JsonSerializable
 class WeimobGuidePointRuleGetData implements \JsonSerializable
 {
     /**
-    * 有效期规则
-    * @var WeimobGuidePointRuleGetDataExpiryRule
-    */
+     * 有效期规则
+     * @var WeimobGuidePointRuleGetDataExpiryRule
+     */
     private $expiryRule;
 
     /**
-    * 抵扣规则
-    * @var WeimobGuidePointRuleGetDataDeductRule
-    */
+     * 抵扣规则
+     * @var WeimobGuidePointRuleGetDataDeductRule
+     */
     private $deductRule;
 
     /**
-    * 抵扣价值
-    * @var WeimobGuidePointRuleGetDataPointUnit
-    */
+     * 抵扣价值
+     * @var WeimobGuidePointRuleGetDataPointUnit
+     */
     private $pointUnit;
 
     /**
-    * 基础规则
-    * @var WeimobGuidePointRuleGetDataBasicRule
-    */
+     * 基础规则
+     * @var WeimobGuidePointRuleGetDataBasicRule
+     */
     private $basicRule;
 
     /**
-    * 积分方案规则id
-    * @var int
-    */
+     * 积分方案规则id
+     * @var int
+     */
     private $pointPlanId;
 
     /**
-    * 规则名称:基础规则, 抵扣价值,抵扣规则,有效期规则
-    * @var string
-    */
+     * 规则名称:基础规则, 抵扣价值,抵扣规则,有效期规则
+     * @var string
+     */
     private $pointPlanName;
 
     /**
-    * 使用须知
-    * @var string
-    */
+     * 使用须知
+     * @var string
+     */
     private $instruction;
 
     /**
-    * @param WeimobGuidePointRuleGetDataExpiryRule $expiryRule
-    */
-    public function setExpiryRule(?WeimobGuidePointRuleGetDataExpiryRule $expiryRule)
+     * @param WeimobGuidePointRuleGetDataExpiryRule $expiryRule
+     */
+    public function setExpiryRule(?WeimobGuidePointRuleGetDataExpiryRule $expiryRule): void
     {
         $this->expiryRule = $expiryRule;
     }
 
     /**
-    * @return WeimobGuidePointRuleGetDataExpiryRule
-    */
+     * @return WeimobGuidePointRuleGetDataExpiryRule
+     */
     public function getExpiryRule(): ?WeimobGuidePointRuleGetDataExpiryRule
     {
         return $this->expiryRule;
     }
 
     /**
-    * @param WeimobGuidePointRuleGetDataDeductRule $deductRule
-    */
-    public function setDeductRule(?WeimobGuidePointRuleGetDataDeductRule $deductRule)
+     * @param WeimobGuidePointRuleGetDataDeductRule $deductRule
+     */
+    public function setDeductRule(?WeimobGuidePointRuleGetDataDeductRule $deductRule): void
     {
         $this->deductRule = $deductRule;
     }
 
     /**
-    * @return WeimobGuidePointRuleGetDataDeductRule
-    */
+     * @return WeimobGuidePointRuleGetDataDeductRule
+     */
     public function getDeductRule(): ?WeimobGuidePointRuleGetDataDeductRule
     {
         return $this->deductRule;
     }
 
     /**
-    * @param WeimobGuidePointRuleGetDataPointUnit $pointUnit
-    */
-    public function setPointUnit(?WeimobGuidePointRuleGetDataPointUnit $pointUnit)
+     * @param WeimobGuidePointRuleGetDataPointUnit $pointUnit
+     */
+    public function setPointUnit(?WeimobGuidePointRuleGetDataPointUnit $pointUnit): void
     {
         $this->pointUnit = $pointUnit;
     }
 
     /**
-    * @return WeimobGuidePointRuleGetDataPointUnit
-    */
+     * @return WeimobGuidePointRuleGetDataPointUnit
+     */
     public function getPointUnit(): ?WeimobGuidePointRuleGetDataPointUnit
     {
         return $this->pointUnit;
     }
 
     /**
-    * @param WeimobGuidePointRuleGetDataBasicRule $basicRule
-    */
-    public function setBasicRule(?WeimobGuidePointRuleGetDataBasicRule $basicRule)
+     * @param WeimobGuidePointRuleGetDataBasicRule $basicRule
+     */
+    public function setBasicRule(?WeimobGuidePointRuleGetDataBasicRule $basicRule): void
     {
         $this->basicRule = $basicRule;
     }
 
     /**
-    * @return WeimobGuidePointRuleGetDataBasicRule
-    */
+     * @return WeimobGuidePointRuleGetDataBasicRule
+     */
     public function getBasicRule(): ?WeimobGuidePointRuleGetDataBasicRule
     {
         return $this->basicRule;
     }
 
     /**
-    * @param int $pointPlanId
-    */
-    public function setPointPlanId(?int $pointPlanId)
+     * @param int $pointPlanId
+     */
+    public function setPointPlanId(?int $pointPlanId): void
     {
         $this->pointPlanId = $pointPlanId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPointPlanId(): ?int
     {
         return $this->pointPlanId;
     }
 
     /**
-    * @param string $pointPlanName
-    */
-    public function setPointPlanName(?string $pointPlanName)
+     * @param string $pointPlanName
+     */
+    public function setPointPlanName(?string $pointPlanName): void
     {
         $this->pointPlanName = $pointPlanName;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getPointPlanName(): ?string
     {
         return $this->pointPlanName;
     }
 
     /**
-    * @param string $instruction
-    */
-    public function setInstruction(?string $instruction)
+     * @param string $instruction
+     */
+    public function setInstruction(?string $instruction): void
     {
         $this->instruction = $instruction;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getInstruction(): ?string
     {
         return $this->instruction;
@@ -430,88 +430,88 @@ class WeimobGuidePointRuleGetData implements \JsonSerializable
 class WeimobGuidePointRuleGetDataExpiryRule implements \JsonSerializable
 {
     /**
-    * 过期类型
-    * @var string
-    */
+     * 过期类型
+     * @var string
+     */
     private $type;
 
     /**
-    * 年
-    * @var int
-    */
+     * 年
+     * @var int
+     */
     private $year;
 
     /**
-    * 月
-    * @var int
-    */
+     * 月
+     * @var int
+     */
     private $month;
 
     /**
-    * 日
-    * @var int
-    */
+     * 日
+     * @var int
+     */
     private $day;
 
     /**
-    * @param string $type
-    */
-    public function setType(?string $type)
+     * @param string $type
+     */
+    public function setType(?string $type): void
     {
         $this->type = $type;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getType(): ?string
     {
         return $this->type;
     }
 
     /**
-    * @param int $year
-    */
-    public function setYear(?int $year)
+     * @param int $year
+     */
+    public function setYear(?int $year): void
     {
         $this->year = $year;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getYear(): ?int
     {
         return $this->year;
     }
 
     /**
-    * @param int $month
-    */
-    public function setMonth(?int $month)
+     * @param int $month
+     */
+    public function setMonth(?int $month): void
     {
         $this->month = $month;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMonth(): ?int
     {
         return $this->month;
     }
 
     /**
-    * @param int $day
-    */
-    public function setDay(?int $day)
+     * @param int $day
+     */
+    public function setDay(?int $day): void
     {
         $this->day = $day;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getDay(): ?int
     {
         return $this->day;
@@ -527,352 +527,352 @@ class WeimobGuidePointRuleGetDataExpiryRule implements \JsonSerializable
 class WeimobGuidePointRuleGetDataDeductRule implements \JsonSerializable
 {
     /**
-    * 抵扣项目（1：整单抵扣；2：商品余额）
-    * @var int
-    */
+     * 抵扣项目（1：整单抵扣；2：商品余额）
+     * @var int
+     */
     private $deductItem;
 
     /**
-    * 抵扣项目-商品金额是否参与抵扣（0否，1是）
-    * @var int
-    */
+     * 抵扣项目-商品金额是否参与抵扣（0否，1是）
+     * @var int
+     */
     private $deductGoodsItem;
 
     /**
-    * 抵扣项目-运费是否参与抵扣（0否，1是）
-    * @var int
-    */
+     * 抵扣项目-运费是否参与抵扣（0否，1是）
+     * @var int
+     */
     private $freight;
 
     /**
-    * 使用商品 1-全部 2-指定商品 3-指定类目 4-指定分组
-    * @var int
-    */
+     * 使用商品 1-全部 2-指定商品 3-指定类目 4-指定分组
+     * @var int
+     */
     private $applicableScope;
 
     /**
-    * 是否排除商品（0-否 1-是）
-    * @var int
-    */
+     * 是否排除商品（0-否 1-是）
+     * @var int
+     */
     private $isExcludeGoods;
 
     /**
-    * 使用校验（0：关闭，1：开启）
-    * @var int
-    */
+     * 使用校验（0：关闭，1：开启）
+     * @var int
+     */
     private $isOpenVerify;
 
     /**
-    * C端默认校验状态（0：不校验，1：校验）
-    * @var int
-    */
+     * C端默认校验状态（0：不校验，1：校验）
+     * @var int
+     */
     private $defaultVerify;
 
     /**
-    * 默认使用状态（0：关闭，1：开启）
-    * @var int
-    */
+     * 默认使用状态（0：关闭，1：开启）
+     * @var int
+     */
     private $defaultUseFlag;
 
     /**
-    * 最少抵扣积分开关（0关闭，1开启）
-    * @var int
-    */
+     * 最少抵扣积分开关（0关闭，1开启）
+     * @var int
+     */
     private $minDeductPointRequire;
 
     /**
-    * 最大抵扣积分开关（0关闭，1开启）
-    * @var int
-    */
+     * 最大抵扣积分开关（0关闭，1开启）
+     * @var int
+     */
     private $maxDeductPointRequire;
 
     /**
-    * 抵扣项目比例开关（0关闭，1开启）
-    * @var int
-    */
+     * 抵扣项目比例开关（0关闭，1开启）
+     * @var int
+     */
     private $deductItemAmtRatioRequire;
 
     /**
-    * 适用商品id列表
-    * @var array
-    */
+     * 适用商品id列表
+     * @var array
+     */
     private $applicableGoods;
 
     /**
-    * 最少抵扣积分
-    * @var int
-    */
+     * 最少抵扣积分
+     * @var int
+     */
     private $minDeductPoint;
 
     /**
-    * 最大抵扣积分
-    * @var int
-    */
+     * 最大抵扣积分
+     * @var int
+     */
     private $maxDeductPoint;
 
     /**
-    * 抵扣项目比例
-    * @var int
-    */
+     * 抵扣项目比例
+     * @var int
+     */
     private $deductItemAmtRatio;
 
     /**
-    * 排除的商品ID列表
-    * @var array
-    */
+     * 排除的商品ID列表
+     * @var array
+     */
     private $excludeGoods;
 
     /**
-    * @param int $deductItem
-    */
-    public function setDeductItem(?int $deductItem)
+     * @param int $deductItem
+     */
+    public function setDeductItem(?int $deductItem): void
     {
         $this->deductItem = $deductItem;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getDeductItem(): ?int
     {
         return $this->deductItem;
     }
 
     /**
-    * @param int $deductGoodsItem
-    */
-    public function setDeductGoodsItem(?int $deductGoodsItem)
+     * @param int $deductGoodsItem
+     */
+    public function setDeductGoodsItem(?int $deductGoodsItem): void
     {
         $this->deductGoodsItem = $deductGoodsItem;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getDeductGoodsItem(): ?int
     {
         return $this->deductGoodsItem;
     }
 
     /**
-    * @param int $freight
-    */
-    public function setFreight(?int $freight)
+     * @param int $freight
+     */
+    public function setFreight(?int $freight): void
     {
         $this->freight = $freight;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFreight(): ?int
     {
         return $this->freight;
     }
 
     /**
-    * @param int $applicableScope
-    */
-    public function setApplicableScope(?int $applicableScope)
+     * @param int $applicableScope
+     */
+    public function setApplicableScope(?int $applicableScope): void
     {
         $this->applicableScope = $applicableScope;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getApplicableScope(): ?int
     {
         return $this->applicableScope;
     }
 
     /**
-    * @param int $isExcludeGoods
-    */
-    public function setIsExcludeGoods(?int $isExcludeGoods)
+     * @param int $isExcludeGoods
+     */
+    public function setIsExcludeGoods(?int $isExcludeGoods): void
     {
         $this->isExcludeGoods = $isExcludeGoods;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getIsExcludeGoods(): ?int
     {
         return $this->isExcludeGoods;
     }
 
     /**
-    * @param int $isOpenVerify
-    */
-    public function setIsOpenVerify(?int $isOpenVerify)
+     * @param int $isOpenVerify
+     */
+    public function setIsOpenVerify(?int $isOpenVerify): void
     {
         $this->isOpenVerify = $isOpenVerify;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getIsOpenVerify(): ?int
     {
         return $this->isOpenVerify;
     }
 
     /**
-    * @param int $defaultVerify
-    */
-    public function setDefaultVerify(?int $defaultVerify)
+     * @param int $defaultVerify
+     */
+    public function setDefaultVerify(?int $defaultVerify): void
     {
         $this->defaultVerify = $defaultVerify;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getDefaultVerify(): ?int
     {
         return $this->defaultVerify;
     }
 
     /**
-    * @param int $defaultUseFlag
-    */
-    public function setDefaultUseFlag(?int $defaultUseFlag)
+     * @param int $defaultUseFlag
+     */
+    public function setDefaultUseFlag(?int $defaultUseFlag): void
     {
         $this->defaultUseFlag = $defaultUseFlag;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getDefaultUseFlag(): ?int
     {
         return $this->defaultUseFlag;
     }
 
     /**
-    * @param int $minDeductPointRequire
-    */
-    public function setMinDeductPointRequire(?int $minDeductPointRequire)
+     * @param int $minDeductPointRequire
+     */
+    public function setMinDeductPointRequire(?int $minDeductPointRequire): void
     {
         $this->minDeductPointRequire = $minDeductPointRequire;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMinDeductPointRequire(): ?int
     {
         return $this->minDeductPointRequire;
     }
 
     /**
-    * @param int $maxDeductPointRequire
-    */
-    public function setMaxDeductPointRequire(?int $maxDeductPointRequire)
+     * @param int $maxDeductPointRequire
+     */
+    public function setMaxDeductPointRequire(?int $maxDeductPointRequire): void
     {
         $this->maxDeductPointRequire = $maxDeductPointRequire;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMaxDeductPointRequire(): ?int
     {
         return $this->maxDeductPointRequire;
     }
 
     /**
-    * @param int $deductItemAmtRatioRequire
-    */
-    public function setDeductItemAmtRatioRequire(?int $deductItemAmtRatioRequire)
+     * @param int $deductItemAmtRatioRequire
+     */
+    public function setDeductItemAmtRatioRequire(?int $deductItemAmtRatioRequire): void
     {
         $this->deductItemAmtRatioRequire = $deductItemAmtRatioRequire;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getDeductItemAmtRatioRequire(): ?int
     {
         return $this->deductItemAmtRatioRequire;
     }
 
     /**
-    * @param array $applicableGoods
-    */
-    public function setApplicableGoods(?array $applicableGoods)
+     * @param array $applicableGoods
+     */
+    public function setApplicableGoods(?array $applicableGoods): void
     {
         $this->applicableGoods = $applicableGoods;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getApplicableGoods(): ?array
     {
         return $this->applicableGoods;
     }
 
     /**
-    * @param int $minDeductPoint
-    */
-    public function setMinDeductPoint(?int $minDeductPoint)
+     * @param int $minDeductPoint
+     */
+    public function setMinDeductPoint(?int $minDeductPoint): void
     {
         $this->minDeductPoint = $minDeductPoint;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMinDeductPoint(): ?int
     {
         return $this->minDeductPoint;
     }
 
     /**
-    * @param int $maxDeductPoint
-    */
-    public function setMaxDeductPoint(?int $maxDeductPoint)
+     * @param int $maxDeductPoint
+     */
+    public function setMaxDeductPoint(?int $maxDeductPoint): void
     {
         $this->maxDeductPoint = $maxDeductPoint;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMaxDeductPoint(): ?int
     {
         return $this->maxDeductPoint;
     }
 
     /**
-    * @param int $deductItemAmtRatio
-    */
-    public function setDeductItemAmtRatio(?int $deductItemAmtRatio)
+     * @param int $deductItemAmtRatio
+     */
+    public function setDeductItemAmtRatio(?int $deductItemAmtRatio): void
     {
         $this->deductItemAmtRatio = $deductItemAmtRatio;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getDeductItemAmtRatio(): ?int
     {
         return $this->deductItemAmtRatio;
     }
 
     /**
-    * @param array $excludeGoods
-    */
-    public function setExcludeGoods(?array $excludeGoods)
+     * @param array $excludeGoods
+     */
+    public function setExcludeGoods(?array $excludeGoods): void
     {
         $this->excludeGoods = $excludeGoods;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getExcludeGoods(): ?array
     {
         return $this->excludeGoods;
@@ -888,44 +888,44 @@ class WeimobGuidePointRuleGetDataDeductRule implements \JsonSerializable
 class WeimobGuidePointRuleGetDataPointUnit implements \JsonSerializable
 {
     /**
-    * 最小抵扣单位
-    * @var int
-    */
+     * 最小抵扣单位
+     * @var int
+     */
     private $unit;
 
     /**
-    * 每单位抵扣金额（元）
-    * @var int
-    */
+     * 每单位抵扣金额（元）
+     * @var int
+     */
     private $unitAmount;
 
     /**
-    * @param int $unit
-    */
-    public function setUnit(?int $unit)
+     * @param int $unit
+     */
+    public function setUnit(?int $unit): void
     {
         $this->unit = $unit;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getUnit(): ?int
     {
         return $this->unit;
     }
 
     /**
-    * @param int $unitAmount
-    */
-    public function setUnitAmount(?int $unitAmount)
+     * @param int $unitAmount
+     */
+    public function setUnitAmount(?int $unitAmount): void
     {
         $this->unitAmount = $unitAmount;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getUnitAmount(): ?int
     {
         return $this->unitAmount;
@@ -941,88 +941,88 @@ class WeimobGuidePointRuleGetDataPointUnit implements \JsonSerializable
 class WeimobGuidePointRuleGetDataBasicRule implements \JsonSerializable
 {
     /**
-    * 所属节点
-    * @var int
-    */
+     * 所属节点
+     * @var int
+     */
     private $sourceVid;
 
     /**
-    * 产品实例ID
-    * @var int
-    */
+     * 产品实例ID
+     * @var int
+     */
     private $productInstanceId;
 
     /**
-    * 可用人群 (1:会员，2:客户)
-    * @var int
-    */
+     * 可用人群 (1:会员，2:客户)
+     * @var int
+     */
     private $availableCrowd;
 
     /**
-    * 最后更新时间
-    * @var string
-    */
+     * 最后更新时间
+     * @var string
+     */
     private $updateTime;
 
     /**
-    * @param int $sourceVid
-    */
-    public function setSourceVid(?int $sourceVid)
+     * @param int $sourceVid
+     */
+    public function setSourceVid(?int $sourceVid): void
     {
         $this->sourceVid = $sourceVid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSourceVid(): ?int
     {
         return $this->sourceVid;
     }
 
     /**
-    * @param int $productInstanceId
-    */
-    public function setProductInstanceId(?int $productInstanceId)
+     * @param int $productInstanceId
+     */
+    public function setProductInstanceId(?int $productInstanceId): void
     {
         $this->productInstanceId = $productInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProductInstanceId(): ?int
     {
         return $this->productInstanceId;
     }
 
     /**
-    * @param int $availableCrowd
-    */
-    public function setAvailableCrowd(?int $availableCrowd)
+     * @param int $availableCrowd
+     */
+    public function setAvailableCrowd(?int $availableCrowd): void
     {
         $this->availableCrowd = $availableCrowd;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getAvailableCrowd(): ?int
     {
         return $this->availableCrowd;
     }
 
     /**
-    * @param string $updateTime
-    */
-    public function setUpdateTime(?string $updateTime)
+     * @param string $updateTime
+     */
+    public function setUpdateTime(?string $updateTime): void
     {
         $this->updateTime = $updateTime;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getUpdateTime(): ?string
     {
         return $this->updateTime;

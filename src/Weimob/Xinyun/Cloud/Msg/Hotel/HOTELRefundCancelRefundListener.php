@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 2,342
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface HOTELRefundCancelRefundListener
 {
@@ -23,66 +23,66 @@ interface HOTELRefundCancelRefundListener
 class CancelRefundMessage implements \JsonSerializable
 {
     /**
-    * orderNo
-    * @var string
-    */
+     * orderNo
+     * @var string
+     */
     private $orderNo;
 
     /**
-    * refundNo
-    * @var string
-    */
+     * refundNo
+     * @var string
+     */
     private $refundNo;
 
     /**
-    * storeId
-    * @var string
-    */
+     * storeId
+     * @var string
+     */
     private $storeId;
 
     /**
-    * @param string $orderNo
-    */
-    public function setOrderNo(?string $orderNo)
+     * @param string $orderNo
+     */
+    public function setOrderNo(?string $orderNo): void
     {
         $this->orderNo = $orderNo;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOrderNo(): ?string
     {
         return $this->orderNo;
     }
 
     /**
-    * @param string $refundNo
-    */
-    public function setRefundNo(?string $refundNo)
+     * @param string $refundNo
+     */
+    public function setRefundNo(?string $refundNo): void
     {
         $this->refundNo = $refundNo;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getRefundNo(): ?string
     {
         return $this->refundNo;
     }
 
     /**
-    * @param string $storeId
-    */
-    public function setStoreId(?string $storeId)
+     * @param string $storeId
+     */
+    public function setStoreId(?string $storeId): void
     {
         $this->storeId = $storeId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getStoreId(): ?string
     {
         return $this->storeId;

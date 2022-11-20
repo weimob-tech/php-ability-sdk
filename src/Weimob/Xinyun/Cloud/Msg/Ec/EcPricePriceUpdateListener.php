@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 548
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface EcPricePriceUpdateListener
 {
@@ -23,44 +23,44 @@ interface EcPricePriceUpdateListener
 class PriceUpdateMessage implements \JsonSerializable
 {
     /**
-    * 商品id
-    * @var int
-    */
+     * 商品id
+     * @var int
+     */
     private $goodsIdList;
 
     /**
-    * 门店id
-    * @var int
-    */
+     * 门店id
+     * @var int
+     */
     private $storeId;
 
     /**
-    * @param int $goodsIdList
-    */
-    public function setGoodsIdList(?int $goodsIdList)
+     * @param int $goodsIdList
+     */
+    public function setGoodsIdList(?int $goodsIdList): void
     {
         $this->goodsIdList = $goodsIdList;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGoodsIdList(): ?int
     {
         return $this->goodsIdList;
     }
 
     /**
-    * @param int $storeId
-    */
-    public function setStoreId(?int $storeId)
+     * @param int $storeId
+     */
+    public function setStoreId(?int $storeId): void
     {
         $this->storeId = $storeId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getStoreId(): ?int
     {
         return $this->storeId;

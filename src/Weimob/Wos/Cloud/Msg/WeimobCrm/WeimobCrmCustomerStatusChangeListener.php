@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,310
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobCrmCustomerStatusChangeListener
 {
@@ -23,44 +23,44 @@ interface WeimobCrmCustomerStatusChangeListener
 class ChangeMessage implements \JsonSerializable
 {
     /**
-    * 状态类型。可选值：1（解冻），3（冻结）
-    * @var int
-    */
+     * 状态类型。可选值：1（解冻），3（冻结）
+     * @var int
+     */
     private $changeType;
 
     /**
-    * 用户ID
-    * @var int
-    */
+     * 用户ID
+     * @var int
+     */
     private $wid;
 
     /**
-    * @param int $changeType
-    */
-    public function setChangeType(?int $changeType)
+     * @param int $changeType
+     */
+    public function setChangeType(?int $changeType): void
     {
         $this->changeType = $changeType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getChangeType(): ?int
     {
         return $this->changeType;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;

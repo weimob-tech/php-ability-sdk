@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,705
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface CcCouponExpireCouponListener
 {
@@ -23,44 +23,44 @@ interface CcCouponExpireCouponListener
 class ExpireCouponMessage implements \JsonSerializable
 {
     /**
-    * 用户唯一标识
-    * @var int
-    */
+     * 用户唯一标识
+     * @var int
+     */
     private $wid;
 
     /**
-    * 券code
-    * @var string
-    */
+     * 券code
+     * @var string
+     */
     private $code;
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param string $code
-    */
-    public function setCode(?string $code)
+     * @param string $code
+     */
+    public function setCode(?string $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCode(): ?string
     {
         return $this->code;

@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,356
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobCrmCustomerStatusUpdateListener
 {
@@ -23,44 +23,44 @@ interface WeimobCrmCustomerStatusUpdateListener
 class StatusUpdateMessage implements \JsonSerializable
 {
     /**
-    * 客户的状态类型。可能出现的状态类型包括:1-解冻;3-冻结。
-    * @var int
-    */
+     * 客户的状态类型。可能出现的状态类型包括:1-解冻;3-冻结。
+     * @var int
+     */
     private $changeType;
 
     /**
-    * 客户编号，是用户身份的唯一标识。可以通过B端页面客户列表/客户详情找到该编号。
-    * @var int
-    */
+     * 客户编号，是用户身份的唯一标识。可以通过B端页面客户列表/客户详情找到该编号。
+     * @var int
+     */
     private $wid;
 
     /**
-    * @param int $changeType
-    */
-    public function setChangeType(?int $changeType)
+     * @param int $changeType
+     */
+    public function setChangeType(?int $changeType): void
     {
         $this->changeType = $changeType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getChangeType(): ?int
     {
         return $this->changeType;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;

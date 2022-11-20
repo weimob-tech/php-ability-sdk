@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,363
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobCrmCouponCreateCouponTemplateListener
 {
@@ -23,88 +23,88 @@ interface WeimobCrmCouponCreateCouponTemplateListener
 class CreateCouponTemplateMessage implements \JsonSerializable
 {
     /**
-    * 券模板id
-    * @var int
-    */
+     * 券模板id
+     * @var int
+     */
     private $couponTemplateId;
 
     /**
-    * 券名称
-    * @var string
-    */
+     * 券名称
+     * @var string
+     */
     private $name;
 
     /**
-    * 优惠券类型：1-代金券；2-折扣券；3-兑换券；5-随机金额代金券；9-免运费
-    * @var int
-    */
+     * 优惠券类型：1-代金券；2-折扣券；3-兑换券；5-随机金额代金券；9-免运费
+     * @var int
+     */
     private $couponType;
 
     /**
-    * 用户wid
-    * @var int
-    */
+     * 用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * @param int $couponTemplateId
-    */
-    public function setCouponTemplateId(?int $couponTemplateId)
+     * @param int $couponTemplateId
+     */
+    public function setCouponTemplateId(?int $couponTemplateId): void
     {
         $this->couponTemplateId = $couponTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCouponTemplateId(): ?int
     {
         return $this->couponTemplateId;
     }
 
     /**
-    * @param string $name
-    */
-    public function setName(?string $name)
+     * @param string $name
+     */
+    public function setName(?string $name): void
     {
         $this->name = $name;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
     /**
-    * @param int $couponType
-    */
-    public function setCouponType(?int $couponType)
+     * @param int $couponType
+     */
+    public function setCouponType(?int $couponType): void
     {
         $this->couponType = $couponType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCouponType(): ?int
     {
         return $this->couponType;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;

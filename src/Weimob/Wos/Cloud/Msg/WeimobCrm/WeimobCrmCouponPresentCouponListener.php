@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,349
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobCrmCouponPresentCouponListener
 {
@@ -23,110 +23,110 @@ interface WeimobCrmCouponPresentCouponListener
 class PresentCouponMessage implements \JsonSerializable
 {
     /**
-    * 优惠券码
-    * @var string
-    */
+     * 优惠券码
+     * @var string
+     */
     private $code;
 
     /**
-    * 转赠人wid
-    * @var int
-    */
+     * 转赠人wid
+     * @var int
+     */
     private $fromWid;
 
     /**
-    * 受赠人wid
-    * @var int
-    */
+     * 受赠人wid
+     * @var int
+     */
     private $toWid;
 
     /**
-    * 优惠券ID
-    * @var int
-    */
+     * 优惠券ID
+     * @var int
+     */
     private $couponTemplateId;
 
     /**
-    * 转赠类型：0-转赠中；1-已转赠；2- 取消转赠
-    * @var int
-    */
+     * 转赠类型：0-转赠中；1-已转赠；2- 取消转赠
+     * @var int
+     */
     private $statusType;
 
     /**
-    * @param string $code
-    */
-    public function setCode(?string $code)
+     * @param string $code
+     */
+    public function setCode(?string $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCode(): ?string
     {
         return $this->code;
     }
 
     /**
-    * @param int $fromWid
-    */
-    public function setFromWid(?int $fromWid)
+     * @param int $fromWid
+     */
+    public function setFromWid(?int $fromWid): void
     {
         $this->fromWid = $fromWid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFromWid(): ?int
     {
         return $this->fromWid;
     }
 
     /**
-    * @param int $toWid
-    */
-    public function setToWid(?int $toWid)
+     * @param int $toWid
+     */
+    public function setToWid(?int $toWid): void
     {
         $this->toWid = $toWid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getToWid(): ?int
     {
         return $this->toWid;
     }
 
     /**
-    * @param int $couponTemplateId
-    */
-    public function setCouponTemplateId(?int $couponTemplateId)
+     * @param int $couponTemplateId
+     */
+    public function setCouponTemplateId(?int $couponTemplateId): void
     {
         $this->couponTemplateId = $couponTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCouponTemplateId(): ?int
     {
         return $this->couponTemplateId;
     }
 
     /**
-    * @param int $statusType
-    */
-    public function setStatusType(?int $statusType)
+     * @param int $statusType
+     */
+    public function setStatusType(?int $statusType): void
     {
         $this->statusType = $statusType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getStatusType(): ?int
     {
         return $this->statusType;

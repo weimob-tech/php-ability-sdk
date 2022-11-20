@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,750
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface XiaokeUserDeleteListener
 {
@@ -23,22 +23,22 @@ interface XiaokeUserDeleteListener
 class DeleteMessage implements \JsonSerializable
 {
     /**
-    * 删除的员工wid列表
-    * @var array
-    */
+     * 删除的员工wid列表
+     * @var array
+     */
     private $widList;
 
     /**
-    * @param array $widList
-    */
-    public function setWidList(?array $widList)
+     * @param array $widList
+     */
+    public function setWidList(?array $widList): void
     {
         $this->widList = $widList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getWidList(): ?array
     {
         return $this->widList;

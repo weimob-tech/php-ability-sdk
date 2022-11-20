@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 471
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface O2oMemberPointChangeListener
 {
@@ -23,198 +23,198 @@ interface O2oMemberPointChangeListener
 class PointChangeMessage implements \JsonSerializable
 {
     /**
-    * 当前积分
-    * @var int
-    */
+     * 当前积分
+     * @var int
+     */
     private $point;
 
     /**
-    * 积分变更值（正数为增加积分，负数为减少积分）
-    * @var int
-    */
+     * 积分变更值（正数为增加积分，负数为减少积分）
+     * @var int
+     */
     private $pointChange;
 
     /**
-    * 备注
-    * @var string
-    */
+     * 备注
+     * @var string
+     */
     private $comment;
 
     /**
-    * 消息生成时间
-    * @var int
-    */
+     * 消息生成时间
+     * @var int
+     */
     private $createTime;
 
     /**
-    * 商户id
-    * @var int
-    */
+     * 商户id
+     * @var int
+     */
     private $merchantId;
 
     /**
-    * 用户openid
-    * @var string
-    */
+     * 用户openid
+     * @var string
+     */
     private $openId;
 
     /**
-    * 用户会员的wid
-    * @var string
-    */
+     * 用户会员的wid
+     * @var string
+     */
     private $wid;
 
     /**
-    * 会员id
-    * @var int
-    */
+     * 会员id
+     * @var int
+     */
     private $customerId;
 
     /**
-    * 会员卡号
-    * @var string
-    */
+     * 会员卡号
+     * @var string
+     */
     private $code;
 
     /**
-    * @param int $point
-    */
-    public function setPoint(?int $point)
+     * @param int $point
+     */
+    public function setPoint(?int $point): void
     {
         $this->point = $point;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPoint(): ?int
     {
         return $this->point;
     }
 
     /**
-    * @param int $pointChange
-    */
-    public function setPointChange(?int $pointChange)
+     * @param int $pointChange
+     */
+    public function setPointChange(?int $pointChange): void
     {
         $this->pointChange = $pointChange;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPointChange(): ?int
     {
         return $this->pointChange;
     }
 
     /**
-    * @param string $comment
-    */
-    public function setComment(?string $comment)
+     * @param string $comment
+     */
+    public function setComment(?string $comment): void
     {
         $this->comment = $comment;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getComment(): ?string
     {
         return $this->comment;
     }
 
     /**
-    * @param int $createTime
-    */
-    public function setCreateTime(?int $createTime)
+     * @param int $createTime
+     */
+    public function setCreateTime(?int $createTime): void
     {
         $this->createTime = $createTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCreateTime(): ?int
     {
         return $this->createTime;
     }
 
     /**
-    * @param int $merchantId
-    */
-    public function setMerchantId(?int $merchantId)
+     * @param int $merchantId
+     */
+    public function setMerchantId(?int $merchantId): void
     {
         $this->merchantId = $merchantId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMerchantId(): ?int
     {
         return $this->merchantId;
     }
 
     /**
-    * @param string $openId
-    */
-    public function setOpenId(?string $openId)
+     * @param string $openId
+     */
+    public function setOpenId(?string $openId): void
     {
         $this->openId = $openId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOpenId(): ?string
     {
         return $this->openId;
     }
 
     /**
-    * @param string $wid
-    */
-    public function setWid(?string $wid)
+     * @param string $wid
+     */
+    public function setWid(?string $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getWid(): ?string
     {
         return $this->wid;
     }
 
     /**
-    * @param int $customerId
-    */
-    public function setCustomerId(?int $customerId)
+     * @param int $customerId
+     */
+    public function setCustomerId(?int $customerId): void
     {
         $this->customerId = $customerId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCustomerId(): ?int
     {
         return $this->customerId;
     }
 
     /**
-    * @param string $code
-    */
-    public function setCode(?string $code)
+     * @param string $code
+     */
+    public function setCode(?string $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCode(): ?string
     {
         return $this->code;

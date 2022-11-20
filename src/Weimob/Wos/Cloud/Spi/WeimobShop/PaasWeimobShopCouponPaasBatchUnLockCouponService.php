@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 579
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface PaasWeimobShopCouponPaasBatchUnLockCouponService
 {
@@ -19,131 +19,131 @@ interface PaasWeimobShopCouponPaasBatchUnLockCouponService
 class WeimobShopCouponPaasBatchUnLockCouponRequest implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 全局唯一的扩展点
-    * @var string
-    */
+     * 全局唯一的扩展点
+     * @var string
+     */
     private $actionKey;
 
     /**
-    * 功能集ID
-    * @var int
-    */
+     * 功能集ID
+     * @var int
+     */
     private $functionId;
 
     /**
-    * 组织结构节点ID
-    * @var int
-    */
+     * 组织结构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 	组织结构节点类型
-    * @var int
-    */
+     * 	组织结构节点类型
+     * @var int
+     */
     private $vType;
 
     /**
-    * @var WeimobShopCouponPaasBatchUnLockCouponParam
-    */
+     * @var WeimobShopCouponPaasBatchUnLockCouponParam
+     */
     private $params;
 
     /**
-    * @param int $bosId
-    */
+     * @param int $bosId
+     */
     public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $actionKey
-    */
+     * @param string $actionKey
+     */
     public function setActionKey(?string $actionKey): void
     {
         $this->actionKey = $actionKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActionKey(): ?string
     {
         return $this->actionKey;
     }
 
     /**
-    * @param int $functionId
-    */
+     * @param int $functionId
+     */
     public function setFunctionId(?int $functionId): void
     {
         $this->functionId = $functionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFunctionId(): ?int
     {
         return $this->functionId;
     }
 
     /**
-    * @param int $vid
-    */
+     * @param int $vid
+     */
     public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vType
-    */
+     * @param int $vType
+     */
     public function setVType(?int $vType): void
     {
         $this->vType = $vType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVType(): ?int
     {
         return $this->vType;
     }
 
     /**
-    * @param WeimobShopCouponPaasBatchUnLockCouponParam $param
-    */
+     * @param WeimobShopCouponPaasBatchUnLockCouponParam $param
+     */
     public function setParam(?WeimobShopCouponPaasBatchUnLockCouponParam $param): void
     {
         $this->param = $param;
     }
 
     /**
-    * @return WeimobShopCouponPaasBatchUnLockCouponParam
-    */
+     * @return WeimobShopCouponPaasBatchUnLockCouponParam
+     */
     public function getParam(): ?WeimobShopCouponPaasBatchUnLockCouponParam
     {
         return $this->param;
@@ -158,176 +158,176 @@ class WeimobShopCouponPaasBatchUnLockCouponRequest implements \JsonSerializable
 class WeimobShopCouponPaasBatchUnLockCouponParam implements \JsonSerializable
 {
     /**
-    * 优惠券列表
-    * @var array
-    */
+     * 优惠券列表
+     * @var array
+     */
     private $couponList;
 
     /**
-    * 用户id
-    * @var int
-    */
+     * 用户id
+     * @var int
+     */
     private $wid;
 
     /**
-    * 商家id	
-    * @var int
-    */
+     * 商家id	
+     * @var int
+     */
     private $merchantId;
 
     /**
-    * 节点类型
-    * @var int
-    */
+     * 节点类型
+     * @var int
+     */
     private $vidType;
 
     /**
-    * 节点id	
-    * @var int
-    */
+     * 节点id	
+     * @var int
+     */
     private $vid;
 
     /**
-    * 商户id	
-    * @var int
-    */
+     * 商户id	
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 产品实例id	
-    * @var int
-    */
+     * 产品实例id	
+     * @var int
+     */
     private $productInstanceId;
 
     /**
-    * 租户类型
-    * @var string
-    */
+     * 租户类型
+     * @var string
+     */
     private $tcode;
 
     /**
-    * @param array $couponList
-    */
-    public function setCouponList(?array $couponList)
+     * @param array $couponList
+     */
+    public function setCouponList(?array $couponList): void
     {
         $this->couponList = $couponList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getCouponList(): ?array
     {
         return $this->couponList;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $merchantId
-    */
-    public function setMerchantId(?int $merchantId)
+     * @param int $merchantId
+     */
+    public function setMerchantId(?int $merchantId): void
     {
         $this->merchantId = $merchantId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMerchantId(): ?int
     {
         return $this->merchantId;
     }
 
     /**
-    * @param int $vidType
-    */
-    public function setVidType(?int $vidType)
+     * @param int $vidType
+     */
+    public function setVidType(?int $vidType): void
     {
         $this->vidType = $vidType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVidType(): ?int
     {
         return $this->vidType;
     }
 
     /**
-    * @param int $vid
-    */
-    public function setVid(?int $vid)
+     * @param int $vid
+     */
+    public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param int $productInstanceId
-    */
-    public function setProductInstanceId(?int $productInstanceId)
+     * @param int $productInstanceId
+     */
+    public function setProductInstanceId(?int $productInstanceId): void
     {
         $this->productInstanceId = $productInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProductInstanceId(): ?int
     {
         return $this->productInstanceId;
     }
 
     /**
-    * @param string $tcode
-    */
-    public function setTcode(?string $tcode)
+     * @param string $tcode
+     */
+    public function setTcode(?string $tcode): void
     {
         $this->tcode = $tcode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTcode(): ?string
     {
         return $this->tcode;
@@ -343,132 +343,132 @@ class WeimobShopCouponPaasBatchUnLockCouponParam implements \JsonSerializable
 class WeimobShopCouponPaasBatchUnLockCouponParamCouponList implements \JsonSerializable
 {
     /**
-    * bosId
-    * @var int
-    */
+     * bosId
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 券模板id
-    * @var int
-    */
+     * 券模板id
+     * @var int
+     */
     private $couponTemplateId;
 
     /**
-    * 订单号
-    * @var string
-    */
+     * 订单号
+     * @var string
+     */
     private $orderNo;
 
     /**
-    * 优惠码码值
-    * @var int
-    */
+     * 优惠码码值
+     * @var int
+     */
     private $code;
 
     /**
-    * 校验的金额(单位元)
-    * @var int
-    */
+     * 校验的金额(单位元)
+     * @var int
+     */
     private $amount;
 
     /**
-    * 核销场景	
-    * @var int
-    */
+     * 核销场景	
+     * @var int
+     */
     private $useScene;
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param int $couponTemplateId
-    */
-    public function setCouponTemplateId(?int $couponTemplateId)
+     * @param int $couponTemplateId
+     */
+    public function setCouponTemplateId(?int $couponTemplateId): void
     {
         $this->couponTemplateId = $couponTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCouponTemplateId(): ?int
     {
         return $this->couponTemplateId;
     }
 
     /**
-    * @param string $orderNo
-    */
-    public function setOrderNo(?string $orderNo)
+     * @param string $orderNo
+     */
+    public function setOrderNo(?string $orderNo): void
     {
         $this->orderNo = $orderNo;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOrderNo(): ?string
     {
         return $this->orderNo;
     }
 
     /**
-    * @param int $code
-    */
-    public function setCode(?int $code)
+     * @param int $code
+     */
+    public function setCode(?int $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?int
     {
         return $this->code;
     }
 
     /**
-    * @param int $amount
-    */
-    public function setAmount(?int $amount)
+     * @param int $amount
+     */
+    public function setAmount(?int $amount): void
     {
         $this->amount = $amount;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getAmount(): ?int
     {
         return $this->amount;
     }
 
     /**
-    * @param int $useScene
-    */
-    public function setUseScene(?int $useScene)
+     * @param int $useScene
+     */
+    public function setUseScene(?int $useScene): void
     {
         $this->useScene = $useScene;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getUseScene(): ?int
     {
         return $this->useScene;
@@ -485,44 +485,44 @@ class WeimobShopCouponPaasBatchUnLockCouponParamCouponList implements \JsonSeria
 class WeimobShopCouponPaasBatchUnLockCouponResponse implements \JsonSerializable
 {
     /**
-    * 请求返回的对象
-    * @var PaasResponseCode
-    */
+     * 请求返回的对象
+     * @var PaasResponseCode
+     */
     private $code;
 
     /**
-    * 请求返回的数据
-    * @var WeimobShopCouponPaasBatchUnLockCouponData
-    */
+     * 请求返回的数据
+     * @var WeimobShopCouponPaasBatchUnLockCouponData
+     */
     private $data;
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?PaasResponseCode
     {
         return $this->code;
     }
 
     /**
-    * @param PaasResponseCode $code
-    */
+     * @param PaasResponseCode $code
+     */
     public function setCode(?PaasResponseCode $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return WeimobShopCouponPaasBatchUnLockCouponData
-    */
+     * @return WeimobShopCouponPaasBatchUnLockCouponData
+     */
     public function getData(): ?WeimobShopCouponPaasBatchUnLockCouponData
     {
         return $this->data;
     }
 
     /**
-    * @param WeimobShopCouponPaasBatchUnLockCouponData $data
-    */
+     * @param WeimobShopCouponPaasBatchUnLockCouponData $data
+     */
     public function setData(?WeimobShopCouponPaasBatchUnLockCouponData $data): void
     {
         $this->data = $data;

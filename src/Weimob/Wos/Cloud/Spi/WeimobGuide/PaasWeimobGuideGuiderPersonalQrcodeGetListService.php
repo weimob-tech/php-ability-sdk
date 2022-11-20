@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,375
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface PaasWeimobGuideGuiderPersonalQrcodeGetListService
 {
@@ -19,131 +19,131 @@ interface PaasWeimobGuideGuiderPersonalQrcodeGetListService
 class WeimobGuideGuiderPersonalQrcodeGetListRequest implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 全局唯一的扩展点
-    * @var string
-    */
+     * 全局唯一的扩展点
+     * @var string
+     */
     private $actionKey;
 
     /**
-    * 功能集ID
-    * @var int
-    */
+     * 功能集ID
+     * @var int
+     */
     private $functionId;
 
     /**
-    * 组织结构节点ID
-    * @var int
-    */
+     * 组织结构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 	组织结构节点类型
-    * @var int
-    */
+     * 	组织结构节点类型
+     * @var int
+     */
     private $vType;
 
     /**
-    * @var WeimobGuideGuiderPersonalQrcodeGetListParam
-    */
+     * @var WeimobGuideGuiderPersonalQrcodeGetListParam
+     */
     private $params;
 
     /**
-    * @param int $bosId
-    */
+     * @param int $bosId
+     */
     public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $actionKey
-    */
+     * @param string $actionKey
+     */
     public function setActionKey(?string $actionKey): void
     {
         $this->actionKey = $actionKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActionKey(): ?string
     {
         return $this->actionKey;
     }
 
     /**
-    * @param int $functionId
-    */
+     * @param int $functionId
+     */
     public function setFunctionId(?int $functionId): void
     {
         $this->functionId = $functionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFunctionId(): ?int
     {
         return $this->functionId;
     }
 
     /**
-    * @param int $vid
-    */
+     * @param int $vid
+     */
     public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vType
-    */
+     * @param int $vType
+     */
     public function setVType(?int $vType): void
     {
         $this->vType = $vType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVType(): ?int
     {
         return $this->vType;
     }
 
     /**
-    * @param WeimobGuideGuiderPersonalQrcodeGetListParam $param
-    */
+     * @param WeimobGuideGuiderPersonalQrcodeGetListParam $param
+     */
     public function setParam(?WeimobGuideGuiderPersonalQrcodeGetListParam $param): void
     {
         $this->param = $param;
     }
 
     /**
-    * @return WeimobGuideGuiderPersonalQrcodeGetListParam
-    */
+     * @return WeimobGuideGuiderPersonalQrcodeGetListParam
+     */
     public function getParam(): ?WeimobGuideGuiderPersonalQrcodeGetListParam
     {
         return $this->param;
@@ -158,22 +158,22 @@ class WeimobGuideGuiderPersonalQrcodeGetListRequest implements \JsonSerializable
 class WeimobGuideGuiderPersonalQrcodeGetListParam implements \JsonSerializable
 {
     /**
-    * 导购列表入参
-    * @var array
-    */
+     * 导购列表入参
+     * @var array
+     */
     private $guiderList;
 
     /**
-    * @param array $guiderList
-    */
-    public function setGuiderList(?array $guiderList)
+     * @param array $guiderList
+     */
+    public function setGuiderList(?array $guiderList): void
     {
         $this->guiderList = $guiderList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getGuiderList(): ?array
     {
         return $this->guiderList;
@@ -189,44 +189,44 @@ class WeimobGuideGuiderPersonalQrcodeGetListParam implements \JsonSerializable
 class WeimobGuideGuiderPersonalQrcodeGetListParamGuiderList implements \JsonSerializable
 {
     /**
-    * 导购wid
-    * @var int
-    */
+     * 导购wid
+     * @var int
+     */
     private $guiderWid;
 
     /**
-    * 导购员手机号
-    * @var string
-    */
+     * 导购员手机号
+     * @var string
+     */
     private $guiderPhone;
 
     /**
-    * @param int $guiderWid
-    */
-    public function setGuiderWid(?int $guiderWid)
+     * @param int $guiderWid
+     */
+    public function setGuiderWid(?int $guiderWid): void
     {
         $this->guiderWid = $guiderWid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGuiderWid(): ?int
     {
         return $this->guiderWid;
     }
 
     /**
-    * @param string $guiderPhone
-    */
-    public function setGuiderPhone(?string $guiderPhone)
+     * @param string $guiderPhone
+     */
+    public function setGuiderPhone(?string $guiderPhone): void
     {
         $this->guiderPhone = $guiderPhone;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getGuiderPhone(): ?string
     {
         return $this->guiderPhone;
@@ -243,44 +243,44 @@ class WeimobGuideGuiderPersonalQrcodeGetListParamGuiderList implements \JsonSeri
 class WeimobGuideGuiderPersonalQrcodeGetListResponse implements \JsonSerializable
 {
     /**
-    * 请求返回的对象
-    * @var PaasResponseCode
-    */
+     * 请求返回的对象
+     * @var PaasResponseCode
+     */
     private $code;
 
     /**
-    * 请求返回的数据
-    * @var WeimobGuideGuiderPersonalQrcodeGetListData
-    */
+     * 请求返回的数据
+     * @var WeimobGuideGuiderPersonalQrcodeGetListData
+     */
     private $data;
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?PaasResponseCode
     {
         return $this->code;
     }
 
     /**
-    * @param PaasResponseCode $code
-    */
+     * @param PaasResponseCode $code
+     */
     public function setCode(?PaasResponseCode $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return WeimobGuideGuiderPersonalQrcodeGetListData
-    */
+     * @return WeimobGuideGuiderPersonalQrcodeGetListData
+     */
     public function getData(): ?WeimobGuideGuiderPersonalQrcodeGetListData
     {
         return $this->data;
     }
 
     /**
-    * @param WeimobGuideGuiderPersonalQrcodeGetListData $data
-    */
+     * @param WeimobGuideGuiderPersonalQrcodeGetListData $data
+     */
     public function setData(?WeimobGuideGuiderPersonalQrcodeGetListData $data): void
     {
         $this->data = $data;
@@ -295,22 +295,22 @@ class WeimobGuideGuiderPersonalQrcodeGetListResponse implements \JsonSerializabl
 class WeimobGuideGuiderPersonalQrcodeGetListData implements \JsonSerializable
 {
     /**
-    * 导购个人二维码列表
-    * @var array
-    */
+     * 导购个人二维码列表
+     * @var array
+     */
     private $guiderList;
 
     /**
-    * @param array $guiderList
-    */
-    public function setGuiderList(?array $guiderList)
+     * @param array $guiderList
+     */
+    public function setGuiderList(?array $guiderList): void
     {
         $this->guiderList = $guiderList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getGuiderList(): ?array
     {
         return $this->guiderList;
@@ -326,44 +326,44 @@ class WeimobGuideGuiderPersonalQrcodeGetListData implements \JsonSerializable
 class WeimobGuideGuiderPersonalQrcodeGetListDataGuiderList implements \JsonSerializable
 {
     /**
-    * 导购wid
-    * @var int
-    */
+     * 导购wid
+     * @var int
+     */
     private $guiderWid;
 
     /**
-    * 导购个人二维码（支持多个）
-    * @var array
-    */
+     * 导购个人二维码（支持多个）
+     * @var array
+     */
     private $qrCodes;
 
     /**
-    * @param int $guiderWid
-    */
-    public function setGuiderWid(?int $guiderWid)
+     * @param int $guiderWid
+     */
+    public function setGuiderWid(?int $guiderWid): void
     {
         $this->guiderWid = $guiderWid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGuiderWid(): ?int
     {
         return $this->guiderWid;
     }
 
     /**
-    * @param array $qrCodes
-    */
-    public function setQrCodes(?array $qrCodes)
+     * @param array $qrCodes
+     */
+    public function setQrCodes(?array $qrCodes): void
     {
         $this->qrCodes = $qrCodes;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getQrCodes(): ?array
     {
         return $this->qrCodes;

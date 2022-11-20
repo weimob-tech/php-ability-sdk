@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,307
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobGuideGuiderChangeGuiderDeleteListener
 {
@@ -23,176 +23,176 @@ interface WeimobGuideGuiderChangeGuiderDeleteListener
 class GuiderDeleteMessage implements \JsonSerializable
 {
     /**
-    * 商业操作系统id
-    * @var int
-    */
+     * 商业操作系统id
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 导购id，用于管理导购员的生命周期，同一个导购wid在同一个门店多次入离职，guiderId不同；同一个导购员，在不同的门店，guiderId不同
-    * @var string
-    */
+     * 导购id，用于管理导购员的生命周期，同一个导购wid在同一个门店多次入离职，guiderId不同；同一个导购员，在不同的门店，guiderId不同
+     * @var string
+     */
     private $guiderId;
 
     /**
-    * 变更时间，格式：yyyy-MM-dd HH:mm:ss
-    * @var string
-    */
+     * 变更时间，格式：yyyy-MM-dd HH:mm:ss
+     * @var string
+     */
     private $updateTime;
 
     /**
-    * 导购wid
-    * @var int
-    */
+     * 导购wid
+     * @var int
+     */
     private $guiderWid;
 
     /**
-    * 导购归属门店vid，来源于组织节点ID
-    * @var int
-    */
+     * 导购归属门店vid，来源于组织节点ID
+     * @var int
+     */
     private $guiderVid;
 
     /**
-    * 导购归属vid类型
-    * @var int
-    */
+     * 导购归属vid类型
+     * @var int
+     */
     private $guiderVidType;
 
     /**
-    * 来源产品ID
-    * @var int
-    */
+     * 来源产品ID
+     * @var int
+     */
     private $sourceProductId;
 
     /**
-    * 来源产品实例ID
-    * @var int
-    */
+     * 来源产品实例ID
+     * @var int
+     */
     private $sourceProductInstanceId;
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $guiderId
-    */
-    public function setGuiderId(?string $guiderId)
+     * @param string $guiderId
+     */
+    public function setGuiderId(?string $guiderId): void
     {
         $this->guiderId = $guiderId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getGuiderId(): ?string
     {
         return $this->guiderId;
     }
 
     /**
-    * @param string $updateTime
-    */
-    public function setUpdateTime(?string $updateTime)
+     * @param string $updateTime
+     */
+    public function setUpdateTime(?string $updateTime): void
     {
         $this->updateTime = $updateTime;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getUpdateTime(): ?string
     {
         return $this->updateTime;
     }
 
     /**
-    * @param int $guiderWid
-    */
-    public function setGuiderWid(?int $guiderWid)
+     * @param int $guiderWid
+     */
+    public function setGuiderWid(?int $guiderWid): void
     {
         $this->guiderWid = $guiderWid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGuiderWid(): ?int
     {
         return $this->guiderWid;
     }
 
     /**
-    * @param int $guiderVid
-    */
-    public function setGuiderVid(?int $guiderVid)
+     * @param int $guiderVid
+     */
+    public function setGuiderVid(?int $guiderVid): void
     {
         $this->guiderVid = $guiderVid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGuiderVid(): ?int
     {
         return $this->guiderVid;
     }
 
     /**
-    * @param int $guiderVidType
-    */
-    public function setGuiderVidType(?int $guiderVidType)
+     * @param int $guiderVidType
+     */
+    public function setGuiderVidType(?int $guiderVidType): void
     {
         $this->guiderVidType = $guiderVidType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGuiderVidType(): ?int
     {
         return $this->guiderVidType;
     }
 
     /**
-    * @param int $sourceProductId
-    */
-    public function setSourceProductId(?int $sourceProductId)
+     * @param int $sourceProductId
+     */
+    public function setSourceProductId(?int $sourceProductId): void
     {
         $this->sourceProductId = $sourceProductId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSourceProductId(): ?int
     {
         return $this->sourceProductId;
     }
 
     /**
-    * @param int $sourceProductInstanceId
-    */
-    public function setSourceProductInstanceId(?int $sourceProductInstanceId)
+     * @param int $sourceProductInstanceId
+     */
+    public function setSourceProductInstanceId(?int $sourceProductInstanceId): void
     {
         $this->sourceProductInstanceId = $sourceProductInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSourceProductInstanceId(): ?int
     {
         return $this->sourceProductInstanceId;

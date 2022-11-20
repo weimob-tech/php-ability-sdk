@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,686
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface CcCouponUpdateCouponTemplateListener
 {
@@ -23,88 +23,88 @@ interface CcCouponUpdateCouponTemplateListener
 class UpdateCouponTemplateMessage implements \JsonSerializable
 {
     /**
-    * 商户id
-    * @var int
-    */
+     * 商户id
+     * @var int
+     */
     private $pid;
 
     /**
-    * 券模板id
-    * @var int
-    */
+     * 券模板id
+     * @var int
+     */
     private $cardTemplateId;
 
     /**
-    * 操作人id
-    * @var int
-    */
+     * 操作人id
+     * @var int
+     */
     private $operateUserId;
 
     /**
-    * 渠道
-    * @var int
-    */
+     * 渠道
+     * @var int
+     */
     private $channel;
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;
     }
 
     /**
-    * @param int $cardTemplateId
-    */
-    public function setCardTemplateId(?int $cardTemplateId)
+     * @param int $cardTemplateId
+     */
+    public function setCardTemplateId(?int $cardTemplateId): void
     {
         $this->cardTemplateId = $cardTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCardTemplateId(): ?int
     {
         return $this->cardTemplateId;
     }
 
     /**
-    * @param int $operateUserId
-    */
-    public function setOperateUserId(?int $operateUserId)
+     * @param int $operateUserId
+     */
+    public function setOperateUserId(?int $operateUserId): void
     {
         $this->operateUserId = $operateUserId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOperateUserId(): ?int
     {
         return $this->operateUserId;
     }
 
     /**
-    * @param int $channel
-    */
-    public function setChannel(?int $channel)
+     * @param int $channel
+     */
+    public function setChannel(?int $channel): void
     {
         $this->channel = $channel;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getChannel(): ?int
     {
         return $this->channel;

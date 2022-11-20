@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,342
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobCrmCouponUpdateCouponTemplateListener
 {
@@ -23,88 +23,88 @@ interface WeimobCrmCouponUpdateCouponTemplateListener
 class UpdateCouponTemplateMessage implements \JsonSerializable
 {
     /**
-    * 券模板id
-    * @var int
-    */
+     * 券模板id
+     * @var int
+     */
     private $couponTemplateId;
 
     /**
-    * 券名称
-    * @var string
-    */
+     * 券名称
+     * @var string
+     */
     private $name;
 
     /**
-    * 用户wid
-    * @var int
-    */
+     * 用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * 请求渠道
-    * @var string
-    */
+     * 请求渠道
+     * @var string
+     */
     private $saasChannel;
 
     /**
-    * @param int $couponTemplateId
-    */
-    public function setCouponTemplateId(?int $couponTemplateId)
+     * @param int $couponTemplateId
+     */
+    public function setCouponTemplateId(?int $couponTemplateId): void
     {
         $this->couponTemplateId = $couponTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCouponTemplateId(): ?int
     {
         return $this->couponTemplateId;
     }
 
     /**
-    * @param string $name
-    */
-    public function setName(?string $name)
+     * @param string $name
+     */
+    public function setName(?string $name): void
     {
         $this->name = $name;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param string $saasChannel
-    */
-    public function setSaasChannel(?string $saasChannel)
+     * @param string $saasChannel
+     */
+    public function setSaasChannel(?string $saasChannel): void
     {
         $this->saasChannel = $saasChannel;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSaasChannel(): ?string
     {
         return $this->saasChannel;

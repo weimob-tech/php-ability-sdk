@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 2,686
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface XiaokeOrderNullityListener
 {
@@ -23,110 +23,110 @@ interface XiaokeOrderNullityListener
 class NullityMessage implements \JsonSerializable
 {
     /**
-    * 订单号
-    * @var array
-    */
+     * 订单号
+     * @var array
+     */
     private $orderNumberList;
 
     /**
-    * 作废原因
-    * @var string
-    */
+     * 作废原因
+     * @var string
+     */
     private $causeOfAbandonment;
 
     /**
-    * 作废原因编码
-    * @var string
-    */
+     * 作废原因编码
+     * @var string
+     */
     private $causeOfAbandonmentCode;
 
     /**
-    * 最后操作人
-    * @var int
-    */
+     * 最后操作人
+     * @var int
+     */
     private $lastUpdateUserWid;
 
     /**
-    * 最后操作时间
-    * @var int
-    */
+     * 最后操作时间
+     * @var int
+     */
     private $lastUpdateTime;
 
     /**
-    * @param array $orderNumberList
-    */
-    public function setOrderNumberList(?array $orderNumberList)
+     * @param array $orderNumberList
+     */
+    public function setOrderNumberList(?array $orderNumberList): void
     {
         $this->orderNumberList = $orderNumberList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getOrderNumberList(): ?array
     {
         return $this->orderNumberList;
     }
 
     /**
-    * @param string $causeOfAbandonment
-    */
-    public function setCauseOfAbandonment(?string $causeOfAbandonment)
+     * @param string $causeOfAbandonment
+     */
+    public function setCauseOfAbandonment(?string $causeOfAbandonment): void
     {
         $this->causeOfAbandonment = $causeOfAbandonment;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCauseOfAbandonment(): ?string
     {
         return $this->causeOfAbandonment;
     }
 
     /**
-    * @param string $causeOfAbandonmentCode
-    */
-    public function setCauseOfAbandonmentCode(?string $causeOfAbandonmentCode)
+     * @param string $causeOfAbandonmentCode
+     */
+    public function setCauseOfAbandonmentCode(?string $causeOfAbandonmentCode): void
     {
         $this->causeOfAbandonmentCode = $causeOfAbandonmentCode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCauseOfAbandonmentCode(): ?string
     {
         return $this->causeOfAbandonmentCode;
     }
 
     /**
-    * @param int $lastUpdateUserWid
-    */
-    public function setLastUpdateUserWid(?int $lastUpdateUserWid)
+     * @param int $lastUpdateUserWid
+     */
+    public function setLastUpdateUserWid(?int $lastUpdateUserWid): void
     {
         $this->lastUpdateUserWid = $lastUpdateUserWid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getLastUpdateUserWid(): ?int
     {
         return $this->lastUpdateUserWid;
     }
 
     /**
-    * @param int $lastUpdateTime
-    */
-    public function setLastUpdateTime(?int $lastUpdateTime)
+     * @param int $lastUpdateTime
+     */
+    public function setLastUpdateTime(?int $lastUpdateTime): void
     {
         $this->lastUpdateTime = $lastUpdateTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getLastUpdateTime(): ?int
     {
         return $this->lastUpdateTime;

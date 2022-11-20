@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 2,683
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface XiaokeOrderCreateListener
 {
@@ -23,88 +23,88 @@ interface XiaokeOrderCreateListener
 class CreateMessage implements \JsonSerializable
 {
     /**
-    * 业务字段
-    * @var array
-    */
+     * 业务字段
+     * @var array
+     */
     private $list;
 
     /**
-    * 订单意向产品
-    * @var array
-    */
+     * 订单意向产品
+     * @var array
+     */
     private $products;
 
     /**
-    * 操作时间,时间戳
-    * @var int
-    */
+     * 操作时间,时间戳
+     * @var int
+     */
     private $buildTime;
 
     /**
-    * 操作用户wid
-    * @var int
-    */
+     * 操作用户wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * @param array $list
-    */
-    public function setList(?array $list)
+     * @param array $list
+     */
+    public function setList(?array $list): void
     {
         $this->list = $list;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getList(): ?array
     {
         return $this->list;
     }
 
     /**
-    * @param array $products
-    */
-    public function setProducts(?array $products)
+     * @param array $products
+     */
+    public function setProducts(?array $products): void
     {
         $this->products = $products;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getProducts(): ?array
     {
         return $this->products;
     }
 
     /**
-    * @param int $buildTime
-    */
-    public function setBuildTime(?int $buildTime)
+     * @param int $buildTime
+     */
+    public function setBuildTime(?int $buildTime): void
     {
         $this->buildTime = $buildTime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBuildTime(): ?int
     {
         return $this->buildTime;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;

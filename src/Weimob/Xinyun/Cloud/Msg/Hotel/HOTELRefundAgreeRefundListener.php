@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 2,341
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface HOTELRefundAgreeRefundListener
 {
@@ -23,66 +23,66 @@ interface HOTELRefundAgreeRefundListener
 class AgreeRefundMessage implements \JsonSerializable
 {
     /**
-    * 门店id
-    * @var int
-    */
+     * 门店id
+     * @var int
+     */
     private $storeId;
 
     /**
-    * 售后单号
-    * @var int
-    */
+     * 售后单号
+     * @var int
+     */
     private $refundNo;
 
     /**
-    * 关联订单号
-    * @var string
-    */
+     * 关联订单号
+     * @var string
+     */
     private $orderNo;
 
     /**
-    * @param int $storeId
-    */
-    public function setStoreId(?int $storeId)
+     * @param int $storeId
+     */
+    public function setStoreId(?int $storeId): void
     {
         $this->storeId = $storeId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getStoreId(): ?int
     {
         return $this->storeId;
     }
 
     /**
-    * @param int $refundNo
-    */
-    public function setRefundNo(?int $refundNo)
+     * @param int $refundNo
+     */
+    public function setRefundNo(?int $refundNo): void
     {
         $this->refundNo = $refundNo;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getRefundNo(): ?int
     {
         return $this->refundNo;
     }
 
     /**
-    * @param string $orderNo
-    */
-    public function setOrderNo(?string $orderNo)
+     * @param string $orderNo
+     */
+    public function setOrderNo(?string $orderNo): void
     {
         $this->orderNo = $orderNo;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOrderNo(): ?string
     {
         return $this->orderNo;

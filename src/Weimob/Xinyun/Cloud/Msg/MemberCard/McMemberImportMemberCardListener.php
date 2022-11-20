@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,448
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface McMemberImportMemberCardListener
 {
@@ -23,44 +23,44 @@ interface McMemberImportMemberCardListener
 class ImportMemberCardMessage implements \JsonSerializable
 {
     /**
-    * 用户wid集合
-    * @var array
-    */
+     * 用户wid集合
+     * @var array
+     */
     private $widList;
 
     /**
-    * 会员卡模板id
-    * @var int
-    */
+     * 会员卡模板id
+     * @var int
+     */
     private $memberCardTemplateId;
 
     /**
-    * @param array $widList
-    */
-    public function setWidList(?array $widList)
+     * @param array $widList
+     */
+    public function setWidList(?array $widList): void
     {
         $this->widList = $widList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getWidList(): ?array
     {
         return $this->widList;
     }
 
     /**
-    * @param int $memberCardTemplateId
-    */
-    public function setMemberCardTemplateId(?int $memberCardTemplateId)
+     * @param int $memberCardTemplateId
+     */
+    public function setMemberCardTemplateId(?int $memberCardTemplateId): void
     {
         $this->memberCardTemplateId = $memberCardTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMemberCardTemplateId(): ?int
     {
         return $this->memberCardTemplateId;

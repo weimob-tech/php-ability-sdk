@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,482
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface InterScrapecardPlayCardListener
 {
@@ -23,88 +23,88 @@ interface InterScrapecardPlayCardListener
 class PlayCardMessage implements \JsonSerializable
 {
     /**
-    * unionid
-    * @var string
-    */
+     * unionid
+     * @var string
+     */
     private $unionid;
 
     /**
-    * wid
-    * @var int
-    */
+     * wid
+     * @var int
+     */
     private $wid;
 
     /**
-    * opened
-    * @var string
-    */
+     * opened
+     * @var string
+     */
     private $openid;
 
     /**
-    * 参与活动时间（刮卡时间）
-    * @var int
-    */
+     * 参与活动时间（刮卡时间）
+     * @var int
+     */
     private $playtime;
 
     /**
-    * @param string $unionid
-    */
-    public function setUnionid(?string $unionid)
+     * @param string $unionid
+     */
+    public function setUnionid(?string $unionid): void
     {
         $this->unionid = $unionid;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getUnionid(): ?string
     {
         return $this->unionid;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param string $openid
-    */
-    public function setOpenid(?string $openid)
+     * @param string $openid
+     */
+    public function setOpenid(?string $openid): void
     {
         $this->openid = $openid;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOpenid(): ?string
     {
         return $this->openid;
     }
 
     /**
-    * @param int $playtime
-    */
-    public function setPlaytime(?int $playtime)
+     * @param int $playtime
+     */
+    public function setPlaytime(?int $playtime): void
     {
         $this->playtime = $playtime;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPlaytime(): ?int
     {
         return $this->playtime;

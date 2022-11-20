@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,617
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface UcTagCustomerTagV2ReleationChangedListener
 {
@@ -23,44 +23,44 @@ interface UcTagCustomerTagV2ReleationChangedListener
 class CustomerTagV2ReleationChangedMessage implements \JsonSerializable
 {
     /**
-    * 用户wid
-    * @var array
-    */
+     * 用户wid
+     * @var array
+     */
     private $wids;
 
     /**
-    * 商户id
-    * @var int
-    */
+     * 商户id
+     * @var int
+     */
     private $pid;
 
     /**
-    * @param array $wids
-    */
-    public function setWids(?array $wids)
+     * @param array $wids
+     */
+    public function setWids(?array $wids): void
     {
         $this->wids = $wids;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getWids(): ?array
     {
         return $this->wids;
     }
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;

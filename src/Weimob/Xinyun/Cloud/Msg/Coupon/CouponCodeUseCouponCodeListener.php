@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,166
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface CouponCodeUseCouponCodeListener
 {
@@ -23,66 +23,66 @@ interface CouponCodeUseCouponCodeListener
 class UseCouponCodeMessage implements \JsonSerializable
 {
     /**
-    * 商户pid
-    * @var int
-    */
+     * 商户pid
+     * @var int
+     */
     private $pid;
 
     /**
-    * 用户唯一标识
-    * @var int
-    */
+     * 用户唯一标识
+     * @var int
+     */
     private $wid;
 
     /**
-    * 优惠码code
-    * @var string
-    */
+     * 优惠码code
+     * @var string
+     */
     private $code;
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param string $code
-    */
-    public function setCode(?string $code)
+     * @param string $code
+     */
+    public function setCode(?string $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCode(): ?string
     {
         return $this->code;

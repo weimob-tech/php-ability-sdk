@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,264
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobShopGoodsDeleteListener
 {
@@ -23,44 +23,44 @@ interface WeimobShopGoodsDeleteListener
 class DeleteMessage implements \JsonSerializable
 {
     /**
-    * 商品ID列表
-    * @var array
-    */
+     * 商品ID列表
+     * @var array
+     */
     private $goodsIdList;
 
     /**
-    * 组织结构节点
-    * @var int
-    */
+     * 组织结构节点
+     * @var int
+     */
     private $vid;
 
     /**
-    * @param array $goodsIdList
-    */
-    public function setGoodsIdList(?array $goodsIdList)
+     * @param array $goodsIdList
+     */
+    public function setGoodsIdList(?array $goodsIdList): void
     {
         $this->goodsIdList = $goodsIdList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getGoodsIdList(): ?array
     {
         return $this->goodsIdList;
     }
 
     /**
-    * @param int $vid
-    */
-    public function setVid(?int $vid)
+     * @param int $vid
+     */
+    public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;

@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,174
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface EcOrderOrderTransferListener
 {
@@ -23,22 +23,22 @@ interface EcOrderOrderTransferListener
 class OrderTransferMessage implements \JsonSerializable
 {
     /**
-    * 订单编号
-    * @var int
-    */
+     * 订单编号
+     * @var int
+     */
     private $orderNo;
 
     /**
-    * @param int $orderNo
-    */
-    public function setOrderNo(?int $orderNo)
+     * @param int $orderNo
+     */
+    public function setOrderNo(?int $orderNo): void
     {
         $this->orderNo = $orderNo;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOrderNo(): ?int
     {
         return $this->orderNo;

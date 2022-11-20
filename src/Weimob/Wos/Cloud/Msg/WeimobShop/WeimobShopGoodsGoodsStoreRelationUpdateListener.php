@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,231
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobShopGoodsGoodsStoreRelationUpdateListener
 {
@@ -23,88 +23,88 @@ interface WeimobShopGoodsGoodsStoreRelationUpdateListener
 class GoodsStoreRelationUpdateMessage implements \JsonSerializable
 {
     /**
-    * 商品ID列表,可以通过接口weimob_shop/goods/getList获得
-    * @var array
-    */
+     * 商品ID列表,可以通过接口weimob_shop/goods/getList获得
+     * @var array
+     */
     private $goodsIdList;
 
     /**
-    * 组织结构节点
-    * @var array
-    */
+     * 组织结构节点
+     * @var array
+     */
     private $vidList;
 
     /**
-    * 是否分配，分配-true；未分配；false
-    * @var bool
-    */
+     * 是否分配，分配-true；未分配；false
+     * @var bool
+     */
     private $isAssigned;
 
     /**
-    * 商品上架状态，上架-true；下架-false；
-    * @var bool
-    */
+     * 商品上架状态，上架-true；下架-false；
+     * @var bool
+     */
     private $isOnline;
 
     /**
-    * @param array $goodsIdList
-    */
-    public function setGoodsIdList(?array $goodsIdList)
+     * @param array $goodsIdList
+     */
+    public function setGoodsIdList(?array $goodsIdList): void
     {
         $this->goodsIdList = $goodsIdList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getGoodsIdList(): ?array
     {
         return $this->goodsIdList;
     }
 
     /**
-    * @param array $vidList
-    */
-    public function setVidList(?array $vidList)
+     * @param array $vidList
+     */
+    public function setVidList(?array $vidList): void
     {
         $this->vidList = $vidList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getVidList(): ?array
     {
         return $this->vidList;
     }
 
     /**
-    * @param bool $isAssigned
-    */
-    public function setIsAssigned(?bool $isAssigned)
+     * @param bool $isAssigned
+     */
+    public function setIsAssigned(?bool $isAssigned): void
     {
         $this->isAssigned = $isAssigned;
     }
 
     /**
-    * @return bool
-    */
+     * @return bool
+     */
     public function getIsAssigned(): ?bool
     {
         return $this->isAssigned;
     }
 
     /**
-    * @param bool $isOnline
-    */
-    public function setIsOnline(?bool $isOnline)
+     * @param bool $isOnline
+     */
+    public function setIsOnline(?bool $isOnline): void
     {
         $this->isOnline = $isOnline;
     }
 
     /**
-    * @return bool
-    */
+     * @return bool
+     */
     public function getIsOnline(): ?bool
     {
         return $this->isOnline;

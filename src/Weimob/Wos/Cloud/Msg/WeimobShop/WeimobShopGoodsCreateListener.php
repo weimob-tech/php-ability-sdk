@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,325
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobShopGoodsCreateListener
 {
@@ -23,44 +23,44 @@ interface WeimobShopGoodsCreateListener
 class CreateMessage implements \JsonSerializable
 {
     /**
-    * 组织结构节点
-    * @var string
-    */
+     * 组织结构节点
+     * @var string
+     */
     private $vid;
 
     /**
-    * 新生成的商品id
-    * @var string
-    */
+     * 新生成的商品id
+     * @var string
+     */
     private $goodsId;
 
     /**
-    * @param string $vid
-    */
-    public function setVid(?string $vid)
+     * @param string $vid
+     */
+    public function setVid(?string $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getVid(): ?string
     {
         return $this->vid;
     }
 
     /**
-    * @param string $goodsId
-    */
-    public function setGoodsId(?string $goodsId)
+     * @param string $goodsId
+     */
+    public function setGoodsId(?string $goodsId): void
     {
         $this->goodsId = $goodsId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getGoodsId(): ?string
     {
         return $this->goodsId;

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 723
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface PaasWeimobGuideGoodsConditionsFirstGetListService
 {
@@ -19,131 +19,131 @@ interface PaasWeimobGuideGoodsConditionsFirstGetListService
 class WeimobGuideGoodsConditionsFirstGetListRequest implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 全局唯一的扩展点
-    * @var string
-    */
+     * 全局唯一的扩展点
+     * @var string
+     */
     private $actionKey;
 
     /**
-    * 功能集ID
-    * @var int
-    */
+     * 功能集ID
+     * @var int
+     */
     private $functionId;
 
     /**
-    * 组织结构节点ID
-    * @var int
-    */
+     * 组织结构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 	组织结构节点类型
-    * @var int
-    */
+     * 	组织结构节点类型
+     * @var int
+     */
     private $vType;
 
     /**
-    * @var WeimobGuideGoodsConditionsFirstGetListParam
-    */
+     * @var WeimobGuideGoodsConditionsFirstGetListParam
+     */
     private $params;
 
     /**
-    * @param int $bosId
-    */
+     * @param int $bosId
+     */
     public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $actionKey
-    */
+     * @param string $actionKey
+     */
     public function setActionKey(?string $actionKey): void
     {
         $this->actionKey = $actionKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActionKey(): ?string
     {
         return $this->actionKey;
     }
 
     /**
-    * @param int $functionId
-    */
+     * @param int $functionId
+     */
     public function setFunctionId(?int $functionId): void
     {
         $this->functionId = $functionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFunctionId(): ?int
     {
         return $this->functionId;
     }
 
     /**
-    * @param int $vid
-    */
+     * @param int $vid
+     */
     public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vType
-    */
+     * @param int $vType
+     */
     public function setVType(?int $vType): void
     {
         $this->vType = $vType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVType(): ?int
     {
         return $this->vType;
     }
 
     /**
-    * @param WeimobGuideGoodsConditionsFirstGetListParam $param
-    */
+     * @param WeimobGuideGoodsConditionsFirstGetListParam $param
+     */
     public function setParam(?WeimobGuideGoodsConditionsFirstGetListParam $param): void
     {
         $this->param = $param;
     }
 
     /**
-    * @return WeimobGuideGoodsConditionsFirstGetListParam
-    */
+     * @return WeimobGuideGoodsConditionsFirstGetListParam
+     */
     public function getParam(): ?WeimobGuideGoodsConditionsFirstGetListParam
     {
         return $this->param;
@@ -168,44 +168,44 @@ class WeimobGuideGoodsConditionsFirstGetListParam implements \JsonSerializable
 class WeimobGuideGoodsConditionsFirstGetListResponse implements \JsonSerializable
 {
     /**
-    * 请求返回的对象
-    * @var PaasResponseCode
-    */
+     * 请求返回的对象
+     * @var PaasResponseCode
+     */
     private $code;
 
     /**
-    * 请求返回的数据
-    * @var WeimobGuideGoodsConditionsFirstGetListData
-    */
+     * 请求返回的数据
+     * @var WeimobGuideGoodsConditionsFirstGetListData
+     */
     private $data;
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?PaasResponseCode
     {
         return $this->code;
     }
 
     /**
-    * @param PaasResponseCode $code
-    */
+     * @param PaasResponseCode $code
+     */
     public function setCode(?PaasResponseCode $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return WeimobGuideGoodsConditionsFirstGetListData
-    */
+     * @return WeimobGuideGoodsConditionsFirstGetListData
+     */
     public function getData(): ?WeimobGuideGoodsConditionsFirstGetListData
     {
         return $this->data;
     }
 
     /**
-    * @param WeimobGuideGoodsConditionsFirstGetListData $data
-    */
+     * @param WeimobGuideGoodsConditionsFirstGetListData $data
+     */
     public function setData(?WeimobGuideGoodsConditionsFirstGetListData $data): void
     {
         $this->data = $data;
@@ -220,66 +220,66 @@ class WeimobGuideGoodsConditionsFirstGetListResponse implements \JsonSerializabl
 class WeimobGuideGoodsConditionsFirstGetListData implements \JsonSerializable
 {
     /**
-    * 一级分类子项
-    * @var array
-    */
+     * 一级分类子项
+     * @var array
+     */
     private $itemList;
 
     /**
-    * 一级分类类型
-    * @var int
-    */
+     * 一级分类类型
+     * @var int
+     */
     private $type;
 
     /**
-    * 一级筛选条件标题
-    * @var string
-    */
+     * 一级筛选条件标题
+     * @var string
+     */
     private $title;
 
     /**
-    * @param array $itemList
-    */
-    public function setItemList(?array $itemList)
+     * @param array $itemList
+     */
+    public function setItemList(?array $itemList): void
     {
         $this->itemList = $itemList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getItemList(): ?array
     {
         return $this->itemList;
     }
 
     /**
-    * @param int $type
-    */
-    public function setType(?int $type)
+     * @param int $type
+     */
+    public function setType(?int $type): void
     {
         $this->type = $type;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getType(): ?int
     {
         return $this->type;
     }
 
     /**
-    * @param string $title
-    */
-    public function setTitle(?string $title)
+     * @param string $title
+     */
+    public function setTitle(?string $title): void
     {
         $this->title = $title;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTitle(): ?string
     {
         return $this->title;
@@ -295,88 +295,88 @@ class WeimobGuideGoodsConditionsFirstGetListData implements \JsonSerializable
 class WeimobGuideGoodsConditionsFirstGetListDataItemList implements \JsonSerializable
 {
     /**
-    * 一级分类id
-    * @var int
-    */
+     * 一级分类id
+     * @var int
+     */
     private $id;
 
     /**
-    * 一级分类标题
-    * @var string
-    */
+     * 一级分类标题
+     * @var string
+     */
     private $title;
 
     /**
-    * 一级分类类型
-    * @var int
-    */
+     * 一级分类类型
+     * @var int
+     */
     private $type;
 
     /**
-    * 是否有子类
-    * @var bool
-    */
+     * 是否有子类
+     * @var bool
+     */
     private $hasSub;
 
     /**
-    * @param int $id
-    */
-    public function setId(?int $id)
+     * @param int $id
+     */
+    public function setId(?int $id): void
     {
         $this->id = $id;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
     /**
-    * @param string $title
-    */
-    public function setTitle(?string $title)
+     * @param string $title
+     */
+    public function setTitle(?string $title): void
     {
         $this->title = $title;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
     /**
-    * @param int $type
-    */
-    public function setType(?int $type)
+     * @param int $type
+     */
+    public function setType(?int $type): void
     {
         $this->type = $type;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getType(): ?int
     {
         return $this->type;
     }
 
     /**
-    * @param bool $hasSub
-    */
-    public function setHasSub(?bool $hasSub)
+     * @param bool $hasSub
+     */
+    public function setHasSub(?bool $hasSub): void
     {
         $this->hasSub = $hasSub;
     }
 
     /**
-    * @return bool
-    */
+     * @return bool
+     */
     public function getHasSub(): ?bool
     {
         return $this->hasSub;

@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,687
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface CcCouponUpdateCouponTemplateStatusListener
 {
@@ -23,110 +23,110 @@ interface CcCouponUpdateCouponTemplateStatusListener
 class UpdateCouponTemplateStatusMessage implements \JsonSerializable
 {
     /**
-    * 商户id
-    * @var int
-    */
+     * 商户id
+     * @var int
+     */
     private $pid;
 
     /**
-    * 券模板id
-    * @var int
-    */
+     * 券模板id
+     * @var int
+     */
     private $cardTemplateId;
 
     /**
-    * 当前状态 （1-开始投放 2-停止投放 6-删除 11-开始发放 12 停止发放） 如果状态变更频繁，传输过程中可能会有乱序问题
-    * @var int
-    */
+     * 当前状态 （1-开始投放 2-停止投放 6-删除 11-开始发放 12 停止发放） 如果状态变更频繁，传输过程中可能会有乱序问题
+     * @var int
+     */
     private $status;
 
     /**
-    * 渠道
-    * @var int
-    */
+     * 渠道
+     * @var int
+     */
     private $channel;
 
     /**
-    * 消息发送时间
-    * @var int
-    */
+     * 消息发送时间
+     * @var int
+     */
     private $timestamp;
 
     /**
-    * @param int $pid
-    */
-    public function setPid(?int $pid)
+     * @param int $pid
+     */
+    public function setPid(?int $pid): void
     {
         $this->pid = $pid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getPid(): ?int
     {
         return $this->pid;
     }
 
     /**
-    * @param int $cardTemplateId
-    */
-    public function setCardTemplateId(?int $cardTemplateId)
+     * @param int $cardTemplateId
+     */
+    public function setCardTemplateId(?int $cardTemplateId): void
     {
         $this->cardTemplateId = $cardTemplateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCardTemplateId(): ?int
     {
         return $this->cardTemplateId;
     }
 
     /**
-    * @param int $status
-    */
-    public function setStatus(?int $status)
+     * @param int $status
+     */
+    public function setStatus(?int $status): void
     {
         $this->status = $status;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getStatus(): ?int
     {
         return $this->status;
     }
 
     /**
-    * @param int $channel
-    */
-    public function setChannel(?int $channel)
+     * @param int $channel
+     */
+    public function setChannel(?int $channel): void
     {
         $this->channel = $channel;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getChannel(): ?int
     {
         return $this->channel;
     }
 
     /**
-    * @param int $timestamp
-    */
-    public function setTimestamp(?int $timestamp)
+     * @param int $timestamp
+     */
+    public function setTimestamp(?int $timestamp): void
     {
         $this->timestamp = $timestamp;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getTimestamp(): ?int
     {
         return $this->timestamp;

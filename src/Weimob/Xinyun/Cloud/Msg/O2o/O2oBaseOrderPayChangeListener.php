@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,428
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface O2oBaseOrderPayChangeListener
 {
@@ -23,22 +23,22 @@ interface O2oBaseOrderPayChangeListener
 class PayChangeMessage implements \JsonSerializable
 {
     /**
-    * 业务请求参数
-    * @var O2oBaseOrderPayChangeParams
-    */
+     * 业务请求参数
+     * @var O2oBaseOrderPayChangeParams
+     */
     private $params;
 
     /**
-    * @param O2oBaseOrderPayChangeParams $params
-    */
-    public function setParams(?O2oBaseOrderPayChangeParams $params)
+     * @param O2oBaseOrderPayChangeParams $params
+     */
+    public function setParams(?O2oBaseOrderPayChangeParams $params): void
     {
         $this->params = $params;
     }
 
     /**
-    * @return O2oBaseOrderPayChangeParams
-    */
+     * @return O2oBaseOrderPayChangeParams
+     */
     public function getParams(): ?O2oBaseOrderPayChangeParams
     {
         return $this->params;

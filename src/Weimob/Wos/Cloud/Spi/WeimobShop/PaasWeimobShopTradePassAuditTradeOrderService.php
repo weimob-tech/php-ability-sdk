@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,025
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface PaasWeimobShopTradePassAuditTradeOrderService
 {
@@ -19,131 +19,131 @@ interface PaasWeimobShopTradePassAuditTradeOrderService
 class WeimobShopTradePassAuditTradeOrderRequest implements \JsonSerializable
 {
     /**
-    * 商业操作系统ID
-    * @var int
-    */
+     * 商业操作系统ID
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 全局唯一的扩展点
-    * @var string
-    */
+     * 全局唯一的扩展点
+     * @var string
+     */
     private $actionKey;
 
     /**
-    * 功能集ID
-    * @var int
-    */
+     * 功能集ID
+     * @var int
+     */
     private $functionId;
 
     /**
-    * 组织结构节点ID
-    * @var int
-    */
+     * 组织结构节点ID
+     * @var int
+     */
     private $vid;
 
     /**
-    * 	组织结构节点类型
-    * @var int
-    */
+     * 	组织结构节点类型
+     * @var int
+     */
     private $vType;
 
     /**
-    * @var WeimobShopTradePassAuditTradeOrderParam
-    */
+     * @var WeimobShopTradePassAuditTradeOrderParam
+     */
     private $params;
 
     /**
-    * @param int $bosId
-    */
+     * @param int $bosId
+     */
     public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param string $actionKey
-    */
+     * @param string $actionKey
+     */
     public function setActionKey(?string $actionKey): void
     {
         $this->actionKey = $actionKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActionKey(): ?string
     {
         return $this->actionKey;
     }
 
     /**
-    * @param int $functionId
-    */
+     * @param int $functionId
+     */
     public function setFunctionId(?int $functionId): void
     {
         $this->functionId = $functionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getFunctionId(): ?int
     {
         return $this->functionId;
     }
 
     /**
-    * @param int $vid
-    */
+     * @param int $vid
+     */
     public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param int $vType
-    */
+     * @param int $vType
+     */
     public function setVType(?int $vType): void
     {
         $this->vType = $vType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVType(): ?int
     {
         return $this->vType;
     }
 
     /**
-    * @param WeimobShopTradePassAuditTradeOrderParam $param
-    */
+     * @param WeimobShopTradePassAuditTradeOrderParam $param
+     */
     public function setParam(?WeimobShopTradePassAuditTradeOrderParam $param): void
     {
         $this->param = $param;
     }
 
     /**
-    * @return WeimobShopTradePassAuditTradeOrderParam
-    */
+     * @return WeimobShopTradePassAuditTradeOrderParam
+     */
     public function getParam(): ?WeimobShopTradePassAuditTradeOrderParam
     {
         return $this->param;
@@ -158,176 +158,176 @@ class WeimobShopTradePassAuditTradeOrderRequest implements \JsonSerializable
 class WeimobShopTradePassAuditTradeOrderParam implements \JsonSerializable
 {
     /**
-    * 基础请求信息
-    * @var WeimobShopTradePassAuditTradeOrderParamBasicInfo
-    */
+     * 基础请求信息
+     * @var WeimobShopTradePassAuditTradeOrderParamBasicInfo
+     */
     private $basicInfo;
 
     /**
-    * ""
-    * @var array
-    */
+     * ""
+     * @var array
+     */
     private $confirmOrderShopGroupReqList;
 
     /**
-    * 调用方产品ID,
-    * @var int
-    */
+     * 调用方产品ID,
+     * @var int
+     */
     private $productId;
 
     /**
-    * 调用方产品实例ID.
-    * @var int
-    */
+     * 调用方产品实例ID.
+     * @var int
+     */
     private $productInstanceId;
 
     /**
-    * 被调用方产品ID
-    * @var int
-    */
+     * 被调用方产品ID
+     * @var int
+     */
     private $targetProductId;
 
     /**
-    * 被调用方产品实例ID
-    * @var int
-    */
+     * 被调用方产品实例ID
+     * @var int
+     */
     private $targetProductInstanceId;
 
     /**
-    * 提供产品的租户.
-    * @var string
-    */
+     * 提供产品的租户.
+     * @var string
+     */
     private $tcode;
 
     /**
-    * 商户标识.
-    * @var int
-    */
+     * 商户标识.
+     * @var int
+     */
     private $merchantId;
 
     /**
-    * @param WeimobShopTradePassAuditTradeOrderParamBasicInfo $basicInfo
-    */
-    public function setBasicInfo(?WeimobShopTradePassAuditTradeOrderParamBasicInfo $basicInfo)
+     * @param WeimobShopTradePassAuditTradeOrderParamBasicInfo $basicInfo
+     */
+    public function setBasicInfo(?WeimobShopTradePassAuditTradeOrderParamBasicInfo $basicInfo): void
     {
         $this->basicInfo = $basicInfo;
     }
 
     /**
-    * @return WeimobShopTradePassAuditTradeOrderParamBasicInfo
-    */
+     * @return WeimobShopTradePassAuditTradeOrderParamBasicInfo
+     */
     public function getBasicInfo(): ?WeimobShopTradePassAuditTradeOrderParamBasicInfo
     {
         return $this->basicInfo;
     }
 
     /**
-    * @param array $confirmOrderShopGroupReqList
-    */
-    public function setConfirmOrderShopGroupReqList(?array $confirmOrderShopGroupReqList)
+     * @param array $confirmOrderShopGroupReqList
+     */
+    public function setConfirmOrderShopGroupReqList(?array $confirmOrderShopGroupReqList): void
     {
         $this->confirmOrderShopGroupReqList = $confirmOrderShopGroupReqList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getConfirmOrderShopGroupReqList(): ?array
     {
         return $this->confirmOrderShopGroupReqList;
     }
 
     /**
-    * @param int $productId
-    */
-    public function setProductId(?int $productId)
+     * @param int $productId
+     */
+    public function setProductId(?int $productId): void
     {
         $this->productId = $productId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProductId(): ?int
     {
         return $this->productId;
     }
 
     /**
-    * @param int $productInstanceId
-    */
-    public function setProductInstanceId(?int $productInstanceId)
+     * @param int $productInstanceId
+     */
+    public function setProductInstanceId(?int $productInstanceId): void
     {
         $this->productInstanceId = $productInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getProductInstanceId(): ?int
     {
         return $this->productInstanceId;
     }
 
     /**
-    * @param int $targetProductId
-    */
-    public function setTargetProductId(?int $targetProductId)
+     * @param int $targetProductId
+     */
+    public function setTargetProductId(?int $targetProductId): void
     {
         $this->targetProductId = $targetProductId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getTargetProductId(): ?int
     {
         return $this->targetProductId;
     }
 
     /**
-    * @param int $targetProductInstanceId
-    */
-    public function setTargetProductInstanceId(?int $targetProductInstanceId)
+     * @param int $targetProductInstanceId
+     */
+    public function setTargetProductInstanceId(?int $targetProductInstanceId): void
     {
         $this->targetProductInstanceId = $targetProductInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getTargetProductInstanceId(): ?int
     {
         return $this->targetProductInstanceId;
     }
 
     /**
-    * @param string $tcode
-    */
-    public function setTcode(?string $tcode)
+     * @param string $tcode
+     */
+    public function setTcode(?string $tcode): void
     {
         $this->tcode = $tcode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTcode(): ?string
     {
         return $this->tcode;
     }
 
     /**
-    * @param int $merchantId
-    */
-    public function setMerchantId(?int $merchantId)
+     * @param int $merchantId
+     */
+    public function setMerchantId(?int $merchantId): void
     {
         $this->merchantId = $merchantId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMerchantId(): ?int
     {
         return $this->merchantId;
@@ -343,110 +343,110 @@ class WeimobShopTradePassAuditTradeOrderParam implements \JsonSerializable
 class WeimobShopTradePassAuditTradeOrderParamBasicInfo implements \JsonSerializable
 {
     /**
-    * 商户标识
-    * @var int
-    */
+     * 商户标识
+     * @var int
+     */
     private $merchantId;
 
     /**
-    * bosId不能为空
-    * @var int
-    */
+     * bosId不能为空
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 产品标识
-    * @var int
-    */
+     * 产品标识
+     * @var int
+     */
     private $sourceProductId;
 
     /**
-    * 产品版本标识
-    * @var int
-    */
+     * 产品版本标识
+     * @var int
+     */
     private $sourceProductVersionId;
 
     /**
-    * 产品实例标识
-    * @var int
-    */
+     * 产品实例标识
+     * @var int
+     */
     private $sourceProductInstanceId;
 
     /**
-    * @param int $merchantId
-    */
-    public function setMerchantId(?int $merchantId)
+     * @param int $merchantId
+     */
+    public function setMerchantId(?int $merchantId): void
     {
         $this->merchantId = $merchantId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMerchantId(): ?int
     {
         return $this->merchantId;
     }
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param int $sourceProductId
-    */
-    public function setSourceProductId(?int $sourceProductId)
+     * @param int $sourceProductId
+     */
+    public function setSourceProductId(?int $sourceProductId): void
     {
         $this->sourceProductId = $sourceProductId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSourceProductId(): ?int
     {
         return $this->sourceProductId;
     }
 
     /**
-    * @param int $sourceProductVersionId
-    */
-    public function setSourceProductVersionId(?int $sourceProductVersionId)
+     * @param int $sourceProductVersionId
+     */
+    public function setSourceProductVersionId(?int $sourceProductVersionId): void
     {
         $this->sourceProductVersionId = $sourceProductVersionId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSourceProductVersionId(): ?int
     {
         return $this->sourceProductVersionId;
     }
 
     /**
-    * @param int $sourceProductInstanceId
-    */
-    public function setSourceProductInstanceId(?int $sourceProductInstanceId)
+     * @param int $sourceProductInstanceId
+     */
+    public function setSourceProductInstanceId(?int $sourceProductInstanceId): void
     {
         $this->sourceProductInstanceId = $sourceProductInstanceId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSourceProductInstanceId(): ?int
     {
         return $this->sourceProductInstanceId;
@@ -462,242 +462,242 @@ class WeimobShopTradePassAuditTradeOrderParamBasicInfo implements \JsonSerializa
 class WeimobShopTradePassAuditTradeOrderParamConfirmOrderShopGroupReqList implements \JsonSerializable
 {
     /**
-    * 商品级列表
-    * @var array
-    */
+     * 商品级列表
+     * @var array
+     */
     private $goodsReqList;
 
     /**
-    * 支付信息 
-    * @var WeimobShopTradePassAuditTradeOrderParamPaymentInfo
-    */
+     * 支付信息 
+     * @var WeimobShopTradePassAuditTradeOrderParamPaymentInfo
+     */
     private $paymentInfo;
 
     /**
-    * bosId不能为空
-    * @var int
-    */
+     * bosId不能为空
+     * @var int
+     */
     private $bosId;
 
     /**
-    * 商户标识
-    * @var int
-    */
+     * 商户标识
+     * @var int
+     */
     private $merchantId;
 
     /**
-    * 商户名
-    * @var string
-    */
+     * 商户名
+     * @var string
+     */
     private $merchantName;
 
     /**
-    * 用户id
-    * @var int
-    */
+     * 用户id
+     * @var int
+     */
     private $wid;
 
     /**
-    * 组织结构节点
-    * @var int
-    */
+     * 组织结构节点
+     * @var int
+     */
     private $vid;
 
     /**
-    * vid节点名
-    * @var string
-    */
+     * vid节点名
+     * @var string
+     */
     private $vidName;
 
     /**
-    * 渠道类型
-    * @var int
-    */
+     * 渠道类型
+     * @var int
+     */
     private $channelType;
 
     /**
-    * 订单号1
-    * @var int
-    */
+     * 订单号1
+     * @var int
+     */
     private $orderNo;
 
     /**
-    * 父单号
-    * @var int
-    */
+     * 父单号
+     * @var int
+     */
     private $parentOrderNo;
 
     /**
-    * @param array $goodsReqList
-    */
-    public function setGoodsReqList(?array $goodsReqList)
+     * @param array $goodsReqList
+     */
+    public function setGoodsReqList(?array $goodsReqList): void
     {
         $this->goodsReqList = $goodsReqList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getGoodsReqList(): ?array
     {
         return $this->goodsReqList;
     }
 
     /**
-    * @param WeimobShopTradePassAuditTradeOrderParamPaymentInfo $paymentInfo
-    */
-    public function setPaymentInfo(?WeimobShopTradePassAuditTradeOrderParamPaymentInfo $paymentInfo)
+     * @param WeimobShopTradePassAuditTradeOrderParamPaymentInfo $paymentInfo
+     */
+    public function setPaymentInfo(?WeimobShopTradePassAuditTradeOrderParamPaymentInfo $paymentInfo): void
     {
         $this->paymentInfo = $paymentInfo;
     }
 
     /**
-    * @return WeimobShopTradePassAuditTradeOrderParamPaymentInfo
-    */
+     * @return WeimobShopTradePassAuditTradeOrderParamPaymentInfo
+     */
     public function getPaymentInfo(): ?WeimobShopTradePassAuditTradeOrderParamPaymentInfo
     {
         return $this->paymentInfo;
     }
 
     /**
-    * @param int $bosId
-    */
-    public function setBosId(?int $bosId)
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
     {
         $this->bosId = $bosId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBosId(): ?int
     {
         return $this->bosId;
     }
 
     /**
-    * @param int $merchantId
-    */
-    public function setMerchantId(?int $merchantId)
+     * @param int $merchantId
+     */
+    public function setMerchantId(?int $merchantId): void
     {
         $this->merchantId = $merchantId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getMerchantId(): ?int
     {
         return $this->merchantId;
     }
 
     /**
-    * @param string $merchantName
-    */
-    public function setMerchantName(?string $merchantName)
+     * @param string $merchantName
+     */
+    public function setMerchantName(?string $merchantName): void
     {
         $this->merchantName = $merchantName;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getMerchantName(): ?string
     {
         return $this->merchantName;
     }
 
     /**
-    * @param int $wid
-    */
-    public function setWid(?int $wid)
+     * @param int $wid
+     */
+    public function setWid(?int $wid): void
     {
         $this->wid = $wid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWid(): ?int
     {
         return $this->wid;
     }
 
     /**
-    * @param int $vid
-    */
-    public function setVid(?int $vid)
+     * @param int $vid
+     */
+    public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;
     }
 
     /**
-    * @param string $vidName
-    */
-    public function setVidName(?string $vidName)
+     * @param string $vidName
+     */
+    public function setVidName(?string $vidName): void
     {
         $this->vidName = $vidName;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getVidName(): ?string
     {
         return $this->vidName;
     }
 
     /**
-    * @param int $channelType
-    */
-    public function setChannelType(?int $channelType)
+     * @param int $channelType
+     */
+    public function setChannelType(?int $channelType): void
     {
         $this->channelType = $channelType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getChannelType(): ?int
     {
         return $this->channelType;
     }
 
     /**
-    * @param int $orderNo
-    */
-    public function setOrderNo(?int $orderNo)
+     * @param int $orderNo
+     */
+    public function setOrderNo(?int $orderNo): void
     {
         $this->orderNo = $orderNo;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getOrderNo(): ?int
     {
         return $this->orderNo;
     }
 
     /**
-    * @param int $parentOrderNo
-    */
-    public function setParentOrderNo(?int $parentOrderNo)
+     * @param int $parentOrderNo
+     */
+    public function setParentOrderNo(?int $parentOrderNo): void
     {
         $this->parentOrderNo = $parentOrderNo;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getParentOrderNo(): ?int
     {
         return $this->parentOrderNo;
@@ -713,330 +713,330 @@ class WeimobShopTradePassAuditTradeOrderParamConfirmOrderShopGroupReqList implem
 class WeimobShopTradePassAuditTradeOrderParamGoodsReqList implements \JsonSerializable
 {
     /**
-    * ""
-    * @var WeimobShopTradePassAuditTradeOrderParamGoodsAbilityReq
-    */
+     * ""
+     * @var WeimobShopTradePassAuditTradeOrderParamGoodsAbilityReq
+     */
     private $goodsAbilityReq;
 
     /**
-    * 使用的活动集合
-    * @var array
-    */
+     * 使用的活动集合
+     * @var array
+     */
     private $useActivityList;
 
     /**
-    * ItemProductInfo
-    * @var WeimobShopTradePassAuditTradeOrderParamItemProductInfo
-    */
+     * ItemProductInfo
+     * @var WeimobShopTradePassAuditTradeOrderParamItemProductInfo
+     */
     private $itemProductInfo;
 
     /**
-    * 品类信息key:productCategory(该参数为map)
-    * @var WeimobShopTradePassAuditTradeOrderParamGoodsExtMap
-    */
+     * 品类信息key:productCategory(该参数为map)
+     * @var WeimobShopTradePassAuditTradeOrderParamGoodsExtMap
+     */
     private $goodsExtMap;
 
     /**
-    * 商品能力
-    * @var array
-    */
+     * 商品能力
+     * @var array
+     */
     private $goodsAbilityList;
 
     /**
-    * 商品级拆分ID,一次交易过程中唯一
-    * @var int
-    */
+     * 商品级拆分ID,一次交易过程中唯一
+     * @var int
+     */
     private $itemId;
 
     /**
-    * 商品ID
-    * @var int
-    */
+     * 商品ID
+     * @var int
+     */
     private $goodsId;
 
     /**
-    * SKUID
-    * @var int
-    */
+     * SKUID
+     * @var int
+     */
     private $skuId;
 
     /**
-    * 购买数量
-    * @var int
-    */
+     * 购买数量
+     * @var int
+     */
     private $buyNum;
 
     /**
-    * 商品销售价格(BigDecimal)
-    * @var int
-    */
+     * 商品销售价格(BigDecimal)
+     * @var int
+     */
     private $skuSalePrice;
 
     /**
-    * 市场价(BigDecimal)
-    * @var string
-    */
+     * 市场价(BigDecimal)
+     * @var string
+     */
     private $skuMarketPrice;
 
     /**
-    * 结算商品类型1、普通商品2、赠品3、加价购换购商品
-    * @var int
-    */
+     * 结算商品类型1、普通商品2、赠品3、加价购换购商品
+     * @var int
+     */
     private $tradeGoodsType;
 
     /**
-    * 商品类型
-    * @var int
-    */
+     * 商品类型
+     * @var int
+     */
     private $goodsType;
 
     /**
-    * 商品子类型
-    * @var int
-    */
+     * 商品子类型
+     * @var int
+     */
     private $subGoodsType;
 
     /**
-    * 商品销售模式
-    * @var int
-    */
+     * 商品销售模式
+     * @var int
+     */
     private $soldType;
 
     /**
-    * @param WeimobShopTradePassAuditTradeOrderParamGoodsAbilityReq $goodsAbilityReq
-    */
-    public function setGoodsAbilityReq(?WeimobShopTradePassAuditTradeOrderParamGoodsAbilityReq $goodsAbilityReq)
+     * @param WeimobShopTradePassAuditTradeOrderParamGoodsAbilityReq $goodsAbilityReq
+     */
+    public function setGoodsAbilityReq(?WeimobShopTradePassAuditTradeOrderParamGoodsAbilityReq $goodsAbilityReq): void
     {
         $this->goodsAbilityReq = $goodsAbilityReq;
     }
 
     /**
-    * @return WeimobShopTradePassAuditTradeOrderParamGoodsAbilityReq
-    */
+     * @return WeimobShopTradePassAuditTradeOrderParamGoodsAbilityReq
+     */
     public function getGoodsAbilityReq(): ?WeimobShopTradePassAuditTradeOrderParamGoodsAbilityReq
     {
         return $this->goodsAbilityReq;
     }
 
     /**
-    * @param array $useActivityList
-    */
-    public function setUseActivityList(?array $useActivityList)
+     * @param array $useActivityList
+     */
+    public function setUseActivityList(?array $useActivityList): void
     {
         $this->useActivityList = $useActivityList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getUseActivityList(): ?array
     {
         return $this->useActivityList;
     }
 
     /**
-    * @param WeimobShopTradePassAuditTradeOrderParamItemProductInfo $itemProductInfo
-    */
-    public function setItemProductInfo(?WeimobShopTradePassAuditTradeOrderParamItemProductInfo $itemProductInfo)
+     * @param WeimobShopTradePassAuditTradeOrderParamItemProductInfo $itemProductInfo
+     */
+    public function setItemProductInfo(?WeimobShopTradePassAuditTradeOrderParamItemProductInfo $itemProductInfo): void
     {
         $this->itemProductInfo = $itemProductInfo;
     }
 
     /**
-    * @return WeimobShopTradePassAuditTradeOrderParamItemProductInfo
-    */
+     * @return WeimobShopTradePassAuditTradeOrderParamItemProductInfo
+     */
     public function getItemProductInfo(): ?WeimobShopTradePassAuditTradeOrderParamItemProductInfo
     {
         return $this->itemProductInfo;
     }
 
     /**
-    * @param WeimobShopTradePassAuditTradeOrderParamGoodsExtMap $goodsExtMap
-    */
-    public function setGoodsExtMap(?WeimobShopTradePassAuditTradeOrderParamGoodsExtMap $goodsExtMap)
+     * @param WeimobShopTradePassAuditTradeOrderParamGoodsExtMap $goodsExtMap
+     */
+    public function setGoodsExtMap(?WeimobShopTradePassAuditTradeOrderParamGoodsExtMap $goodsExtMap): void
     {
         $this->goodsExtMap = $goodsExtMap;
     }
 
     /**
-    * @return WeimobShopTradePassAuditTradeOrderParamGoodsExtMap
-    */
+     * @return WeimobShopTradePassAuditTradeOrderParamGoodsExtMap
+     */
     public function getGoodsExtMap(): ?WeimobShopTradePassAuditTradeOrderParamGoodsExtMap
     {
         return $this->goodsExtMap;
     }
 
     /**
-    * @param array $goodsAbilityList
-    */
-    public function setGoodsAbilityList(?array $goodsAbilityList)
+     * @param array $goodsAbilityList
+     */
+    public function setGoodsAbilityList(?array $goodsAbilityList): void
     {
         $this->goodsAbilityList = $goodsAbilityList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getGoodsAbilityList(): ?array
     {
         return $this->goodsAbilityList;
     }
 
     /**
-    * @param int $itemId
-    */
-    public function setItemId(?int $itemId)
+     * @param int $itemId
+     */
+    public function setItemId(?int $itemId): void
     {
         $this->itemId = $itemId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getItemId(): ?int
     {
         return $this->itemId;
     }
 
     /**
-    * @param int $goodsId
-    */
-    public function setGoodsId(?int $goodsId)
+     * @param int $goodsId
+     */
+    public function setGoodsId(?int $goodsId): void
     {
         $this->goodsId = $goodsId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGoodsId(): ?int
     {
         return $this->goodsId;
     }
 
     /**
-    * @param int $skuId
-    */
-    public function setSkuId(?int $skuId)
+     * @param int $skuId
+     */
+    public function setSkuId(?int $skuId): void
     {
         $this->skuId = $skuId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSkuId(): ?int
     {
         return $this->skuId;
     }
 
     /**
-    * @param int $buyNum
-    */
-    public function setBuyNum(?int $buyNum)
+     * @param int $buyNum
+     */
+    public function setBuyNum(?int $buyNum): void
     {
         $this->buyNum = $buyNum;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getBuyNum(): ?int
     {
         return $this->buyNum;
     }
 
     /**
-    * @param int $skuSalePrice
-    */
-    public function setSkuSalePrice(?int $skuSalePrice)
+     * @param int $skuSalePrice
+     */
+    public function setSkuSalePrice(?int $skuSalePrice): void
     {
         $this->skuSalePrice = $skuSalePrice;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSkuSalePrice(): ?int
     {
         return $this->skuSalePrice;
     }
 
     /**
-    * @param string $skuMarketPrice
-    */
-    public function setSkuMarketPrice(?string $skuMarketPrice)
+     * @param string $skuMarketPrice
+     */
+    public function setSkuMarketPrice(?string $skuMarketPrice): void
     {
         $this->skuMarketPrice = $skuMarketPrice;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getSkuMarketPrice(): ?string
     {
         return $this->skuMarketPrice;
     }
 
     /**
-    * @param int $tradeGoodsType
-    */
-    public function setTradeGoodsType(?int $tradeGoodsType)
+     * @param int $tradeGoodsType
+     */
+    public function setTradeGoodsType(?int $tradeGoodsType): void
     {
         $this->tradeGoodsType = $tradeGoodsType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getTradeGoodsType(): ?int
     {
         return $this->tradeGoodsType;
     }
 
     /**
-    * @param int $goodsType
-    */
-    public function setGoodsType(?int $goodsType)
+     * @param int $goodsType
+     */
+    public function setGoodsType(?int $goodsType): void
     {
         $this->goodsType = $goodsType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGoodsType(): ?int
     {
         return $this->goodsType;
     }
 
     /**
-    * @param int $subGoodsType
-    */
-    public function setSubGoodsType(?int $subGoodsType)
+     * @param int $subGoodsType
+     */
+    public function setSubGoodsType(?int $subGoodsType): void
     {
         $this->subGoodsType = $subGoodsType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSubGoodsType(): ?int
     {
         return $this->subGoodsType;
     }
 
     /**
-    * @param int $soldType
-    */
-    public function setSoldType(?int $soldType)
+     * @param int $soldType
+     */
+    public function setSoldType(?int $soldType): void
     {
         $this->soldType = $soldType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSoldType(): ?int
     {
         return $this->soldType;
@@ -1052,22 +1052,22 @@ class WeimobShopTradePassAuditTradeOrderParamGoodsReqList implements \JsonSerial
 class WeimobShopTradePassAuditTradeOrderParamGoodsAbilityReq implements \JsonSerializable
 {
     /**
-    * 周期购商品信息
-    * @var WeimobShopTradePassAuditTradeOrderParamCycleInfoReq
-    */
+     * 周期购商品信息
+     * @var WeimobShopTradePassAuditTradeOrderParamCycleInfoReq
+     */
     private $cycleInfoReq;
 
     /**
-    * @param WeimobShopTradePassAuditTradeOrderParamCycleInfoReq $cycleInfoReq
-    */
-    public function setCycleInfoReq(?WeimobShopTradePassAuditTradeOrderParamCycleInfoReq $cycleInfoReq)
+     * @param WeimobShopTradePassAuditTradeOrderParamCycleInfoReq $cycleInfoReq
+     */
+    public function setCycleInfoReq(?WeimobShopTradePassAuditTradeOrderParamCycleInfoReq $cycleInfoReq): void
     {
         $this->cycleInfoReq = $cycleInfoReq;
     }
 
     /**
-    * @return WeimobShopTradePassAuditTradeOrderParamCycleInfoReq
-    */
+     * @return WeimobShopTradePassAuditTradeOrderParamCycleInfoReq
+     */
     public function getCycleInfoReq(): ?WeimobShopTradePassAuditTradeOrderParamCycleInfoReq
     {
         return $this->cycleInfoReq;
@@ -1083,22 +1083,22 @@ class WeimobShopTradePassAuditTradeOrderParamGoodsAbilityReq implements \JsonSer
 class WeimobShopTradePassAuditTradeOrderParamCycleInfoReq implements \JsonSerializable
 {
     /**
-    * 商品能力Id(例如：周期购的总期数对应的ID)
-    * @var string
-    */
+     * 商品能力Id(例如：周期购的总期数对应的ID)
+     * @var string
+     */
     private $cycleBizId;
 
     /**
-    * @param string $cycleBizId
-    */
-    public function setCycleBizId(?string $cycleBizId)
+     * @param string $cycleBizId
+     */
+    public function setCycleBizId(?string $cycleBizId): void
     {
         $this->cycleBizId = $cycleBizId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getCycleBizId(): ?string
     {
         return $this->cycleBizId;
@@ -1114,176 +1114,176 @@ class WeimobShopTradePassAuditTradeOrderParamCycleInfoReq implements \JsonSerial
 class WeimobShopTradePassAuditTradeOrderParamUseActivityList implements \JsonSerializable
 {
     /**
-    * 折扣优惠名称编码
-    * @var string
-    */
+     * 折扣优惠名称编码
+     * @var string
+     */
     private $activityId;
 
     /**
-    * 折扣优惠名称
-    * @var string
-    */
+     * 折扣优惠名称
+     * @var string
+     */
     private $activityName;
 
     /**
-    * 折扣优惠类型
-    * @var int
-    */
+     * 折扣优惠类型
+     * @var int
+     */
     private $activityType;
 
     /**
-    * 折扣优惠类型金额(BigDecimal)
-    * @var string
-    */
+     * 折扣优惠类型金额(BigDecimal)
+     * @var string
+     */
     private $discountAmount;
 
     /**
-    * 拼团砍价的订单号id
-    * @var string
-    */
+     * 拼团砍价的订单号id
+     * @var string
+     */
     private $discountBizOrderId;
 
     /**
-    * 套装活动的分组Key
-    * @var string
-    */
+     * 套装活动的分组Key
+     * @var string
+     */
     private $groupKey;
 
     /**
-    * 活动层级
-    * @var int
-    */
+     * 活动层级
+     * @var int
+     */
     private $level;
 
     /**
-    * 活动模版ID
-    * @var int
-    */
+     * 活动模版ID
+     * @var int
+     */
     private $templateId;
 
     /**
-    * @param string $activityId
-    */
-    public function setActivityId(?string $activityId)
+     * @param string $activityId
+     */
+    public function setActivityId(?string $activityId): void
     {
         $this->activityId = $activityId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActivityId(): ?string
     {
         return $this->activityId;
     }
 
     /**
-    * @param string $activityName
-    */
-    public function setActivityName(?string $activityName)
+     * @param string $activityName
+     */
+    public function setActivityName(?string $activityName): void
     {
         $this->activityName = $activityName;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getActivityName(): ?string
     {
         return $this->activityName;
     }
 
     /**
-    * @param int $activityType
-    */
-    public function setActivityType(?int $activityType)
+     * @param int $activityType
+     */
+    public function setActivityType(?int $activityType): void
     {
         $this->activityType = $activityType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getActivityType(): ?int
     {
         return $this->activityType;
     }
 
     /**
-    * @param string $discountAmount
-    */
-    public function setDiscountAmount(?string $discountAmount)
+     * @param string $discountAmount
+     */
+    public function setDiscountAmount(?string $discountAmount): void
     {
         $this->discountAmount = $discountAmount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getDiscountAmount(): ?string
     {
         return $this->discountAmount;
     }
 
     /**
-    * @param string $discountBizOrderId
-    */
-    public function setDiscountBizOrderId(?string $discountBizOrderId)
+     * @param string $discountBizOrderId
+     */
+    public function setDiscountBizOrderId(?string $discountBizOrderId): void
     {
         $this->discountBizOrderId = $discountBizOrderId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getDiscountBizOrderId(): ?string
     {
         return $this->discountBizOrderId;
     }
 
     /**
-    * @param string $groupKey
-    */
-    public function setGroupKey(?string $groupKey)
+     * @param string $groupKey
+     */
+    public function setGroupKey(?string $groupKey): void
     {
         $this->groupKey = $groupKey;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getGroupKey(): ?string
     {
         return $this->groupKey;
     }
 
     /**
-    * @param int $level
-    */
-    public function setLevel(?int $level)
+     * @param int $level
+     */
+    public function setLevel(?int $level): void
     {
         $this->level = $level;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getLevel(): ?int
     {
         return $this->level;
     }
 
     /**
-    * @param int $templateId
-    */
-    public function setTemplateId(?int $templateId)
+     * @param int $templateId
+     */
+    public function setTemplateId(?int $templateId): void
     {
         $this->templateId = $templateId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getTemplateId(): ?int
     {
         return $this->templateId;
@@ -1299,22 +1299,22 @@ class WeimobShopTradePassAuditTradeOrderParamUseActivityList implements \JsonSer
 class WeimobShopTradePassAuditTradeOrderParamItemProductInfo implements \JsonSerializable
 {
     /**
-    * ""
-    * @var array
-    */
+     * ""
+     * @var array
+     */
     private $productDetailList;
 
     /**
-    * @param array $productDetailList
-    */
-    public function setProductDetailList(?array $productDetailList)
+     * @param array $productDetailList
+     */
+    public function setProductDetailList(?array $productDetailList): void
     {
         $this->productDetailList = $productDetailList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getProductDetailList(): ?array
     {
         return $this->productDetailList;
@@ -1330,22 +1330,22 @@ class WeimobShopTradePassAuditTradeOrderParamItemProductInfo implements \JsonSer
 class WeimobShopTradePassAuditTradeOrderParamProductDetailList implements \JsonSerializable
 {
     /**
-    * ""
-    * @var array
-    */
+     * ""
+     * @var array
+     */
     private $warehouseList;
 
     /**
-    * @param array $warehouseList
-    */
-    public function setWarehouseList(?array $warehouseList)
+     * @param array $warehouseList
+     */
+    public function setWarehouseList(?array $warehouseList): void
     {
         $this->warehouseList = $warehouseList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getWarehouseList(): ?array
     {
         return $this->warehouseList;
@@ -1361,66 +1361,66 @@ class WeimobShopTradePassAuditTradeOrderParamProductDetailList implements \JsonS
 class WeimobShopTradePassAuditTradeOrderParamWarehouseList implements \JsonSerializable
 {
     /**
-    * ""
-    * @var int
-    */
+     * ""
+     * @var int
+     */
     private $warehouseId;
 
     /**
-    * ""
-    * @var string
-    */
+     * ""
+     * @var string
+     */
     private $warehouseName;
 
     /**
-    * ""
-    * @var string
-    */
+     * ""
+     * @var string
+     */
     private $warehouseType;
 
     /**
-    * @param int $warehouseId
-    */
-    public function setWarehouseId(?int $warehouseId)
+     * @param int $warehouseId
+     */
+    public function setWarehouseId(?int $warehouseId): void
     {
         $this->warehouseId = $warehouseId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getWarehouseId(): ?int
     {
         return $this->warehouseId;
     }
 
     /**
-    * @param string $warehouseName
-    */
-    public function setWarehouseName(?string $warehouseName)
+     * @param string $warehouseName
+     */
+    public function setWarehouseName(?string $warehouseName): void
     {
         $this->warehouseName = $warehouseName;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getWarehouseName(): ?string
     {
         return $this->warehouseName;
     }
 
     /**
-    * @param string $warehouseType
-    */
-    public function setWarehouseType(?string $warehouseType)
+     * @param string $warehouseType
+     */
+    public function setWarehouseType(?string $warehouseType): void
     {
         $this->warehouseType = $warehouseType;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getWarehouseType(): ?string
     {
         return $this->warehouseType;
@@ -1445,88 +1445,88 @@ class WeimobShopTradePassAuditTradeOrderParamGoodsExtMap implements \JsonSeriali
 class WeimobShopTradePassAuditTradeOrderParamGoodsAbilityList implements \JsonSerializable
 {
     /**
-    * Objects
-    * @var WeimobShopTradePassAuditTradeOrderParamAbilityDetailInfo
-    */
+     * Objects
+     * @var WeimobShopTradePassAuditTradeOrderParamAbilityDetailInfo
+     */
     private $abilityDetailInfo;
 
     /**
-    * ""
-    * @var string
-    */
+     * ""
+     * @var string
+     */
     private $abilityCode;
 
     /**
-    * ""
-    * @var int
-    */
+     * ""
+     * @var int
+     */
     private $abilityType;
 
     /**
-    * ""
-    * @var string
-    */
+     * ""
+     * @var string
+     */
     private $bizId;
 
     /**
-    * @param WeimobShopTradePassAuditTradeOrderParamAbilityDetailInfo $abilityDetailInfo
-    */
-    public function setAbilityDetailInfo(?WeimobShopTradePassAuditTradeOrderParamAbilityDetailInfo $abilityDetailInfo)
+     * @param WeimobShopTradePassAuditTradeOrderParamAbilityDetailInfo $abilityDetailInfo
+     */
+    public function setAbilityDetailInfo(?WeimobShopTradePassAuditTradeOrderParamAbilityDetailInfo $abilityDetailInfo): void
     {
         $this->abilityDetailInfo = $abilityDetailInfo;
     }
 
     /**
-    * @return WeimobShopTradePassAuditTradeOrderParamAbilityDetailInfo
-    */
+     * @return WeimobShopTradePassAuditTradeOrderParamAbilityDetailInfo
+     */
     public function getAbilityDetailInfo(): ?WeimobShopTradePassAuditTradeOrderParamAbilityDetailInfo
     {
         return $this->abilityDetailInfo;
     }
 
     /**
-    * @param string $abilityCode
-    */
-    public function setAbilityCode(?string $abilityCode)
+     * @param string $abilityCode
+     */
+    public function setAbilityCode(?string $abilityCode): void
     {
         $this->abilityCode = $abilityCode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getAbilityCode(): ?string
     {
         return $this->abilityCode;
     }
 
     /**
-    * @param int $abilityType
-    */
-    public function setAbilityType(?int $abilityType)
+     * @param int $abilityType
+     */
+    public function setAbilityType(?int $abilityType): void
     {
         $this->abilityType = $abilityType;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getAbilityType(): ?int
     {
         return $this->abilityType;
     }
 
     /**
-    * @param string $bizId
-    */
-    public function setBizId(?string $bizId)
+     * @param string $bizId
+     */
+    public function setBizId(?string $bizId): void
     {
         $this->bizId = $bizId;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getBizId(): ?string
     {
         return $this->bizId;
@@ -1551,110 +1551,110 @@ class WeimobShopTradePassAuditTradeOrderParamAbilityDetailInfo implements \JsonS
 class WeimobShopTradePassAuditTradeOrderParamPaymentInfo implements \JsonSerializable
 {
     /**
-    * 抵扣资产（积分、余额、）
-    * @var array
-    */
+     * 抵扣资产（积分、余额、）
+     * @var array
+     */
     private $DeductibleAssetList;
 
     /**
-    * 实付金额(BigDecimal)
-    * @var string
-    */
+     * 实付金额(BigDecimal)
+     * @var string
+     */
     private $paymentAmount;
 
     /**
-    * 总金额(BigDecimal)
-    * @var string
-    */
+     * 总金额(BigDecimal)
+     * @var string
+     */
     private $totalAmount;
 
     /**
-    * 应付金额
-    * @var string
-    */
+     * 应付金额
+     * @var string
+     */
     private $shouldPaymentAmount;
 
     /**
-    * 优惠总金额(BigDecimal)
-    * @var string
-    */
+     * 优惠总金额(BigDecimal)
+     * @var string
+     */
     private $totalDiscountAmount;
 
     /**
-    * @param array $DeductibleAssetList
-    */
-    public function setDeductibleAssetList(?array $DeductibleAssetList)
+     * @param array $DeductibleAssetList
+     */
+    public function setDeductibleAssetList(?array $DeductibleAssetList): void
     {
         $this->DeductibleAssetList = $DeductibleAssetList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getDeductibleAssetList(): ?array
     {
         return $this->DeductibleAssetList;
     }
 
     /**
-    * @param string $paymentAmount
-    */
-    public function setPaymentAmount(?string $paymentAmount)
+     * @param string $paymentAmount
+     */
+    public function setPaymentAmount(?string $paymentAmount): void
     {
         $this->paymentAmount = $paymentAmount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getPaymentAmount(): ?string
     {
         return $this->paymentAmount;
     }
 
     /**
-    * @param string $totalAmount
-    */
-    public function setTotalAmount(?string $totalAmount)
+     * @param string $totalAmount
+     */
+    public function setTotalAmount(?string $totalAmount): void
     {
         $this->totalAmount = $totalAmount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTotalAmount(): ?string
     {
         return $this->totalAmount;
     }
 
     /**
-    * @param string $shouldPaymentAmount
-    */
-    public function setShouldPaymentAmount(?string $shouldPaymentAmount)
+     * @param string $shouldPaymentAmount
+     */
+    public function setShouldPaymentAmount(?string $shouldPaymentAmount): void
     {
         $this->shouldPaymentAmount = $shouldPaymentAmount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getShouldPaymentAmount(): ?string
     {
         return $this->shouldPaymentAmount;
     }
 
     /**
-    * @param string $totalDiscountAmount
-    */
-    public function setTotalDiscountAmount(?string $totalDiscountAmount)
+     * @param string $totalDiscountAmount
+     */
+    public function setTotalDiscountAmount(?string $totalDiscountAmount): void
     {
         $this->totalDiscountAmount = $totalDiscountAmount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getTotalDiscountAmount(): ?string
     {
         return $this->totalDiscountAmount;
@@ -1670,44 +1670,44 @@ class WeimobShopTradePassAuditTradeOrderParamPaymentInfo implements \JsonSeriali
 class WeimobShopTradePassAuditTradeOrderParamDeductibleAssetList implements \JsonSerializable
 {
     /**
-    * 抵扣类型
-    * @var int
-    */
+     * 抵扣类型
+     * @var int
+     */
     private $type;
 
     /**
-    * 抵扣金额(BigDecimal)
-    * @var string
-    */
+     * 抵扣金额(BigDecimal)
+     * @var string
+     */
     private $amount;
 
     /**
-    * @param int $type
-    */
-    public function setType(?int $type)
+     * @param int $type
+     */
+    public function setType(?int $type): void
     {
         $this->type = $type;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getType(): ?int
     {
         return $this->type;
     }
 
     /**
-    * @param string $amount
-    */
-    public function setAmount(?string $amount)
+     * @param string $amount
+     */
+    public function setAmount(?string $amount): void
     {
         $this->amount = $amount;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getAmount(): ?string
     {
         return $this->amount;
@@ -1724,44 +1724,44 @@ class WeimobShopTradePassAuditTradeOrderParamDeductibleAssetList implements \Jso
 class WeimobShopTradePassAuditTradeOrderResponse implements \JsonSerializable
 {
     /**
-    * 请求返回的对象
-    * @var PaasResponseCode
-    */
+     * 请求返回的对象
+     * @var PaasResponseCode
+     */
     private $code;
 
     /**
-    * 请求返回的数据
-    * @var WeimobShopTradePassAuditTradeOrderData
-    */
+     * 请求返回的数据
+     * @var WeimobShopTradePassAuditTradeOrderData
+     */
     private $data;
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getCode(): ?PaasResponseCode
     {
         return $this->code;
     }
 
     /**
-    * @param PaasResponseCode $code
-    */
+     * @param PaasResponseCode $code
+     */
     public function setCode(?PaasResponseCode $code): void
     {
         $this->code = $code;
     }
 
     /**
-    * @return WeimobShopTradePassAuditTradeOrderData
-    */
+     * @return WeimobShopTradePassAuditTradeOrderData
+     */
     public function getData(): ?WeimobShopTradePassAuditTradeOrderData
     {
         return $this->data;
     }
 
     /**
-    * @param WeimobShopTradePassAuditTradeOrderData $data
-    */
+     * @param WeimobShopTradePassAuditTradeOrderData $data
+     */
     public function setData(?WeimobShopTradePassAuditTradeOrderData $data): void
     {
         $this->data = $data;
@@ -1776,22 +1776,22 @@ class WeimobShopTradePassAuditTradeOrderResponse implements \JsonSerializable
 class WeimobShopTradePassAuditTradeOrderData implements \JsonSerializable
 {
     /**
-    * ""
-    * @var WeimobShopTradePassAuditTradeOrderDataCommitInfo
-    */
+     * ""
+     * @var WeimobShopTradePassAuditTradeOrderDataCommitInfo
+     */
     private $commitInfo;
 
     /**
-    * @param WeimobShopTradePassAuditTradeOrderDataCommitInfo $commitInfo
-    */
-    public function setCommitInfo(?WeimobShopTradePassAuditTradeOrderDataCommitInfo $commitInfo)
+     * @param WeimobShopTradePassAuditTradeOrderDataCommitInfo $commitInfo
+     */
+    public function setCommitInfo(?WeimobShopTradePassAuditTradeOrderDataCommitInfo $commitInfo): void
     {
         $this->commitInfo = $commitInfo;
     }
 
     /**
-    * @return WeimobShopTradePassAuditTradeOrderDataCommitInfo
-    */
+     * @return WeimobShopTradePassAuditTradeOrderDataCommitInfo
+     */
     public function getCommitInfo(): ?WeimobShopTradePassAuditTradeOrderDataCommitInfo
     {
         return $this->commitInfo;
@@ -1807,44 +1807,44 @@ class WeimobShopTradePassAuditTradeOrderData implements \JsonSerializable
 class WeimobShopTradePassAuditTradeOrderDataCommitInfo implements \JsonSerializable
 {
     /**
-    * 是否可以提交
-    * @var bool
-    */
+     * 是否可以提交
+     * @var bool
+     */
     private $commitInfo;
 
     /**
-    * 不能提交原因
-    * @var string
-    */
+     * 不能提交原因
+     * @var string
+     */
     private $unCommitReason	;
 
     /**
-    * @param bool $commitInfo
-    */
-    public function setCommitInfo(?bool $commitInfo)
+     * @param bool $commitInfo
+     */
+    public function setCommitInfo(?bool $commitInfo): void
     {
         $this->commitInfo = $commitInfo;
     }
 
     /**
-    * @return bool
-    */
+     * @return bool
+     */
     public function getCommitInfo(): ?bool
     {
         return $this->commitInfo;
     }
 
     /**
-    * @param string $unCommitReason	
-    */
-    public function setUnCommitReason	(?string $unCommitReason	)
+     * @param string $unCommitReason	
+     */
+    public function setUnCommitReason	(?string $unCommitReason	): void
     {
         $this->unCommitReason	 = $unCommitReason	;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getUnCommitReason	(): ?string
     {
         return $this->unCommitReason	;

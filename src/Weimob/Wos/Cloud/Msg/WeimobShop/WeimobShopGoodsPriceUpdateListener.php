@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,265
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobShopGoodsPriceUpdateListener
 {
@@ -23,66 +23,66 @@ interface WeimobShopGoodsPriceUpdateListener
 class PriceUpdateMessage implements \JsonSerializable
 {
     /**
-    * 商品ID
-    * @var int
-    */
+     * 商品ID
+     * @var int
+     */
     private $goodsId;
 
     /**
-    * SKU ID
-    * @var int
-    */
+     * SKU ID
+     * @var int
+     */
     private $skuId;
 
     /**
-    * 组织结构节点
-    * @var int
-    */
+     * 组织结构节点
+     * @var int
+     */
     private $vid;
 
     /**
-    * @param int $goodsId
-    */
-    public function setGoodsId(?int $goodsId)
+     * @param int $goodsId
+     */
+    public function setGoodsId(?int $goodsId): void
     {
         $this->goodsId = $goodsId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGoodsId(): ?int
     {
         return $this->goodsId;
     }
 
     /**
-    * @param int $skuId
-    */
-    public function setSkuId(?int $skuId)
+     * @param int $skuId
+     */
+    public function setSkuId(?int $skuId): void
     {
         $this->skuId = $skuId;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getSkuId(): ?int
     {
         return $this->skuId;
     }
 
     /**
-    * @param int $vid
-    */
-    public function setVid(?int $vid)
+     * @param int $vid
+     */
+    public function setVid(?int $vid): void
     {
         $this->vid = $vid;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getVid(): ?int
     {
         return $this->vid;

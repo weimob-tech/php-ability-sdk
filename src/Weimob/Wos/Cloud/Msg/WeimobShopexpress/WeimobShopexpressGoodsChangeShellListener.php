@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,335
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobShopexpressGoodsChangeShellListener
 {
@@ -23,44 +23,44 @@ interface WeimobShopexpressGoodsChangeShellListener
 class ChangeShellMessage implements \JsonSerializable
 {
     /**
-    * 商品编码
-    * @var string
-    */
+     * 商品编码
+     * @var string
+     */
     private $goodsCode;
 
     /**
-    * 商品上下架状态， 包含：1-上架；2-下架。
-    * @var int
-    */
+     * 商品上下架状态， 包含：1-上架；2-下架。
+     * @var int
+     */
     private $goodsStatus;
 
     /**
-    * @param string $goodsCode
-    */
-    public function setGoodsCode(?string $goodsCode)
+     * @param string $goodsCode
+     */
+    public function setGoodsCode(?string $goodsCode): void
     {
         $this->goodsCode = $goodsCode;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getGoodsCode(): ?string
     {
         return $this->goodsCode;
     }
 
     /**
-    * @param int $goodsStatus
-    */
-    public function setGoodsStatus(?int $goodsStatus)
+     * @param int $goodsStatus
+     */
+    public function setGoodsStatus(?int $goodsStatus): void
     {
         $this->goodsStatus = $goodsStatus;
     }
 
     /**
-    * @return int
-    */
+     * @return int
+     */
     public function getGoodsStatus(): ?int
     {
         return $this->goodsStatus;

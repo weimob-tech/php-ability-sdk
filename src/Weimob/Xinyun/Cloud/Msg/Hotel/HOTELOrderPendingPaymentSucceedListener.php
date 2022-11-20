@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,293
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface HOTELOrderPendingPaymentSucceedListener
 {
@@ -23,44 +23,44 @@ interface HOTELOrderPendingPaymentSucceedListener
 class PaymentSucceedMessage implements \JsonSerializable
 {
     /**
-    * 接入方传入的订单标识
-    * @var string
-    */
+     * 接入方传入的订单标识
+     * @var string
+     */
     private $orderNo;
 
     /**
-    * 支付金额
-    * @var float
-    */
+     * 支付金额
+     * @var float
+     */
     private $paymentAmount;
 
     /**
-    * @param string $orderNo
-    */
-    public function setOrderNo(?string $orderNo)
+     * @param string $orderNo
+     */
+    public function setOrderNo(?string $orderNo): void
     {
         $this->orderNo = $orderNo;
     }
 
     /**
-    * @return string
-    */
+     * @return string
+     */
     public function getOrderNo(): ?string
     {
         return $this->orderNo;
     }
 
     /**
-    * @param float $paymentAmount
-    */
-    public function setPaymentAmount(?float $paymentAmount)
+     * @param float $paymentAmount
+     */
+    public function setPaymentAmount(?float $paymentAmount): void
     {
         $this->paymentAmount = $paymentAmount;
     }
 
     /**
-    * @return float
-    */
+     * @return float
+     */
     public function getPaymentAmount(): ?float
     {
         return $this->paymentAmount;

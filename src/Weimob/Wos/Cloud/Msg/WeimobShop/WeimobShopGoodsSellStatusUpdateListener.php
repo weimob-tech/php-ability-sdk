@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,262
  * @author weimobcloud
- * @create 2022年11月18日
+ * @create 2022年11月20日
  */
 interface WeimobShopGoodsSellStatusUpdateListener
 {
@@ -23,44 +23,44 @@ interface WeimobShopGoodsSellStatusUpdateListener
 class SellStatusUpdateMessage implements \JsonSerializable
 {
     /**
-    * 商品ID列表，可通接口weimob_shop/goods/getList获得此编号
-    * @var array
-    */
+     * 商品ID列表，可通接口weimob_shop/goods/getList获得此编号
+     * @var array
+     */
     private $goodsIdList;
 
     /**
-    * 商品销售状态，可售-true；禁售-false；
-    * @var bool
-    */
+     * 商品销售状态，可售-true；禁售-false；
+     * @var bool
+     */
     private $isCanShell;
 
     /**
-    * @param array $goodsIdList
-    */
-    public function setGoodsIdList(?array $goodsIdList)
+     * @param array $goodsIdList
+     */
+    public function setGoodsIdList(?array $goodsIdList): void
     {
         $this->goodsIdList = $goodsIdList;
     }
 
     /**
-    * @return array
-    */
+     * @return array
+     */
     public function getGoodsIdList(): ?array
     {
         return $this->goodsIdList;
     }
 
     /**
-    * @param bool $isCanShell
-    */
-    public function setIsCanShell(?bool $isCanShell)
+     * @param bool $isCanShell
+     */
+    public function setIsCanShell(?bool $isCanShell): void
     {
         $this->isCanShell = $isCanShell;
     }
 
     /**
-    * @return bool
-    */
+     * @return bool
+     */
     public function getIsCanShell(): ?bool
     {
         return $this->isCanShell;
