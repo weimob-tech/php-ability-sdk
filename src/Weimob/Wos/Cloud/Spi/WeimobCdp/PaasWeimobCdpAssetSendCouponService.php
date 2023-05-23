@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 612
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasWeimobCdpAssetSendCouponService
 {

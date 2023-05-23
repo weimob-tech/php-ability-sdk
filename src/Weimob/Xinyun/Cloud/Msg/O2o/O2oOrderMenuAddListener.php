@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,298
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface O2oOrderMenuAddListener
 {
@@ -59,13 +59,13 @@ class AddMessage implements \JsonSerializable
     private $updateTime;
 
     /**
-     * 加菜流水号 第一次点菜流水号是0 每加一次菜流水号+1 流水号
+     * 加菜流水号第一次点菜流水号是0每加一次菜流水号+1流水号
      * @var int
      */
     private $serialNo;
 
     /**
-     * 加菜状态 0 未处理 1：已确认 2：已拒绝 3：已取消
+     * 加菜状态0未处理1：已确认2：已拒绝3：已取消
      * @var int
      */
     private $menuStatus;

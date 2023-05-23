@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,363
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface WeimobCrmCouponCreateCouponTemplateListener
 {
@@ -23,7 +23,7 @@ interface WeimobCrmCouponCreateCouponTemplateListener
 class CreateCouponTemplateMessage implements \JsonSerializable
 {
     /**
-     * 券模板id
+     * 优惠券ID
      * @var int
      */
     private $couponTemplateId;
@@ -41,10 +41,10 @@ class CreateCouponTemplateMessage implements \JsonSerializable
     private $couponType;
 
     /**
-     * 用户wid
-     * @var int
+     * 请求渠道，weimob-saas-coupon：微盟；weimob-open-api:开放平台
+     * @var string
      */
-    private $wid;
+    private $saasChannel;
 
     /**
      * @param int $couponTemplateId
@@ -95,19 +95,19 @@ class CreateCouponTemplateMessage implements \JsonSerializable
     }
 
     /**
-     * @param int $wid
+     * @param string $saasChannel
      */
-    public function setWid(?int $wid): void
+    public function setSaasChannel(?string $saasChannel): void
     {
-        $this->wid = $wid;
+        $this->saasChannel = $saasChannel;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getWid(): ?int
+    public function getSaasChannel(): ?string
     {
-        return $this->wid;
+        return $this->saasChannel;
     }
 
 

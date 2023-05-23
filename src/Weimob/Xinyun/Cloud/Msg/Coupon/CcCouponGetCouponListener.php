@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,163
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface CcCouponGetCouponListener
 {
@@ -59,7 +59,7 @@ class GetCouponMessage implements \JsonSerializable
     private $channel;
 
     /**
-     * 是否转赠 0 否 1是
+     * 是否转赠0否1是
      * @var int
      */
     private $isGiveByFriend;

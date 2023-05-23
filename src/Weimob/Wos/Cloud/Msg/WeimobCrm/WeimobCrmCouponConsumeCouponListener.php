@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,341
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface WeimobCrmCouponConsumeCouponListener
 {
@@ -35,7 +35,7 @@ class ConsumeCouponMessage implements \JsonSerializable
     private $code;
 
     /**
-     * 券模板id
+     * 优惠券ID
      * @var int
      */
     private $couponTemplateId;
@@ -53,10 +53,10 @@ class ConsumeCouponMessage implements \JsonSerializable
     private $useScene;
 
     /**
-     * 业务id，如：订单号
+     * 订单号
      * @var int
      */
-    private $transactionId;
+    private $orderNo;
 
     /**
      * 核销时间
@@ -69,6 +69,24 @@ class ConsumeCouponMessage implements \JsonSerializable
      * @var int
      */
     private $sWid;
+
+    /**
+     * 领券场景
+     * @var int
+     */
+    private $subScene;
+
+    /**
+     * 领券场景ID
+     * @var string
+     */
+    private $subSceneId;
+
+    /**
+     * 请求渠道，weimob-saas-coupon：微盟；weimob-open-api:开放平台
+     * @var string
+     */
+    private $saasChannel;
 
     /**
      * @param int $wid
@@ -151,19 +169,19 @@ class ConsumeCouponMessage implements \JsonSerializable
     }
 
     /**
-     * @param int $transactionId
+     * @param int $orderNo
      */
-    public function setTransactionId(?int $transactionId): void
+    public function setOrderNo(?int $orderNo): void
     {
-        $this->transactionId = $transactionId;
+        $this->orderNo = $orderNo;
     }
 
     /**
      * @return int
      */
-    public function getTransactionId(): ?int
+    public function getOrderNo(): ?int
     {
-        return $this->transactionId;
+        return $this->orderNo;
     }
 
     /**
@@ -196,6 +214,54 @@ class ConsumeCouponMessage implements \JsonSerializable
     public function getSWid(): ?int
     {
         return $this->sWid;
+    }
+
+    /**
+     * @param int $subScene
+     */
+    public function setSubScene(?int $subScene): void
+    {
+        $this->subScene = $subScene;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSubScene(): ?int
+    {
+        return $this->subScene;
+    }
+
+    /**
+     * @param string $subSceneId
+     */
+    public function setSubSceneId(?string $subSceneId): void
+    {
+        $this->subSceneId = $subSceneId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSubSceneId(): ?string
+    {
+        return $this->subSceneId;
+    }
+
+    /**
+     * @param string $saasChannel
+     */
+    public function setSaasChannel(?string $saasChannel): void
+    {
+        $this->saasChannel = $saasChannel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSaasChannel(): ?string
+    {
+        return $this->saasChannel;
     }
 
 

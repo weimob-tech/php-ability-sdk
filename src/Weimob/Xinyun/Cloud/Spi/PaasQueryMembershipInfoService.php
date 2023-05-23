@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,780
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasQueryMembershipInfoService
 {
@@ -257,13 +257,13 @@ class SQueryMembershipInfoParamSourceObject implements \JsonSerializable
     private $sourceOpenId;
 
     /**
-     * 渠道的appid 如果渠道没有appid概念的话，可以不传
+     * 渠道的appid如果渠道没有appid概念的话，可以不传
      * @var string
      */
     private $sourceAppId;
 
     /**
-     * 渠道类型 0 微信公众号 1 微信小程序 2 unionid 4 手机号 phone
+     * 渠道类型0微信公众号1微信小程序2unionid4手机号phone
      * @var string
      */
     private $source;

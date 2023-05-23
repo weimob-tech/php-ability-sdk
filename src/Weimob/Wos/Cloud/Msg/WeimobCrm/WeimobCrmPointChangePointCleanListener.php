@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,412
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface WeimobCrmPointChangePointCleanListener
 {
@@ -41,7 +41,7 @@ class PointCleanMessage implements \JsonSerializable
     private $bosId;
 
     /**
-     * 变更积分
+     * 变更积分，仅支持整数
      * @var int
      */
     private $changPoint;
@@ -71,7 +71,7 @@ class PointCleanMessage implements \JsonSerializable
     private $sourceProductId;
 
     /**
-     * 总积分
+     * 总积分，仅支持整数
      * @var int
      */
     private $totalPoint;

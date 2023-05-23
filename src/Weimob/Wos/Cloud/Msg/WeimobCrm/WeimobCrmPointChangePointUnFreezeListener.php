@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,414
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface WeimobCrmPointChangePointUnFreezeListener
 {
@@ -89,8 +89,8 @@ class PointUnFreezeMessage implements \JsonSerializable
     private $requestType;
 
     /**
-     * 解锁积分值
-     * @var int
+     * 解锁积分值，仅支持整数
+     * @var string
      */
     private $point;
 
@@ -271,17 +271,17 @@ class PointUnFreezeMessage implements \JsonSerializable
     }
 
     /**
-     * @param int $point
+     * @param string $point
      */
-    public function setPoint(?int $point): void
+    public function setPoint(?string $point): void
     {
         $this->point = $point;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getPoint(): ?int
+    public function getPoint(): ?string
     {
         return $this->point;
     }

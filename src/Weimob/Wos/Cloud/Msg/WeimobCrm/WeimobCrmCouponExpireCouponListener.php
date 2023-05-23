@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,350
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface WeimobCrmCouponExpireCouponListener
 {
@@ -51,6 +51,12 @@ class ExpireCouponMessage implements \JsonSerializable
      * @var string
      */
     private $subSceneId;
+
+    /**
+     * 请求渠道，weimob-saas-coupon：微盟；weimob-open-api:开放平台
+     * @var string
+     */
+    private $saasChannel;
 
     /**
      * @param string $code
@@ -130,6 +136,22 @@ class ExpireCouponMessage implements \JsonSerializable
     public function getSubSceneId(): ?string
     {
         return $this->subSceneId;
+    }
+
+    /**
+     * @param string $saasChannel
+     */
+    public function setSaasChannel(?string $saasChannel): void
+    {
+        $this->saasChannel = $saasChannel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSaasChannel(): ?string
+    {
+        return $this->saasChannel;
     }
 
 

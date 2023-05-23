@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,348
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasQueryUserBasicInfoService
 {
@@ -261,13 +261,13 @@ class SQueryUserBasicInfoParamSourceObjectList implements \JsonSerializable
     private $sourceOpenId;
 
     /**
-     * 渠道的appid 如果渠道没有appid概念的话，可以不传
+     * 渠道的appid如果渠道没有appid概念的话，可以不传
      * @var string
      */
     private $sourceAppId;
 
     /**
-     * 渠道类型 0 微信公众号 1 微信小程序 2 unionid 4 手机号 phone
+     * 渠道类型0微信公众号1微信小程序2unionid4手机号phone
      * @var int
      */
     private $source;
@@ -389,13 +389,13 @@ class SQueryUserBasicInfoData implements \JsonSerializable
     private $channelStatuses;
 
     /**
-     * 是否是会员身份 true-是 false-否 客户有至少一张未过期状态的会员卡则为会员，否则不是会员
+     * 是否是会员身份true-是false-否客户有至少一张未过期状态的会员卡则为会员，否则不是会员
      * @var bool
      */
     private $isMember;
 
     /**
-     * 会员本地卡的状态。参见下文字典 MemberCardStatusEnum 枚举。
+     * 会员本地卡的状态。参见下文字典MemberCardStatusEnum枚举。
      * @var int
      */
     private $status;
@@ -413,7 +413,7 @@ class SQueryUserBasicInfoData implements \JsonSerializable
     private $expireTime;
 
     /**
-     * 领卡来源类型。参见下文字典 AppChannelEnum 枚举。
+     * 领卡来源类型。参见下文字典AppChannelEnum枚举。
      * @var int
      */
     private $appChannel;
@@ -1030,7 +1030,7 @@ class SQueryUserBasicInfoData implements \JsonSerializable
 class SQueryUserBasicInfoDataChannelStatuses implements \JsonSerializable
 {
     /**
-     * 第三方appid渠道。参见下文字段 CardTemplateSynchTypeConstants 枚举。
+     * 第三方appid渠道。参见下文字段CardTemplateSynchTypeConstants枚举。
      * @var int
      */
     private $channel;

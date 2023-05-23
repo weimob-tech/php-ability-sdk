@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,367
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasWeimobShopTradeOrderAuditService
 {
@@ -479,7 +479,7 @@ class WeimobShopTradeOrderAuditParamGoodsList implements \JsonSerializable
 
     /**
      * 商品销售价格，以元为单位，精确到小数点后两位。
-     * @var int
+     * @var string
      */
     private $skuSalePrice;
 
@@ -674,17 +674,17 @@ class WeimobShopTradeOrderAuditParamGoodsList implements \JsonSerializable
     }
 
     /**
-     * @param int $skuSalePrice
+     * @param string $skuSalePrice
      */
-    public function setSkuSalePrice(?int $skuSalePrice): void
+    public function setSkuSalePrice(?string $skuSalePrice): void
     {
         $this->skuSalePrice = $skuSalePrice;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getSkuSalePrice(): ?int
+    public function getSkuSalePrice(): ?string
     {
         return $this->skuSalePrice;
     }
@@ -1276,13 +1276,13 @@ class WeimobShopTradeOrderAuditParamPaymentInfo implements \JsonSerializable
 
     /**
      * 实付金额，以元为单位，精确到小数点后两位。
-     * @var int
+     * @var string
      */
     private $paymentAmount;
 
     /**
      * 应付金额，以元为单位，精确到小数点后两位。
-     * @var int
+     * @var string
      */
     private $shouldPaymentAmount;
 
@@ -1315,33 +1315,33 @@ class WeimobShopTradeOrderAuditParamPaymentInfo implements \JsonSerializable
     }
 
     /**
-     * @param int $paymentAmount
+     * @param string $paymentAmount
      */
-    public function setPaymentAmount(?int $paymentAmount): void
+    public function setPaymentAmount(?string $paymentAmount): void
     {
         $this->paymentAmount = $paymentAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getPaymentAmount(): ?int
+    public function getPaymentAmount(): ?string
     {
         return $this->paymentAmount;
     }
 
     /**
-     * @param int $shouldPaymentAmount
+     * @param string $shouldPaymentAmount
      */
-    public function setShouldPaymentAmount(?int $shouldPaymentAmount): void
+    public function setShouldPaymentAmount(?string $shouldPaymentAmount): void
     {
         $this->shouldPaymentAmount = $shouldPaymentAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getShouldPaymentAmount(): ?int
+    public function getShouldPaymentAmount(): ?string
     {
         return $this->shouldPaymentAmount;
     }
@@ -1389,7 +1389,7 @@ class WeimobShopTradeOrderAuditParamDeductibleAssets implements \JsonSerializabl
 {
     /**
      * 抵扣金额。以元为单位，精确到小数点后两位。
-     * @var int
+     * @var string
      */
     private $amount;
 
@@ -1400,17 +1400,17 @@ class WeimobShopTradeOrderAuditParamDeductibleAssets implements \JsonSerializabl
     private $type;
 
     /**
-     * @param int $amount
+     * @param string $amount
      */
-    public function setAmount(?int $amount): void
+    public function setAmount(?string $amount): void
     {
         $this->amount = $amount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getAmount(): ?int
+    public function getAmount(): ?string
     {
         return $this->amount;
     }

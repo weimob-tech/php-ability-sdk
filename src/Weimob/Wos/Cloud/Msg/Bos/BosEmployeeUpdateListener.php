@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,386
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface BosEmployeeUpdateListener
 {
@@ -29,7 +29,7 @@ class UpdateMessage implements \JsonSerializable
     private $wid;
 
     /**
-     * 操作类型，1新建、2删除、3变更
+     * 操作类型，0:新建 1:更新 2:删除
      * @var int
      */
     private $operateType;

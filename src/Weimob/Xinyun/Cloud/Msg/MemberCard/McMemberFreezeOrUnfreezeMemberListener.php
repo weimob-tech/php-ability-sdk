@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 623
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface McMemberFreezeOrUnfreezeMemberListener
 {
@@ -35,7 +35,7 @@ class FreezeOrUnfreezeMemberMessage implements \JsonSerializable
     private $memberCode;
 
     /**
-     * 1：冻结 2：解冻
+     * 1：冻结2：解冻
      * @var int
      */
     private $changeType;

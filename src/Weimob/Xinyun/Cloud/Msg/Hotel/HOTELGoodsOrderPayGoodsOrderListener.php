@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 488
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface HOTELGoodsOrderPayGoodsOrderListener
 {
@@ -35,7 +35,7 @@ class PayGoodsOrderMessage implements \JsonSerializable
     private $goodsName;
 
     /**
-     * 商品类型0 普通团购  1客房现金券
+     * 商品类型0普通团购1客房现金券
      * @var string
      */
     private $type;

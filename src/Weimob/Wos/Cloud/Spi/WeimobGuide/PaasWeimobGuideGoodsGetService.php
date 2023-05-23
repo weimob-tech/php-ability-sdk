@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 740
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasWeimobGuideGoodsGetService
 {
@@ -705,6 +705,24 @@ class WeimobGuideGoodsGetData implements \JsonSerializable
     private $skuList;
 
     /**
+     * 属性+属性值  参数+参数值
+     * @var array
+     */
+    private $goodsPropertyList;
+
+    /**
+     * 分组信息
+     * @var array
+     */
+    private $classifyList;
+
+    /**
+     * 类目树
+     * @var WeimobGuideGoodsGetDataCategoryTree
+     */
+    private $categoryTree;
+
+    /**
      * 门店ID
      * @var int
      */
@@ -948,6 +966,54 @@ class WeimobGuideGoodsGetData implements \JsonSerializable
     public function getSkuList(): ?array
     {
         return $this->skuList;
+    }
+
+    /**
+     * @param array $goodsPropertyList
+     */
+    public function setGoodsPropertyList(?array $goodsPropertyList): void
+    {
+        $this->goodsPropertyList = $goodsPropertyList;
+    }
+
+    /**
+     * @return array
+     */
+    public function getGoodsPropertyList(): ?array
+    {
+        return $this->goodsPropertyList;
+    }
+
+    /**
+     * @param array $classifyList
+     */
+    public function setClassifyList(?array $classifyList): void
+    {
+        $this->classifyList = $classifyList;
+    }
+
+    /**
+     * @return array
+     */
+    public function getClassifyList(): ?array
+    {
+        return $this->classifyList;
+    }
+
+    /**
+     * @param WeimobGuideGoodsGetDataCategoryTree $categoryTree
+     */
+    public function setCategoryTree(?WeimobGuideGoodsGetDataCategoryTree $categoryTree): void
+    {
+        $this->categoryTree = $categoryTree;
+    }
+
+    /**
+     * @return WeimobGuideGoodsGetDataCategoryTree
+     */
+    public function getCategoryTree(): ?WeimobGuideGoodsGetDataCategoryTree
+    {
+        return $this->categoryTree;
     }
 
     /**
@@ -2648,6 +2714,579 @@ class WeimobGuideGoodsGetDataSkuSpecValueList implements \JsonSerializable
     public function getSpecValueId(): ?int
     {
         return $this->specValueId;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobGuideGoodsGetDataGoodsPropertyList implements \JsonSerializable
+{
+    /**
+     * 属性值列表
+     * @var array
+     */
+    private $goodsPropertyValueInfoList;
+
+    /**
+     * 属性id
+     * @var int
+     */
+    private $propId;
+
+    /**
+     * 属性名称
+     * @var string
+     */
+    private $propName;
+
+    /**
+     * 属性类型 0、商品检索属性 1、内部属性   3、参数值
+     * @var string
+     */
+    private $propType;
+
+    /**
+     * @param array $goodsPropertyValueInfoList
+     */
+    public function setGoodsPropertyValueInfoList(?array $goodsPropertyValueInfoList): void
+    {
+        $this->goodsPropertyValueInfoList = $goodsPropertyValueInfoList;
+    }
+
+    /**
+     * @return array
+     */
+    public function getGoodsPropertyValueInfoList(): ?array
+    {
+        return $this->goodsPropertyValueInfoList;
+    }
+
+    /**
+     * @param int $propId
+     */
+    public function setPropId(?int $propId): void
+    {
+        $this->propId = $propId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPropId(): ?int
+    {
+        return $this->propId;
+    }
+
+    /**
+     * @param string $propName
+     */
+    public function setPropName(?string $propName): void
+    {
+        $this->propName = $propName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPropName(): ?string
+    {
+        return $this->propName;
+    }
+
+    /**
+     * @param string $propType
+     */
+    public function setPropType(?string $propType): void
+    {
+        $this->propType = $propType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPropType(): ?string
+    {
+        return $this->propType;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobGuideGoodsGetDataGoodsPropertyValueInfoList implements \JsonSerializable
+{
+    /**
+     * 属性id
+     * @var int
+     */
+    private $propId;
+
+    /**
+     * 属性值id
+     * @var int
+     */
+    private $propValueId;
+
+    /**
+     * 属性值名称
+     * @var string
+     */
+    private $propValueName;
+
+    /**
+     * 属性值排序
+     * @var int
+     */
+    private $sort;
+
+    /**
+     * @param int $propId
+     */
+    public function setPropId(?int $propId): void
+    {
+        $this->propId = $propId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPropId(): ?int
+    {
+        return $this->propId;
+    }
+
+    /**
+     * @param int $propValueId
+     */
+    public function setPropValueId(?int $propValueId): void
+    {
+        $this->propValueId = $propValueId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPropValueId(): ?int
+    {
+        return $this->propValueId;
+    }
+
+    /**
+     * @param string $propValueName
+     */
+    public function setPropValueName(?string $propValueName): void
+    {
+        $this->propValueName = $propValueName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPropValueName(): ?string
+    {
+        return $this->propValueName;
+    }
+
+    /**
+     * @param int $sort
+     */
+    public function setSort(?int $sort): void
+    {
+        $this->sort = $sort;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSort(): ?int
+    {
+        return $this->sort;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobGuideGoodsGetDataClassifyList implements \JsonSerializable
+{
+    /**
+     * 分组id
+     * @var int
+     */
+    private $classifyId;
+
+    /**
+     * 分组名称
+     * @var string
+     */
+    private $name;
+
+    /**
+     * 是否叶子节点
+     * @var bool
+     */
+    private $isLeaf;
+
+    /**
+     * @param int $classifyId
+     */
+    public function setClassifyId(?int $classifyId): void
+    {
+        $this->classifyId = $classifyId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getClassifyId(): ?int
+    {
+        return $this->classifyId;
+    }
+
+    /**
+     * @param string $name
+     */
+    public function setName(?string $name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param bool $isLeaf
+     */
+    public function setIsLeaf(?bool $isLeaf): void
+    {
+        $this->isLeaf = $isLeaf;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getIsLeaf(): ?bool
+    {
+        return $this->isLeaf;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobGuideGoodsGetDataCategoryTree implements \JsonSerializable
+{
+    /**
+     * 子类目
+     * @var WeimobGuideGoodsGetDataChildrenCategory
+     */
+    private $childrenCategory;
+
+    /**
+     * 类目id
+     * @var int
+     */
+    private $categoryId;
+
+    /**
+     * 类目名称
+     * @var string
+     */
+    private $categoryName;
+
+    /**
+     * 父类目ID
+     * @var int
+     */
+    private $parentCategoryId;
+
+    /**
+     * 类目层级
+     * @var int
+     */
+    private $categoryLevel;
+
+    /**
+     * 是否叶子结点 0-否，1-是
+     * @var bool
+     */
+    private $isLeaf;
+
+    /**
+     * 类目类型 1-服饰 2-鞋类箱包 3-母婴
+     * @var int
+     */
+    private $categoryType;
+
+    /**
+     * @param WeimobGuideGoodsGetDataChildrenCategory $childrenCategory
+     */
+    public function setChildrenCategory(?WeimobGuideGoodsGetDataChildrenCategory $childrenCategory): void
+    {
+        $this->childrenCategory = $childrenCategory;
+    }
+
+    /**
+     * @return WeimobGuideGoodsGetDataChildrenCategory
+     */
+    public function getChildrenCategory(): ?WeimobGuideGoodsGetDataChildrenCategory
+    {
+        return $this->childrenCategory;
+    }
+
+    /**
+     * @param int $categoryId
+     */
+    public function setCategoryId(?int $categoryId): void
+    {
+        $this->categoryId = $categoryId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCategoryId(): ?int
+    {
+        return $this->categoryId;
+    }
+
+    /**
+     * @param string $categoryName
+     */
+    public function setCategoryName(?string $categoryName): void
+    {
+        $this->categoryName = $categoryName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCategoryName(): ?string
+    {
+        return $this->categoryName;
+    }
+
+    /**
+     * @param int $parentCategoryId
+     */
+    public function setParentCategoryId(?int $parentCategoryId): void
+    {
+        $this->parentCategoryId = $parentCategoryId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getParentCategoryId(): ?int
+    {
+        return $this->parentCategoryId;
+    }
+
+    /**
+     * @param int $categoryLevel
+     */
+    public function setCategoryLevel(?int $categoryLevel): void
+    {
+        $this->categoryLevel = $categoryLevel;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCategoryLevel(): ?int
+    {
+        return $this->categoryLevel;
+    }
+
+    /**
+     * @param bool $isLeaf
+     */
+    public function setIsLeaf(?bool $isLeaf): void
+    {
+        $this->isLeaf = $isLeaf;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getIsLeaf(): ?bool
+    {
+        return $this->isLeaf;
+    }
+
+    /**
+     * @param int $categoryType
+     */
+    public function setCategoryType(?int $categoryType): void
+    {
+        $this->categoryType = $categoryType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCategoryType(): ?int
+    {
+        return $this->categoryType;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobGuideGoodsGetDataChildrenCategory implements \JsonSerializable
+{
+    /**
+     * 类目id
+     * @var int
+     */
+    private $categoryId;
+
+    /**
+     * 类目名称
+     * @var string
+     */
+    private $categoryName;
+
+    /**
+     * 父类目id
+     * @var int
+     */
+    private $parentCategoryId;
+
+    /**
+     * 类目层级
+     * @var int
+     */
+    private $categoryLevel;
+
+    /**
+     * 是否叶子
+     * @var bool
+     */
+    private $isLeaf;
+
+    /**
+     * 类目类型
+     * @var int
+     */
+    private $categoryType;
+
+    /**
+     * @param int $categoryId
+     */
+    public function setCategoryId(?int $categoryId): void
+    {
+        $this->categoryId = $categoryId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCategoryId(): ?int
+    {
+        return $this->categoryId;
+    }
+
+    /**
+     * @param string $categoryName
+     */
+    public function setCategoryName(?string $categoryName): void
+    {
+        $this->categoryName = $categoryName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCategoryName(): ?string
+    {
+        return $this->categoryName;
+    }
+
+    /**
+     * @param int $parentCategoryId
+     */
+    public function setParentCategoryId(?int $parentCategoryId): void
+    {
+        $this->parentCategoryId = $parentCategoryId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getParentCategoryId(): ?int
+    {
+        return $this->parentCategoryId;
+    }
+
+    /**
+     * @param int $categoryLevel
+     */
+    public function setCategoryLevel(?int $categoryLevel): void
+    {
+        $this->categoryLevel = $categoryLevel;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCategoryLevel(): ?int
+    {
+        return $this->categoryLevel;
+    }
+
+    /**
+     * @param bool $isLeaf
+     */
+    public function setIsLeaf(?bool $isLeaf): void
+    {
+        $this->isLeaf = $isLeaf;
+    }
+
+    /**
+     * @return bool
+     */
+    public function getIsLeaf(): ?bool
+    {
+        return $this->isLeaf;
+    }
+
+    /**
+     * @param int $categoryType
+     */
+    public function setCategoryType(?int $categoryType): void
+    {
+        $this->categoryType = $categoryType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCategoryType(): ?int
+    {
+        return $this->categoryType;
     }
 
 

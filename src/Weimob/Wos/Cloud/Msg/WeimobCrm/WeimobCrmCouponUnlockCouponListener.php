@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,347
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface WeimobCrmCouponUnlockCouponListener
 {
@@ -35,7 +35,7 @@ class UnlockCouponMessage implements \JsonSerializable
     private $wid;
 
     /**
-     * 券模板id
+     * 优惠券ID
      * @var int
      */
     private $couponTemplateId;

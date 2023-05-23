@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,348
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface WeimobCrmCouponCancelCouponListener
 {
@@ -35,7 +35,7 @@ class CancelCouponMessage implements \JsonSerializable
     private $wid;
 
     /**
-     * 券模板ID
+     * 优惠券ID
      * @var int
      */
     private $couponTemplateId;
@@ -45,6 +45,24 @@ class CancelCouponMessage implements \JsonSerializable
      * @var int
      */
     private $type;
+
+    /**
+     * 领券场景
+     * @var int
+     */
+    private $subScene;
+
+    /**
+     * 领券场景ID
+     * @var string
+     */
+    private $subSceneId;
+
+    /**
+     * 请求渠道，weimob-saas-coupon：微盟；weimob-open-api:开放平台
+     * @var string
+     */
+    private $saasChannel;
 
     /**
      * @param string $code
@@ -108,6 +126,54 @@ class CancelCouponMessage implements \JsonSerializable
     public function getType(): ?int
     {
         return $this->type;
+    }
+
+    /**
+     * @param int $subScene
+     */
+    public function setSubScene(?int $subScene): void
+    {
+        $this->subScene = $subScene;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSubScene(): ?int
+    {
+        return $this->subScene;
+    }
+
+    /**
+     * @param string $subSceneId
+     */
+    public function setSubSceneId(?string $subSceneId): void
+    {
+        $this->subSceneId = $subSceneId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSubSceneId(): ?string
+    {
+        return $this->subSceneId;
+    }
+
+    /**
+     * @param string $saasChannel
+     */
+    public function setSaasChannel(?string $saasChannel): void
+    {
+        $this->saasChannel = $saasChannel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSaasChannel(): ?string
+    {
+        return $this->saasChannel;
     }
 
 

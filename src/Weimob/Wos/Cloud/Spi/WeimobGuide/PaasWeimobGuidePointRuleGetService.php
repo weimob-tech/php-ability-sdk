@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 925
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasWeimobGuidePointRuleGetService
 {
@@ -895,7 +895,7 @@ class WeimobGuidePointRuleGetDataPointUnit implements \JsonSerializable
 
     /**
      * 每单位抵扣金额（元）
-     * @var int
+     * @var string
      */
     private $unitAmount;
 
@@ -916,17 +916,17 @@ class WeimobGuidePointRuleGetDataPointUnit implements \JsonSerializable
     }
 
     /**
-     * @param int $unitAmount
+     * @param string $unitAmount
      */
-    public function setUnitAmount(?int $unitAmount): void
+    public function setUnitAmount(?string $unitAmount): void
     {
         $this->unitAmount = $unitAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getUnitAmount(): ?int
+    public function getUnitAmount(): ?string
     {
         return $this->unitAmount;
     }

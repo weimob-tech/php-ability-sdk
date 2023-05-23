@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,259
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface WeimobCrmCouponReceiveCouponListener
 {
@@ -81,6 +81,12 @@ class ReceiveCouponMessage implements \JsonSerializable
      * @var int
      */
     private $shareGuiderWid;
+
+    /**
+     * 请求渠道，weimob-saas-coupon：微盟；weimob-open-api:开放平台
+     * @var string
+     */
+    private $saasChannel;
 
     /**
      * @param int $wid
@@ -240,6 +246,22 @@ class ReceiveCouponMessage implements \JsonSerializable
     public function getShareGuiderWid(): ?int
     {
         return $this->shareGuiderWid;
+    }
+
+    /**
+     * @param string $saasChannel
+     */
+    public function setSaasChannel(?string $saasChannel): void
+    {
+        $this->saasChannel = $saasChannel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSaasChannel(): ?string
+    {
+        return $this->saasChannel;
     }
 
 

@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,687
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface CcCouponUpdateCouponTemplateStatusListener
 {
@@ -35,7 +35,7 @@ class UpdateCouponTemplateStatusMessage implements \JsonSerializable
     private $cardTemplateId;
 
     /**
-     * 当前状态 （1-开始投放 2-停止投放 6-删除 11-开始发放 12 停止发放） 如果状态变更频繁，传输过程中可能会有乱序问题
+     * 当前状态（1-开始投放2-停止投放6-删除11-开始发放12停止发放）如果状态变更频繁，传输过程中可能会有乱序问题
      * @var int
      */
     private $status;

@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,764
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface XiaokeCustomerDealStatusChangeListener
 {
@@ -29,7 +29,7 @@ class DealStatusChangeMessage implements \JsonSerializable
     private $customerKey;
 
     /**
-     * 客户成单状态，1 未成单，2 已成单，3再成单
+     * 客户成单状态，1未成单，2已成单，3再成单
      * @var int
      */
     private $dealStatus;

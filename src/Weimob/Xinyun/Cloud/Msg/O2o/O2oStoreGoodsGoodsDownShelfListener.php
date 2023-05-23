@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 194
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface O2oStoreGoodsGoodsDownShelfListener
 {
