@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 323
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface KLDMemberCardUpdateMemberCardAccountInfoListener
 {
@@ -41,7 +41,7 @@ class UpdateMemberCardAccountInfoMessage implements \JsonSerializable
     private $MemberCardNo;
 
     /**
-     * 消息提示，分为 积分变更，余额变更
+     * 消息提示，分为积分变更，余额变更
      * @var string
      */
     private $Message;

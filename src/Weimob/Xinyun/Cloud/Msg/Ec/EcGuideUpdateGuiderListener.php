@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,271
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface EcGuideUpdateGuiderListener
 {
@@ -47,13 +47,13 @@ class UpdateGuiderMessage implements \JsonSerializable
     private $guiderPhone;
 
     /**
-     * 是否启用 (0 未启用 1已启用)
+     * 是否启用(0未启用1已启用)
      * @var int
      */
     private $isUsed;
 
     /**
-     * 是否专属客服 (0 不是 1是)
+     * 是否专属客服(0不是1是)
      * @var int
      */
     private $isExclusiveCus;

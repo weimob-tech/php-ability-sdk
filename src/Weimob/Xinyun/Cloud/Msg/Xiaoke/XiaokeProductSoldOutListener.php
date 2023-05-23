@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 2,692
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface XiaokeProductSoldOutListener
 {
@@ -35,7 +35,7 @@ class SoldOutMessage implements \JsonSerializable
     private $buildTime;
 
     /**
-     * 操作用户 wid
+     * 操作用户wid
      * @var int
      */
     private $wid;

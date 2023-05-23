@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,301
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface WeimobShopOrderCreateListener
 {
@@ -23,7 +23,7 @@ interface WeimobShopOrderCreateListener
 class CreateMessage implements \JsonSerializable
 {
     /**
-     * 订单业务来源：1-普通订单，2-商户助手APP，3-收银台，5-普通货柜，6-免密货柜，7-扫码购，10-换货订单
+     * 订单业务来源：1-普通订单，2-商户助手APP，3-收银台，5-普通货柜，6-免密货柜，7-扫码购，10-换货订单，12-先试后买
      * @var int
      */
     private $bizSourceType;

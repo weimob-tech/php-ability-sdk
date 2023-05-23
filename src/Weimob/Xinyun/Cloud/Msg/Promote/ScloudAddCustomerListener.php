@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,269
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface ScloudAddCustomerListener
 {
@@ -143,7 +143,7 @@ class AddCustomerMessage implements \JsonSerializable
     private $employeeName;
 
     /**
-     * 员工 (跟进人)微信userId
+     * 员工(跟进人)微信userId
      * @var string
      */
     private $employeeUserId;

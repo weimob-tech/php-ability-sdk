@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,243
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface BosOrganizationUpdateListener
 {
@@ -29,7 +29,7 @@ class UpdateMessage implements \JsonSerializable
     private $vid;
 
     /**
-     * 变更类型，枚举值：1-创建组织、2-删除组织、3-组织变更父节、4-组织编码变更、5-组织状态变更
+     * 变更类型，枚举值：1-创建组织、2-删除组织、3-组织变更父节、4-组织编码变更、5-组织状态变更、6-网店状态变更、7-基础信息变更，基础信息包含[vidName, logo, pictureList, contactTels, businessHours, area, detailAddress, floorName, isUnifyLogo]
      * @var int
      */
     private $updateType;

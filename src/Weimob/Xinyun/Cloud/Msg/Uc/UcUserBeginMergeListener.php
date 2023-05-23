@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 3,695
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface UcUserBeginMergeListener
 {
@@ -23,7 +23,7 @@ interface UcUserBeginMergeListener
 class BeginMergeMessage implements \JsonSerializable
 {
     /**
-     * 开始合并的用户 ID 列表。
+     * 开始合并的用户ID列表。
      * @var array
      */
     private $widList;

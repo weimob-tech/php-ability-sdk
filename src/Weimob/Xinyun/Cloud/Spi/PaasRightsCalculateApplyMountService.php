@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 3,883
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasRightsCalculateApplyMountService
 {
@@ -164,19 +164,19 @@ class SRightsCalculateApplyMountParam implements \JsonSerializable
     private $applyItems;
 
     /**
-     * ⽤户 ID
+     * ⽤户ID
      * @var int
      */
     private $wid;
 
     /**
-     * 商家 ID
+     * 商家ID
      * @var int
      */
     private $pid;
 
     /**
-     * 店铺 ID
+     * 店铺ID
      * @var int
      */
     private $storeId;
@@ -277,7 +277,7 @@ class SRightsCalculateApplyMountParam implements \JsonSerializable
 class SRightsCalculateApplyMountParamApplyItems implements \JsonSerializable
 {
     /**
-     * 订单项 ID
+     * 订单项ID
      * @var int
      */
     private $itemId;
@@ -568,7 +568,7 @@ class SRightsCalculateApplyMountData implements \JsonSerializable
 class SRightsCalculateApplyMountDataRightsDetails implements \JsonSerializable
 {
     /**
-     * 订单项 ID
+     * 订单项ID
      * @var int
      */
     private $itemId;

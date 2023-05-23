@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,486
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface UcUserReleaseSourceListener
 {
@@ -29,7 +29,7 @@ class ReleaseSourceMessage implements \JsonSerializable
     private $wid;
 
     /**
-     * 对应的渠道类型 4：手机号
+     * 对应的渠道类型4：手机号
      * @var int
      */
     private $source;

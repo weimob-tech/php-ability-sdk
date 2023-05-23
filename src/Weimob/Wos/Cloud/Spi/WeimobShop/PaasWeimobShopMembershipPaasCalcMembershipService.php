@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,167
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasWeimobShopMembershipPaasCalcMembershipService
 {
@@ -983,28 +983,28 @@ class WeimobShopMembershipPaasCalcMembershipParamPriceInfo implements \JsonSeria
 {
     /**
      * 价格
-     * @var int
+     * @var string
      */
     private $price;
 
     /**
-     * 价格类型:1-市场价;2-销售价;3-定金价;4-运费;
+     * 价格类型:1-销售价;2-市场价;3-定金价;4-运费;
      * @var int
      */
     private $type;
 
     /**
-     * @param int $price
+     * @param string $price
      */
-    public function setPrice(?int $price): void
+    public function setPrice(?string $price): void
     {
         $this->price = $price;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getPrice(): ?int
+    public function getPrice(): ?string
     {
         return $this->price;
     }
@@ -1227,7 +1227,7 @@ class WeimobShopMembershipPaasCalcMembershipParamInputItemDiscountList implement
 
     /**
      * 使用的资产量，积分、余额
-     * @var int
+     * @var string
      */
     private $costAmount;
 
@@ -1278,17 +1278,17 @@ class WeimobShopMembershipPaasCalcMembershipParamInputItemDiscountList implement
     }
 
     /**
-     * @param int $costAmount
+     * @param string $costAmount
      */
-    public function setCostAmount(?int $costAmount): void
+    public function setCostAmount(?string $costAmount): void
     {
         $this->costAmount = $costAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getCostAmount(): ?int
+    public function getCostAmount(): ?string
     {
         return $this->costAmount;
     }

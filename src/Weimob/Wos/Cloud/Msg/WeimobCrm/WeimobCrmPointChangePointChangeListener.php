@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,245
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface WeimobCrmPointChangePointChangeListener
 {
@@ -89,14 +89,14 @@ class PointChangeMessage implements \JsonSerializable
     private $bizUniqueId;
 
     /**
-     * 变更积分
-     * @var int
+     * 变更积分,仅支持整数
+     * @var string
      */
     private $changPoint;
 
     /**
      * 总积分
-     * @var int
+     * @var string
      */
     private $totalPoint;
 
@@ -105,6 +105,18 @@ class PointChangeMessage implements \JsonSerializable
      * @var int
      */
     private $changeTime;
+
+    /**
+     * 积分生效日期，时间戳，单位ms，适用于积分调增场景	
+     * @var int
+     */
+    private $effectiveTime;
+
+    /**
+     * 积分过期时间，时间戳，单位ms，适用于积分调增场景	
+     * @var int
+     */
+    private $expireTime;
 
     /**
      * @param int $productId
@@ -283,33 +295,33 @@ class PointChangeMessage implements \JsonSerializable
     }
 
     /**
-     * @param int $changPoint
+     * @param string $changPoint
      */
-    public function setChangPoint(?int $changPoint): void
+    public function setChangPoint(?string $changPoint): void
     {
         $this->changPoint = $changPoint;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getChangPoint(): ?int
+    public function getChangPoint(): ?string
     {
         return $this->changPoint;
     }
 
     /**
-     * @param int $totalPoint
+     * @param string $totalPoint
      */
-    public function setTotalPoint(?int $totalPoint): void
+    public function setTotalPoint(?string $totalPoint): void
     {
         $this->totalPoint = $totalPoint;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getTotalPoint(): ?int
+    public function getTotalPoint(): ?string
     {
         return $this->totalPoint;
     }
@@ -328,6 +340,38 @@ class PointChangeMessage implements \JsonSerializable
     public function getChangeTime(): ?int
     {
         return $this->changeTime;
+    }
+
+    /**
+     * @param int $effectiveTime
+     */
+    public function setEffectiveTime(?int $effectiveTime): void
+    {
+        $this->effectiveTime = $effectiveTime;
+    }
+
+    /**
+     * @return int
+     */
+    public function getEffectiveTime(): ?int
+    {
+        return $this->effectiveTime;
+    }
+
+    /**
+     * @param int $expireTime
+     */
+    public function setExpireTime(?int $expireTime): void
+    {
+        $this->expireTime = $expireTime;
+    }
+
+    /**
+     * @return int
+     */
+    public function getExpireTime(): ?int
+    {
+        return $this->expireTime;
     }
 
 

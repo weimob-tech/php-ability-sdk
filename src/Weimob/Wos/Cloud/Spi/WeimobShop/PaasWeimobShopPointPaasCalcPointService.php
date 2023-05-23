@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,168
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasWeimobShopPointPaasCalcPointService
 {
@@ -158,37 +158,6 @@ class WeimobShopPointPaasCalcPointRequest implements \JsonSerializable
 class WeimobShopPointPaasCalcPointParam implements \JsonSerializable
 {
     /**
-     * 业务请求参数
-     * @var WeimobShopPointPaasCalcPointParamParams2
-     */
-    private $params;
-
-    /**
-     * @param WeimobShopPointPaasCalcPointParamParams2 $params
-     */
-    public function setParams(?WeimobShopPointPaasCalcPointParamParams2 $params): void
-    {
-        $this->params = $params;
-    }
-
-    /**
-     * @return WeimobShopPointPaasCalcPointParamParams2
-     */
-    public function getParams(): ?WeimobShopPointPaasCalcPointParamParams2
-    {
-        return $this->params;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointParamParams2 implements \JsonSerializable
-{
-    /**
      * 基础信息
      * @var WeimobShopPointPaasCalcPointParamBasicInfo
      */
@@ -208,27 +177,9 @@ class WeimobShopPointPaasCalcPointParamParams2 implements \JsonSerializable
 
     /**
      * 用户选择的积分信息
-     * @var WeimobShopPointPaasCalcPointParamInputUserDiscountList
-     */
-    private $inputUserDiscountList;
-
-    /**
-     * 抵扣规则信息集合
      * @var array
      */
-    private $assetDeductionRule	;
-
-    /**
-     * 调用方产品ID
-     * @var int
-     */
-    private $productId;
-
-    /**
-     * 调用方产品实例ID
-     * @var int
-     */
-    private $productInstanceId;
+    private $inputUserDiscountList;
 
     /**
      * 提供产品的租户
@@ -241,6 +192,18 @@ class WeimobShopPointPaasCalcPointParamParams2 implements \JsonSerializable
      * @var int
      */
     private $wid;
+
+    /**
+     * 调用方产品ID
+     * @var int
+     */
+    private $productId;
+
+    /**
+     * 调用方产品实例ID
+     * @var int
+     */
+    private $productInstanceId;
 
     /**
      * @param WeimobShopPointPaasCalcPointParamBasicInfo $basicInfo
@@ -291,67 +254,19 @@ class WeimobShopPointPaasCalcPointParamParams2 implements \JsonSerializable
     }
 
     /**
-     * @param WeimobShopPointPaasCalcPointParamInputUserDiscountList $inputUserDiscountList
+     * @param array $inputUserDiscountList
      */
-    public function setInputUserDiscountList(?WeimobShopPointPaasCalcPointParamInputUserDiscountList $inputUserDiscountList): void
+    public function setInputUserDiscountList(?array $inputUserDiscountList): void
     {
         $this->inputUserDiscountList = $inputUserDiscountList;
     }
 
     /**
-     * @return WeimobShopPointPaasCalcPointParamInputUserDiscountList
-     */
-    public function getInputUserDiscountList(): ?WeimobShopPointPaasCalcPointParamInputUserDiscountList
-    {
-        return $this->inputUserDiscountList;
-    }
-
-    /**
-     * @param array $assetDeductionRule	
-     */
-    public function setAssetDeductionRule	(?array $assetDeductionRule	): void
-    {
-        $this->assetDeductionRule	 = $assetDeductionRule	;
-    }
-
-    /**
      * @return array
      */
-    public function getAssetDeductionRule	(): ?array
+    public function getInputUserDiscountList(): ?array
     {
-        return $this->assetDeductionRule	;
-    }
-
-    /**
-     * @param int $productId
-     */
-    public function setProductId(?int $productId): void
-    {
-        $this->productId = $productId;
-    }
-
-    /**
-     * @return int
-     */
-    public function getProductId(): ?int
-    {
-        return $this->productId;
-    }
-
-    /**
-     * @param int $productInstanceId
-     */
-    public function setProductInstanceId(?int $productInstanceId): void
-    {
-        $this->productInstanceId = $productInstanceId;
-    }
-
-    /**
-     * @return int
-     */
-    public function getProductInstanceId(): ?int
-    {
-        return $this->productInstanceId;
+        return $this->inputUserDiscountList;
     }
 
     /**
@@ -386,67 +301,6 @@ class WeimobShopPointPaasCalcPointParamParams2 implements \JsonSerializable
         return $this->wid;
     }
 
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointParamBasicInfo implements \JsonSerializable
-{
-    /**
-     * 店铺标识
-     * @var int
-     */
-    private $bosId;
-
-    /**
-     * 调用方产品ID
-     * @var int
-     */
-    private $productId;
-
-    /**
-     * 调用方产品实例ID
-     * @var int
-     */
-    private $productInstanceId;
-
-    /**
-     * 组织结构节点
-     * @var string
-     */
-    private $vid;
-
-    /**
-     * vid节点类型：0-无类型,无业务意义;1-集团;2-品牌;3-区域;5-商场;10-门店;100-自提点;
-     * @var int
-     */
-    private $vidType;
-
-    /**
-     * 调用方产品实例版本号
-     * @var int
-     */
-    private $productVersionId;
-
-    /**
-     * @param int $bosId
-     */
-    public function setBosId(?int $bosId): void
-    {
-        $this->bosId = $bosId;
-    }
-
-    /**
-     * @return int
-     */
-    public function getBosId(): ?int
-    {
-        return $this->bosId;
-    }
-
     /**
      * @param int $productId
      */
@@ -479,6 +333,51 @@ class WeimobShopPointPaasCalcPointParamBasicInfo implements \JsonSerializable
         return $this->productInstanceId;
     }
 
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointParamBasicInfo implements \JsonSerializable
+{
+    /**
+     * 组织结构节点
+     * @var string
+     */
+    private $vid;
+
+    /**
+     * 调用方产品ID
+     * @var int
+     */
+    private $productId;
+
+    /**
+     * 店铺标识
+     * @var int
+     */
+    private $bosId;
+
+    /**
+     * 调用方产品实例ID
+     * @var int
+     */
+    private $productInstanceId;
+
+    /**
+     * vid节点类型：0-无类型,无业务意义;1-集团;2-品牌;3-区域;5-商场;10-门店;100-自提点;
+     * @var int
+     */
+    private $vidType;
+
+    /**
+     * 调用方产品实例版本号
+     * @var int
+     */
+    private $productVersionId;
+
     /**
      * @param string $vid
      */
@@ -493,6 +392,54 @@ class WeimobShopPointPaasCalcPointParamBasicInfo implements \JsonSerializable
     public function getVid(): ?string
     {
         return $this->vid;
+    }
+
+    /**
+     * @param int $productId
+     */
+    public function setProductId(?int $productId): void
+    {
+        $this->productId = $productId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getProductId(): ?int
+    {
+        return $this->productId;
+    }
+
+    /**
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
+    {
+        $this->bosId = $bosId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getBosId(): ?int
+    {
+        return $this->bosId;
+    }
+
+    /**
+     * @param int $productInstanceId
+     */
+    public function setProductInstanceId(?int $productInstanceId): void
+    {
+        $this->productInstanceId = $productInstanceId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getProductInstanceId(): ?int
+    {
+        return $this->productInstanceId;
     }
 
     /**
@@ -543,16 +490,22 @@ class WeimobShopPointPaasCalcPointParamExtendInfo implements \JsonSerializable
     private $globalTicket;
 
     /**
-     * 销售渠道:1-线上;2-线下;
-     * @var int
+     * 结算唯一标识
+     * @var string
      */
-    private $salesChannel;
+    private $tradeTrackId;
 
     /**
      * 渠道类型：0-微信h5  ;1-微信小程序 ;2-非微信环境h5   ;5-字节跳动小程序webview-H5 ;6-支付宝小程序webview-H5  ;8-安卓app ;9-苹果app ;10-百度小程序webview-H5  ;11-pad  ;12-自有app(App开店) ;13-微信小程序webview ;14-微信小程序webview-直播  ;15-线下大屏 ;16-企业微信 ;17-字节跳动小程序原生    ;18-芸智免密 ;19-qq小程序原生  ;20-qq小程序webview-H5  ;21-支付宝小程序原生 ;22-微信小商店    ;23-快手小程序原生  ;24-快手小程序webview-H5  ;25-小红书小程序原生 ;26-小红书小程序webview-H5 ;27-直播半屏小程序  ;28-直播h5-微信小程序webview-H5 ;
      * @var int
      */
     private $source;
+
+    /**
+     * 销售渠道:1-线上;2-线下;
+     * @var int
+     */
+    private $salesChannel;
 
     /**
      * @param string $globalTicket
@@ -571,19 +524,19 @@ class WeimobShopPointPaasCalcPointParamExtendInfo implements \JsonSerializable
     }
 
     /**
-     * @param int $salesChannel
+     * @param string $tradeTrackId
      */
-    public function setSalesChannel(?int $salesChannel): void
+    public function setTradeTrackId(?string $tradeTrackId): void
     {
-        $this->salesChannel = $salesChannel;
+        $this->tradeTrackId = $tradeTrackId;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getSalesChannel(): ?int
+    public function getTradeTrackId(): ?string
     {
-        return $this->salesChannel;
+        return $this->tradeTrackId;
     }
 
     /**
@@ -602,6 +555,22 @@ class WeimobShopPointPaasCalcPointParamExtendInfo implements \JsonSerializable
         return $this->source;
     }
 
+    /**
+     * @param int $salesChannel
+     */
+    public function setSalesChannel(?int $salesChannel): void
+    {
+        $this->salesChannel = $salesChannel;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSalesChannel(): ?int
+    {
+        return $this->salesChannel;
+    }
+
 
     public function jsonSerialize()
     {
@@ -612,34 +581,10 @@ class WeimobShopPointPaasCalcPointParamExtendInfo implements \JsonSerializable
 class WeimobShopPointPaasCalcPointParamGoodsTradeMetas implements \JsonSerializable
 {
     /**
-     * 商品本身的基本信息
-     * @var WeimobShopPointPaasCalcPointParamBasicGoodsInfo
-     */
-    private $basicGoodsInfo;
-
-    /**
-     * 已使用优惠列表
-     * @var array
-     */
-    private $discountInfoList;
-
-    /**
      * 带入的商品折扣列表
      * @var array
      */
     private $inputItemDiscountList;
-
-    /**
-     * 商品互斥信息
-     * @var WeimobShopPointPaasCalcPointParamMutex
-     */
-    private $mutex;
-
-    /**
-     * 运费的优惠信息
-     * @var WeimobShopPointPaasCalcPointParamPostageDiscountInfo
-     */
-    private $postageDiscountInfo;
 
     /**
      * 交易信息
@@ -648,19 +593,59 @@ class WeimobShopPointPaasCalcPointParamGoodsTradeMetas implements \JsonSerializa
     private $tradeGoodsInfo;
 
     /**
-     * @param WeimobShopPointPaasCalcPointParamBasicGoodsInfo $basicGoodsInfo
+     * 已使用优惠列表
+     * @var array
      */
-    public function setBasicGoodsInfo(?WeimobShopPointPaasCalcPointParamBasicGoodsInfo $basicGoodsInfo): void
+    private $discountInfoList;
+
+    /**
+     * 商品互斥信息
+     * @var WeimobShopPointPaasCalcPointParamMutex
+     */
+    private $mutex;
+
+    /**
+     * 商品本身的基本信息
+     * @var WeimobShopPointPaasCalcPointParamBasicGoodsInfo
+     */
+    private $basicGoodsInfo;
+
+    /**
+     * 费用信息（运费）
+     * @var array
+     */
+    private $feeTypeDiscountInfos;
+
+    /**
+     * @param array $inputItemDiscountList
+     */
+    public function setInputItemDiscountList(?array $inputItemDiscountList): void
     {
-        $this->basicGoodsInfo = $basicGoodsInfo;
+        $this->inputItemDiscountList = $inputItemDiscountList;
     }
 
     /**
-     * @return WeimobShopPointPaasCalcPointParamBasicGoodsInfo
+     * @return array
      */
-    public function getBasicGoodsInfo(): ?WeimobShopPointPaasCalcPointParamBasicGoodsInfo
+    public function getInputItemDiscountList(): ?array
     {
-        return $this->basicGoodsInfo;
+        return $this->inputItemDiscountList;
+    }
+
+    /**
+     * @param WeimobShopPointPaasCalcPointParamTradeGoodsInfo $tradeGoodsInfo
+     */
+    public function setTradeGoodsInfo(?WeimobShopPointPaasCalcPointParamTradeGoodsInfo $tradeGoodsInfo): void
+    {
+        $this->tradeGoodsInfo = $tradeGoodsInfo;
+    }
+
+    /**
+     * @return WeimobShopPointPaasCalcPointParamTradeGoodsInfo
+     */
+    public function getTradeGoodsInfo(): ?WeimobShopPointPaasCalcPointParamTradeGoodsInfo
+    {
+        return $this->tradeGoodsInfo;
     }
 
     /**
@@ -680,22 +665,6 @@ class WeimobShopPointPaasCalcPointParamGoodsTradeMetas implements \JsonSerializa
     }
 
     /**
-     * @param array $inputItemDiscountList
-     */
-    public function setInputItemDiscountList(?array $inputItemDiscountList): void
-    {
-        $this->inputItemDiscountList = $inputItemDiscountList;
-    }
-
-    /**
-     * @return array
-     */
-    public function getInputItemDiscountList(): ?array
-    {
-        return $this->inputItemDiscountList;
-    }
-
-    /**
      * @param WeimobShopPointPaasCalcPointParamMutex $mutex
      */
     public function setMutex(?WeimobShopPointPaasCalcPointParamMutex $mutex): void
@@ -712,35 +681,489 @@ class WeimobShopPointPaasCalcPointParamGoodsTradeMetas implements \JsonSerializa
     }
 
     /**
-     * @param WeimobShopPointPaasCalcPointParamPostageDiscountInfo $postageDiscountInfo
+     * @param WeimobShopPointPaasCalcPointParamBasicGoodsInfo $basicGoodsInfo
      */
-    public function setPostageDiscountInfo(?WeimobShopPointPaasCalcPointParamPostageDiscountInfo $postageDiscountInfo): void
+    public function setBasicGoodsInfo(?WeimobShopPointPaasCalcPointParamBasicGoodsInfo $basicGoodsInfo): void
     {
-        $this->postageDiscountInfo = $postageDiscountInfo;
+        $this->basicGoodsInfo = $basicGoodsInfo;
     }
 
     /**
-     * @return WeimobShopPointPaasCalcPointParamPostageDiscountInfo
+     * @return WeimobShopPointPaasCalcPointParamBasicGoodsInfo
      */
-    public function getPostageDiscountInfo(): ?WeimobShopPointPaasCalcPointParamPostageDiscountInfo
+    public function getBasicGoodsInfo(): ?WeimobShopPointPaasCalcPointParamBasicGoodsInfo
     {
-        return $this->postageDiscountInfo;
+        return $this->basicGoodsInfo;
     }
 
     /**
-     * @param WeimobShopPointPaasCalcPointParamTradeGoodsInfo $tradeGoodsInfo
+     * @param array $feeTypeDiscountInfos
      */
-    public function setTradeGoodsInfo(?WeimobShopPointPaasCalcPointParamTradeGoodsInfo $tradeGoodsInfo): void
+    public function setFeeTypeDiscountInfos(?array $feeTypeDiscountInfos): void
     {
-        $this->tradeGoodsInfo = $tradeGoodsInfo;
+        $this->feeTypeDiscountInfos = $feeTypeDiscountInfos;
     }
 
     /**
-     * @return WeimobShopPointPaasCalcPointParamTradeGoodsInfo
+     * @return array
      */
-    public function getTradeGoodsInfo(): ?WeimobShopPointPaasCalcPointParamTradeGoodsInfo
+    public function getFeeTypeDiscountInfos(): ?array
     {
-        return $this->tradeGoodsInfo;
+        return $this->feeTypeDiscountInfos;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointParamInputItemDiscountList implements \JsonSerializable
+{
+    /**
+     * 层级
+     * @var int
+     */
+    private $discountLevel;
+
+    /**
+     * 折扣状态： 1: 使用 2: 不使用;3:默认推荐
+     * @var int
+     */
+    private $discountStatus;
+
+    /**
+     * 抵扣类型：1-抵扣商品；2-抵扣运费；3-抵扣积分商品
+     * @var int
+     */
+    private $deductionType;
+
+    /**
+     * 使用的资产量，积分、余额
+     * @var string
+     */
+    private $costAmount;
+
+    /**
+     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
+     * @var int
+     */
+    private $discountType;
+
+    /**
+     * 折扣id
+     * @var string
+     */
+    private $discountId;
+
+    /**
+     * @param int $discountLevel
+     */
+    public function setDiscountLevel(?int $discountLevel): void
+    {
+        $this->discountLevel = $discountLevel;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountLevel(): ?int
+    {
+        return $this->discountLevel;
+    }
+
+    /**
+     * @param int $discountStatus
+     */
+    public function setDiscountStatus(?int $discountStatus): void
+    {
+        $this->discountStatus = $discountStatus;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountStatus(): ?int
+    {
+        return $this->discountStatus;
+    }
+
+    /**
+     * @param int $deductionType
+     */
+    public function setDeductionType(?int $deductionType): void
+    {
+        $this->deductionType = $deductionType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDeductionType(): ?int
+    {
+        return $this->deductionType;
+    }
+
+    /**
+     * @param string $costAmount
+     */
+    public function setCostAmount(?string $costAmount): void
+    {
+        $this->costAmount = $costAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCostAmount(): ?string
+    {
+        return $this->costAmount;
+    }
+
+    /**
+     * @param int $discountType
+     */
+    public function setDiscountType(?int $discountType): void
+    {
+        $this->discountType = $discountType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountType(): ?int
+    {
+        return $this->discountType;
+    }
+
+    /**
+     * @param string $discountId
+     */
+    public function setDiscountId(?string $discountId): void
+    {
+        $this->discountId = $discountId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiscountId(): ?string
+    {
+        return $this->discountId;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointParamTradeGoodsInfo implements \JsonSerializable
+{
+    /**
+     * 交易商品id
+     * @var int
+     */
+    private $itemId;
+
+    /**
+     * 结算商品类型：1-主商品;2-赠品;3-换购商品
+     * @var int
+     */
+    private $tradeGoodsType;
+
+    /**
+     * 交易价格类型：1-市场价;2-销售价;
+     * @var int
+     */
+    private $tradePriceType;
+
+    /**
+     * 交易基准价(BigDecimal)
+     * @var string
+     */
+    private $tradePrice;
+
+    /**
+     * @param int $itemId
+     */
+    public function setItemId(?int $itemId): void
+    {
+        $this->itemId = $itemId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getItemId(): ?int
+    {
+        return $this->itemId;
+    }
+
+    /**
+     * @param int $tradeGoodsType
+     */
+    public function setTradeGoodsType(?int $tradeGoodsType): void
+    {
+        $this->tradeGoodsType = $tradeGoodsType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTradeGoodsType(): ?int
+    {
+        return $this->tradeGoodsType;
+    }
+
+    /**
+     * @param int $tradePriceType
+     */
+    public function setTradePriceType(?int $tradePriceType): void
+    {
+        $this->tradePriceType = $tradePriceType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTradePriceType(): ?int
+    {
+        return $this->tradePriceType;
+    }
+
+    /**
+     * @param string $tradePrice
+     */
+    public function setTradePrice(?string $tradePrice): void
+    {
+        $this->tradePrice = $tradePrice;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTradePrice(): ?string
+    {
+        return $this->tradePrice;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointParamDiscountInfoList implements \JsonSerializable
+{
+    /**
+     * 层级
+     * @var int
+     */
+    private $discountLevel;
+
+    /**
+     * 优惠计算的基础金额， 在当前checkAmount上计算出discountAmoun(BigDecimal)
+     * @var string
+     */
+    private $checkAmount;
+
+    /**
+     * 抵扣类型：1-抵扣商品；2-抵扣运费；3-抵扣积分商品
+     * @var int
+     */
+    private $deductionType;
+
+    /**
+     * 折扣优惠金额(BigDecimal)
+     * @var string
+     */
+    private $discountAmount;
+
+    /**
+     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;	1
+     * @var int
+     */
+    private $discountType;
+
+    /**
+     * 折扣id
+     * @var string
+     */
+    private $discountId;
+
+    /**
+     * 折扣顺序
+     * @var int
+     */
+    private $order;
+
+    /**
+     * @param int $discountLevel
+     */
+    public function setDiscountLevel(?int $discountLevel): void
+    {
+        $this->discountLevel = $discountLevel;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountLevel(): ?int
+    {
+        return $this->discountLevel;
+    }
+
+    /**
+     * @param string $checkAmount
+     */
+    public function setCheckAmount(?string $checkAmount): void
+    {
+        $this->checkAmount = $checkAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCheckAmount(): ?string
+    {
+        return $this->checkAmount;
+    }
+
+    /**
+     * @param int $deductionType
+     */
+    public function setDeductionType(?int $deductionType): void
+    {
+        $this->deductionType = $deductionType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDeductionType(): ?int
+    {
+        return $this->deductionType;
+    }
+
+    /**
+     * @param string $discountAmount
+     */
+    public function setDiscountAmount(?string $discountAmount): void
+    {
+        $this->discountAmount = $discountAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiscountAmount(): ?string
+    {
+        return $this->discountAmount;
+    }
+
+    /**
+     * @param int $discountType
+     */
+    public function setDiscountType(?int $discountType): void
+    {
+        $this->discountType = $discountType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountType(): ?int
+    {
+        return $this->discountType;
+    }
+
+    /**
+     * @param string $discountId
+     */
+    public function setDiscountId(?string $discountId): void
+    {
+        $this->discountId = $discountId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiscountId(): ?string
+    {
+        return $this->discountId;
+    }
+
+    /**
+     * @param int $order
+     */
+    public function setOrder(?int $order): void
+    {
+        $this->order = $order;
+    }
+
+    /**
+     * @return int
+     */
+    public function getOrder(): ?int
+    {
+        return $this->order;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointParamMutex implements \JsonSerializable
+{
+    /**
+     * 可用的优惠列表
+     * @var array
+     */
+    private $customDiscountTypeList;
+
+    /**
+     * 自定义优惠类型:1-所有优惠可用;2-自定义优惠类型;
+     * @var int
+     */
+    private $customDiscountType;
+
+    /**
+     * @param array $customDiscountTypeList
+     */
+    public function setCustomDiscountTypeList(?array $customDiscountTypeList): void
+    {
+        $this->customDiscountTypeList = $customDiscountTypeList;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCustomDiscountTypeList(): ?array
+    {
+        return $this->customDiscountTypeList;
+    }
+
+    /**
+     * @param int $customDiscountType
+     */
+    public function setCustomDiscountType(?int $customDiscountType): void
+    {
+        $this->customDiscountType = $customDiscountType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCustomDiscountType(): ?int
+    {
+        return $this->customDiscountType;
     }
 
 
@@ -753,28 +1176,22 @@ class WeimobShopPointPaasCalcPointParamGoodsTradeMetas implements \JsonSerializa
 class WeimobShopPointPaasCalcPointParamBasicGoodsInfo implements \JsonSerializable
 {
     /**
+     * 价格信息
+     * @var array
+     */
+    private $priceInfo;
+
+    /**
      * 预售信息
      * @var WeimobShopPointPaasCalcPointParamPreSellInfo
      */
     private $preSellInfo;
 
     /**
-     * 费用信息
-     * @var array
-     */
-    private $priceInfo;
-
-    /**
-     * 商品id
+     * 组织节点id
      * @var int
      */
-    private $goodsId;
-
-    /**
-     * 商品数量
-     * @var int
-     */
-    private $num;
+    private $vid;
 
     /**
      * 商品销售模式：1-现货销售； 2-预售）
@@ -783,22 +1200,16 @@ class WeimobShopPointPaasCalcPointParamBasicGoodsInfo implements \JsonSerializab
     private $sellModelType;
 
     /**
-     * skuId
+     * 商品id
      * @var int
      */
-    private $skuId;
+    private $goodsId;
 
     /**
-     * 节点id
+     * 数量
      * @var int
      */
-    private $vid;
-
-    /**
-     * vid节点类型：0-无类型,无业务意义;1-集团;2-品牌;3-区域;5-商场;10-门店;100-自提点;
-     * @var int
-     */
-    private $vidType;
+    private $num;
 
     /**
      * 商品编码
@@ -807,10 +1218,38 @@ class WeimobShopPointPaasCalcPointParamBasicGoodsInfo implements \JsonSerializab
     private $goodsCode;
 
     /**
+     * skuId
+     * @var int
+     */
+    private $skuId;
+
+    /**
+     * vid节点类型：0-无类型,无业务意义;1-集团;2-品牌;3-区域;5-商场;10-门店;100-自提点;
+     * @var int
+     */
+    private $vidType;
+
+    /**
      * sku 编码
      * @var string
      */
     private $skuCode;
+
+    /**
+     * @param array $priceInfo
+     */
+    public function setPriceInfo(?array $priceInfo): void
+    {
+        $this->priceInfo = $priceInfo;
+    }
+
+    /**
+     * @return array
+     */
+    public function getPriceInfo(): ?array
+    {
+        return $this->priceInfo;
+    }
 
     /**
      * @param WeimobShopPointPaasCalcPointParamPreSellInfo $preSellInfo
@@ -829,19 +1268,35 @@ class WeimobShopPointPaasCalcPointParamBasicGoodsInfo implements \JsonSerializab
     }
 
     /**
-     * @param array $priceInfo
+     * @param int $vid
      */
-    public function setPriceInfo(?array $priceInfo): void
+    public function setVid(?int $vid): void
     {
-        $this->priceInfo = $priceInfo;
+        $this->vid = $vid;
     }
 
     /**
-     * @return array
+     * @return int
      */
-    public function getPriceInfo(): ?array
+    public function getVid(): ?int
     {
-        return $this->priceInfo;
+        return $this->vid;
+    }
+
+    /**
+     * @param int $sellModelType
+     */
+    public function setSellModelType(?int $sellModelType): void
+    {
+        $this->sellModelType = $sellModelType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSellModelType(): ?int
+    {
+        return $this->sellModelType;
     }
 
     /**
@@ -877,19 +1332,19 @@ class WeimobShopPointPaasCalcPointParamBasicGoodsInfo implements \JsonSerializab
     }
 
     /**
-     * @param int $sellModelType
+     * @param string $goodsCode
      */
-    public function setSellModelType(?int $sellModelType): void
+    public function setGoodsCode(?string $goodsCode): void
     {
-        $this->sellModelType = $sellModelType;
+        $this->goodsCode = $goodsCode;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getSellModelType(): ?int
+    public function getGoodsCode(): ?string
     {
-        return $this->sellModelType;
+        return $this->goodsCode;
     }
 
     /**
@@ -909,22 +1364,6 @@ class WeimobShopPointPaasCalcPointParamBasicGoodsInfo implements \JsonSerializab
     }
 
     /**
-     * @param int $vid
-     */
-    public function setVid(?int $vid): void
-    {
-        $this->vid = $vid;
-    }
-
-    /**
-     * @return int
-     */
-    public function getVid(): ?int
-    {
-        return $this->vid;
-    }
-
-    /**
      * @param int $vidType
      */
     public function setVidType(?int $vidType): void
@@ -938,22 +1377,6 @@ class WeimobShopPointPaasCalcPointParamBasicGoodsInfo implements \JsonSerializab
     public function getVidType(): ?int
     {
         return $this->vidType;
-    }
-
-    /**
-     * @param string $goodsCode
-     */
-    public function setGoodsCode(?string $goodsCode): void
-    {
-        $this->goodsCode = $goodsCode;
-    }
-
-    /**
-     * @return string
-     */
-    public function getGoodsCode(): ?string
-    {
-        return $this->goodsCode;
     }
 
     /**
@@ -979,37 +1402,6 @@ class WeimobShopPointPaasCalcPointParamBasicGoodsInfo implements \JsonSerializab
     }
 }
 
-class WeimobShopPointPaasCalcPointParamPreSellInfo implements \JsonSerializable
-{
-    /**
-     * 预售类型:1-全款预售;2-比例定金预售;3-固定定金预售;
-     * @var int
-     */
-    private $type;
-
-    /**
-     * @param int $type
-     */
-    public function setType(?int $type): void
-    {
-        $this->type = $type;
-    }
-
-    /**
-     * @return int
-     */
-    public function getType(): ?int
-    {
-        return $this->type;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
 class WeimobShopPointPaasCalcPointParamPriceInfo implements \JsonSerializable
 {
     /**
@@ -1019,7 +1411,7 @@ class WeimobShopPointPaasCalcPointParamPriceInfo implements \JsonSerializable
     private $price;
 
     /**
-     * 价格类型:1-市场价;2-销售价;3-定金价;4-运费;
+     * 价格类型:1-销售价;2-市场价;3-定金价;4-运费;
      * @var int
      */
     private $type;
@@ -1063,138 +1455,28 @@ class WeimobShopPointPaasCalcPointParamPriceInfo implements \JsonSerializable
     }
 }
 
-class WeimobShopPointPaasCalcPointParamDiscountInfoList implements \JsonSerializable
+class WeimobShopPointPaasCalcPointParamPreSellInfo implements \JsonSerializable
 {
     /**
-     * 折扣优惠金额(BigDecimal)
-     * @var string
-     */
-    private $discountAmount;
-
-    /**
-     * 折扣id
+     * 预售类型:1-全款预售;2-比例定金预售;3-固定定金预售;
      * @var int
      */
-    private $discountId;
+    private $type;
 
     /**
-     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
-     * @var int
+     * @param int $type
      */
-    private $discountType;
-
-    /**
-     * 层级
-     * @var int
-     */
-    private $discountLevel;
-
-    /**
-     * 使用顺序
-     * @var int
-     */
-    private $order;
-
-    /**
-     * 优惠计算的基础金额， 在当前checkAmount上计算出discountAmoun(BigDecimal)
-     * @var string
-     */
-    private $checkAmount;
-
-    /**
-     * @param string $discountAmount
-     */
-    public function setDiscountAmount(?string $discountAmount): void
+    public function setType(?int $type): void
     {
-        $this->discountAmount = $discountAmount;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDiscountAmount(): ?string
-    {
-        return $this->discountAmount;
-    }
-
-    /**
-     * @param int $discountId
-     */
-    public function setDiscountId(?int $discountId): void
-    {
-        $this->discountId = $discountId;
+        $this->type = $type;
     }
 
     /**
      * @return int
      */
-    public function getDiscountId(): ?int
+    public function getType(): ?int
     {
-        return $this->discountId;
-    }
-
-    /**
-     * @param int $discountType
-     */
-    public function setDiscountType(?int $discountType): void
-    {
-        $this->discountType = $discountType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountType(): ?int
-    {
-        return $this->discountType;
-    }
-
-    /**
-     * @param int $discountLevel
-     */
-    public function setDiscountLevel(?int $discountLevel): void
-    {
-        $this->discountLevel = $discountLevel;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountLevel(): ?int
-    {
-        return $this->discountLevel;
-    }
-
-    /**
-     * @param int $order
-     */
-    public function setOrder(?int $order): void
-    {
-        $this->order = $order;
-    }
-
-    /**
-     * @return int
-     */
-    public function getOrder(): ?int
-    {
-        return $this->order;
-    }
-
-    /**
-     * @param string $checkAmount
-     */
-    public function setCheckAmount(?string $checkAmount): void
-    {
-        $this->checkAmount = $checkAmount;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCheckAmount(): ?string
-    {
-        return $this->checkAmount;
+        return $this->type;
     }
 
 
@@ -1204,160 +1486,10 @@ class WeimobShopPointPaasCalcPointParamDiscountInfoList implements \JsonSerializ
     }
 }
 
-class WeimobShopPointPaasCalcPointParamInputItemDiscountList implements \JsonSerializable
+class WeimobShopPointPaasCalcPointParamFeeTypeDiscountInfos implements \JsonSerializable
 {
     /**
-     * 折扣id
-     * @var int
-     */
-    private $discountId;
-
-    /**
-     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
-     * @var int
-     */
-    private $discountType;
-
-    /**
-     * 层级
-     * @var int
-     */
-    private $discountLevel;
-
-    /**
-     * 折扣状态： 1: 使用 2: 不使用;3:默认推荐
-     * @var int
-     */
-    private $discountStatus;
-
-    /**
-     * @param int $discountId
-     */
-    public function setDiscountId(?int $discountId): void
-    {
-        $this->discountId = $discountId;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountId(): ?int
-    {
-        return $this->discountId;
-    }
-
-    /**
-     * @param int $discountType
-     */
-    public function setDiscountType(?int $discountType): void
-    {
-        $this->discountType = $discountType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountType(): ?int
-    {
-        return $this->discountType;
-    }
-
-    /**
-     * @param int $discountLevel
-     */
-    public function setDiscountLevel(?int $discountLevel): void
-    {
-        $this->discountLevel = $discountLevel;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountLevel(): ?int
-    {
-        return $this->discountLevel;
-    }
-
-    /**
-     * @param int $discountStatus
-     */
-    public function setDiscountStatus(?int $discountStatus): void
-    {
-        $this->discountStatus = $discountStatus;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountStatus(): ?int
-    {
-        return $this->discountStatus;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointParamMutex implements \JsonSerializable
-{
-    /**
-     * 自定义优惠类型:1-所有优惠可用;2-自定义优惠类型;
-     * @var int
-     */
-    private $customDiscountType;
-
-    /**
-     * 可用的优惠列表
-     * @var array
-     */
-    private $customDiscountTypeList;
-
-    /**
-     * @param int $customDiscountType
-     */
-    public function setCustomDiscountType(?int $customDiscountType): void
-    {
-        $this->customDiscountType = $customDiscountType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getCustomDiscountType(): ?int
-    {
-        return $this->customDiscountType;
-    }
-
-    /**
-     * @param array $customDiscountTypeList
-     */
-    public function setCustomDiscountTypeList(?array $customDiscountTypeList): void
-    {
-        $this->customDiscountTypeList = $customDiscountTypeList;
-    }
-
-    /**
-     * @return array
-     */
-    public function getCustomDiscountTypeList(): ?array
-    {
-        return $this->customDiscountTypeList;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointParamPostageDiscountInfo implements \JsonSerializable
-{
-    /**
-     * 已使用优惠列表
+     * 优惠信息
      * @var array
      */
     private $discountInfoList;
@@ -1367,6 +1499,12 @@ class WeimobShopPointPaasCalcPointParamPostageDiscountInfo implements \JsonSeria
      * @var WeimobShopPointPaasCalcPointParamMutex2
      */
     private $mutex;
+
+    /**
+     * 费用类型 3-运费
+     * @var int
+     */
+    private $feeType;
 
     /**
      * @param array $discountInfoList
@@ -1400,6 +1538,22 @@ class WeimobShopPointPaasCalcPointParamPostageDiscountInfo implements \JsonSeria
         return $this->mutex;
     }
 
+    /**
+     * @param int $feeType
+     */
+    public function setFeeType(?int $feeType): void
+    {
+        $this->feeType = $feeType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFeeType(): ?int
+    {
+        return $this->feeType;
+    }
+
 
     public function jsonSerialize()
     {
@@ -1410,16 +1564,22 @@ class WeimobShopPointPaasCalcPointParamPostageDiscountInfo implements \JsonSeria
 class WeimobShopPointPaasCalcPointParamDiscountInfoList2 implements \JsonSerializable
 {
     /**
-     * 折扣优惠金额(BigDecimal)
+     * 计算优惠的基准金额
+     * @var string
+     */
+    private $checkAmount;
+
+    /**
+     * 优惠金额
      * @var string
      */
     private $discountAmount;
 
     /**
-     * 折扣id
-     * @var int
+     * 使用的资产量，积分
+     * @var string
      */
-    private $discountId;
+    private $costAmount;
 
     /**
      * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
@@ -1428,22 +1588,38 @@ class WeimobShopPointPaasCalcPointParamDiscountInfoList2 implements \JsonSeriali
     private $discountType;
 
     /**
-     * 活动使用顺序
+     * 折扣id
+     * @var string
+     */
+    private $discountId;
+
+    /**
+     * 优惠顺序
      * @var int
      */
     private $order;
 
     /**
-     * 给订单落单(BigDecimal)
-     * @var string
+     * 层级
+     * @var int
      */
-    private $checkAmount;
+    private $discountLevel;
 
     /**
-     * 使用的资产量，积分(BigDecimal)
-     * @var string
+     * @param string $checkAmount
      */
-    private $costAmount;
+    public function setCheckAmount(?string $checkAmount): void
+    {
+        $this->checkAmount = $checkAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCheckAmount(): ?string
+    {
+        return $this->checkAmount;
+    }
 
     /**
      * @param string $discountAmount
@@ -1462,19 +1638,19 @@ class WeimobShopPointPaasCalcPointParamDiscountInfoList2 implements \JsonSeriali
     }
 
     /**
-     * @param int $discountId
+     * @param string $costAmount
      */
-    public function setDiscountId(?int $discountId): void
+    public function setCostAmount(?string $costAmount): void
     {
-        $this->discountId = $discountId;
+        $this->costAmount = $costAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getDiscountId(): ?int
+    public function getCostAmount(): ?string
     {
-        return $this->discountId;
+        return $this->costAmount;
     }
 
     /**
@@ -1494,6 +1670,22 @@ class WeimobShopPointPaasCalcPointParamDiscountInfoList2 implements \JsonSeriali
     }
 
     /**
+     * @param string $discountId
+     */
+    public function setDiscountId(?string $discountId): void
+    {
+        $this->discountId = $discountId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiscountId(): ?string
+    {
+        return $this->discountId;
+    }
+
+    /**
      * @param int $order
      */
     public function setOrder(?int $order): void
@@ -1510,35 +1702,19 @@ class WeimobShopPointPaasCalcPointParamDiscountInfoList2 implements \JsonSeriali
     }
 
     /**
-     * @param string $checkAmount
+     * @param int $discountLevel
      */
-    public function setCheckAmount(?string $checkAmount): void
+    public function setDiscountLevel(?int $discountLevel): void
     {
-        $this->checkAmount = $checkAmount;
+        $this->discountLevel = $discountLevel;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getCheckAmount(): ?string
+    public function getDiscountLevel(): ?int
     {
-        return $this->checkAmount;
-    }
-
-    /**
-     * @param string $costAmount
-     */
-    public function setCostAmount(?string $costAmount): void
-    {
-        $this->costAmount = $costAmount;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCostAmount(): ?string
-    {
-        return $this->costAmount;
+        return $this->discountLevel;
     }
 
 
@@ -1551,32 +1727,16 @@ class WeimobShopPointPaasCalcPointParamDiscountInfoList2 implements \JsonSeriali
 class WeimobShopPointPaasCalcPointParamMutex2 implements \JsonSerializable
 {
     /**
-     * 自定义折扣类型：1 ：全部可用 2：部分可用
-     * @var int
-     */
-    private $customDiscountType;
-
-    /**
-     * 可用抵扣类型、可用优惠活动类型，自定义折扣类型具体值 customDiscountType=2,必填
+     * 可用的优惠列表
      * @var array
      */
     private $customDiscountTypeList;
 
     /**
-     * @param int $customDiscountType
+     * 自定义优惠类型:1-所有优惠可用;2-自定义优惠类型;
+     * @var int
      */
-    public function setCustomDiscountType(?int $customDiscountType): void
-    {
-        $this->customDiscountType = $customDiscountType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getCustomDiscountType(): ?int
-    {
-        return $this->customDiscountType;
-    }
+    private $customDiscountType;
 
     /**
      * @param array $customDiscountTypeList
@@ -1594,101 +1754,20 @@ class WeimobShopPointPaasCalcPointParamMutex2 implements \JsonSerializable
         return $this->customDiscountTypeList;
     }
 
-
-    public function jsonSerialize()
+    /**
+     * @param int $customDiscountType
+     */
+    public function setCustomDiscountType(?int $customDiscountType): void
     {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointParamTradeGoodsInfo implements \JsonSerializable
-{
-    /**
-     * 交易商品id
-     * @var int
-     */
-    private $itemId;
-
-    /**
-     * 结算商品类型：1-主商品;2-赠品;3-换购商品
-     * @var int
-     */
-    private $tradeGoodsType;
-
-    /**
-     * 交易基准价(BigDecimal)
-     * @var string
-     */
-    private $tradePrice;
-
-    /**
-     * 交易价格类型：1-市场价;2-销售价;
-     * @var int
-     */
-    private $tradePriceType;
-
-    /**
-     * @param int $itemId
-     */
-    public function setItemId(?int $itemId): void
-    {
-        $this->itemId = $itemId;
+        $this->customDiscountType = $customDiscountType;
     }
 
     /**
      * @return int
      */
-    public function getItemId(): ?int
+    public function getCustomDiscountType(): ?int
     {
-        return $this->itemId;
-    }
-
-    /**
-     * @param int $tradeGoodsType
-     */
-    public function setTradeGoodsType(?int $tradeGoodsType): void
-    {
-        $this->tradeGoodsType = $tradeGoodsType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getTradeGoodsType(): ?int
-    {
-        return $this->tradeGoodsType;
-    }
-
-    /**
-     * @param string $tradePrice
-     */
-    public function setTradePrice(?string $tradePrice): void
-    {
-        $this->tradePrice = $tradePrice;
-    }
-
-    /**
-     * @return string
-     */
-    public function getTradePrice(): ?string
-    {
-        return $this->tradePrice;
-    }
-
-    /**
-     * @param int $tradePriceType
-     */
-    public function setTradePriceType(?int $tradePriceType): void
-    {
-        $this->tradePriceType = $tradePriceType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getTradePriceType(): ?int
-    {
-        return $this->tradePriceType;
+        return $this->customDiscountType;
     }
 
 
@@ -1702,27 +1781,21 @@ class WeimobShopPointPaasCalcPointParamInputUserDiscountList implements \JsonSer
 {
     /**
      * 优惠id
-     * @var int
+     * @var string
      */
     private $discountId;
 
     /**
      * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
-     * @var string
+     * @var int
      */
     private $discountType;
 
     /**
-     * 序号
-     * @var string
+     * 抵扣类型：1-抵扣商品；2-抵扣运费；3-抵扣积分商品；4-附加费
+     * @var int
      */
-    private $order;
-
-    /**
-     * 使用的资产量，积分.BigDecimal类型
-     * @var string
-     */
-    private $costAmount;
+    private $deductionType;
 
     /**
      * 折扣状态： 1: 使用 2: 不使用;3:默认推荐
@@ -1731,105 +1804,38 @@ class WeimobShopPointPaasCalcPointParamInputUserDiscountList implements \JsonSer
     private $discountStatus;
 
     /**
-     * @param int $discountId
+     * 使用的资产量，积分.BigDecimal类型
+     * @var string
      */
-    public function setDiscountId(?int $discountId): void
+    private $costAmount;
+
+    /**
+     * 活动顺序
+     * @var int
+     */
+    private $order;
+
+    /**
+     * 活动层级
+     * @var int
+     */
+    private $discountLevel;
+
+    /**
+     * @param string $discountId
+     */
+    public function setDiscountId(?string $discountId): void
     {
         $this->discountId = $discountId;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getDiscountId(): ?int
+    public function getDiscountId(): ?string
     {
         return $this->discountId;
     }
-
-    /**
-     * @param string $discountType
-     */
-    public function setDiscountType(?string $discountType): void
-    {
-        $this->discountType = $discountType;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDiscountType(): ?string
-    {
-        return $this->discountType;
-    }
-
-    /**
-     * @param string $order
-     */
-    public function setOrder(?string $order): void
-    {
-        $this->order = $order;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOrder(): ?string
-    {
-        return $this->order;
-    }
-
-    /**
-     * @param string $costAmount
-     */
-    public function setCostAmount(?string $costAmount): void
-    {
-        $this->costAmount = $costAmount;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCostAmount(): ?string
-    {
-        return $this->costAmount;
-    }
-
-    /**
-     * @param int $discountStatus
-     */
-    public function setDiscountStatus(?int $discountStatus): void
-    {
-        $this->discountStatus = $discountStatus;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountStatus(): ?int
-    {
-        return $this->discountStatus;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointParamAssetDeductionRule implements \JsonSerializable
-{
-    /**
-     * 折扣类型:23-积分抵扣;
-     * @var int
-     */
-    private $discountType;
-
-    /**
-     * 抵扣项：1-商品金额；2-积分兑换；3-运费
-     * @var int
-     */
-    private $deductionType;
 
     /**
      * @param int $discountType
@@ -1861,6 +1867,70 @@ class WeimobShopPointPaasCalcPointParamAssetDeductionRule implements \JsonSerial
     public function getDeductionType(): ?int
     {
         return $this->deductionType;
+    }
+
+    /**
+     * @param int $discountStatus
+     */
+    public function setDiscountStatus(?int $discountStatus): void
+    {
+        $this->discountStatus = $discountStatus;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountStatus(): ?int
+    {
+        return $this->discountStatus;
+    }
+
+    /**
+     * @param string $costAmount
+     */
+    public function setCostAmount(?string $costAmount): void
+    {
+        $this->costAmount = $costAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCostAmount(): ?string
+    {
+        return $this->costAmount;
+    }
+
+    /**
+     * @param int $order
+     */
+    public function setOrder(?int $order): void
+    {
+        $this->order = $order;
+    }
+
+    /**
+     * @return int
+     */
+    public function getOrder(): ?int
+    {
+        return $this->order;
+    }
+
+    /**
+     * @param int $discountLevel
+     */
+    public function setDiscountLevel(?int $discountLevel): void
+    {
+        $this->discountLevel = $discountLevel;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountLevel(): ?int
+    {
+        return $this->discountLevel;
     }
 
 
@@ -1926,47 +1996,16 @@ class WeimobShopPointPaasCalcPointResponse implements \JsonSerializable
 class WeimobShopPointPaasCalcPointData implements \JsonSerializable
 {
     /**
-     * 业务返回数据
-     * @var WeimobShopPointPaasCalcPointDataData2
+     * 计算规则集合
+     * @var array
      */
-    private $data;
+    private $calcRuleList;
 
-    /**
-     * @param WeimobShopPointPaasCalcPointDataData2 $data
-     */
-    public function setData(?WeimobShopPointPaasCalcPointDataData2 $data): void
-    {
-        $this->data = $data;
-    }
-
-    /**
-     * @return WeimobShopPointPaasCalcPointDataData2
-     */
-    public function getData(): ?WeimobShopPointPaasCalcPointDataData2
-    {
-        return $this->data;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointDataData2 implements \JsonSerializable
-{
     /**
      * 商品集合
      * @var array
      */
     private $goodsTradeMetas;
-
-    /**
-     * 计算规则集合
-     * @var array
-     */
-    private $calcRuleList;
 
     /**
      * 请求中的globalTicket
@@ -1979,22 +2018,6 @@ class WeimobShopPointPaasCalcPointDataData2 implements \JsonSerializable
      * @var string
      */
     private $outTicket;
-
-    /**
-     * @param array $goodsTradeMetas
-     */
-    public function setGoodsTradeMetas(?array $goodsTradeMetas): void
-    {
-        $this->goodsTradeMetas = $goodsTradeMetas;
-    }
-
-    /**
-     * @return array
-     */
-    public function getGoodsTradeMetas(): ?array
-    {
-        return $this->goodsTradeMetas;
-    }
 
     /**
      * @param array $calcRuleList
@@ -2010,6 +2033,22 @@ class WeimobShopPointPaasCalcPointDataData2 implements \JsonSerializable
     public function getCalcRuleList(): ?array
     {
         return $this->calcRuleList;
+    }
+
+    /**
+     * @param array $goodsTradeMetas
+     */
+    public function setGoodsTradeMetas(?array $goodsTradeMetas): void
+    {
+        $this->goodsTradeMetas = $goodsTradeMetas;
+    }
+
+    /**
+     * @return array
+     */
+    public function getGoodsTradeMetas(): ?array
+    {
+        return $this->goodsTradeMetas;
     }
 
     /**
@@ -2051,207 +2090,13 @@ class WeimobShopPointPaasCalcPointDataData2 implements \JsonSerializable
     }
 }
 
-class WeimobShopPointPaasCalcPointDataGoodsTradeMetas implements \JsonSerializable
+class WeimobShopPointPaasCalcPointDataCalcRuleList implements \JsonSerializable
 {
     /**
-     * 已使用优惠列表
-     * @var array
+     * 折扣使用信息
+     * @var WeimobShopPointPaasCalcPointDataDiscountUseInfo
      */
-    private $discountInfoList;
-
-    /**
-     * 运费的优惠信息
-     * @var WeimobShopPointPaasCalcPointDataPostageDiscountInfo
-     */
-    private $postageDiscountInfo;
-
-    /**
-     * 交易信息
-     * @var WeimobShopPointPaasCalcPointDataTradeGoodsInfo
-     */
-    private $tradeGoodsInfo;
-
-    /**
-     * @param array $discountInfoList
-     */
-    public function setDiscountInfoList(?array $discountInfoList): void
-    {
-        $this->discountInfoList = $discountInfoList;
-    }
-
-    /**
-     * @return array
-     */
-    public function getDiscountInfoList(): ?array
-    {
-        return $this->discountInfoList;
-    }
-
-    /**
-     * @param WeimobShopPointPaasCalcPointDataPostageDiscountInfo $postageDiscountInfo
-     */
-    public function setPostageDiscountInfo(?WeimobShopPointPaasCalcPointDataPostageDiscountInfo $postageDiscountInfo): void
-    {
-        $this->postageDiscountInfo = $postageDiscountInfo;
-    }
-
-    /**
-     * @return WeimobShopPointPaasCalcPointDataPostageDiscountInfo
-     */
-    public function getPostageDiscountInfo(): ?WeimobShopPointPaasCalcPointDataPostageDiscountInfo
-    {
-        return $this->postageDiscountInfo;
-    }
-
-    /**
-     * @param WeimobShopPointPaasCalcPointDataTradeGoodsInfo $tradeGoodsInfo
-     */
-    public function setTradeGoodsInfo(?WeimobShopPointPaasCalcPointDataTradeGoodsInfo $tradeGoodsInfo): void
-    {
-        $this->tradeGoodsInfo = $tradeGoodsInfo;
-    }
-
-    /**
-     * @return WeimobShopPointPaasCalcPointDataTradeGoodsInfo
-     */
-    public function getTradeGoodsInfo(): ?WeimobShopPointPaasCalcPointDataTradeGoodsInfo
-    {
-        return $this->tradeGoodsInfo;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointDataDiscountInfoList implements \JsonSerializable
-{
-    /**
-     * 折扣优惠金额(BigDecimal)
-     * @var string
-     */
-    private $discountAmount;
-
-    /**
-     * 折扣id
-     * @var int
-     */
-    private $discountId;
-
-    /**
-     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
-     * @var int
-     */
-    private $discountType;
-
-    /**
-     * 抵扣顺序
-     * @var int
-     */
-    private $order;
-
-    /**
-     * 使用的资产量，积分(BigDecimal)
-     * @var string
-     */
-    private $checkAmount;
-
-    /**
-     * @param string $discountAmount
-     */
-    public function setDiscountAmount(?string $discountAmount): void
-    {
-        $this->discountAmount = $discountAmount;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDiscountAmount(): ?string
-    {
-        return $this->discountAmount;
-    }
-
-    /**
-     * @param int $discountId
-     */
-    public function setDiscountId(?int $discountId): void
-    {
-        $this->discountId = $discountId;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountId(): ?int
-    {
-        return $this->discountId;
-    }
-
-    /**
-     * @param int $discountType
-     */
-    public function setDiscountType(?int $discountType): void
-    {
-        $this->discountType = $discountType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountType(): ?int
-    {
-        return $this->discountType;
-    }
-
-    /**
-     * @param int $order
-     */
-    public function setOrder(?int $order): void
-    {
-        $this->order = $order;
-    }
-
-    /**
-     * @return int
-     */
-    public function getOrder(): ?int
-    {
-        return $this->order;
-    }
-
-    /**
-     * @param string $checkAmount
-     */
-    public function setCheckAmount(?string $checkAmount): void
-    {
-        $this->checkAmount = $checkAmount;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCheckAmount(): ?string
-    {
-        return $this->checkAmount;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointDataPostageDiscountInfo implements \JsonSerializable
-{
-    /**
-     * 已使用优惠列表
-     * @var array
-     */
-    private $discountInfoList;
+    private $discountUseInfo;
 
     /**
      * 互斥信息
@@ -2260,19 +2105,37 @@ class WeimobShopPointPaasCalcPointDataPostageDiscountInfo implements \JsonSerial
     private $mutex;
 
     /**
-     * @param array $discountInfoList
+     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
+     * @var int
      */
-    public function setDiscountInfoList(?array $discountInfoList): void
+    private $discountType;
+
+    /**
+     * 折扣id
+     * @var string
+     */
+    private $discountId;
+
+    /**
+     * 资产总数量
+     * @var string
+     */
+    private $totalCostAmount;
+
+    /**
+     * @param WeimobShopPointPaasCalcPointDataDiscountUseInfo $discountUseInfo
+     */
+    public function setDiscountUseInfo(?WeimobShopPointPaasCalcPointDataDiscountUseInfo $discountUseInfo): void
     {
-        $this->discountInfoList = $discountInfoList;
+        $this->discountUseInfo = $discountUseInfo;
     }
 
     /**
-     * @return array
+     * @return WeimobShopPointPaasCalcPointDataDiscountUseInfo
      */
-    public function getDiscountInfoList(): ?array
+    public function getDiscountUseInfo(): ?WeimobShopPointPaasCalcPointDataDiscountUseInfo
     {
-        return $this->discountInfoList;
+        return $this->discountUseInfo;
     }
 
     /**
@@ -2291,83 +2154,6 @@ class WeimobShopPointPaasCalcPointDataPostageDiscountInfo implements \JsonSerial
         return $this->mutex;
     }
 
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointDataDiscountInfoList2 implements \JsonSerializable
-{
-    /**
-     * 折扣优惠金额(BigDecimal)
-     * @var int
-     */
-    private $discountAmount	;
-
-    /**
-     * 折扣id
-     * @var int
-     */
-    private $discountId;
-
-    /**
-     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
-     * @var int
-     */
-    private $discountType;
-
-    /**
-     * 顺序
-     * @var int
-     */
-    private $order;
-
-    /**
-     * 折扣计算的基础金额， 在当前checkAmount上计算出discountAmount
-     * @var string
-     */
-    private $checkAmount;
-
-    /**
-     * 使用的资产量，积分(BigDecimal)
-     * @var string
-     */
-    private $costAmount;
-
-    /**
-     * @param int $discountAmount	
-     */
-    public function setDiscountAmount	(?int $discountAmount	): void
-    {
-        $this->discountAmount	 = $discountAmount	;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountAmount	(): ?int
-    {
-        return $this->discountAmount	;
-    }
-
-    /**
-     * @param int $discountId
-     */
-    public function setDiscountId(?int $discountId): void
-    {
-        $this->discountId = $discountId;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountId(): ?int
-    {
-        return $this->discountId;
-    }
-
     /**
      * @param int $discountType
      */
@@ -2382,269 +2168,6 @@ class WeimobShopPointPaasCalcPointDataDiscountInfoList2 implements \JsonSerializ
     public function getDiscountType(): ?int
     {
         return $this->discountType;
-    }
-
-    /**
-     * @param int $order
-     */
-    public function setOrder(?int $order): void
-    {
-        $this->order = $order;
-    }
-
-    /**
-     * @return int
-     */
-    public function getOrder(): ?int
-    {
-        return $this->order;
-    }
-
-    /**
-     * @param string $checkAmount
-     */
-    public function setCheckAmount(?string $checkAmount): void
-    {
-        $this->checkAmount = $checkAmount;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCheckAmount(): ?string
-    {
-        return $this->checkAmount;
-    }
-
-    /**
-     * @param string $costAmount
-     */
-    public function setCostAmount(?string $costAmount): void
-    {
-        $this->costAmount = $costAmount;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCostAmount(): ?string
-    {
-        return $this->costAmount;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointDataMutex implements \JsonSerializable
-{
-    /**
-     * 自定义优惠类型:1-所有优惠可用;2-自定义优惠类型;
-     * @var int
-     */
-    private $customDiscountType;
-
-    /**
-     * 可用抵扣类型、可用优惠活动类型，自定义折扣类型具体值 customDiscountType=2,必填
-     * @var array
-     */
-    private $customDiscountTypeList;
-
-    /**
-     * @param int $customDiscountType
-     */
-    public function setCustomDiscountType(?int $customDiscountType): void
-    {
-        $this->customDiscountType = $customDiscountType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getCustomDiscountType(): ?int
-    {
-        return $this->customDiscountType;
-    }
-
-    /**
-     * @param array $customDiscountTypeList
-     */
-    public function setCustomDiscountTypeList(?array $customDiscountTypeList): void
-    {
-        $this->customDiscountTypeList = $customDiscountTypeList;
-    }
-
-    /**
-     * @return array
-     */
-    public function getCustomDiscountTypeList(): ?array
-    {
-        return $this->customDiscountTypeList;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointDataTradeGoodsInfo implements \JsonSerializable
-{
-    /**
-     * 交易商品id
-     * @var int
-     */
-    private $itemId;
-
-    /**
-     * 结算商品类型：1-主商品;2-赠品;3-换购商品
-     * @var int
-     */
-    private $tradeGoodsType;
-
-    /**
-     * 交易基准价(BigDecimal)
-     * @var int
-     */
-    private $tradePrice;
-
-    /**
-     * 交易价格类型：1-市场价;2-销售价;
-     * @var int
-     */
-    private $tradePriceType;
-
-    /**
-     * @param int $itemId
-     */
-    public function setItemId(?int $itemId): void
-    {
-        $this->itemId = $itemId;
-    }
-
-    /**
-     * @return int
-     */
-    public function getItemId(): ?int
-    {
-        return $this->itemId;
-    }
-
-    /**
-     * @param int $tradeGoodsType
-     */
-    public function setTradeGoodsType(?int $tradeGoodsType): void
-    {
-        $this->tradeGoodsType = $tradeGoodsType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getTradeGoodsType(): ?int
-    {
-        return $this->tradeGoodsType;
-    }
-
-    /**
-     * @param int $tradePrice
-     */
-    public function setTradePrice(?int $tradePrice): void
-    {
-        $this->tradePrice = $tradePrice;
-    }
-
-    /**
-     * @return int
-     */
-    public function getTradePrice(): ?int
-    {
-        return $this->tradePrice;
-    }
-
-    /**
-     * @param int $tradePriceType
-     */
-    public function setTradePriceType(?int $tradePriceType): void
-    {
-        $this->tradePriceType = $tradePriceType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getTradePriceType(): ?int
-    {
-        return $this->tradePriceType;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointDataCalcRuleList implements \JsonSerializable
-{
-    /**
-     * 互斥信息
-     * @var WeimobShopPointPaasCalcPointDataMutex2
-     */
-    private $mutex;
-
-    /**
-     * 折扣使用状态： 1: 使用 2: 不使用;3:默认推荐
-     * @var WeimobShopPointPaasCalcPointDataDiscountUseInfo
-     */
-    private $discountUseInfo;
-
-    /**
-     * 折扣id
-     * @var string
-     */
-    private $discountId;
-
-    /**
-     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
-     * @var int
-     */
-    private $discountType;
-
-    /**
-     * @param WeimobShopPointPaasCalcPointDataMutex2 $mutex
-     */
-    public function setMutex(?WeimobShopPointPaasCalcPointDataMutex2 $mutex): void
-    {
-        $this->mutex = $mutex;
-    }
-
-    /**
-     * @return WeimobShopPointPaasCalcPointDataMutex2
-     */
-    public function getMutex(): ?WeimobShopPointPaasCalcPointDataMutex2
-    {
-        return $this->mutex;
-    }
-
-    /**
-     * @param WeimobShopPointPaasCalcPointDataDiscountUseInfo $discountUseInfo
-     */
-    public function setDiscountUseInfo(?WeimobShopPointPaasCalcPointDataDiscountUseInfo $discountUseInfo): void
-    {
-        $this->discountUseInfo = $discountUseInfo;
-    }
-
-    /**
-     * @return WeimobShopPointPaasCalcPointDataDiscountUseInfo
-     */
-    public function getDiscountUseInfo(): ?WeimobShopPointPaasCalcPointDataDiscountUseInfo
-    {
-        return $this->discountUseInfo;
     }
 
     /**
@@ -2664,72 +2187,19 @@ class WeimobShopPointPaasCalcPointDataCalcRuleList implements \JsonSerializable
     }
 
     /**
-     * @param int $discountType
+     * @param string $totalCostAmount
      */
-    public function setDiscountType(?int $discountType): void
+    public function setTotalCostAmount(?string $totalCostAmount): void
     {
-        $this->discountType = $discountType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountType(): ?int
-    {
-        return $this->discountType;
-    }
-
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobShopPointPaasCalcPointDataMutex2 implements \JsonSerializable
-{
-    /**
-     * 自定义优惠类型:1-所有优惠可用;2-自定义优惠类型;
-     * @var int
-     */
-    private $customDiscountType;
-
-    /**
-     * 可用的优惠列表
-     * @var string
-     */
-    private $customDiscountTypeList;
-
-    /**
-     * @param int $customDiscountType
-     */
-    public function setCustomDiscountType(?int $customDiscountType): void
-    {
-        $this->customDiscountType = $customDiscountType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getCustomDiscountType(): ?int
-    {
-        return $this->customDiscountType;
-    }
-
-    /**
-     * @param string $customDiscountTypeList
-     */
-    public function setCustomDiscountTypeList(?string $customDiscountTypeList): void
-    {
-        $this->customDiscountTypeList = $customDiscountTypeList;
+        $this->totalCostAmount = $totalCostAmount;
     }
 
     /**
      * @return string
      */
-    public function getCustomDiscountTypeList(): ?string
+    public function getTotalCostAmount(): ?string
     {
-        return $this->customDiscountTypeList;
+        return $this->totalCostAmount;
     }
 
 
@@ -2748,25 +2218,31 @@ class WeimobShopPointPaasCalcPointDataDiscountUseInfo implements \JsonSerializab
     private $usedDiscountDetailList;
 
     /**
+     * 最大可用抵扣明细
+     * @var array
+     */
+    private $maxDiscountDetailList;
+
+    /**
+     * 最多可抵扣资产(积分)(BigDecimal)
+     * @var string
+     */
+    private $maxDiscountTotalCostAmount;
+
+    /**
      * 最多可抵扣金额(积分)(BigDecimal)
      * @var string
      */
     private $maxDiscountTotalAmount;
 
     /**
-     * 最多可抵扣资产(积分)(BigDecimal)
-     * @var string
-     */
-    private $maxDiscountTotalCostAmount	;
-
-    /**
-     * 积分的总优惠金额(BigDecimal)
+     * 使用积分抵扣的金额
      * @var string
      */
     private $useDiscountTotalAmount;
 
     /**
-     * 实际抵扣资产(BigDecimal)
+     * 使用积分的数量
      * @var string
      */
     private $useDiscountTotalCostAmount;
@@ -2794,6 +2270,38 @@ class WeimobShopPointPaasCalcPointDataDiscountUseInfo implements \JsonSerializab
     }
 
     /**
+     * @param array $maxDiscountDetailList
+     */
+    public function setMaxDiscountDetailList(?array $maxDiscountDetailList): void
+    {
+        $this->maxDiscountDetailList = $maxDiscountDetailList;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMaxDiscountDetailList(): ?array
+    {
+        return $this->maxDiscountDetailList;
+    }
+
+    /**
+     * @param string $maxDiscountTotalCostAmount
+     */
+    public function setMaxDiscountTotalCostAmount(?string $maxDiscountTotalCostAmount): void
+    {
+        $this->maxDiscountTotalCostAmount = $maxDiscountTotalCostAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMaxDiscountTotalCostAmount(): ?string
+    {
+        return $this->maxDiscountTotalCostAmount;
+    }
+
+    /**
      * @param string $maxDiscountTotalAmount
      */
     public function setMaxDiscountTotalAmount(?string $maxDiscountTotalAmount): void
@@ -2807,22 +2315,6 @@ class WeimobShopPointPaasCalcPointDataDiscountUseInfo implements \JsonSerializab
     public function getMaxDiscountTotalAmount(): ?string
     {
         return $this->maxDiscountTotalAmount;
-    }
-
-    /**
-     * @param string $maxDiscountTotalCostAmount	
-     */
-    public function setMaxDiscountTotalCostAmount	(?string $maxDiscountTotalCostAmount	): void
-    {
-        $this->maxDiscountTotalCostAmount	 = $maxDiscountTotalCostAmount	;
-    }
-
-    /**
-     * @return string
-     */
-    public function getMaxDiscountTotalCostAmount	(): ?string
-    {
-        return $this->maxDiscountTotalCostAmount	;
     }
 
     /**
@@ -2883,6 +2375,12 @@ class WeimobShopPointPaasCalcPointDataDiscountUseInfo implements \JsonSerializab
 class WeimobShopPointPaasCalcPointDataUsedDiscountDetailList implements \JsonSerializable
 {
     /**
+     * 抵扣类型：1：商品金额，2：积分兑换，3：运费
+     * @var int
+     */
+    private $deductionType;
+
+    /**
      * 折扣优惠金额(BigDecimal)
      * @var string
      */
@@ -2895,10 +2393,713 @@ class WeimobShopPointPaasCalcPointDataUsedDiscountDetailList implements \JsonSer
     private $costAmount;
 
     /**
-     * 抵扣类型：1：商品金额，2：积分兑换，3：运费
+     * @param int $deductionType
+     */
+    public function setDeductionType(?int $deductionType): void
+    {
+        $this->deductionType = $deductionType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDeductionType(): ?int
+    {
+        return $this->deductionType;
+    }
+
+    /**
+     * @param string $discountAmount
+     */
+    public function setDiscountAmount(?string $discountAmount): void
+    {
+        $this->discountAmount = $discountAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiscountAmount(): ?string
+    {
+        return $this->discountAmount;
+    }
+
+    /**
+     * @param string $costAmount
+     */
+    public function setCostAmount(?string $costAmount): void
+    {
+        $this->costAmount = $costAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCostAmount(): ?string
+    {
+        return $this->costAmount;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointDataMaxDiscountDetailList implements \JsonSerializable
+{
+    /**
+     * 抵扣类型：1-抵扣商品；2-抵扣积分商品；3-抵扣运费)
      * @var int
      */
     private $deductionType;
+
+    /**
+     * 最大可抵扣金额（BigDecimal）
+     * @var string
+     */
+    private $discountAmount;
+
+    /**
+     * 最大可抵扣资产（BigDecimal）
+     * @var string
+     */
+    private $costAmount;
+
+    /**
+     * @param int $deductionType
+     */
+    public function setDeductionType(?int $deductionType): void
+    {
+        $this->deductionType = $deductionType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDeductionType(): ?int
+    {
+        return $this->deductionType;
+    }
+
+    /**
+     * @param string $discountAmount
+     */
+    public function setDiscountAmount(?string $discountAmount): void
+    {
+        $this->discountAmount = $discountAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiscountAmount(): ?string
+    {
+        return $this->discountAmount;
+    }
+
+    /**
+     * @param string $costAmount
+     */
+    public function setCostAmount(?string $costAmount): void
+    {
+        $this->costAmount = $costAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCostAmount(): ?string
+    {
+        return $this->costAmount;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointDataMutex implements \JsonSerializable
+{
+    /**
+     * 可用的优惠列表
+     * @var string
+     */
+    private $customDiscountTypeList;
+
+    /**
+     * 自定义优惠类型:1-所有优惠可用;2-自定义优惠类型;
+     * @var int
+     */
+    private $customDiscountType;
+
+    /**
+     * @param string $customDiscountTypeList
+     */
+    public function setCustomDiscountTypeList(?string $customDiscountTypeList): void
+    {
+        $this->customDiscountTypeList = $customDiscountTypeList;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCustomDiscountTypeList(): ?string
+    {
+        return $this->customDiscountTypeList;
+    }
+
+    /**
+     * @param int $customDiscountType
+     */
+    public function setCustomDiscountType(?int $customDiscountType): void
+    {
+        $this->customDiscountType = $customDiscountType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCustomDiscountType(): ?int
+    {
+        return $this->customDiscountType;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointDataGoodsTradeMetas implements \JsonSerializable
+{
+    /**
+     * 交易信息
+     * @var WeimobShopPointPaasCalcPointDataTradeGoodsInfo
+     */
+    private $tradeGoodsInfo;
+
+    /**
+     * 已使用优惠列表
+     * @var array
+     */
+    private $discountInfoList;
+
+    /**
+     * 费用抵扣信息
+     * @var array
+     */
+    private $feeTypeDiscountInfos;
+
+    /**
+     * @param WeimobShopPointPaasCalcPointDataTradeGoodsInfo $tradeGoodsInfo
+     */
+    public function setTradeGoodsInfo(?WeimobShopPointPaasCalcPointDataTradeGoodsInfo $tradeGoodsInfo): void
+    {
+        $this->tradeGoodsInfo = $tradeGoodsInfo;
+    }
+
+    /**
+     * @return WeimobShopPointPaasCalcPointDataTradeGoodsInfo
+     */
+    public function getTradeGoodsInfo(): ?WeimobShopPointPaasCalcPointDataTradeGoodsInfo
+    {
+        return $this->tradeGoodsInfo;
+    }
+
+    /**
+     * @param array $discountInfoList
+     */
+    public function setDiscountInfoList(?array $discountInfoList): void
+    {
+        $this->discountInfoList = $discountInfoList;
+    }
+
+    /**
+     * @return array
+     */
+    public function getDiscountInfoList(): ?array
+    {
+        return $this->discountInfoList;
+    }
+
+    /**
+     * @param array $feeTypeDiscountInfos
+     */
+    public function setFeeTypeDiscountInfos(?array $feeTypeDiscountInfos): void
+    {
+        $this->feeTypeDiscountInfos = $feeTypeDiscountInfos;
+    }
+
+    /**
+     * @return array
+     */
+    public function getFeeTypeDiscountInfos(): ?array
+    {
+        return $this->feeTypeDiscountInfos;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointDataTradeGoodsInfo implements \JsonSerializable
+{
+    /**
+     * 交易商品id
+     * @var int
+     */
+    private $itemId;
+
+    /**
+     * 结算商品类型：1-主商品;2-赠品;3-换购商品
+     * @var int
+     */
+    private $tradeGoodsType;
+
+    /**
+     * 交易价格类型：1-市场价;2-销售价;
+     * @var int
+     */
+    private $tradePriceType;
+
+    /**
+     * 交易基准价(BigDecimal)
+     * @var string
+     */
+    private $tradePrice;
+
+    /**
+     * @param int $itemId
+     */
+    public function setItemId(?int $itemId): void
+    {
+        $this->itemId = $itemId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getItemId(): ?int
+    {
+        return $this->itemId;
+    }
+
+    /**
+     * @param int $tradeGoodsType
+     */
+    public function setTradeGoodsType(?int $tradeGoodsType): void
+    {
+        $this->tradeGoodsType = $tradeGoodsType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTradeGoodsType(): ?int
+    {
+        return $this->tradeGoodsType;
+    }
+
+    /**
+     * @param int $tradePriceType
+     */
+    public function setTradePriceType(?int $tradePriceType): void
+    {
+        $this->tradePriceType = $tradePriceType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTradePriceType(): ?int
+    {
+        return $this->tradePriceType;
+    }
+
+    /**
+     * @param string $tradePrice
+     */
+    public function setTradePrice(?string $tradePrice): void
+    {
+        $this->tradePrice = $tradePrice;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTradePrice(): ?string
+    {
+        return $this->tradePrice;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointDataDiscountInfoList implements \JsonSerializable
+{
+    /**
+     * 折扣计算的基础金额， 在当前checkAmount上计算出discountAmount
+     * @var string
+     */
+    private $checkAmount;
+
+    /**
+     * 折扣优惠金额(BigDecimal)
+     * @var string
+     */
+    private $discountAmount;
+
+    /**
+     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
+     * @var int
+     */
+    private $discountType;
+
+    /**
+     * 折扣id
+     * @var int
+     */
+    private $discountId;
+
+    /**
+     * 折扣顺序
+     * @var int
+     */
+    private $order;
+
+    /**
+     * 使用的资产量，积分
+     * @var string
+     */
+    private $costAmount;
+
+    /**
+     * 折扣层级
+     * @var int
+     */
+    private $discountLevel;
+
+    /**
+     * 折扣状态： 1: 使用 2: 不使用;3:默认推荐
+     * @var int
+     */
+    private $discountStatus;
+
+    /**
+     * 抵扣类型：1-抵扣商品；2-抵扣运费；3-抵扣积分商品
+     * @var int
+     */
+    private $deductionType;
+
+    /**
+     * @param string $checkAmount
+     */
+    public function setCheckAmount(?string $checkAmount): void
+    {
+        $this->checkAmount = $checkAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCheckAmount(): ?string
+    {
+        return $this->checkAmount;
+    }
+
+    /**
+     * @param string $discountAmount
+     */
+    public function setDiscountAmount(?string $discountAmount): void
+    {
+        $this->discountAmount = $discountAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiscountAmount(): ?string
+    {
+        return $this->discountAmount;
+    }
+
+    /**
+     * @param int $discountType
+     */
+    public function setDiscountType(?int $discountType): void
+    {
+        $this->discountType = $discountType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountType(): ?int
+    {
+        return $this->discountType;
+    }
+
+    /**
+     * @param int $discountId
+     */
+    public function setDiscountId(?int $discountId): void
+    {
+        $this->discountId = $discountId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountId(): ?int
+    {
+        return $this->discountId;
+    }
+
+    /**
+     * @param int $order
+     */
+    public function setOrder(?int $order): void
+    {
+        $this->order = $order;
+    }
+
+    /**
+     * @return int
+     */
+    public function getOrder(): ?int
+    {
+        return $this->order;
+    }
+
+    /**
+     * @param string $costAmount
+     */
+    public function setCostAmount(?string $costAmount): void
+    {
+        $this->costAmount = $costAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCostAmount(): ?string
+    {
+        return $this->costAmount;
+    }
+
+    /**
+     * @param int $discountLevel
+     */
+    public function setDiscountLevel(?int $discountLevel): void
+    {
+        $this->discountLevel = $discountLevel;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountLevel(): ?int
+    {
+        return $this->discountLevel;
+    }
+
+    /**
+     * @param int $discountStatus
+     */
+    public function setDiscountStatus(?int $discountStatus): void
+    {
+        $this->discountStatus = $discountStatus;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountStatus(): ?int
+    {
+        return $this->discountStatus;
+    }
+
+    /**
+     * @param int $deductionType
+     */
+    public function setDeductionType(?int $deductionType): void
+    {
+        $this->deductionType = $deductionType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDeductionType(): ?int
+    {
+        return $this->deductionType;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointDataFeeTypeDiscountInfos implements \JsonSerializable
+{
+    /**
+     * 折扣优惠金额
+     * @var array
+     */
+    private $discountInfoList;
+
+    /**
+     * 互斥信息
+     * @var WeimobShopPointPaasCalcPointDataMutex2
+     */
+    private $mutex;
+
+    /**
+     * 费用类型 3-运费
+     * @var int
+     */
+    private $feeType;
+
+    /**
+     * @param array $discountInfoList
+     */
+    public function setDiscountInfoList(?array $discountInfoList): void
+    {
+        $this->discountInfoList = $discountInfoList;
+    }
+
+    /**
+     * @return array
+     */
+    public function getDiscountInfoList(): ?array
+    {
+        return $this->discountInfoList;
+    }
+
+    /**
+     * @param WeimobShopPointPaasCalcPointDataMutex2 $mutex
+     */
+    public function setMutex(?WeimobShopPointPaasCalcPointDataMutex2 $mutex): void
+    {
+        $this->mutex = $mutex;
+    }
+
+    /**
+     * @return WeimobShopPointPaasCalcPointDataMutex2
+     */
+    public function getMutex(): ?WeimobShopPointPaasCalcPointDataMutex2
+    {
+        return $this->mutex;
+    }
+
+    /**
+     * @param int $feeType
+     */
+    public function setFeeType(?int $feeType): void
+    {
+        $this->feeType = $feeType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getFeeType(): ?int
+    {
+        return $this->feeType;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointDataDiscountInfoList2 implements \JsonSerializable
+{
+    /**
+     * 折扣计算的基础金额， 在当前checkAmount上计算出discountAmount
+     * @var string
+     */
+    private $checkAmount;
+
+    /**
+     * 折扣优惠金额
+     * @var string
+     */
+    private $discountAmount;
+
+    /**
+     * 使用的资产量，积分
+     * @var string
+     */
+    private $costAmount;
+
+    /**
+     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
+     * @var int
+     */
+    private $discountType;
+
+    /**
+     * 折扣
+     * @var string
+     */
+    private $discountId;
+
+    /**
+     * 折扣顺序
+     * @var int
+     */
+    private $order;
+
+    /**
+     * 折扣层级
+     * @var int
+     */
+    private $discountLevel;
+
+    /**
+     * 折扣使用状态
+     * @var int
+     */
+    private $discountStatus;
+
+    /**
+     * 抵扣类型：1-抵扣商品；2-抵扣运费；3-抵扣积分商品
+     * @var int
+     */
+    private $deductionType;
+
+    /**
+     * @param string $checkAmount
+     */
+    public function setCheckAmount(?string $checkAmount): void
+    {
+        $this->checkAmount = $checkAmount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCheckAmount(): ?string
+    {
+        return $this->checkAmount;
+    }
 
     /**
      * @param string $discountAmount
@@ -2933,6 +3134,86 @@ class WeimobShopPointPaasCalcPointDataUsedDiscountDetailList implements \JsonSer
     }
 
     /**
+     * @param int $discountType
+     */
+    public function setDiscountType(?int $discountType): void
+    {
+        $this->discountType = $discountType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountType(): ?int
+    {
+        return $this->discountType;
+    }
+
+    /**
+     * @param string $discountId
+     */
+    public function setDiscountId(?string $discountId): void
+    {
+        $this->discountId = $discountId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiscountId(): ?string
+    {
+        return $this->discountId;
+    }
+
+    /**
+     * @param int $order
+     */
+    public function setOrder(?int $order): void
+    {
+        $this->order = $order;
+    }
+
+    /**
+     * @return int
+     */
+    public function getOrder(): ?int
+    {
+        return $this->order;
+    }
+
+    /**
+     * @param int $discountLevel
+     */
+    public function setDiscountLevel(?int $discountLevel): void
+    {
+        $this->discountLevel = $discountLevel;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountLevel(): ?int
+    {
+        return $this->discountLevel;
+    }
+
+    /**
+     * @param int $discountStatus
+     */
+    public function setDiscountStatus(?int $discountStatus): void
+    {
+        $this->discountStatus = $discountStatus;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDiscountStatus(): ?int
+    {
+        return $this->discountStatus;
+    }
+
+    /**
      * @param int $deductionType
      */
     public function setDeductionType(?int $deductionType): void
@@ -2946,6 +3227,59 @@ class WeimobShopPointPaasCalcPointDataUsedDiscountDetailList implements \JsonSer
     public function getDeductionType(): ?int
     {
         return $this->deductionType;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class WeimobShopPointPaasCalcPointDataMutex2 implements \JsonSerializable
+{
+    /**
+     * 可用的优惠列表
+     * @var array
+     */
+    private $customDiscountTypeList;
+
+    /**
+     * 自定义优惠类型:1-所有优惠可用;2-自定义优惠类型;
+     * @var int
+     */
+    private $customDiscountType;
+
+    /**
+     * @param array $customDiscountTypeList
+     */
+    public function setCustomDiscountTypeList(?array $customDiscountTypeList): void
+    {
+        $this->customDiscountTypeList = $customDiscountTypeList;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCustomDiscountTypeList(): ?array
+    {
+        return $this->customDiscountTypeList;
+    }
+
+    /**
+     * @param int $customDiscountType
+     */
+    public function setCustomDiscountType(?int $customDiscountType): void
+    {
+        $this->customDiscountType = $customDiscountType;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCustomDiscountType(): ?int
+    {
+        return $this->customDiscountType;
     }
 
 

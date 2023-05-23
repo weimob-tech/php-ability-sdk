@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,351
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasQueryCardTemplateListService
 {
@@ -352,7 +352,7 @@ class SQueryCardTemplateListData implements \JsonSerializable
 class SQueryCardTemplateListDataBaseInfo implements \JsonSerializable
 {
     /**
-     * 是否设置该会员卡模板为默认卡模版 true：是 false：否
+     * 是否设置该会员卡模板为默认卡模版true：是false：否
      * @var bool
      */
     private $isDefault;
@@ -376,19 +376,19 @@ class SQueryCardTemplateListDataBaseInfo implements \JsonSerializable
     private $brandName;
 
     /**
-     * 会员卡code码显示类型（第三方微信卡必填字段，会员卡同步至微信该字段必传）  卡券Code类型
+     * 会员卡code码显示类型（第三方微信卡必填字段，会员卡同步至微信该字段必传）卡券Code类型
      * @var int
      */
     private $codeType;
 
     /**
-     * 会员卡颜色 参见相关字段说明：#### 会员卡模板颜色对应关系
+     * 会员卡颜色参见相关字段说明：####会员卡模板颜色对应关系
      * @var int
      */
     private $color;
 
     /**
-     * 背景类型 0-颜色，1-自定义图片 2-等级图片
+     * 背景类型0-颜色，1-自定义图片2-等级图片
      * @var int
      */
     private $backgroundType;
@@ -400,7 +400,7 @@ class SQueryCardTemplateListDataBaseInfo implements \JsonSerializable
     private $userTakeLimit;
 
     /**
-     * 会员卡有效期类型  卡券过期时间类型
+     * 会员卡有效期类型卡券过期时间类型
      * @var int
      */
     private $dateType;
@@ -436,7 +436,7 @@ class SQueryCardTemplateListDataBaseInfo implements \JsonSerializable
     private $useAllStore;
 
     /**
-     * 会员卡code码生成类型 MemberCardCodeGenerateTypeEnum
+     * 会员卡code码生成类型MemberCardCodeGenerateTypeEnum
      * @var int
      */
     private $codeGenerateType;

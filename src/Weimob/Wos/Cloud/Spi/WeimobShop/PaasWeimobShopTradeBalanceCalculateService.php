@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,433
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasWeimobShopTradeBalanceCalculateService
 {
@@ -961,28 +961,28 @@ class WeimobShopTradeBalanceCalculateParamPriceInfo implements \JsonSerializable
 {
     /**
      * 价格
-     * @var int
+     * @var string
      */
     private $price;
 
     /**
-     * 价格类型:1-市场价;2-销售价;3-定金价;4-运费;
+     * 价格类型:1-销售价;2-市场价;3-定金价;4-运费;
      * @var int
      */
     private $type;
 
     /**
-     * @param int $price
+     * @param string $price
      */
-    public function setPrice(?int $price): void
+    public function setPrice(?string $price): void
     {
         $this->price = $price;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getPrice(): ?int
+    public function getPrice(): ?string
     {
         return $this->price;
     }
@@ -1199,7 +1199,7 @@ class WeimobShopTradeBalanceCalculateParamInputItemDiscountList implements \Json
 {
     /**
      * 使用的资产量，积分、余额
-     * @var int
+     * @var string
      */
     private $costAmount;
 
@@ -1240,17 +1240,17 @@ class WeimobShopTradeBalanceCalculateParamInputItemDiscountList implements \Json
     private $deductionType;
 
     /**
-     * @param int $costAmount
+     * @param string $costAmount
      */
-    public function setCostAmount(?int $costAmount): void
+    public function setCostAmount(?string $costAmount): void
     {
         $this->costAmount = $costAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getCostAmount(): ?int
+    public function getCostAmount(): ?string
     {
         return $this->costAmount;
     }
@@ -1657,7 +1657,7 @@ class WeimobShopTradeBalanceCalculateParamInputUserDiscountList implements \Json
 
     /**
      * 使用的余额。(BigDecimal)
-     * @var int
+     * @var string
      */
     private $costAmount;
 
@@ -1748,17 +1748,17 @@ class WeimobShopTradeBalanceCalculateParamInputUserDiscountList implements \Json
     }
 
     /**
-     * @param int $costAmount
+     * @param string $costAmount
      */
-    public function setCostAmount(?int $costAmount): void
+    public function setCostAmount(?string $costAmount): void
     {
         $this->costAmount = $costAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getCostAmount(): ?int
+    public function getCostAmount(): ?string
     {
         return $this->costAmount;
     }
@@ -1843,7 +1843,7 @@ class WeimobShopTradeBalanceCalculateData implements \JsonSerializable
 {
     /**
      * 商品集合
-     * @var WeimobShopTradeBalanceCalculateDataGoodsTradeMetas
+     * @var array
      */
     private $goodsTradeMetas;
 
@@ -1872,17 +1872,17 @@ class WeimobShopTradeBalanceCalculateData implements \JsonSerializable
     private $enableInputBalance;
 
     /**
-     * @param WeimobShopTradeBalanceCalculateDataGoodsTradeMetas $goodsTradeMetas
+     * @param array $goodsTradeMetas
      */
-    public function setGoodsTradeMetas(?WeimobShopTradeBalanceCalculateDataGoodsTradeMetas $goodsTradeMetas): void
+    public function setGoodsTradeMetas(?array $goodsTradeMetas): void
     {
         $this->goodsTradeMetas = $goodsTradeMetas;
     }
 
     /**
-     * @return WeimobShopTradeBalanceCalculateDataGoodsTradeMetas
+     * @return array
      */
-    public function getGoodsTradeMetas(): ?WeimobShopTradeBalanceCalculateDataGoodsTradeMetas
+    public function getGoodsTradeMetas(): ?array
     {
         return $this->goodsTradeMetas;
     }
@@ -2036,25 +2036,25 @@ class WeimobShopTradeBalanceCalculateDataGoodsTradeMetas implements \JsonSeriali
 class WeimobShopTradeBalanceCalculateDataTradeGoodsInfo implements \JsonSerializable
 {
     /**
-     * 标识商品item的唯一id
+     * 标识商品 item 的唯一 ID
      * @var int
      */
     private $itemId;
 
     /**
-     * 结算商品类型：1-主商品;2-赠品;
+     * 结算商品类型：1-主商品；2-赠品
      * @var int
      */
     private $tradeGoodsType;
 
     /**
-     * 结算价(结算流程中的基准计算价格，可以是销售价、市场价)
+     * 结算价（结算流程中的基准计算价格，可以是销售价、市场价）
      * @var string
      */
     private $tradePrice;
 
     /**
-     * 1-市场价;2-销售价;
+     * 价格类型：1-市场价；2-销售价。
      * @var int
      */
     private $tradePriceType;
@@ -2145,25 +2145,19 @@ class WeimobShopTradeBalanceCalculateDataDiscountInfoList implements \JsonSerial
     private $discountAmount;
 
     /**
-     * 折扣id
+     * 折扣 ID
      * @var string
      */
     private $discountId;
 
     /**
-     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
+     * 折扣类型：1-满减满折；27-跨店满减满折；1-跨境满减满折；2-第X件X折；2-跨境第X件X折；3-销售价优惠券；30-跨店销售价优惠券；4-优惠码；5-市场价优惠券；6-N元N件；7-固定套装；7-商圈固定套装；8-搭配套装；9-满赠；28-跨店满赠；10-订单加价购；11-满减邮；29-满减邮；12-限时折扣；12-跨店限时折扣；1201-跨境限时折扣；13-一口价；1301-cps专享价；14-限量抢购；15-定金膨胀；16-阶梯价；17-单品加价购；18-会员优惠；19-特权价；20-企业内购；22-砍价；21-拼团；23-积分抵扣；24-余额抵扣；25-储值卡抵扣；26-直播价；999-整单开单优惠；32-整单买单优惠；997-抹零；31-裂变内购；41-直播砍价；33-兑换卡抵扣；44-订单改价；50-销售价；34-必购码；34-商圈必购码；35-买M付N；35-商圈买M付N。
      * @var int
      */
     private $discountType;
 
     /**
-     * 折扣层级
-     * @var int
-     */
-    private $discountLevel;
-
-    /**
-     * 折扣使用状态：1-使用;2-不使用;3-默认推荐;
+     * 折扣使用状态：1-使用；2-不使用；3-默认推荐。
      * @var int
      */
     private $discountStatus;
@@ -2242,22 +2236,6 @@ class WeimobShopTradeBalanceCalculateDataDiscountInfoList implements \JsonSerial
     public function getDiscountType(): ?int
     {
         return $this->discountType;
-    }
-
-    /**
-     * @param int $discountLevel
-     */
-    public function setDiscountLevel(?int $discountLevel): void
-    {
-        $this->discountLevel = $discountLevel;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountLevel(): ?int
-    {
-        return $this->discountLevel;
     }
 
     /**
@@ -2371,45 +2349,45 @@ class WeimobShopTradeBalanceCalculateDataPostageDiscountInfo implements \JsonSer
 class WeimobShopTradeBalanceCalculateDataMutex implements \JsonSerializable
 {
     /**
-     * 自定义优惠类型:1-所有优惠可用;2-自定义优惠类型;
-     * @var string
+     * 自定义优惠类型：1-所有优惠可用；2-自定义优惠类型。
+     * @var int
      */
     private $customDiscountType;
 
     /**
-     * 自定义折扣类型具体值
-     * @var string
+     * 自定义折扣类型具体值:可用的折扣类型
+     * @var array
      */
     private $customDiscountTypeList;
 
     /**
-     * @param string $customDiscountType
+     * @param int $customDiscountType
      */
-    public function setCustomDiscountType(?string $customDiscountType): void
+    public function setCustomDiscountType(?int $customDiscountType): void
     {
         $this->customDiscountType = $customDiscountType;
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getCustomDiscountType(): ?string
+    public function getCustomDiscountType(): ?int
     {
         return $this->customDiscountType;
     }
 
     /**
-     * @param string $customDiscountTypeList
+     * @param array $customDiscountTypeList
      */
-    public function setCustomDiscountTypeList(?string $customDiscountTypeList): void
+    public function setCustomDiscountTypeList(?array $customDiscountTypeList): void
     {
         $this->customDiscountTypeList = $customDiscountTypeList;
     }
 
     /**
-     * @return string
+     * @return array
      */
-    public function getCustomDiscountTypeList(): ?string
+    public function getCustomDiscountTypeList(): ?array
     {
         return $this->customDiscountTypeList;
     }
@@ -2424,10 +2402,10 @@ class WeimobShopTradeBalanceCalculateDataMutex implements \JsonSerializable
 class WeimobShopTradeBalanceCalculateDataDiscountInfoList2 implements \JsonSerializable
 {
     /**
-     * 折扣计算的基础金额，在当前checkAmount上计算出discountAmount
+     * 折扣计算的基础金额，在当前 checkAmount 上计算出 discountAmount
      * @var string
      */
-    private $checkAmount	;
+    private $checkAmount;
 
     /**
      * 折扣金额
@@ -2436,22 +2414,16 @@ class WeimobShopTradeBalanceCalculateDataDiscountInfoList2 implements \JsonSeria
     private $discountAmount;
 
     /**
-     * 折扣id
+     * 折扣 ID
      * @var string
      */
     private $discountId;
 
     /**
-     * 折扣类型:1-满减满折;27-跨店满减满折;1-跨境满减满折;2-第X件X折;2-跨境第X件X折;3-销售价优惠券;30-跨店销售价优惠券;4-优惠码;5-市场价优惠券;6-N元N件;7-固定套装;7-商圈固定套装;8-搭配套装;9-满赠;28-跨店满赠;10-订单加价购;11-满减邮;29-满减邮;12-限时折扣;12-跨店限时折扣;1201-跨境限时折扣;13-一口价;1301-cps专享价;14-限量抢购;15-定金膨胀;16-阶梯价;17-单品加价购;18-会员优惠;19-特权价;20-企业内购;22-砍价;21-拼团;23-积分抵扣;24-余额抵扣;25-储值卡抵扣;26-直播价;999-整单开单优惠;32-整单买单优惠;997-抹零;31-裂变内购;41-直播砍价;33-兑换卡抵扣;44-订单改价;50-销售价;34-必购码;34-商圈必购码;35-买M付N;35-商圈买M付N;
+     * 折扣类型：1-满减满折；27-跨店满减满折；1-跨境满减满折；2-第X件X折；2-跨境第X件X折；3-销售价优惠券；30-跨店销售价优惠券；4-优惠码；5-市场价优惠券；6-N元N件；7-固定套装；7-商圈固定套装；8-搭配套装；9-满赠；28-跨店满赠；10-订单加价购；11-满减邮；29-满减邮；12-限时折扣；12-跨店限时折扣；1201-跨境限时折扣；13-一口价；1301-cps专享价；14-限量抢购；15-定金膨胀；16-阶梯价；17-单品加价购；18-会员优惠；19-特权价；20-企业内购；22-砍价；21-拼团；23-积分抵扣；24-余额抵扣；25-储值卡抵扣；26-直播价；999-整单开单优惠；32-整单买单优惠；997-抹零；31-裂变内购；41-直播砍价；33-兑换卡抵扣；44-订单改价；50-销售价；34-必购码；34-商圈必购码；35-买M付N；35-商圈买M付N。
      * @var int
      */
     private $discountType;
-
-    /**
-     * 折扣层级
-     * @var int
-     */
-    private $discountLevel;
 
     /**
      * 折扣使用状态：1-使用;2-不使用;3-默认推荐;
@@ -2472,19 +2444,19 @@ class WeimobShopTradeBalanceCalculateDataDiscountInfoList2 implements \JsonSeria
     private $costAmount;
 
     /**
-     * @param string $checkAmount	
+     * @param string $checkAmount
      */
-    public function setCheckAmount	(?string $checkAmount	): void
+    public function setCheckAmount(?string $checkAmount): void
     {
-        $this->checkAmount	 = $checkAmount	;
+        $this->checkAmount = $checkAmount;
     }
 
     /**
      * @return string
      */
-    public function getCheckAmount	(): ?string
+    public function getCheckAmount(): ?string
     {
-        return $this->checkAmount	;
+        return $this->checkAmount;
     }
 
     /**
@@ -2533,22 +2505,6 @@ class WeimobShopTradeBalanceCalculateDataDiscountInfoList2 implements \JsonSeria
     public function getDiscountType(): ?int
     {
         return $this->discountType;
-    }
-
-    /**
-     * @param int $discountLevel
-     */
-    public function setDiscountLevel(?int $discountLevel): void
-    {
-        $this->discountLevel = $discountLevel;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDiscountLevel(): ?int
-    {
-        return $this->discountLevel;
     }
 
     /**
@@ -2633,7 +2589,7 @@ class WeimobShopTradeBalanceCalculateDataCalcRuleList implements \JsonSerializab
     private $discountType;
 
     /**
-     * 资产总数量。(BigDecimal)
+     * 用户的余额总数量(BigDecimal)
      * @var string
      */
     private $totalCostAmount;
@@ -2793,13 +2749,13 @@ class WeimobShopTradeBalanceCalculateDataDiscountUseInfo implements \JsonSeriali
     private $maxDiscountDetailList;
 
     /**
-     * 最多可抵扣金额(余额)（BigDecimal）
+     * 最多可抵扣的金额(余额)（BigDecimal）
      * @var string
      */
     private $maxDiscountTotalAmount;
 
     /**
-     * 最多可抵扣资产(余额)（BigDecimal）
+     * 最多可抵扣的余额数量（BigDecimal）
      * @var string
      */
     private $maxDiscountTotalCostAmount;
@@ -2811,7 +2767,7 @@ class WeimobShopTradeBalanceCalculateDataDiscountUseInfo implements \JsonSeriali
     private $useDiscountTotalAmount;
 
     /**
-     * 实际抵扣资产（BigDecimal）
+     * 实际抵扣的余额（BigDecimal）
      * @var string
      */
     private $useDiscountTotalCostAmount;
@@ -2821,12 +2777,6 @@ class WeimobShopTradeBalanceCalculateDataDiscountUseInfo implements \JsonSeriali
      * @var bool
      */
     private $useStatus;
-
-    /**
-     * 置灰状态：true-置灰；false-不置灰
-     * @var bool
-     */
-    private $greyStatus;
 
     /**
      * 提示信息
@@ -2947,22 +2897,6 @@ class WeimobShopTradeBalanceCalculateDataDiscountUseInfo implements \JsonSeriali
     }
 
     /**
-     * @param bool $greyStatus
-     */
-    public function setGreyStatus(?bool $greyStatus): void
-    {
-        $this->greyStatus = $greyStatus;
-    }
-
-    /**
-     * @return bool
-     */
-    public function getGreyStatus(): ?bool
-    {
-        return $this->greyStatus;
-    }
-
-    /**
      * @param string $toast
      */
     public function setToast(?string $toast): void
@@ -2994,7 +2928,7 @@ class WeimobShopTradeBalanceCalculateDataUsedDiscountDetailList implements \Json
     private $discountAmount;
 
     /**
-     * 抵扣的资产（BigDecimal）
+     * 抵扣的余额数量（BigDecimal）
      * @var string
      */
     private $costAmount;
@@ -3069,7 +3003,7 @@ class WeimobShopTradeBalanceCalculateDataMaxDiscountDetailList implements \JsonS
     private $discountAmount;
 
     /**
-     * 最大可抵扣资产（BigDecimal）
+     * 最大可抵扣余额数量（BigDecimal）
      * @var string
      */
     private $costAmount;

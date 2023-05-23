@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,689
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface CcCouponUpdateCouponOwnerListener
 {
@@ -23,7 +23,7 @@ interface CcCouponUpdateCouponOwnerListener
 class UpdateCouponOwnerMessage implements \JsonSerializable
 {
     /**
-     * 原wid （fromWid和toWid仅作参考，券具体归属，需要通过反查接口获取）
+     * 原wid（fromWid和toWid仅作参考，券具体归属，需要通过反查接口获取）
      * @var int
      */
     private $fromWid;

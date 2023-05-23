@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 734
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface PaasWeimobGuideRightsGetListService
 {
@@ -376,19 +376,19 @@ class WeimobGuideRightsGetListDataRightsList implements \JsonSerializable
 
     /**
      * 应退运费实付
-     * @var int
+     * @var string
      */
     private $deliveryRefundAmount;
 
     /**
      * 应退运费余额
-     * @var int
+     * @var string
      */
     private $deliveryRefundBalance;
 
     /**
      * 应退运费积分抵扣金额
-     * @var int
+     * @var string
      */
     private $deliveryRefundPointDiscountAmount;
 
@@ -412,19 +412,19 @@ class WeimobGuideRightsGetListDataRightsList implements \JsonSerializable
 
     /**
      * 应退金额
-     * @var int
+     * @var string
      */
     private $refundAmount;
 
     /**
      * 应退余额
-     * @var int
+     * @var string
      */
     private $refundBalance;
 
     /**
      * 应退运费(实付 + 余额 + 积分 + 储值卡)
-     * @var int
+     * @var string
      */
     private $refundDeliveryAmount;
 
@@ -442,7 +442,7 @@ class WeimobGuideRightsGetListDataRightsList implements \JsonSerializable
 
     /**
      * 应退积分抵扣金额
-     * @var int
+     * @var string
      */
     private $refundPointDiscountAmount;
 
@@ -785,49 +785,49 @@ class WeimobGuideRightsGetListDataRightsList implements \JsonSerializable
     }
 
     /**
-     * @param int $deliveryRefundAmount
+     * @param string $deliveryRefundAmount
      */
-    public function setDeliveryRefundAmount(?int $deliveryRefundAmount): void
+    public function setDeliveryRefundAmount(?string $deliveryRefundAmount): void
     {
         $this->deliveryRefundAmount = $deliveryRefundAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getDeliveryRefundAmount(): ?int
+    public function getDeliveryRefundAmount(): ?string
     {
         return $this->deliveryRefundAmount;
     }
 
     /**
-     * @param int $deliveryRefundBalance
+     * @param string $deliveryRefundBalance
      */
-    public function setDeliveryRefundBalance(?int $deliveryRefundBalance): void
+    public function setDeliveryRefundBalance(?string $deliveryRefundBalance): void
     {
         $this->deliveryRefundBalance = $deliveryRefundBalance;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getDeliveryRefundBalance(): ?int
+    public function getDeliveryRefundBalance(): ?string
     {
         return $this->deliveryRefundBalance;
     }
 
     /**
-     * @param int $deliveryRefundPointDiscountAmount
+     * @param string $deliveryRefundPointDiscountAmount
      */
-    public function setDeliveryRefundPointDiscountAmount(?int $deliveryRefundPointDiscountAmount): void
+    public function setDeliveryRefundPointDiscountAmount(?string $deliveryRefundPointDiscountAmount): void
     {
         $this->deliveryRefundPointDiscountAmount = $deliveryRefundPointDiscountAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getDeliveryRefundPointDiscountAmount(): ?int
+    public function getDeliveryRefundPointDiscountAmount(): ?string
     {
         return $this->deliveryRefundPointDiscountAmount;
     }
@@ -881,49 +881,49 @@ class WeimobGuideRightsGetListDataRightsList implements \JsonSerializable
     }
 
     /**
-     * @param int $refundAmount
+     * @param string $refundAmount
      */
-    public function setRefundAmount(?int $refundAmount): void
+    public function setRefundAmount(?string $refundAmount): void
     {
         $this->refundAmount = $refundAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getRefundAmount(): ?int
+    public function getRefundAmount(): ?string
     {
         return $this->refundAmount;
     }
 
     /**
-     * @param int $refundBalance
+     * @param string $refundBalance
      */
-    public function setRefundBalance(?int $refundBalance): void
+    public function setRefundBalance(?string $refundBalance): void
     {
         $this->refundBalance = $refundBalance;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getRefundBalance(): ?int
+    public function getRefundBalance(): ?string
     {
         return $this->refundBalance;
     }
 
     /**
-     * @param int $refundDeliveryAmount
+     * @param string $refundDeliveryAmount
      */
-    public function setRefundDeliveryAmount(?int $refundDeliveryAmount): void
+    public function setRefundDeliveryAmount(?string $refundDeliveryAmount): void
     {
         $this->refundDeliveryAmount = $refundDeliveryAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getRefundDeliveryAmount(): ?int
+    public function getRefundDeliveryAmount(): ?string
     {
         return $this->refundDeliveryAmount;
     }
@@ -961,17 +961,17 @@ class WeimobGuideRightsGetListDataRightsList implements \JsonSerializable
     }
 
     /**
-     * @param int $refundPointDiscountAmount
+     * @param string $refundPointDiscountAmount
      */
-    public function setRefundPointDiscountAmount(?int $refundPointDiscountAmount): void
+    public function setRefundPointDiscountAmount(?string $refundPointDiscountAmount): void
     {
         $this->refundPointDiscountAmount = $refundPointDiscountAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getRefundPointDiscountAmount(): ?int
+    public function getRefundPointDiscountAmount(): ?string
     {
         return $this->refundPointDiscountAmount;
     }
@@ -1207,14 +1207,8 @@ class WeimobGuideRightsGetListDataFinishTime implements \JsonSerializable
 class WeimobGuideRightsGetListDataItemList implements \JsonSerializable
 {
     /**
-     * 应退余额
-     * @var WeimobGuideRightsGetListDataRefundStorageCard
-     */
-    private $refundStorageCard;
-
-    /**
      * 余额抵扣金额（换货用，取原单上金额）
-     * @var int
+     * @var string
      */
     private $balanceDiscountAmount;
 
@@ -1232,13 +1226,13 @@ class WeimobGuideRightsGetListDataItemList implements \JsonSerializable
 
     /**
      * 应退运费余额
-     * @var int
+     * @var string
      */
     private $deliveryRefundBalance;
 
     /**
      * 应退运费积分抵扣金额
-     * @var int
+     * @var string
      */
     private $deliveryRefundPointDiscountAmount;
 
@@ -1274,43 +1268,43 @@ class WeimobGuideRightsGetListDataItemList implements \JsonSerializable
 
     /**
      * 实收金额
-     * @var int
+     * @var string
      */
     private $paymentAmount;
 
     /**
      * 价格
-     * @var int
+     * @var string
      */
     private $price;
 
     /**
      * 应退金额
-     * @var int
+     * @var string
      */
     private $refundAmount;
 
     /**
      * 应退余额
-     * @var int
+     * @var string
      */
     private $refundBalance;
 
     /**
      * 应退运费(实付 + 余额 + 积分)
-     * @var int
+     * @var string
      */
     private $refundDeliveryAmount;
 
     /**
      * 应退发票税费
-     * @var int
+     * @var string
      */
     private $refundInvoiceTexAmount;
 
     /**
      * 应退积分所对应的金额
-     * @var int
+     * @var string
      */
     private $refundPointDiscountAmount;
 
@@ -1319,6 +1313,12 @@ class WeimobGuideRightsGetListDataItemList implements \JsonSerializable
      * @var int
      */
     private $refundPoints;
+
+    /**
+     * 应退余额
+     * @var string
+     */
+    private $refundStorageCard;
 
     /**
      * 单品id
@@ -1339,33 +1339,17 @@ class WeimobGuideRightsGetListDataItemList implements \JsonSerializable
     private $skuNum;
 
     /**
-     * @param WeimobGuideRightsGetListDataRefundStorageCard $refundStorageCard
+     * @param string $balanceDiscountAmount
      */
-    public function setRefundStorageCard(?WeimobGuideRightsGetListDataRefundStorageCard $refundStorageCard): void
-    {
-        $this->refundStorageCard = $refundStorageCard;
-    }
-
-    /**
-     * @return WeimobGuideRightsGetListDataRefundStorageCard
-     */
-    public function getRefundStorageCard(): ?WeimobGuideRightsGetListDataRefundStorageCard
-    {
-        return $this->refundStorageCard;
-    }
-
-    /**
-     * @param int $balanceDiscountAmount
-     */
-    public function setBalanceDiscountAmount(?int $balanceDiscountAmount): void
+    public function setBalanceDiscountAmount(?string $balanceDiscountAmount): void
     {
         $this->balanceDiscountAmount = $balanceDiscountAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getBalanceDiscountAmount(): ?int
+    public function getBalanceDiscountAmount(): ?string
     {
         return $this->balanceDiscountAmount;
     }
@@ -1403,33 +1387,33 @@ class WeimobGuideRightsGetListDataItemList implements \JsonSerializable
     }
 
     /**
-     * @param int $deliveryRefundBalance
+     * @param string $deliveryRefundBalance
      */
-    public function setDeliveryRefundBalance(?int $deliveryRefundBalance): void
+    public function setDeliveryRefundBalance(?string $deliveryRefundBalance): void
     {
         $this->deliveryRefundBalance = $deliveryRefundBalance;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getDeliveryRefundBalance(): ?int
+    public function getDeliveryRefundBalance(): ?string
     {
         return $this->deliveryRefundBalance;
     }
 
     /**
-     * @param int $deliveryRefundPointDiscountAmount
+     * @param string $deliveryRefundPointDiscountAmount
      */
-    public function setDeliveryRefundPointDiscountAmount(?int $deliveryRefundPointDiscountAmount): void
+    public function setDeliveryRefundPointDiscountAmount(?string $deliveryRefundPointDiscountAmount): void
     {
         $this->deliveryRefundPointDiscountAmount = $deliveryRefundPointDiscountAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getDeliveryRefundPointDiscountAmount(): ?int
+    public function getDeliveryRefundPointDiscountAmount(): ?string
     {
         return $this->deliveryRefundPointDiscountAmount;
     }
@@ -1515,113 +1499,113 @@ class WeimobGuideRightsGetListDataItemList implements \JsonSerializable
     }
 
     /**
-     * @param int $paymentAmount
+     * @param string $paymentAmount
      */
-    public function setPaymentAmount(?int $paymentAmount): void
+    public function setPaymentAmount(?string $paymentAmount): void
     {
         $this->paymentAmount = $paymentAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getPaymentAmount(): ?int
+    public function getPaymentAmount(): ?string
     {
         return $this->paymentAmount;
     }
 
     /**
-     * @param int $price
+     * @param string $price
      */
-    public function setPrice(?int $price): void
+    public function setPrice(?string $price): void
     {
         $this->price = $price;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getPrice(): ?int
+    public function getPrice(): ?string
     {
         return $this->price;
     }
 
     /**
-     * @param int $refundAmount
+     * @param string $refundAmount
      */
-    public function setRefundAmount(?int $refundAmount): void
+    public function setRefundAmount(?string $refundAmount): void
     {
         $this->refundAmount = $refundAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getRefundAmount(): ?int
+    public function getRefundAmount(): ?string
     {
         return $this->refundAmount;
     }
 
     /**
-     * @param int $refundBalance
+     * @param string $refundBalance
      */
-    public function setRefundBalance(?int $refundBalance): void
+    public function setRefundBalance(?string $refundBalance): void
     {
         $this->refundBalance = $refundBalance;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getRefundBalance(): ?int
+    public function getRefundBalance(): ?string
     {
         return $this->refundBalance;
     }
 
     /**
-     * @param int $refundDeliveryAmount
+     * @param string $refundDeliveryAmount
      */
-    public function setRefundDeliveryAmount(?int $refundDeliveryAmount): void
+    public function setRefundDeliveryAmount(?string $refundDeliveryAmount): void
     {
         $this->refundDeliveryAmount = $refundDeliveryAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getRefundDeliveryAmount(): ?int
+    public function getRefundDeliveryAmount(): ?string
     {
         return $this->refundDeliveryAmount;
     }
 
     /**
-     * @param int $refundInvoiceTexAmount
+     * @param string $refundInvoiceTexAmount
      */
-    public function setRefundInvoiceTexAmount(?int $refundInvoiceTexAmount): void
+    public function setRefundInvoiceTexAmount(?string $refundInvoiceTexAmount): void
     {
         $this->refundInvoiceTexAmount = $refundInvoiceTexAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getRefundInvoiceTexAmount(): ?int
+    public function getRefundInvoiceTexAmount(): ?string
     {
         return $this->refundInvoiceTexAmount;
     }
 
     /**
-     * @param int $refundPointDiscountAmount
+     * @param string $refundPointDiscountAmount
      */
-    public function setRefundPointDiscountAmount(?int $refundPointDiscountAmount): void
+    public function setRefundPointDiscountAmount(?string $refundPointDiscountAmount): void
     {
         $this->refundPointDiscountAmount = $refundPointDiscountAmount;
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getRefundPointDiscountAmount(): ?int
+    public function getRefundPointDiscountAmount(): ?string
     {
         return $this->refundPointDiscountAmount;
     }
@@ -1640,6 +1624,22 @@ class WeimobGuideRightsGetListDataItemList implements \JsonSerializable
     public function getRefundPoints(): ?int
     {
         return $this->refundPoints;
+    }
+
+    /**
+     * @param string $refundStorageCard
+     */
+    public function setRefundStorageCard(?string $refundStorageCard): void
+    {
+        $this->refundStorageCard = $refundStorageCard;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRefundStorageCard(): ?string
+    {
+        return $this->refundStorageCard;
     }
 
     /**
@@ -1690,15 +1690,6 @@ class WeimobGuideRightsGetListDataItemList implements \JsonSerializable
         return $this->skuNum;
     }
 
-
-    public function jsonSerialize()
-    {
-        return get_object_vars($this);
-    }
-}
-
-class WeimobGuideRightsGetListDataRefundStorageCard implements \JsonSerializable
-{
 
     public function jsonSerialize()
     {

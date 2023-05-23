@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 3,735
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface XiaokeAiccRecordListener
 {
@@ -23,333 +23,470 @@ interface XiaokeAiccRecordListener
 class RecordMessage implements \JsonSerializable
 {
     /**
-     * 关联的业务对象id
+     * -
+     * @var XiaokeAiccRecordNumberData
+     */
+    private $numberData;
+
+    /**
+     * 录音地址
+     * @var string
+     */
+    private $aAudioUrl;
+
+    /**
+     * 任务名称
+     * @var string
+     */
+    private $aTaskName;
+
+    /**
+     * 第三方用户ID
+     * @var string
+     */
+    private $aUserId;
+
+    /**
+     * 账单
      * @var int
      */
-    private $businessId;
+    private $bill;
 
     /**
-     * 行为
-     * @var string
-     */
-    private $behavior;
-
-    /**
-     * 8.写跟进，41.用户行为
+     * 通话时间
      * @var int
      */
-    private $opType;
+    private $callDate;
 
     /**
-     * 内容
+     * 第三方通话ID
      * @var string
      */
-    private $opContentText;
+    private $callId;
 
     /**
-     * 线索操作日志
-     * @var string
-     */
-    private $opContent;
-
-    /**
-     * 备注信息
-     * @var string
-     */
-    private $remark;
-
-    /**
-     * 操作时间
+     * 意向等级ID
      * @var int
      */
-    private $opTime;
+    private $levelId;
 
     /**
-     * 图片url地址,分号隔开
+     * 意向等级名称
      * @var string
      */
-    private $imgAddress;
+    private $levelName;
 
     /**
-     * 语音url地址,分号隔开
+     * 话单ID
      * @var string
      */
-    private $voiceAddress;
+    private $recordId;
 
     /**
-     * 签到地址
-     * @var string
-     */
-    private $checkInAddress;
-
-    /**
-     * 经度
+     * 接听状态，1.已接听,2.运营商拦截,3.拒接,4.无人应答,5.空号,6.关机,7.停机,8.忙线中,9.主叫欠费,10.黑名单拦截,11.风控拦截
      * @var int
      */
-    private $longitude;
+    private $status;
 
     /**
-     * 纬度
+     * 任务ID
      * @var int
      */
-    private $latitude;
+    private $taskId;
 
     /**
-     * 文件地址
+     * 通话轮次
+     * @var int
+     */
+    private $turnCount;
+
+    /**
+     * 自动加微标识0-否；1-是
+     * @var int
+     */
+    private $autoAddWechat;
+
+    /**
+     * 加微状态，0-默认不需要加微，1-待发送，2-已发送，3-未找到
+     * @var int
+     */
+    private $addWechatStatus;
+
+    /**
+     * 所属商户bosId
+     * @var int
+     */
+    private $bosId;
+
+    private $tagList;
+
+    /**
+     * 对话内容
      * @var string
      */
-    private $fileAddress;
+    private $conversation;
 
     /**
-     * 线索描述
-     * @var string
+     * 通话时长
+     * @var int
      */
-    private $clueDescription;
+    private $duration;
 
     /**
-     * 语音文字
-     * @var string
+     * @param XiaokeAiccRecordNumberData $numberData
      */
-    private $voiceText;
-
-    /**
-     * @param int $businessId
-     */
-    public function setBusinessId(?int $businessId): void
+    public function setNumberData(?XiaokeAiccRecordNumberData $numberData): void
     {
-        $this->businessId = $businessId;
+        $this->numberData = $numberData;
+    }
+
+    /**
+     * @return XiaokeAiccRecordNumberData
+     */
+    public function getNumberData(): ?XiaokeAiccRecordNumberData
+    {
+        return $this->numberData;
+    }
+
+    /**
+     * @param string $aAudioUrl
+     */
+    public function setAAudioUrl(?string $aAudioUrl): void
+    {
+        $this->aAudioUrl = $aAudioUrl;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAAudioUrl(): ?string
+    {
+        return $this->aAudioUrl;
+    }
+
+    /**
+     * @param string $aTaskName
+     */
+    public function setATaskName(?string $aTaskName): void
+    {
+        $this->aTaskName = $aTaskName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getATaskName(): ?string
+    {
+        return $this->aTaskName;
+    }
+
+    /**
+     * @param string $aUserId
+     */
+    public function setAUserId(?string $aUserId): void
+    {
+        $this->aUserId = $aUserId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAUserId(): ?string
+    {
+        return $this->aUserId;
+    }
+
+    /**
+     * @param int $bill
+     */
+    public function setBill(?int $bill): void
+    {
+        $this->bill = $bill;
     }
 
     /**
      * @return int
      */
-    public function getBusinessId(): ?int
+    public function getBill(): ?int
     {
-        return $this->businessId;
+        return $this->bill;
     }
 
     /**
-     * @param string $behavior
+     * @param int $callDate
      */
-    public function setBehavior(?string $behavior): void
+    public function setCallDate(?int $callDate): void
     {
-        $this->behavior = $behavior;
-    }
-
-    /**
-     * @return string
-     */
-    public function getBehavior(): ?string
-    {
-        return $this->behavior;
-    }
-
-    /**
-     * @param int $opType
-     */
-    public function setOpType(?int $opType): void
-    {
-        $this->opType = $opType;
+        $this->callDate = $callDate;
     }
 
     /**
      * @return int
      */
-    public function getOpType(): ?int
+    public function getCallDate(): ?int
     {
-        return $this->opType;
+        return $this->callDate;
     }
 
     /**
-     * @param string $opContentText
+     * @param string $callId
      */
-    public function setOpContentText(?string $opContentText): void
+    public function setCallId(?string $callId): void
     {
-        $this->opContentText = $opContentText;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOpContentText(): ?string
-    {
-        return $this->opContentText;
-    }
-
-    /**
-     * @param string $opContent
-     */
-    public function setOpContent(?string $opContent): void
-    {
-        $this->opContent = $opContent;
+        $this->callId = $callId;
     }
 
     /**
      * @return string
      */
-    public function getOpContent(): ?string
+    public function getCallId(): ?string
     {
-        return $this->opContent;
+        return $this->callId;
     }
 
     /**
-     * @param string $remark
+     * @param int $levelId
      */
-    public function setRemark(?string $remark): void
+    public function setLevelId(?int $levelId): void
     {
-        $this->remark = $remark;
-    }
-
-    /**
-     * @return string
-     */
-    public function getRemark(): ?string
-    {
-        return $this->remark;
-    }
-
-    /**
-     * @param int $opTime
-     */
-    public function setOpTime(?int $opTime): void
-    {
-        $this->opTime = $opTime;
+        $this->levelId = $levelId;
     }
 
     /**
      * @return int
      */
-    public function getOpTime(): ?int
+    public function getLevelId(): ?int
     {
-        return $this->opTime;
+        return $this->levelId;
     }
 
     /**
-     * @param string $imgAddress
+     * @param string $levelName
      */
-    public function setImgAddress(?string $imgAddress): void
+    public function setLevelName(?string $levelName): void
     {
-        $this->imgAddress = $imgAddress;
-    }
-
-    /**
-     * @return string
-     */
-    public function getImgAddress(): ?string
-    {
-        return $this->imgAddress;
-    }
-
-    /**
-     * @param string $voiceAddress
-     */
-    public function setVoiceAddress(?string $voiceAddress): void
-    {
-        $this->voiceAddress = $voiceAddress;
+        $this->levelName = $levelName;
     }
 
     /**
      * @return string
      */
-    public function getVoiceAddress(): ?string
+    public function getLevelName(): ?string
     {
-        return $this->voiceAddress;
+        return $this->levelName;
     }
 
     /**
-     * @param string $checkInAddress
+     * @param string $recordId
      */
-    public function setCheckInAddress(?string $checkInAddress): void
+    public function setRecordId(?string $recordId): void
     {
-        $this->checkInAddress = $checkInAddress;
+        $this->recordId = $recordId;
     }
 
     /**
      * @return string
      */
-    public function getCheckInAddress(): ?string
+    public function getRecordId(): ?string
     {
-        return $this->checkInAddress;
+        return $this->recordId;
     }
 
     /**
-     * @param int $longitude
+     * @param int $status
      */
-    public function setLongitude(?int $longitude): void
+    public function setStatus(?int $status): void
     {
-        $this->longitude = $longitude;
+        $this->status = $status;
     }
 
     /**
      * @return int
      */
-    public function getLongitude(): ?int
+    public function getStatus(): ?int
     {
-        return $this->longitude;
+        return $this->status;
     }
 
     /**
-     * @param int $latitude
+     * @param int $taskId
      */
-    public function setLatitude(?int $latitude): void
+    public function setTaskId(?int $taskId): void
     {
-        $this->latitude = $latitude;
+        $this->taskId = $taskId;
     }
 
     /**
      * @return int
      */
-    public function getLatitude(): ?int
+    public function getTaskId(): ?int
     {
-        return $this->latitude;
+        return $this->taskId;
     }
 
     /**
-     * @param string $fileAddress
+     * @param int $turnCount
      */
-    public function setFileAddress(?string $fileAddress): void
+    public function setTurnCount(?int $turnCount): void
     {
-        $this->fileAddress = $fileAddress;
+        $this->turnCount = $turnCount;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTurnCount(): ?int
+    {
+        return $this->turnCount;
+    }
+
+    /**
+     * @param int $autoAddWechat
+     */
+    public function setAutoAddWechat(?int $autoAddWechat): void
+    {
+        $this->autoAddWechat = $autoAddWechat;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAutoAddWechat(): ?int
+    {
+        return $this->autoAddWechat;
+    }
+
+    /**
+     * @param int $addWechatStatus
+     */
+    public function setAddWechatStatus(?int $addWechatStatus): void
+    {
+        $this->addWechatStatus = $addWechatStatus;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAddWechatStatus(): ?int
+    {
+        return $this->addWechatStatus;
+    }
+
+    /**
+     * @param int $bosId
+     */
+    public function setBosId(?int $bosId): void
+    {
+        $this->bosId = $bosId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getBosId(): ?int
+    {
+        return $this->bosId;
+    }
+
+    /**
+     * @param array $tagList
+     */
+    public function setTagList(?array $tagList): void
+    {
+        $this->tagList = $tagList;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTagList(): ?array
+    {
+        return $this->tagList;
+    }
+
+    /**
+     * @param string $conversation
+     */
+    public function setConversation(?string $conversation): void
+    {
+        $this->conversation = $conversation;
     }
 
     /**
      * @return string
      */
-    public function getFileAddress(): ?string
+    public function getConversation(): ?string
     {
-        return $this->fileAddress;
+        return $this->conversation;
     }
 
     /**
-     * @param string $clueDescription
+     * @param int $duration
      */
-    public function setClueDescription(?string $clueDescription): void
+    public function setDuration(?int $duration): void
     {
-        $this->clueDescription = $clueDescription;
+        $this->duration = $duration;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDuration(): ?int
+    {
+        return $this->duration;
+    }
+
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
+}
+
+class XiaokeAiccRecordNumberData implements \JsonSerializable
+{
+    /**
+     * 挂机时间
+     * @var int
+     */
+    private $handUpDate;
+
+    /**
+     * 号码
+     * @var string
+     */
+    private $number;
+
+    /**
+     * @param int $handUpDate
+     */
+    public function setHandUpDate(?int $handUpDate): void
+    {
+        $this->handUpDate = $handUpDate;
+    }
+
+    /**
+     * @return int
+     */
+    public function getHandUpDate(): ?int
+    {
+        return $this->handUpDate;
+    }
+
+    /**
+     * @param string $number
+     */
+    public function setNumber(?string $number): void
+    {
+        $this->number = $number;
     }
 
     /**
      * @return string
      */
-    public function getClueDescription(): ?string
+    public function getNumber(): ?string
     {
-        return $this->clueDescription;
-    }
-
-    /**
-     * @param string $voiceText
-     */
-    public function setVoiceText(?string $voiceText): void
-    {
-        $this->voiceText = $voiceText;
-    }
-
-    /**
-     * @return string
-     */
-    public function getVoiceText(): ?string
-    {
-        return $this->voiceText;
+        return $this->number;
     }
 
 

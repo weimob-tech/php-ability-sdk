@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 1,056
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface O2oServicesOrderAddOrderListener
 {
@@ -47,7 +47,7 @@ class AddOrderMessage implements \JsonSerializable
     private $orderStatus;
 
     /**
-     * 支付状态 0 未支付 1 已支付 2 已退款 3 退款中 4 退款失败 5 申请退款 6 拒绝退款
+     * 支付状态0未支付1已支付2已退款3退款中4退款失败5申请退款6拒绝退款
      * @var int
      */
     private $payStatus;

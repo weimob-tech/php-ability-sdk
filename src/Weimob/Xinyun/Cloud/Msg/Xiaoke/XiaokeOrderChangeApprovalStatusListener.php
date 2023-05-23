@@ -8,7 +8,7 @@ use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 /**
  * @id 3,255
  * @author weimobcloud
- * @create 2022年11月20日
+ * @create 2023-5-23
  */
 interface XiaokeOrderChangeApprovalStatusListener
 {
@@ -29,7 +29,7 @@ class ChangeApprovalStatusMessage implements \JsonSerializable
     private $orderNumber;
 
     /**
-     * 变更的流程状态类型 2已撤回，3已驳回，4失败，5审批通过
+     * 变更的流程状态类型2已撤回，3已驳回，4失败，5审批通过
      * @var int
      */
     private $workFlowStatus;
