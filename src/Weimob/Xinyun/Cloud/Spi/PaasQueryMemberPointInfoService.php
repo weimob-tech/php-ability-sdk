@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,349
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasQueryMemberPointInfoService
 {
@@ -136,17 +136,17 @@ class SQueryMemberPointInfoRequest implements \JsonSerializable
     /**
      * @param SQueryMemberPointInfoParam $param
      */
-    public function setParam(?SQueryMemberPointInfoParam $param): void
+    public function setParams(?SQueryMemberPointInfoParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SQueryMemberPointInfoParam
      */
-    public function getParam(): ?SQueryMemberPointInfoParam
+    public function getParams(): ?SQueryMemberPointInfoParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

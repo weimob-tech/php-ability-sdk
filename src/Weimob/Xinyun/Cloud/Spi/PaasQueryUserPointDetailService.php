@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,375
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasQueryUserPointDetailService
 {
@@ -136,17 +136,17 @@ class SQueryUserPointDetailRequest implements \JsonSerializable
     /**
      * @param SQueryUserPointDetailParam $param
      */
-    public function setParam(?SQueryUserPointDetailParam $param): void
+    public function setParams(?SQueryUserPointDetailParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SQueryUserPointDetailParam
      */
-    public function getParam(): ?SQueryUserPointDetailParam
+    public function getParams(): ?SQueryUserPointDetailParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 852
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobCsServicerMsgSendService
 {
@@ -136,17 +136,17 @@ class WeimobCsServicerMsgSendRequest implements \JsonSerializable
     /**
      * @param WeimobCsServicerMsgSendParam $param
      */
-    public function setParam(?WeimobCsServicerMsgSendParam $param): void
+    public function setParams(?WeimobCsServicerMsgSendParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobCsServicerMsgSendParam
      */
-    public function getParam(): ?WeimobCsServicerMsgSendParam
+    public function getParams(): ?WeimobCsServicerMsgSendParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,375
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobGuideGuiderPersonalQrcodeGetListService
 {
@@ -136,17 +136,17 @@ class WeimobGuideGuiderPersonalQrcodeGetListRequest implements \JsonSerializable
     /**
      * @param WeimobGuideGuiderPersonalQrcodeGetListParam $param
      */
-    public function setParam(?WeimobGuideGuiderPersonalQrcodeGetListParam $param): void
+    public function setParams(?WeimobGuideGuiderPersonalQrcodeGetListParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobGuideGuiderPersonalQrcodeGetListParam
      */
-    public function getParam(): ?WeimobGuideGuiderPersonalQrcodeGetListParam
+    public function getParams(): ?WeimobGuideGuiderPersonalQrcodeGetListParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

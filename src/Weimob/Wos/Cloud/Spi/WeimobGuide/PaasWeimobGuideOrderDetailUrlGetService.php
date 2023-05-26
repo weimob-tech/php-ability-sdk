@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 733
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobGuideOrderDetailUrlGetService
 {
@@ -136,17 +136,17 @@ class WeimobGuideOrderDetailUrlGetRequest implements \JsonSerializable
     /**
      * @param WeimobGuideOrderDetailUrlGetParam $param
      */
-    public function setParam(?WeimobGuideOrderDetailUrlGetParam $param): void
+    public function setParams(?WeimobGuideOrderDetailUrlGetParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobGuideOrderDetailUrlGetParam
      */
-    public function getParam(): ?WeimobGuideOrderDetailUrlGetParam
+    public function getParams(): ?WeimobGuideOrderDetailUrlGetParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,560
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasGetMemberGrowthLogsService
 {
@@ -136,17 +136,17 @@ class SGetMemberGrowthLogsRequest implements \JsonSerializable
     /**
      * @param SGetMemberGrowthLogsParam $param
      */
-    public function setParam(?SGetMemberGrowthLogsParam $param): void
+    public function setParams(?SGetMemberGrowthLogsParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SGetMemberGrowthLogsParam
      */
-    public function getParam(): ?SGetMemberGrowthLogsParam
+    public function getParams(): ?SGetMemberGrowthLogsParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

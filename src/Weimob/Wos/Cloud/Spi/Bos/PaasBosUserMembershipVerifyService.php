@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 587
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasBosUserMembershipVerifyService
 {
@@ -136,17 +136,17 @@ class BosUserMembershipVerifyRequest implements \JsonSerializable
     /**
      * @param BosUserMembershipVerifyParam $param
      */
-    public function setParam(?BosUserMembershipVerifyParam $param): void
+    public function setParams(?BosUserMembershipVerifyParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return BosUserMembershipVerifyParam
      */
-    public function getParam(): ?BosUserMembershipVerifyParam
+    public function getParams(): ?BosUserMembershipVerifyParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

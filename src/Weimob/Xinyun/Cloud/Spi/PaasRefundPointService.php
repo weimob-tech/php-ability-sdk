@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,391
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasRefundPointService
 {
@@ -136,17 +136,17 @@ class SRefundPointRequest implements \JsonSerializable
     /**
      * @param SRefundPointParam $param
      */
-    public function setParam(?SRefundPointParam $param): void
+    public function setParams(?SRefundPointParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SRefundPointParam
      */
-    public function getParam(): ?SRefundPointParam
+    public function getParams(): ?SRefundPointParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

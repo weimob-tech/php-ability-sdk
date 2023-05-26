@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 750
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobGuideCustomerGetListService
 {
@@ -136,17 +136,17 @@ class WeimobGuideCustomerGetListRequest implements \JsonSerializable
     /**
      * @param WeimobGuideCustomerGetListParam $param
      */
-    public function setParam(?WeimobGuideCustomerGetListParam $param): void
+    public function setParams(?WeimobGuideCustomerGetListParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobGuideCustomerGetListParam
      */
-    public function getParam(): ?WeimobGuideCustomerGetListParam
+    public function getParams(): ?WeimobGuideCustomerGetListParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

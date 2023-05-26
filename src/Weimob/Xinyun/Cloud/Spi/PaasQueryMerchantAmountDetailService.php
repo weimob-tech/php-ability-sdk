@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,360
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasQueryMerchantAmountDetailService
 {
@@ -136,17 +136,17 @@ class SQueryMerchantAmountDetailRequest implements \JsonSerializable
     /**
      * @param SQueryMerchantAmountDetailParam $param
      */
-    public function setParam(?SQueryMerchantAmountDetailParam $param): void
+    public function setParams(?SQueryMerchantAmountDetailParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SQueryMerchantAmountDetailParam
      */
-    public function getParam(): ?SQueryMerchantAmountDetailParam
+    public function getParams(): ?SQueryMerchantAmountDetailParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 728
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobGuideCustomerBehaviorActivityGetListService
 {
@@ -136,17 +136,17 @@ class WeimobGuideCustomerBehaviorActivityGetListRequest implements \JsonSerializ
     /**
      * @param WeimobGuideCustomerBehaviorActivityGetListParam $param
      */
-    public function setParam(?WeimobGuideCustomerBehaviorActivityGetListParam $param): void
+    public function setParams(?WeimobGuideCustomerBehaviorActivityGetListParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobGuideCustomerBehaviorActivityGetListParam
      */
-    public function getParam(): ?WeimobGuideCustomerBehaviorActivityGetListParam
+    public function getParams(): ?WeimobGuideCustomerBehaviorActivityGetListParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

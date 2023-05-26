@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,526
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobShopRightsRelatedGoodsGetListService
 {
@@ -136,17 +136,17 @@ class WeimobShopRightsRelatedGoodsGetListRequest implements \JsonSerializable
     /**
      * @param WeimobShopRightsRelatedGoodsGetListParam $param
      */
-    public function setParam(?WeimobShopRightsRelatedGoodsGetListParam $param): void
+    public function setParams(?WeimobShopRightsRelatedGoodsGetListParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobShopRightsRelatedGoodsGetListParam
      */
-    public function getParam(): ?WeimobShopRightsRelatedGoodsGetListParam
+    public function getParams(): ?WeimobShopRightsRelatedGoodsGetListParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

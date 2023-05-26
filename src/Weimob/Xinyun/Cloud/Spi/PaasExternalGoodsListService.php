@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,920
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasExternalGoodsListService
 {
@@ -136,17 +136,17 @@ class SExternalGoodsListRequest implements \JsonSerializable
     /**
      * @param SExternalGoodsListParam $param
      */
-    public function setParam(?SExternalGoodsListParam $param): void
+    public function setParams(?SExternalGoodsListParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SExternalGoodsListParam
      */
-    public function getParam(): ?SExternalGoodsListParam
+    public function getParams(): ?SExternalGoodsListParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

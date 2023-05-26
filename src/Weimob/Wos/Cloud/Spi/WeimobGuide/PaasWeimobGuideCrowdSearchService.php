@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 743
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobGuideCrowdSearchService
 {
@@ -136,17 +136,17 @@ class WeimobGuideCrowdSearchRequest implements \JsonSerializable
     /**
      * @param WeimobGuideCrowdSearchParam $param
      */
-    public function setParam(?WeimobGuideCrowdSearchParam $param): void
+    public function setParams(?WeimobGuideCrowdSearchParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobGuideCrowdSearchParam
      */
-    public function getParam(): ?WeimobGuideCrowdSearchParam
+    public function getParams(): ?WeimobGuideCrowdSearchParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,556
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasDepositAmountService
 {
@@ -136,17 +136,17 @@ class SDepositAmountRequest implements \JsonSerializable
     /**
      * @param SDepositAmountParam $param
      */
-    public function setParam(?SDepositAmountParam $param): void
+    public function setParams(?SDepositAmountParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SDepositAmountParam
      */
-    public function getParam(): ?SDepositAmountParam
+    public function getParams(): ?SDepositAmountParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

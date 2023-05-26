@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,167
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobShopMembershipPaasCalcMembershipService
 {
@@ -136,17 +136,17 @@ class WeimobShopMembershipPaasCalcMembershipRequest implements \JsonSerializable
     /**
      * @param WeimobShopMembershipPaasCalcMembershipParam $param
      */
-    public function setParam(?WeimobShopMembershipPaasCalcMembershipParam $param): void
+    public function setParams(?WeimobShopMembershipPaasCalcMembershipParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobShopMembershipPaasCalcMembershipParam
      */
-    public function getParam(): ?WeimobShopMembershipPaasCalcMembershipParam
+    public function getParams(): ?WeimobShopMembershipPaasCalcMembershipParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

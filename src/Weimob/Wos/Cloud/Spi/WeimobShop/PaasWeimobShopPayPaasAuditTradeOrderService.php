@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,169
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobShopPayPaasAuditTradeOrderService
 {
@@ -136,17 +136,17 @@ class WeimobShopPayPaasAuditTradeOrderRequest implements \JsonSerializable
     /**
      * @param WeimobShopPayPaasAuditTradeOrderParam $param
      */
-    public function setParam(?WeimobShopPayPaasAuditTradeOrderParam $param): void
+    public function setParams(?WeimobShopPayPaasAuditTradeOrderParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobShopPayPaasAuditTradeOrderParam
      */
-    public function getParam(): ?WeimobShopPayPaasAuditTradeOrderParam
+    public function getParams(): ?WeimobShopPayPaasAuditTradeOrderParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

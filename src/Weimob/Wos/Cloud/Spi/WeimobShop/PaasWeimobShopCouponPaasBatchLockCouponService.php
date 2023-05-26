@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 580
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobShopCouponPaasBatchLockCouponService
 {
@@ -136,17 +136,17 @@ class WeimobShopCouponPaasBatchLockCouponRequest implements \JsonSerializable
     /**
      * @param WeimobShopCouponPaasBatchLockCouponParam $param
      */
-    public function setParam(?WeimobShopCouponPaasBatchLockCouponParam $param): void
+    public function setParams(?WeimobShopCouponPaasBatchLockCouponParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobShopCouponPaasBatchLockCouponParam
      */
-    public function getParam(): ?WeimobShopCouponPaasBatchLockCouponParam
+    public function getParams(): ?WeimobShopCouponPaasBatchLockCouponParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

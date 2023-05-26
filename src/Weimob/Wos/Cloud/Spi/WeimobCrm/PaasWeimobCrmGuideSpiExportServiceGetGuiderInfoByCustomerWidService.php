@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 484
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobCrmGuideSpiExportServiceGetGuiderInfoByCustomerWidService
 {
@@ -136,17 +136,17 @@ class WeimobCrmGuideSpiExportServiceGetGuiderInfoByCustomerWidRequest implements
     /**
      * @param WeimobCrmGuideSpiExportServiceGetGuiderInfoByCustomerWidParam $param
      */
-    public function setParam(?WeimobCrmGuideSpiExportServiceGetGuiderInfoByCustomerWidParam $param): void
+    public function setParams(?WeimobCrmGuideSpiExportServiceGetGuiderInfoByCustomerWidParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobCrmGuideSpiExportServiceGetGuiderInfoByCustomerWidParam
      */
-    public function getParam(): ?WeimobCrmGuideSpiExportServiceGetGuiderInfoByCustomerWidParam
+    public function getParams(): ?WeimobCrmGuideSpiExportServiceGetGuiderInfoByCustomerWidParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

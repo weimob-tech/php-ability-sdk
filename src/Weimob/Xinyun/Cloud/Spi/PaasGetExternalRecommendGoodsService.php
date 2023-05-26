@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,853
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasGetExternalRecommendGoodsService
 {
@@ -136,17 +136,17 @@ class SGetExternalRecommendGoodsRequest implements \JsonSerializable
     /**
      * @param SGetExternalRecommendGoodsParam $param
      */
-    public function setParam(?SGetExternalRecommendGoodsParam $param): void
+    public function setParams(?SGetExternalRecommendGoodsParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SGetExternalRecommendGoodsParam
      */
-    public function getParam(): ?SGetExternalRecommendGoodsParam
+    public function getParams(): ?SGetExternalRecommendGoodsParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

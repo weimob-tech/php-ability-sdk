@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,347
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasQueryCardFieldService
 {
@@ -136,17 +136,17 @@ class SQueryCardFieldRequest implements \JsonSerializable
     /**
      * @param SQueryCardFieldParam $param
      */
-    public function setParam(?SQueryCardFieldParam $param): void
+    public function setParams(?SQueryCardFieldParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SQueryCardFieldParam
      */
-    public function getParam(): ?SQueryCardFieldParam
+    public function getParams(): ?SQueryCardFieldParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

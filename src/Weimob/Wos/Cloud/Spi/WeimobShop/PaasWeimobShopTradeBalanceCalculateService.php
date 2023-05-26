@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,433
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobShopTradeBalanceCalculateService
 {
@@ -136,17 +136,17 @@ class WeimobShopTradeBalanceCalculateRequest implements \JsonSerializable
     /**
      * @param WeimobShopTradeBalanceCalculateParam $param
      */
-    public function setParam(?WeimobShopTradeBalanceCalculateParam $param): void
+    public function setParams(?WeimobShopTradeBalanceCalculateParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobShopTradeBalanceCalculateParam
      */
-    public function getParam(): ?WeimobShopTradeBalanceCalculateParam
+    public function getParams(): ?WeimobShopTradeBalanceCalculateParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

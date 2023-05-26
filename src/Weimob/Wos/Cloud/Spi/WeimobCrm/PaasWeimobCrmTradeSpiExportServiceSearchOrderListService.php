@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 483
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobCrmTradeSpiExportServiceSearchOrderListService
 {
@@ -136,17 +136,17 @@ class WeimobCrmTradeSpiExportServiceSearchOrderListRequest implements \JsonSeria
     /**
      * @param WeimobCrmTradeSpiExportServiceSearchOrderListParam $param
      */
-    public function setParam(?WeimobCrmTradeSpiExportServiceSearchOrderListParam $param): void
+    public function setParams(?WeimobCrmTradeSpiExportServiceSearchOrderListParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobCrmTradeSpiExportServiceSearchOrderListParam
      */
-    public function getParam(): ?WeimobCrmTradeSpiExportServiceSearchOrderListParam
+    public function getParams(): ?WeimobCrmTradeSpiExportServiceSearchOrderListParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

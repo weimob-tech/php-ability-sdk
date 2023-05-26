@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,519
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobShopFulfillDeliveryTimeGetService
 {
@@ -136,17 +136,17 @@ class WeimobShopFulfillDeliveryTimeGetRequest implements \JsonSerializable
     /**
      * @param WeimobShopFulfillDeliveryTimeGetParam $param
      */
-    public function setParam(?WeimobShopFulfillDeliveryTimeGetParam $param): void
+    public function setParams(?WeimobShopFulfillDeliveryTimeGetParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobShopFulfillDeliveryTimeGetParam
      */
-    public function getParam(): ?WeimobShopFulfillDeliveryTimeGetParam
+    public function getParams(): ?WeimobShopFulfillDeliveryTimeGetParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

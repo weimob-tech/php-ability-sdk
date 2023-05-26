@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,564
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasUpdateMemberBasicInfoService
 {
@@ -136,17 +136,17 @@ class SUpdateMemberBasicInfoRequest implements \JsonSerializable
     /**
      * @param SUpdateMemberBasicInfoParam $param
      */
-    public function setParam(?SUpdateMemberBasicInfoParam $param): void
+    public function setParams(?SUpdateMemberBasicInfoParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SUpdateMemberBasicInfoParam
      */
-    public function getParam(): ?SUpdateMemberBasicInfoParam
+    public function getParams(): ?SUpdateMemberBasicInfoParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

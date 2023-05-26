@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,387
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasUsePointService
 {
@@ -136,17 +136,17 @@ class SUsePointRequest implements \JsonSerializable
     /**
      * @param SUsePointParam $param
      */
-    public function setParam(?SUsePointParam $param): void
+    public function setParams(?SUsePointParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SUsePointParam
      */
-    public function getParam(): ?SUsePointParam
+    public function getParams(): ?SUsePointParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

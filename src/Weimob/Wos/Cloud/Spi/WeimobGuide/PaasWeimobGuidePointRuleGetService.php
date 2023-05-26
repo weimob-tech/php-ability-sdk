@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 925
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobGuidePointRuleGetService
 {
@@ -136,17 +136,17 @@ class WeimobGuidePointRuleGetRequest implements \JsonSerializable
     /**
      * @param WeimobGuidePointRuleGetParam $param
      */
-    public function setParam(?WeimobGuidePointRuleGetParam $param): void
+    public function setParams(?WeimobGuidePointRuleGetParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobGuidePointRuleGetParam
      */
-    public function getParam(): ?WeimobGuidePointRuleGetParam
+    public function getParams(): ?WeimobGuidePointRuleGetParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()
