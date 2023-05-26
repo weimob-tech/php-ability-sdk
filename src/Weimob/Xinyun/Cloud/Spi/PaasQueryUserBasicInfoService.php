@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,348
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasQueryUserBasicInfoService
 {
@@ -136,17 +136,17 @@ class SQueryUserBasicInfoRequest implements \JsonSerializable
     /**
      * @param SQueryUserBasicInfoParam $param
      */
-    public function setParam(?SQueryUserBasicInfoParam $param): void
+    public function setParams(?SQueryUserBasicInfoParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SQueryUserBasicInfoParam
      */
-    public function getParam(): ?SQueryUserBasicInfoParam
+    public function getParams(): ?SQueryUserBasicInfoParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 2,714
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasUserCardGetCardNumExtendService
 {
@@ -136,17 +136,17 @@ class SUserCardGetCardNumExtendRequest implements \JsonSerializable
     /**
      * @param SUserCardGetCardNumExtendParam $param
      */
-    public function setParam(?SUserCardGetCardNumExtendParam $param): void
+    public function setParams(?SUserCardGetCardNumExtendParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SUserCardGetCardNumExtendParam
      */
-    public function getParam(): ?SUserCardGetCardNumExtendParam
+    public function getParams(): ?SUserCardGetCardNumExtendParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

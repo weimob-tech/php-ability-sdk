@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 2,757
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasCardReceiveRecordInfoExtendService
 {
@@ -136,17 +136,17 @@ class SCardReceiveRecordInfoExtendRequest implements \JsonSerializable
     /**
      * @param SCardReceiveRecordInfoExtendParam $param
      */
-    public function setParam(?SCardReceiveRecordInfoExtendParam $param): void
+    public function setParams(?SCardReceiveRecordInfoExtendParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SCardReceiveRecordInfoExtendParam
      */
-    public function getParam(): ?SCardReceiveRecordInfoExtendParam
+    public function getParams(): ?SCardReceiveRecordInfoExtendParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 2,648
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasCardManufactureBindService
 {
@@ -136,17 +136,17 @@ class SCardManufactureBindRequest implements \JsonSerializable
     /**
      * @param SCardManufactureBindParam $param
      */
-    public function setParam(?SCardManufactureBindParam $param): void
+    public function setParams(?SCardManufactureBindParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SCardManufactureBindParam
      */
-    public function getParam(): ?SCardManufactureBindParam
+    public function getParams(): ?SCardManufactureBindParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

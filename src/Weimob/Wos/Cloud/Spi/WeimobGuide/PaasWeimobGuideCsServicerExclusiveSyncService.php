@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 725
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobGuideCsServicerExclusiveSyncService
 {
@@ -136,17 +136,17 @@ class WeimobGuideCsServicerExclusiveSyncRequest implements \JsonSerializable
     /**
      * @param WeimobGuideCsServicerExclusiveSyncParam $param
      */
-    public function setParam(?WeimobGuideCsServicerExclusiveSyncParam $param): void
+    public function setParams(?WeimobGuideCsServicerExclusiveSyncParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobGuideCsServicerExclusiveSyncParam
      */
-    public function getParam(): ?WeimobGuideCsServicerExclusiveSyncParam
+    public function getParams(): ?WeimobGuideCsServicerExclusiveSyncParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

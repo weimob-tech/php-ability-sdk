@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 488
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobCrmGuideSpiExportServiceQueryOpenCardGuiderService
 {
@@ -136,17 +136,17 @@ class WeimobCrmGuideSpiExportServiceQueryOpenCardGuiderRequest implements \JsonS
     /**
      * @param WeimobCrmGuideSpiExportServiceQueryOpenCardGuiderParam $param
      */
-    public function setParam(?WeimobCrmGuideSpiExportServiceQueryOpenCardGuiderParam $param): void
+    public function setParams(?WeimobCrmGuideSpiExportServiceQueryOpenCardGuiderParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobCrmGuideSpiExportServiceQueryOpenCardGuiderParam
      */
-    public function getParam(): ?WeimobCrmGuideSpiExportServiceQueryOpenCardGuiderParam
+    public function getParams(): ?WeimobCrmGuideSpiExportServiceQueryOpenCardGuiderParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

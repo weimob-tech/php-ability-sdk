@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,563
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasGetMemberSettingFieldService
 {
@@ -136,17 +136,17 @@ class SGetMemberSettingFieldRequest implements \JsonSerializable
     /**
      * @param SGetMemberSettingFieldParam $param
      */
-    public function setParam(?SGetMemberSettingFieldParam $param): void
+    public function setParams(?SGetMemberSettingFieldParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SGetMemberSettingFieldParam
      */
-    public function getParam(): ?SGetMemberSettingFieldParam
+    public function getParams(): ?SGetMemberSettingFieldParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

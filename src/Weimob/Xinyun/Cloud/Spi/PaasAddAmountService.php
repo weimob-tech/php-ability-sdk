@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,365
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasAddAmountService
 {
@@ -136,17 +136,17 @@ class SAddAmountRequest implements \JsonSerializable
     /**
      * @param SAddAmountParam $param
      */
-    public function setParam(?SAddAmountParam $param): void
+    public function setParams(?SAddAmountParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SAddAmountParam
      */
-    public function getParam(): ?SAddAmountParam
+    public function getParams(): ?SAddAmountParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

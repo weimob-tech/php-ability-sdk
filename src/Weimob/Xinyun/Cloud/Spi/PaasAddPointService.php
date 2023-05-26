@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,392
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasAddPointService
 {
@@ -136,17 +136,17 @@ class SAddPointRequest implements \JsonSerializable
     /**
      * @param SAddPointParam $param
      */
-    public function setParam(?SAddPointParam $param): void
+    public function setParams(?SAddPointParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SAddPointParam
      */
-    public function getParam(): ?SAddPointParam
+    public function getParams(): ?SAddPointParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

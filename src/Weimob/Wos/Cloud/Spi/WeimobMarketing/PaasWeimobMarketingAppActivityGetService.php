@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 941
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobMarketingAppActivityGetService
 {
@@ -136,17 +136,17 @@ class WeimobMarketingAppActivityGetRequest implements \JsonSerializable
     /**
      * @param WeimobMarketingAppActivityGetParam $param
      */
-    public function setParam(?WeimobMarketingAppActivityGetParam $param): void
+    public function setParams(?WeimobMarketingAppActivityGetParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobMarketingAppActivityGetParam
      */
-    public function getParam(): ?WeimobMarketingAppActivityGetParam
+    public function getParams(): ?WeimobMarketingAppActivityGetParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

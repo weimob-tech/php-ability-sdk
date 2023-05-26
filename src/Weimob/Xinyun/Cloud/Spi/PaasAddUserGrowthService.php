@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,559
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasAddUserGrowthService
 {
@@ -136,17 +136,17 @@ class SAddUserGrowthRequest implements \JsonSerializable
     /**
      * @param SAddUserGrowthParam $param
      */
-    public function setParam(?SAddUserGrowthParam $param): void
+    public function setParams(?SAddUserGrowthParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SAddUserGrowthParam
      */
-    public function getParam(): ?SAddUserGrowthParam
+    public function getParams(): ?SAddUserGrowthParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

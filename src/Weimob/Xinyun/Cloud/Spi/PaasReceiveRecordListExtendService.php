@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 2,755
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasReceiveRecordListExtendService
 {
@@ -136,17 +136,17 @@ class SReceiveRecordListExtendRequest implements \JsonSerializable
     /**
      * @param SReceiveRecordListExtendParam $param
      */
-    public function setParam(?SReceiveRecordListExtendParam $param): void
+    public function setParams(?SReceiveRecordListExtendParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SReceiveRecordListExtendParam
      */
-    public function getParam(): ?SReceiveRecordListExtendParam
+    public function getParams(): ?SReceiveRecordListExtendParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

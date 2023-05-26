@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 2,564
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasCardVerifyCountExtendService
 {
@@ -136,17 +136,17 @@ class SCardVerifyCountExtendRequest implements \JsonSerializable
     /**
      * @param SCardVerifyCountExtendParam $param
      */
-    public function setParam(?SCardVerifyCountExtendParam $param): void
+    public function setParams(?SCardVerifyCountExtendParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SCardVerifyCountExtendParam
      */
-    public function getParam(): ?SCardVerifyCountExtendParam
+    public function getParams(): ?SCardVerifyCountExtendParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

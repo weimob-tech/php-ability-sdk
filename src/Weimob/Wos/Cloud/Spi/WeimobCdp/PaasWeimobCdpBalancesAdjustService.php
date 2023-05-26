@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 885
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobCdpBalancesAdjustService
 {
@@ -136,17 +136,17 @@ class WeimobCdpBalancesAdjustRequest implements \JsonSerializable
     /**
      * @param WeimobCdpBalancesAdjustParam $param
      */
-    public function setParam(?WeimobCdpBalancesAdjustParam $param): void
+    public function setParams(?WeimobCdpBalancesAdjustParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobCdpBalancesAdjustParam
      */
-    public function getParam(): ?WeimobCdpBalancesAdjustParam
+    public function getParams(): ?WeimobCdpBalancesAdjustParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

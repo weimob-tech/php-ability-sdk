@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,395
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasGetCardRanksService
 {
@@ -136,17 +136,17 @@ class SGetCardRanksRequest implements \JsonSerializable
     /**
      * @param SGetCardRanksParam $param
      */
-    public function setParam(?SGetCardRanksParam $param): void
+    public function setParams(?SGetCardRanksParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SGetCardRanksParam
      */
-    public function getParam(): ?SGetCardRanksParam
+    public function getParams(): ?SGetCardRanksParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

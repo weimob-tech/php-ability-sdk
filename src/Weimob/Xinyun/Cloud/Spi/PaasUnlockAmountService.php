@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,362
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasUnlockAmountService
 {
@@ -136,17 +136,17 @@ class SUnlockAmountRequest implements \JsonSerializable
     /**
      * @param SUnlockAmountParam $param
      */
-    public function setParam(?SUnlockAmountParam $param): void
+    public function setParams(?SUnlockAmountParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SUnlockAmountParam
      */
-    public function getParam(): ?SUnlockAmountParam
+    public function getParams(): ?SUnlockAmountParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,379
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasQueryMerchantPointDetailService
 {
@@ -136,17 +136,17 @@ class SQueryMerchantPointDetailRequest implements \JsonSerializable
     /**
      * @param SQueryMerchantPointDetailParam $param
      */
-    public function setParam(?SQueryMerchantPointDetailParam $param): void
+    public function setParams(?SQueryMerchantPointDetailParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SQueryMerchantPointDetailParam
      */
-    public function getParam(): ?SQueryMerchantPointDetailParam
+    public function getParams(): ?SQueryMerchantPointDetailParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

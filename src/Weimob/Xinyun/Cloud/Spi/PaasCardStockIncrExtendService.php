@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 2,647
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasCardStockIncrExtendService
 {
@@ -136,17 +136,17 @@ class SCardStockIncrExtendRequest implements \JsonSerializable
     /**
      * @param SCardStockIncrExtendParam $param
      */
-    public function setParam(?SCardStockIncrExtendParam $param): void
+    public function setParams(?SCardStockIncrExtendParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SCardStockIncrExtendParam
      */
-    public function getParam(): ?SCardStockIncrExtendParam
+    public function getParams(): ?SCardStockIncrExtendParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

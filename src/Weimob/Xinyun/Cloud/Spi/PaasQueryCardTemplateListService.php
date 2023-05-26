@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,351
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasQueryCardTemplateListService
 {
@@ -136,17 +136,17 @@ class SQueryCardTemplateListRequest implements \JsonSerializable
     /**
      * @param SQueryCardTemplateListParam $param
      */
-    public function setParam(?SQueryCardTemplateListParam $param): void
+    public function setParams(?SQueryCardTemplateListParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SQueryCardTemplateListParam
      */
-    public function getParam(): ?SQueryCardTemplateListParam
+    public function getParams(): ?SQueryCardTemplateListParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

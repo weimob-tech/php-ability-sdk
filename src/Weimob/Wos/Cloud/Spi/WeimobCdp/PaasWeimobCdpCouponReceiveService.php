@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 887
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobCdpCouponReceiveService
 {
@@ -136,17 +136,17 @@ class WeimobCdpCouponReceiveRequest implements \JsonSerializable
     /**
      * @param WeimobCdpCouponReceiveParam $param
      */
-    public function setParam(?WeimobCdpCouponReceiveParam $param): void
+    public function setParams(?WeimobCdpCouponReceiveParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobCdpCouponReceiveParam
      */
-    public function getParam(): ?WeimobCdpCouponReceiveParam
+    public function getParams(): ?WeimobCdpCouponReceiveParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

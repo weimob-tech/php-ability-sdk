@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,359
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasQueryUserAmountDetailService
 {
@@ -136,17 +136,17 @@ class SQueryUserAmountDetailRequest implements \JsonSerializable
     /**
      * @param SQueryUserAmountDetailParam $param
      */
-    public function setParam(?SQueryUserAmountDetailParam $param): void
+    public function setParams(?SQueryUserAmountDetailParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SQueryUserAmountDetailParam
      */
-    public function getParam(): ?SQueryUserAmountDetailParam
+    public function getParams(): ?SQueryUserAmountDetailParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

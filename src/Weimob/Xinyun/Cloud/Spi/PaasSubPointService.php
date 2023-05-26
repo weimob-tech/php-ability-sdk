@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,393
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasSubPointService
 {
@@ -136,17 +136,17 @@ class SSubPointRequest implements \JsonSerializable
     /**
      * @param SSubPointParam $param
      */
-    public function setParam(?SSubPointParam $param): void
+    public function setParams(?SSubPointParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SSubPointParam
      */
-    public function getParam(): ?SSubPointParam
+    public function getParams(): ?SSubPointParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

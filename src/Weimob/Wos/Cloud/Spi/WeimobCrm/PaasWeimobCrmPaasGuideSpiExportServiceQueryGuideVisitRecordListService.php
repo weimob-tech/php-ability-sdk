@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 487
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobCrmPaasGuideSpiExportServiceQueryGuideVisitRecordListService
 {
@@ -136,17 +136,17 @@ class WeimobCrmPaasGuideSpiExportServiceQueryGuideVisitRecordListRequest impleme
     /**
      * @param WeimobCrmPaasGuideSpiExportServiceQueryGuideVisitRecordListParam $param
      */
-    public function setParam(?WeimobCrmPaasGuideSpiExportServiceQueryGuideVisitRecordListParam $param): void
+    public function setParams(?WeimobCrmPaasGuideSpiExportServiceQueryGuideVisitRecordListParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobCrmPaasGuideSpiExportServiceQueryGuideVisitRecordListParam
      */
-    public function getParam(): ?WeimobCrmPaasGuideSpiExportServiceQueryGuideVisitRecordListParam
+    public function getParams(): ?WeimobCrmPaasGuideSpiExportServiceQueryGuideVisitRecordListParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

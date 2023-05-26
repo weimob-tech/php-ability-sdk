@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 485
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobCrmTuikeSpiExportServiceGetTuikeLevelInfoService
 {
@@ -136,17 +136,17 @@ class WeimobCrmTuikeSpiExportServiceGetTuikeLevelInfoRequest implements \JsonSer
     /**
      * @param WeimobCrmTuikeSpiExportServiceGetTuikeLevelInfoParam $param
      */
-    public function setParam(?WeimobCrmTuikeSpiExportServiceGetTuikeLevelInfoParam $param): void
+    public function setParams(?WeimobCrmTuikeSpiExportServiceGetTuikeLevelInfoParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobCrmTuikeSpiExportServiceGetTuikeLevelInfoParam
      */
-    public function getParam(): ?WeimobCrmTuikeSpiExportServiceGetTuikeLevelInfoParam
+    public function getParams(): ?WeimobCrmTuikeSpiExportServiceGetTuikeLevelInfoParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,168
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobShopPointPaasCalcPointService
 {
@@ -136,17 +136,17 @@ class WeimobShopPointPaasCalcPointRequest implements \JsonSerializable
     /**
      * @param WeimobShopPointPaasCalcPointParam $param
      */
-    public function setParam(?WeimobShopPointPaasCalcPointParam $param): void
+    public function setParams(?WeimobShopPointPaasCalcPointParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobShopPointPaasCalcPointParam
      */
-    public function getParam(): ?WeimobShopPointPaasCalcPointParam
+    public function getParams(): ?WeimobShopPointPaasCalcPointParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

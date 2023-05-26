@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 668
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobCdpAssetAddAmountService
 {
@@ -136,17 +136,17 @@ class WeimobCdpAssetAddAmountRequest implements \JsonSerializable
     /**
      * @param WeimobCdpAssetAddAmountParam $param
      */
-    public function setParam(?WeimobCdpAssetAddAmountParam $param): void
+    public function setParams(?WeimobCdpAssetAddAmountParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobCdpAssetAddAmountParam
      */
-    public function getParam(): ?WeimobCdpAssetAddAmountParam
+    public function getParams(): ?WeimobCdpAssetAddAmountParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

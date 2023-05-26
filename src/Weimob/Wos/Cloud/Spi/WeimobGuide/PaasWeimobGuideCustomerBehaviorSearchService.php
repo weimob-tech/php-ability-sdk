@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 727
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobGuideCustomerBehaviorSearchService
 {
@@ -136,17 +136,17 @@ class WeimobGuideCustomerBehaviorSearchRequest implements \JsonSerializable
     /**
      * @param WeimobGuideCustomerBehaviorSearchParam $param
      */
-    public function setParam(?WeimobGuideCustomerBehaviorSearchParam $param): void
+    public function setParams(?WeimobGuideCustomerBehaviorSearchParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobGuideCustomerBehaviorSearchParam
      */
-    public function getParam(): ?WeimobGuideCustomerBehaviorSearchParam
+    public function getParams(): ?WeimobGuideCustomerBehaviorSearchParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

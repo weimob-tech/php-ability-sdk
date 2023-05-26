@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 744
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobGuideCustomerCrowdCategoryGetListService
 {
@@ -136,17 +136,17 @@ class WeimobGuideCustomerCrowdCategoryGetListRequest implements \JsonSerializabl
     /**
      * @param WeimobGuideCustomerCrowdCategoryGetListParam $param
      */
-    public function setParam(?WeimobGuideCustomerCrowdCategoryGetListParam $param): void
+    public function setParams(?WeimobGuideCustomerCrowdCategoryGetListParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobGuideCustomerCrowdCategoryGetListParam
      */
-    public function getParam(): ?WeimobGuideCustomerCrowdCategoryGetListParam
+    public function getParams(): ?WeimobGuideCustomerCrowdCategoryGetListParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

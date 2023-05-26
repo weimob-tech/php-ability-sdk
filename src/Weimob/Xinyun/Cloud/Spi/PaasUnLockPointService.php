@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,385
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasUnLockPointService
 {
@@ -136,17 +136,17 @@ class SUnLockPointRequest implements \JsonSerializable
     /**
      * @param SUnLockPointParam $param
      */
-    public function setParam(?SUnLockPointParam $param): void
+    public function setParams(?SUnLockPointParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SUnLockPointParam
      */
-    public function getParam(): ?SUnLockPointParam
+    public function getParams(): ?SUnLockPointParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 1,180
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasWeimobShopPayPaasPaycheckService
 {
@@ -136,17 +136,17 @@ class WeimobShopPayPaasPaycheckRequest implements \JsonSerializable
     /**
      * @param WeimobShopPayPaasPaycheckParam $param
      */
-    public function setParam(?WeimobShopPayPaasPaycheckParam $param): void
+    public function setParams(?WeimobShopPayPaasPaycheckParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return WeimobShopPayPaasPaycheckParam
      */
-    public function getParam(): ?WeimobShopPayPaasPaycheckParam
+    public function getParams(): ?WeimobShopPayPaasPaycheckParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()

@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 3,883
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-26
  */
 interface PaasRightsCalculateApplyMountService
 {
@@ -136,17 +136,17 @@ class SRightsCalculateApplyMountRequest implements \JsonSerializable
     /**
      * @param SRightsCalculateApplyMountParam $param
      */
-    public function setParam(?SRightsCalculateApplyMountParam $param): void
+    public function setParams(?SRightsCalculateApplyMountParam $param): void
     {
-        $this->param = $param;
+        $this->params = $param;
     }
 
     /**
      * @return SRightsCalculateApplyMountParam
      */
-    public function getParam(): ?SRightsCalculateApplyMountParam
+    public function getParams(): ?SRightsCalculateApplyMountParam
     {
-        return $this->param;
+        return $this->params;
     }
 
     public function jsonSerialize()
