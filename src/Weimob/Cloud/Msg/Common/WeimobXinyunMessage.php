@@ -119,7 +119,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @return string
      */
-    public function getBusinessId(): string
+    public function getBusinessId(): ?string
     {
         return $this->business_id;
     }
@@ -127,7 +127,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @param string $business_id
      */
-    public function setBusinessId(string $business_id): void
+    public function setBusinessId(?string $business_id): void
     {
         $this->business_id = $business_id;
     }
@@ -135,7 +135,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @return string
      */
-    public function getPublicAccountId(): string
+    public function getPublicAccountId(): ?string
     {
         return $this->public_account_id;
     }
@@ -143,7 +143,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @param string $public_account_id
      */
-    public function setPublicAccountId(string $public_account_id): void
+    public function setPublicAccountId(?string $public_account_id): void
     {
         $this->public_account_id = $public_account_id;
     }
@@ -167,7 +167,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @return string
      */
-    public function getMsgSignature(): string
+    public function getMsgSignature(): ?string
     {
         return $this->msgSignature;
     }
@@ -175,7 +175,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @param string $msgSignature
      */
-    public function setMsgSignature(string $msgSignature): void
+    public function setMsgSignature(?string $msgSignature): void
     {
         $this->msgSignature = $msgSignature;
     }
@@ -183,7 +183,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @return string
      */
-    public function getSaasChannel(): string
+    public function getSaasChannel(): ?string
     {
         return $this->saas_channel;
     }
@@ -191,7 +191,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @param string $saas_channel
      */
-    public function setSaasChannel(string $saas_channel): void
+    public function setSaasChannel(?string $saas_channel): void
     {
         $this->saas_channel = $saas_channel;
     }
@@ -199,7 +199,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @return string
      */
-    public function getSaasClientId(): string
+    public function getSaasClientId(): ?string
     {
         return $this->saas_clientId;
     }
@@ -207,7 +207,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @param string $saas_clientId
      */
-    public function setSaasClientId(string $saas_clientId): void
+    public function setSaasClientId(?string $saas_clientId): void
     {
         $this->saas_clientId = $saas_clientId;
     }
