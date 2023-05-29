@@ -2,13 +2,13 @@
 
 namespace WeimobAbility\Weimob\Xinyun\Cloud\Msg\Xiaoke;
 
-use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessage;
+use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobXinyunMessage;
 use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 
 /**
  * @id 2,687
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-29
  */
 interface XiaokeOrderChangeOwnerListener
 {
@@ -17,7 +17,7 @@ interface XiaokeOrderChangeOwnerListener
     const classType = ChangeOwnerMessage::class;
     const specType = 'xinyun';
 
-    public function onMessage(WeimobMessage $message) : WeimobMessageAck;
+    public function onMessage(WeimobXinyunMessage $message) : WeimobMessageAck;
 }
 
 class ChangeOwnerMessage implements \JsonSerializable
