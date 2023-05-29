@@ -2,13 +2,13 @@
 
 namespace WeimobAbility\Weimob\Xinyun\Cloud\Msg\O2o;
 
-use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessage;
+use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobXinyunMessage;
 use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 
 /**
  * @id 1,296
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-29
  */
 interface O2oMealOrderChangeListener
 {
@@ -17,7 +17,7 @@ interface O2oMealOrderChangeListener
     const classType = ChangeMessage::class;
     const specType = 'xinyun';
 
-    public function onMessage(WeimobMessage $message) : WeimobMessageAck;
+    public function onMessage(WeimobXinyunMessage $message) : WeimobMessageAck;
 }
 
 class ChangeMessage implements \JsonSerializable

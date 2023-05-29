@@ -3,10 +3,10 @@
 namespace WeimobAbility\Weimob\Cloud\Msg\Common;
 
 /**
- * 消息请求公共参数
- * author bokang.li
+ * 新云消息请求公共参数
+ * author jichao.huang
  */
-class WeimobMessage implements \JsonSerializable
+class WeimobXinyunMessage implements \JsonSerializable
 {
     /**
      * 微盟业务系统消息 ID，如智慧餐厅的订单编号
@@ -27,10 +27,16 @@ class WeimobMessage implements \JsonSerializable
     var $event;
 
     /**
-     * 微盟新商业操作系统 ID
-     * @var int
+     * 商家id
+     * @var string
      */
-    var $bosId;
+    var $business_id;
+
+    /**
+     *（新云）商家店铺 ID
+     * @var string
+     */
+    var $public_account_id;
 
     /**
      * 防篡改签名：md5(clientId+id+msgBody+clientSecret)
@@ -38,22 +44,29 @@ class WeimobMessage implements \JsonSerializable
      */
     var $sign;
 
+
+    /**
+     * 消息签名
+     * @var string
+     */
+    var $msgSignature;
+
     /**
      * saas渠道
      * @var string
      */
-    var $saasChannel;
+    var $saas_channel;
 
     /**
      * saas客户端id
      * @var string
      */
-    var $saasClientId;
+    var $saas_clientId;
 
     /**
-     * 业务消息体
+     * 业务消息体，编码格式 UTF-8
      */
-    var $msgBody;
+    private $msg_body;
 
     /**
      * @return int
@@ -104,19 +117,35 @@ class WeimobMessage implements \JsonSerializable
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getBosId(): int
+    public function getBusinessId(): ?string
     {
-        return $this->bosId;
+        return $this->business_id;
     }
 
     /**
-     * @param int $bosId
+     * @param string $business_id
      */
-    public function setBosId(int $bosId): void
+    public function setBusinessId(?string $business_id): void
     {
-        $this->bosId = $bosId;
+        $this->business_id = $business_id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPublicAccountId(): ?string
+    {
+        return $this->public_account_id;
+    }
+
+    /**
+     * @param string $public_account_id
+     */
+    public function setPublicAccountId(?string $public_account_id): void
+    {
+        $this->public_account_id = $public_account_id;
     }
 
     /**
@@ -136,19 +165,19 @@ class WeimobMessage implements \JsonSerializable
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getMsgBody()
+    public function getMsgSignature(): ?string
     {
-        return $this->msgBody;
+        return $this->msgSignature;
     }
 
     /**
-     * @param mixed $msgBody
+     * @param string $msgSignature
      */
-    public function setMsgBody($msgBody): void
+    public function setMsgSignature(?string $msgSignature): void
     {
-        $this->msgBody = $msgBody;
+        $this->msgSignature = $msgSignature;
     }
 
     /**
@@ -156,15 +185,15 @@ class WeimobMessage implements \JsonSerializable
      */
     public function getSaasChannel(): ?string
     {
-        return $this->saasChannel;
+        return $this->saas_channel;
     }
 
     /**
-     * @param string $saasChannel
+     * @param string $saas_channel
      */
-    public function setSaasChannel(?string $saasChannel): void
+    public function setSaasChannel(?string $saas_channel): void
     {
-        $this->saasChannel = $saasChannel;
+        $this->saas_channel = $saas_channel;
     }
 
     /**
@@ -172,18 +201,35 @@ class WeimobMessage implements \JsonSerializable
      */
     public function getSaasClientId(): ?string
     {
-        return $this->saasClientId;
+        return $this->saas_clientId;
     }
 
     /**
-     * @param string $saasClientId
+     * @param string $saas_clientId
      */
-    public function setSaasClientId(?string $saasClientId): void
+    public function setSaasClientId(?string $saas_clientId): void
     {
-        $this->saasClientId = $saasClientId;
+        $this->saas_clientId = $saas_clientId;
     }
 
-    public function jsonSerialize() {
+    /**
+     * @return mixed
+     */
+    public function getMsgBody()
+    {
+        return $this->msg_body;
+    }
+
+    /**
+     * @param mixed $msg_body
+     */
+    public function setMsgBody($msg_body): void
+    {
+        $this->msg_body = $msg_body;
+    }
+
+    public function jsonSerialize()
+    {
         return get_object_vars($this);
     }
 }

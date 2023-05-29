@@ -2,13 +2,13 @@
 
 namespace WeimobAbility\Weimob\Xinyun\Cloud\Msg\Kld;
 
-use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessage;
+use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobXinyunMessage;
 use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 
 /**
  * @id 245
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-29
  */
 interface KLDCashAddCashOrderListener
 {
@@ -17,7 +17,7 @@ interface KLDCashAddCashOrderListener
     const classType = AddCashOrderMessage::class;
     const specType = 'xinyun';
 
-    public function onMessage(WeimobMessage $message) : WeimobMessageAck;
+    public function onMessage(WeimobXinyunMessage $message) : WeimobMessageAck;
 }
 
 class AddCashOrderMessage implements \JsonSerializable

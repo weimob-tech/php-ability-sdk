@@ -2,13 +2,13 @@
 
 namespace WeimobAbility\Weimob\Xinyun\Cloud\Msg\Member;
 
-use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessage;
+use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobXinyunMessage;
 use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 
 /**
  * @id 1,910
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-29
  */
 interface EcLoginAgreeProtocolListener
 {
@@ -17,7 +17,7 @@ interface EcLoginAgreeProtocolListener
     const classType = AgreeProtocolMessage::class;
     const specType = 'xinyun';
 
-    public function onMessage(WeimobMessage $message) : WeimobMessageAck;
+    public function onMessage(WeimobXinyunMessage $message) : WeimobMessageAck;
 }
 
 class AgreeProtocolMessage implements \JsonSerializable

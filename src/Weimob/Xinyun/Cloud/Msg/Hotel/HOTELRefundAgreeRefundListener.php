@@ -2,13 +2,13 @@
 
 namespace WeimobAbility\Weimob\Xinyun\Cloud\Msg\Hotel;
 
-use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessage;
+use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobXinyunMessage;
 use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 
 /**
  * @id 2,341
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-29
  */
 interface HOTELRefundAgreeRefundListener
 {
@@ -17,7 +17,7 @@ interface HOTELRefundAgreeRefundListener
     const classType = AgreeRefundMessage::class;
     const specType = 'xinyun';
 
-    public function onMessage(WeimobMessage $message) : WeimobMessageAck;
+    public function onMessage(WeimobXinyunMessage $message) : WeimobMessageAck;
 }
 
 class AgreeRefundMessage implements \JsonSerializable

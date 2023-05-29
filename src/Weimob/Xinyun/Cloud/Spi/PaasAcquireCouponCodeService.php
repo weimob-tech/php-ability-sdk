@@ -7,7 +7,7 @@ use WeimobAbility\Weimob\Cloud\Spi\Common\PaasResponseCode;
 /**
  * @id 3,841
  * @author weimobcloud
- * @create 2023-5-26
+ * @create 2023-5-29
  */
 interface PaasAcquireCouponCodeService
 {
@@ -19,134 +19,288 @@ interface PaasAcquireCouponCodeService
 class SAcquireCouponCodeRequest implements \JsonSerializable
 {
     /**
-     * 商业操作系统ID
-     * @var int
-     */
-    private $bosId;
+    * 商业操作系统ID（解决方案体系）
+    * @var int
+    */
+    private $pid;
 
     /**
-     * 全局唯一的扩展点
-     * @var string
-     */
-    private $actionKey;
+    * 签名
+    * @var string
+    */
+    private $sign;
 
     /**
-     * 功能集ID
-     * @var int
-     */
-    private $functionId;
+    * 发送方时间戳，验签的时候使用
+    * @var string
+    */
+    private $timestamp;
 
     /**
-     * 组织结构节点ID
-     * @var int
-     */
-    private $vid;
-
-    /**
-     * 	组织结构节点类型
-     * @var int
-     */
-    private $vType;
-
-    /**
-     * @var SAcquireCouponCodeParam
-     */
+    * @var SAcquireCouponCodeParam
+    */
     private $params;
 
     /**
-     * @param int $bosId
-     */
-    public function setBosId(?int $bosId): void
+    * 商业操作系统ID（产品方案体系）
+    * @var int
+    */
+    private $bosId;
+
+    /**
+    * actionKey
+    * @var string
+    */
+    private $actionKey;
+
+    /**
+    * 组织结构节点ID
+    * @var int
+    */
+    private $vid;
+
+    /**
+    * 组织结构节点类型
+    * @var int
+    */
+    private $vType;
+
+    /**
+    *  源产品id
+    * @var int
+    */
+    private $originProductId;
+
+    /**
+    * 目标产品id
+    * @var int
+    */
+    private $targetProductId;
+
+    /**
+    * 源代产品实例id
+    * @var int
+    */
+    private $originProductInstanceId;
+
+    /**
+    * 目标产品实例id
+    * @var int
+    */
+    private $targetProductInstanceId;
+
+    /**
+    * 功能集ID
+    * @var int
+    */
+    private $functionId;
+
+    /**
+    * @return int
+    */
+    public function getPid(): ?int
     {
-        $this->bosId = $bosId;
+        return $this->pid;
     }
 
     /**
-     * @return int
-     */
-    public function getBosId(): ?int
+    * @param int $pid
+    */
+    public function setPid(?int $pid): void
     {
-        return $this->bosId;
+        $this->pid = $pid;
     }
 
     /**
-     * @param string $actionKey
-     */
-    public function setActionKey(?string $actionKey): void
+    * @return string
+    */
+    public function getSign(): ?string
     {
-        $this->actionKey = $actionKey;
+        return $this->sign;
     }
 
     /**
-     * @return string
-     */
-    public function getActionKey(): ?string
+    * @param string $sign
+    */
+    public function setSign(?string $sign): void
     {
-        return $this->actionKey;
+        $this->sign = $sign;
     }
 
     /**
-     * @param int $functionId
-     */
-    public function setFunctionId(?int $functionId): void
+    * @return string
+    */
+    public function getTimestamp(): ?string
     {
-        $this->functionId = $functionId;
+        return $this->timestamp;
     }
 
     /**
-     * @return int
-     */
-    public function getFunctionId(): ?int
+    * @param string $timestamp
+    */
+    public function setTimestamp(?string $timestamp): void
     {
-        return $this->functionId;
+        $this->timestamp = $timestamp;
     }
 
     /**
-     * @param int $vid
-     */
-    public function setVid(?int $vid): void
-    {
-        $this->vid = $vid;
-    }
-
-    /**
-     * @return int
-     */
-    public function getVid(): ?int
-    {
-        return $this->vid;
-    }
-
-    /**
-     * @param int $vType
-     */
-    public function setVType(?int $vType): void
-    {
-        $this->vType = $vType;
-    }
-
-    /**
-     * @return int
-     */
-    public function getVType(): ?int
-    {
-        return $this->vType;
-    }
-
-    /**
-     * @param SAcquireCouponCodeParam $param
-     */
+    * @param SAcquireCouponCodeParam $param
+    */
     public function setParams(?SAcquireCouponCodeParam $param): void
     {
         $this->params = $param;
     }
 
     /**
-     * @return SAcquireCouponCodeParam
-     */
+    * @return SAcquireCouponCodeParam
+    */
     public function getParams(): ?SAcquireCouponCodeParam
     {
         return $this->params;
+    }
+
+    /**
+    * @return int
+    */
+    public function getBosId(): ?int
+    {
+        return $this->bosId;
+    }
+
+    /**
+    * @param int $bosId
+    */
+    public function setBosId(?int $bosId): void
+    {
+        $this->bosId = $bosId;
+    }
+
+    /**
+    * @return string
+    */
+    public function getActionKey(): ?string
+    {
+        return $this->actionKey;
+    }
+
+    /**
+    * @param string $actionKey
+    */
+    public function setActionKey(?string $actionKey): void
+    {
+        $this->actionKey = $actionKey;
+    }
+
+    /**
+    * @return int
+    */
+    public function getVid(): ?int
+    {
+        return $this->vid;
+    }
+
+    /**
+    * @param int $vid
+    */
+    public function setVid(?int $vid): void
+    {
+        $this->vid = $vid;
+    }
+
+    /**
+    * @return int
+    */
+    public function getVType(): ?int
+    {
+        return $this->vType;
+    }
+
+    /**
+    * @param int $vType
+    */
+    public function setVType(?int $vType): void
+    {
+        $this->vType = $vType;
+    }
+
+    /**
+    * @return int
+    */
+    public function getOriginProductId(): ?int
+    {
+        return $this->originProductId;
+    }
+
+    /**
+    * @param int $originProductId
+    */
+    public function setOriginProductId(?int $originProductId): void
+    {
+        $this->originProductId = $originProductId;
+    }
+
+    /**
+    * @return int
+    */
+    public function getTargetProductId(): ?int
+    {
+        return $this->targetProductId;
+    }
+
+    /**
+    * @param int $targetProductId
+    */
+    public function setTargetProductId(?int $targetProductId): void
+    {
+        $this->targetProductId = $targetProductId;
+    }
+
+    /**
+    * @return int
+    */
+    public function getOriginProductInstanceId(): ?int
+    {
+        return $this->originProductInstanceId;
+    }
+
+    /**
+    * @param int $originProductInstanceId
+    */
+    public function setOriginProductInstanceId(?int $originProductInstanceId): void
+    {
+        $this->originProductInstanceId = $originProductInstanceId;
+    }
+
+    /**
+    * @return int
+    */
+    public function getTargetProductInstanceId(): ?int
+    {
+        return $this->targetProductInstanceId;
+    }
+
+    /**
+    * @param int $targetProductInstanceId
+    */
+    public function setTargetProductInstanceId(?int $targetProductInstanceId): void
+    {
+        $this->targetProductInstanceId = $targetProductInstanceId;
+    }
+
+    /**
+    * @return int
+    */
+    public function getFunctionId(): ?int
+    {
+        return $this->functionId;
+    }
+
+    /**
+    * @param int $functionId
+    */
+    public function setFunctionId(?int $functionId): void
+    {
+        $this->functionId = $functionId;
     }
 
     public function jsonSerialize()

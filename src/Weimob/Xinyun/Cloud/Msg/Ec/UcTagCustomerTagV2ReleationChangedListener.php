@@ -2,13 +2,13 @@
 
 namespace WeimobAbility\Weimob\Xinyun\Cloud\Msg\Ec;
 
-use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessage;
+use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobXinyunMessage;
 use WeimobAbility\Weimob\Cloud\Msg\Common\WeimobMessageAck;
 
 /**
  * @id 1,617
  * @author weimobcloud
- * @create 2023-5-23
+ * @create 2023-5-29
  */
 interface UcTagCustomerTagV2ReleationChangedListener
 {
@@ -17,7 +17,7 @@ interface UcTagCustomerTagV2ReleationChangedListener
     const classType = CustomerTagV2ReleationChangedMessage::class;
     const specType = 'xinyun';
 
-    public function onMessage(WeimobMessage $message) : WeimobMessageAck;
+    public function onMessage(WeimobXinyunMessage $message) : WeimobMessageAck;
 }
 
 class CustomerTagV2ReleationChangedMessage implements \JsonSerializable
