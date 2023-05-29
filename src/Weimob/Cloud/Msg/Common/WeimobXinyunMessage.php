@@ -71,7 +71,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -79,7 +79,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @param int $id
      */
-    public function setId(int $id): void
+    public function setId(?int $id): void
     {
         $this->id = $id;
     }
@@ -87,7 +87,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @return string
      */
-    public function getTopic(): string
+    public function getTopic(): ?string
     {
         return $this->topic;
     }
@@ -95,7 +95,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @param string $topic
      */
-    public function setTopic(string $topic): void
+    public function setTopic(?string $topic): void
     {
         $this->topic = $topic;
     }
@@ -103,7 +103,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @return string
      */
-    public function getEvent(): string
+    public function getEvent(): ?string
     {
         return $this->event;
     }
@@ -111,7 +111,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @param string $event
      */
-    public function setEvent(string $event): void
+    public function setEvent(?string $event): void
     {
         $this->event = $event;
     }
@@ -151,7 +151,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @return string
      */
-    public function getSign(): string
+    public function getSign(): ?string
     {
         return $this->sign;
     }
@@ -159,7 +159,7 @@ class WeimobXinyunMessage implements \JsonSerializable
     /**
      * @param string $sign
      */
-    public function setSign(string $sign): void
+    public function setSign(?string $sign): void
     {
         $this->sign = $sign;
     }
